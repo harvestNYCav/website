@@ -383,8 +383,8 @@ export default function Home() {
             <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
               <p>
                 {language === "en"
-                  ? "© 2024 Harvest Ministry. Part of Remnant Church NYC."
-                  : "© 2024 Ministerio Harvest. Parte de Iglesia Remanente NYC."}
+                  ? "© 2026 Harvest Ministry. Part of Remnant Church NYC."
+                  : "© 2026 Ministerio Harvest. Parte de Iglesia Remanente NYC."}
               </p>
             </div>
           </div>
