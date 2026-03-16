@@ -1,15 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
 
 type Language = "en" | "es";
-
-interface Content {
-  en: string;
-  es: string;
-}
 
 const content: Record<string, { en: string; es: string }> = {
   tagline: {
@@ -82,7 +75,7 @@ export default function Home() {
   const [language, setLanguage] = useState<Language>("en");
 
   const t = (key: string): string => {
-    const translations = content[key];
+    const translations = content[key as keyof typeof content];
     return translations ? translations[language] : key;
   };
 

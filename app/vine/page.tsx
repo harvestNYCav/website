@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 type Language = "en" | "es";
 
@@ -104,7 +105,7 @@ export default function VinePage() {
 
   const t = (key: string): string => {
     const translations = vineContent[key as keyof typeof vineContent];
-    return translations ? (translations as any)[language] : key;
+    return translations ? translations[language] : key;
   };
 
   return (
@@ -114,12 +115,12 @@ export default function VinePage() {
         <nav className="sticky top-0 z-50 bg-white shadow-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
-              <a href="/" className="flex items-center gap-2">
+              <Link href="/" className="flex items-center gap-2">
                 <div className="w-8 h-8 bg-blue-600 rounded"></div>
                 <span className="text-sm font-semibold text-gray-800">
                   Harvest
                 </span>
-              </a>
+              </Link>
 
               <div className="flex items-center gap-4">
                 <button
@@ -263,12 +264,12 @@ export default function VinePage() {
               </div>
             </div>
 
-            <a
+            <Link
               href="/"
               className="inline-block px-6 py-3 bg-blue-600 text-white rounded font-semibold hover:bg-blue-700 transition"
             >
               {t("back")}
-            </a>
+            </Link>
           </div>
         </section>
 
