@@ -53,8 +53,8 @@ const content: Record<string, { en: string; es: string }> = {
     es: "Adoración",
   },
   vine: {
-    en: "Vine (Tutoring)",
-    es: "Vine (Tutoría)",
+    en: "Vine",
+    es: "Vine",
   },
   ourMission: {
     en: "Our Mission",
@@ -180,7 +180,7 @@ export default function Home() {
               {t("ministries")}
             </h2>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {/* Children's Ministry */}
               <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
                 <div
@@ -202,27 +202,11 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Worship */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
-                <div
-                  className="h-48 bg-cover bg-center"
-                  style={{
-                    backgroundImage:
-                      "url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&h=400&fit=crop')",
-                  }}
-                ></div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3">{t("worship")}</h3>
-                  <p className="text-gray-600">
-                    {language === "en"
-                      ? "Experience authentic worship as we gather to sing, pray, and celebrate God's faithfulness together as a community."
-                      : "Experimenta adoración auténtica mientras nos reunimos para cantar, orar y celebrar la fidelidad de Dios juntos."}
-                  </p>
-                </div>
-              </div>
-
-              {/* Vine Tutoring */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+              {/* Vine */}
+              <a
+                href="/vine"
+                className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition cursor-pointer block"
+              >
                 <div
                   className="h-48 bg-cover bg-center"
                   style={{
@@ -234,11 +218,11 @@ export default function Home() {
                   <h3 className="text-xl font-bold mb-3">{t("vine")}</h3>
                   <p className="text-gray-600">
                     {language === "en"
-                      ? "Vine provides academic tutoring and mentorship to help students succeed and reach their full potential."
-                      : "Vine proporciona tutoría académica y mentoría para ayudar a los estudiantes a tener éxito y alcanzar su máximo potencial."}
+                      ? "A tutoring program serving the local and migrant communities, helping students develop English language skills and academic success."
+                      : "Un programa de tutoría que sirve a las comunidades locales y migrantes, ayudando a los estudiantes a desarrollar habilidades en inglés y éxito académico."}
                   </p>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </section>
