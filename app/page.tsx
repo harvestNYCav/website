@@ -80,9 +80,8 @@ export default function Home() {
   };
 
   return (
-    <html lang={language} suppressHydrationWarning>
-      <body className="bg-white text-gray-900">
-        {/* Navigation */}
+    <>
+      {/* Navigation */}
         <nav className="sticky top-0 z-50 bg-white shadow-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
@@ -390,7 +389,6 @@ export default function Home() {
             </div>
           </div>
         </footer>
-      </body>
-    </html>
+    </>
   );
 }
