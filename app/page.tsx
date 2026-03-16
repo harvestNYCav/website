@@ -87,7 +87,7 @@ export default function Home() {
   };
 
   return (
-    <html lang={language}>
+    <html lang={language} suppressHydrationWarning>
       <body className="bg-white text-gray-900">
         {/* Navigation */}
         <nav className="sticky top-0 z-50 bg-white shadow-sm">
