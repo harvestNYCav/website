@@ -140,7 +140,7 @@ export default function Home() {
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 max-w-2xl">
               <p className="text-lg md:text-xl mb-4">{t("serviceTime")}</p>
               <a
-                href="https://www.youtube.com/@harvestinthecity"
+                href="https://www.youtube.com/@harvestinthecity/streams"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded text-sm font-semibold transition"
@@ -305,7 +305,7 @@ export default function Home() {
                 {t("give")}
               </a>
               <a
-                href="https://www.youtube.com/@harvestinthecity"
+                href="https://www.youtube.com/@harvestinthecity/streams"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 border-2 border-blue-600 text-blue-600 rounded font-semibold hover:bg-blue-50 transition"
@@ -361,7 +361,7 @@ export default function Home() {
                 </h4>
                 <div className="flex gap-4 text-gray-400">
                   <a
-                    href="https://www.youtube.com/@harvestinthecity"
+                    href="https://www.youtube.com/@harvestinthecity/streams"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-white"
