@@ -12,7 +12,7 @@ const vineContent = {
   },
   subtitle: {
     en: "Academic Tutoring & Community Outreach",
-    es: "Tutoría Académica y Alcance Comunitario",
+    es: "Tutoría académica y alcance comunitario",
   },
   aboutTitle: {
     en: "About Vine",
@@ -20,7 +20,7 @@ const vineContent = {
   },
   aboutDesc: {
     en: "Vine is a tutoring program run by Harvest Ministry as part of our outreach and community service. We provide English language instruction to migrant communities and academic tutoring support to local students, helping all participants develop strong skills and reach their full potential.",
-    es: "Vine es un programa de tutoría dirigido por el Ministerio Harvest como parte de nuestro alcance y servicio comunitario. Proporcionamos instrucción en idioma inglés a comunidades migrantes y apoyo de tutoría académica a estudiantes locales, ayudando a todos los participantes a desarrollar habilidades sólidas y alcanzar su máximo potencial.",
+    es: "Vine es un programa de tutoría dirigido por el Ministerio Harvest como parte de nuestro alcance y servicio comunitario. proporcionamos tutorías enfocadas en el aprendizaje del  ingles como segunda lengua para todas las comunidades migrantes y apoyo de tutoría académica a estudiantes locales, ayudando a todos los participantes a desarrollar habilidades sólidas y alcanzar su máximo potencial",
   },
   programDetails: {
     en: "Program Details",
@@ -60,7 +60,7 @@ const vineContent = {
   },
   englishDesc: {
     en: "For our migrant community partners, we provide structured English instruction focusing on reading, writing, and speaking skills using beginner-friendly materials and resources.",
-    es: "Para nuestros socios de la comunidad migrante, proporcionamos instrucción en inglés estructurada enfocada en habilidades de lectura, escritura y expresión oral utilizando materiales amigables para principiantes.",
+    es: "Para toda nuestra comunidad migrante, proporcionamos instrucción en inglés estructurada enfocada en habilidades de lectura, escritura y expresión oral utilizando materiales flexibles y de facil uso  para principiantes.",
   },
   academicTutoring: {
     en: "Academic Tutoring",
@@ -68,7 +68,7 @@ const vineContent = {
   },
   academicDesc: {
     en: "Local students receive personalized tutoring support in school subjects with mentors dedicated to helping them succeed academically and develop confidence in their learning.",
-    es: "Los estudiantes locales reciben apoyo de tutoría personalizado en materias escolares con mentores dedicados a ayudarlos a tener éxito académico y desarrollar confianza en su aprendizaje.",
+    es: "Los estudiantes locales reciben apoyo de tutoría personalizada en materias escolares con mentores dedicados a ayudarlos a obtener éxito académico y desarrollar confianza en su aprendizaje.",
   },
   mentorship: {
     en: "Mentorship",
