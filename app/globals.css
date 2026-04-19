@@ -131,6 +131,12 @@ a:hover {
   display: block;
 }
 
+@media (max-width: 767px) {
+  .hero-img {
+    height: 300px;
+  }
+}
+
 @media (min-width: 768px) {
   .hero-img {
     height: 409px;
@@ -183,6 +189,56 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
+}
+
+@media (max-width: 767px) {
+  .nav-inner {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 16px 0;
+    row-gap: 0;
+  }
+
+  .nav-logo {
+    font-size: 14px;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    padding: 8px 0 10px;
+    gap: 4px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+  }
+
+  .lang-btn {
+    font-size: 13px;
+    padding: 4px 10px;
+  }
+
+  .intro-section {
+    padding: 36px 20px;
+  }
+
+  .intro-text {
+    line-height: 1.8;
+  }
+
+  .contact-section {
+    padding: 32px 20px 60px;
+  }
+
+  .contact-heading {
+    margin-bottom: 20px;
+  }
+
+  .contact-list {
+    margin-bottom: 28px;
+  }
 }
 
 @media (max-width: 768px) {
