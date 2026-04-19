@@ -164,7 +164,7 @@ a:hover {
 .intro-text {
   font-size: clamp(18.7px, 2.125vw, 29.75px);
   font-weight: 200;
-  line-height: 60px;
+  line-height: 48px;
   color: #000;
   margin: 0 auto;
   max-width: 1140px;
@@ -207,14 +207,14 @@ a:hover {
   margin-bottom: 40px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12.8px;
 }
 
 .contact-line {
   font-size: clamp(15.3px, 1.53vw, 23.8px);
   text-decoration: underline;
   color: #000;
-  line-height: 1.4;
+  line-height: 1.12;
 }
 
 .contact-name {
