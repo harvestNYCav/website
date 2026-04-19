@@ -5,14 +5,75 @@ import Link from "next/link";
 
 type Language = "en" | "es";
 
+const translations = {
+  announcement: {
+    en: "SOME SORT OF ANNOUNCEMENT HERE",
+    es: "ALGÚN TIPO DE ANUNCIO AQUÍ",
+  },
+  aboutUs: {
+    en: "ABOUT US",
+    es: "ACERCA DE NOSOTROS",
+  },
+  ministries: {
+    en: "MINISTRIES",
+    es: "MINISTERIOS",
+  },
+  getInvolved: {
+    en: "GET INVOLVED",
+    es: "INVOLÚCRATE",
+  },
+  connect: {
+    en: "CONNECT",
+    es: "CONECTAR",
+  },
+  heroTitle: {
+    en: "CONNECT WITH US",
+    es: "CONECTA CON NOSOTROS",
+  },
+  introText: {
+    en: "We'd love to get to know you!\nFor more information, blahblahb blah xyz\nxyz xyz xyz lah blah",
+    es: "¡Nos encantaría conocerte!\nPara más información, blahblahb blah xyz\nxyz xyz xyz lah blah",
+  },
+  harvest: {
+    en: "HARVEST",
+    es: "HARVEST",
+  },
+  vineTutoring: {
+    en: "VINE TUTORING",
+    es: "VINE TUTORÍA",
+  },
+  aldoWiloto: {
+    en: "Aldo Wiloto:",
+    es: "Aldo Wiloto:",
+  },
+  rachelGuen: {
+    en: "Rachel Guen:",
+    es: "Rachel Guen:",
+  },
+  connectBtn: {
+    en: "CONNECT",
+    es: "CONECTAR",
+  },
+  harvestNyc: {
+    en: "HARVEST NYC",
+    es: "HARVEST NYC",
+  },
+};
+
 export default function ConnectPage() {
   const [language, setLanguage] = useState<Language>("en");
+
+  const t = (key: keyof typeof translations): string => {
+    return translations[key][language];
+  };
+
+  const introLines = t("introText").split("\n");
 
   return (
     <>
       {/* Announcement Banner */}
       <div className="announcement-bar">
-        SOME SORT OF ANNOUNCEMENT HERE
+        {t("announcement")}
       </div>
 
       {/* Navigation */}
@@ -24,16 +85,16 @@ export default function ConnectPage() {
 
           <div className="nav-links">
             <Link href="/about" className="nav-link">
-              ABOUT US
+              {t("aboutUs")}
             </Link>
             <Link href="/#ministries" className="nav-link">
-              MINISTRIES
+              {t("ministries")}
             </Link>
             <Link href="/#involved" className="nav-link">
-              GET INVOLVED
+              {t("getInvolved")}
             </Link>
             <Link href="/connect" className="nav-link nav-link--active">
-              CONNECT
+              {t("connect")}
             </Link>
           </div>
 
@@ -55,16 +116,16 @@ export default function ConnectPage() {
           draggable="false"
         />
         <div className="hero-overlay">
-          <h1 className="hero-title">CONNECT WITH US</h1>
+          <h1 className="hero-title">{t("heroTitle")}</h1>
         </div>
       </div>
 
       {/* Intro Section */}
       <section className="intro-section">
         <p className="intro-text">
-          We&apos;d love to get to know you!<br />
-          For more information, blahblahb blah xyz<br />
-          xyz xyz xyz lah blah
+          {introLines[0]}<br />
+          {introLines[1]}<br />
+          {introLines[2]}
         </p>
       </section>
 
@@ -74,42 +135,42 @@ export default function ConnectPage() {
 
           {/* Harvest */}
           <div className="contact-column">
-            <h3 className="contact-heading">HARVEST</h3>
+            <h3 className="contact-heading">{t("harvest")}</h3>
             <div className="contact-list">
               <p className="contact-line">
-                <span className="contact-name">Aldo Wiloto:</span>{" "}
+                <span className="contact-name">{t("aldoWiloto")}</span>{" "}
                 <a href="mailto:aldowiloto@gmail.com" className="contact-email">
                   aldowiloto@gmail.com
                 </a>
               </p>
               <p className="contact-line">
-                <span className="contact-name">Rachel Guen:</span>{" "}
+                <span className="contact-name">{t("rachelGuen")}</span>{" "}
                 <a href="mailto:rguen97@gmail.com" className="contact-email">
                   rguen97@gmail.com
                 </a>
               </p>
             </div>
-            <button className="connect-btn">CONNECT</button>
+            <button className="connect-btn">{t("connectBtn")}</button>
           </div>
 
           {/* Vine Tutoring */}
           <div className="contact-column">
-            <h3 className="contact-heading">VINE TUTORING</h3>
+            <h3 className="contact-heading">{t("vineTutoring")}</h3>
             <div className="contact-list">
               <p className="contact-line">
-                <span className="contact-name">Aldo Wiloto:</span>{" "}
+                <span className="contact-name">{t("aldoWiloto")}</span>{" "}
                 <a href="mailto:aldowiloto@gmail.com" className="contact-email">
                   aldowiloto@gmail.com
                 </a>
               </p>
               <p className="contact-line">
-                <span className="contact-name">Rachel Guen:</span>{" "}
+                <span className="contact-name">{t("rachelGuen")}</span>{" "}
                 <a href="mailto:rguen97@gmail.com" className="contact-email">
                   rguen97@gmail.com
                 </a>
               </p>
             </div>
-            <button className="connect-btn">CONNECT</button>
+            <button className="connect-btn">{t("connectBtn")}</button>
           </div>
 
         </div>
@@ -117,7 +178,7 @@ export default function ConnectPage() {
 
       {/* Footer */}
       <footer className="site-footer">
-        <h3 className="footer-title">HARVEST NYC</h3>
+        <h3 className="footer-title">{t("harvestNyc")}</h3>
         <div className="footer-icons">
           <a href="https://www.youtube.com/@harvestinthecity" target="_blank" rel="noopener noreferrer">
             <img
