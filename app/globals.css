@@ -170,6 +170,7 @@ a:hover {
 /* ── Contact ── */
 .contact-section {
   padding: 48px 24px 80px;
+  background: #fff;
 }
 
 .contact-grid {
