@@ -110,6 +110,11 @@ export default function VinePage() {
 
   return (
     <>
+      {/* Announcement Banner */}
+      <div className="bg-gray-200 text-gray-800 text-sm py-2 text-center">
+        SOME SORT OF ANNOUNCEMENT HERE
+      </div>
+
       {/* Navigation */}
         <nav className="sticky top-0 z-50 bg-white shadow-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,12 +126,27 @@ export default function VinePage() {
                 </span>
               </Link>
 
+              <div className="hidden md:flex items-center gap-8">
+                <Link href="/about" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
+                  About Us
+                </Link>
+                <Link href="/#ministries" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
+                  Ministries
+                </Link>
+                <Link href="/#involved" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
+                  Get Involved
+                </Link>
+                <Link href="/connect" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
+                  Connect
+                </Link>
+              </div>
+
               <div className="flex items-center gap-4">
                 <button
                   onClick={() => setLanguage(language === "en" ? "es" : "en")}
-                  className="px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-700"
+                  className="px-3 py-1 text-sm border border-gray-800 text-gray-800 rounded hover:bg-gray-100"
                 >
-                  {language === "en" ? "ES" : "EN"}
+                  {language === "en" ? "ESPAÑOL" : "ENGLISH"}
                 </button>
               </div>
             </div>
@@ -246,7 +266,7 @@ export default function VinePage() {
                   <h4 className="font-bold mb-2">Aldo Wiloto</h4>
                   <a
                     href="mailto:aldowiloto@gmail.com"
-                    className="text-blue-600 hover:underline"
+                    className="text-green-700 hover:underline"
                   >
                     aldowiloto@gmail.com
                   </a>
@@ -255,7 +275,7 @@ export default function VinePage() {
                   <h4 className="font-bold mb-2">Rachel Guen</h4>
                   <a
                     href="mailto:rguen97@gmail.com"
-                    className="text-blue-600 hover:underline"
+                    className="text-green-700 hover:underline"
                   >
                     rguen97@gmail.com
                   </a>
@@ -265,7 +285,7 @@ export default function VinePage() {
 
             <Link
               href="/"
-              className="inline-block px-6 py-3 bg-blue-600 text-white rounded font-semibold hover:bg-blue-700 transition"
+              className="inline-block px-6 py-3 bg-black text-white rounded font-semibold hover:bg-gray-900 transition uppercase"
             >
               {t("back")}
             </Link>
@@ -273,13 +293,33 @@ export default function VinePage() {
         </section>
 
         {/* Footer */}
-        <footer className="bg-gray-900 text-white py-12 px-4">
-          <div className="max-w-6xl mx-auto text-center text-gray-400 text-sm">
-            <p>
-              {language === "en"
-                ? "© 2026 Harvest Ministry. Part of Remnant Church NYC."
-                : "© 2026 Ministerio Harvest. Parte de Iglesia Remanente NYC."}
-            </p>
+        <footer className="bg-gray-100 py-12 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h3 className="text-center text-2xl font-bold mb-8 underline text-black uppercase">HARVEST NYC</h3>
+            <div className="flex justify-center items-center gap-12 mb-8">
+              <a href="https://www.youtube.com/@harvestinthecity" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Ffc234dd74fca47339292514ea22e61c2?format=webp&width=100"
+                  alt="YouTube"
+                  className="w-16 h-16"
+                  draggable="false"
+                />
+              </a>
+              <a href="mailto:harvestinthecitynyc@gmail.com">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2F4e33951a443c48028a4f03ea89d1e34c?format=webp&width=100"
+                  alt="Email"
+                  className="w-16 h-16"
+                  draggable="false"
+                />
+              </a>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fd2a5926a2a294ef4a6be01d573e936d5?format=webp&width=200"
+                alt="Remnant Church"
+                className="h-16"
+                draggable="false"
+              />
+            </div>
           </div>
         </footer>
     </>

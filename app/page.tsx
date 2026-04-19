@@ -81,6 +81,11 @@ export default function Home() {
 
   return (
     <>
+      {/* Announcement Banner */}
+      <div className="bg-gray-200 text-gray-800 text-sm py-2 text-center">
+        SOME SORT OF ANNOUNCEMENT HERE
+      </div>
+
       {/* Navigation */}
         <nav className="sticky top-0 z-50 bg-white shadow-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -93,16 +98,16 @@ export default function Home() {
               </div>
 
               <div className="hidden md:flex items-center gap-8">
-                <a href="#about" className="text-sm text-gray-700 hover:text-blue-600">
+                <a href="/about" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
                   {t("aboutUs")}
                 </a>
-                <a href="#ministries" className="text-sm text-gray-700 hover:text-blue-600">
+                <a href="#ministries" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
                   {t("ministries")}
                 </a>
-                <a href="#involved" className="text-sm text-gray-700 hover:text-blue-600">
+                <a href="#involved" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
                   {t("getInvolved")}
                 </a>
-                <a href="#contact" className="text-sm text-gray-700 hover:text-blue-600">
+                <a href="/connect" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
                   {t("contact")}
                 </a>
               </div>
@@ -110,9 +115,9 @@ export default function Home() {
               <div className="flex items-center gap-4">
                 <button
                   onClick={() => setLanguage(language === "en" ? "es" : "en")}
-                  className="px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-700"
+                  className="px-3 py-1 text-sm border border-gray-800 text-gray-800 rounded hover:bg-gray-100"
                 >
-                  {language === "en" ? "ES" : "EN"}
+                  {language === "en" ? "ESPAÑOL" : "ENGLISH"}
                 </button>
               </div>
             </div>
@@ -140,13 +145,13 @@ export default function Home() {
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 max-w-2xl">
               <p className="text-lg md:text-xl mb-4">{t("serviceTime")}</p>
               <a
-                href="https://www.youtube.com/@harvestinthecity/streams"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded text-sm font-semibold transition"
-              >
-                {t("liveStream")}
-              </a>
+              href="https://www.youtube.com/@harvestinthecity/streams"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-2 bg-black hover:bg-gray-900 rounded text-sm font-semibold transition text-white uppercase"
+            >
+              {t("liveStream")}
+            </a>
             </div>
           </div>
         </section>
@@ -245,13 +250,13 @@ export default function Home() {
                     : "¿Preguntas? ¿Quieres involucrarte? ¡Nos encantaría saber de ti!"}
                 </p>
                 <a
-                  href="https://wa.me/19175977498"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-6 py-3 bg-green-500 text-white rounded font-semibold hover:bg-green-600 transition"
-                >
-                  {language === "en" ? "Message on WhatsApp" : "Mensaje por WhatsApp"}
-                </a>
+                href="https://wa.me/19175977498"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-6 py-3 bg-black text-white rounded font-semibold hover:bg-gray-900 transition uppercase"
+              >
+                {language === "en" ? "Message on WhatsApp" : "Mensaje por WhatsApp"}
+              </a>
               </div>
             </div>
           </div>
@@ -268,11 +273,11 @@ export default function Home() {
                   {language === "en" ? "Phone" : "Teléfono"}
                 </h3>
                 <a
-                  href="tel:+19175977498"
-                  className="text-blue-600 hover:underline"
-                >
-                  +1 (917) 597-7498
-                </a>
+                href="tel:+19175977498"
+                className="text-green-700 hover:underline"
+              >
+                +1 (917) 597-7498
+              </a>
               </div>
 
               <div>
@@ -281,7 +286,7 @@ export default function Home() {
                 </h3>
                 <a
                   href="mailto:harvestinthecitynyc@gmail.com"
-                  className="text-blue-600 hover:underline"
+                  className="text-green-700 hover:underline"
                 >
                   harvestinthecitynyc@gmail.com
                 </a>
@@ -300,7 +305,7 @@ export default function Home() {
                 href="https://app.easytithe.com/App/Giving/remnantchurch"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-blue-600 text-white rounded font-semibold hover:bg-blue-700 transition"
+                className="px-6 py-3 bg-black text-white rounded font-semibold hover:bg-gray-900 transition uppercase"
               >
                 {t("give")}
               </a>
@@ -308,7 +313,7 @@ export default function Home() {
                 href="https://www.youtube.com/@harvestinthecity/streams"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 border-2 border-blue-600 text-blue-600 rounded font-semibold hover:bg-blue-50 transition"
+                className="px-6 py-3 border-2 border-black text-black rounded font-semibold hover:bg-gray-100 transition uppercase"
               >
                 {language === "en" ? "YouTube" : "YouTube"}
               </a>
@@ -317,75 +322,32 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="bg-gray-900 text-white py-12 px-4">
+        <footer className="bg-gray-100 py-12 px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              <div>
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-6 h-6 bg-blue-500 rounded"></div>
-                  <span className="text-sm font-semibold">Harvest</span>
-                </div>
-                <p className="text-gray-400 text-sm">
-                  {language === "en"
-                    ? "Part of Remnant Church NYC"
-                    : "Parte de Iglesia Remanente NYC"}
-                </p>
-              </div>
-
-              <div>
-                <h4 className="font-bold mb-4">
-                  {language === "en" ? "Quick Links" : "Enlaces Rápidos"}
-                </h4>
-                <ul className="space-y-2 text-gray-400 text-sm">
-                  <li>
-                    <a href="#about" className="hover:text-white">
-                      {t("aboutUs")}
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#ministries" className="hover:text-white">
-                      {t("ministries")}
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#contact" className="hover:text-white">
-                      {t("contact")}
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="font-bold mb-4">
-                  {language === "en" ? "Follow Us" : "Síguenos"}
-                </h4>
-                <div className="flex gap-4 text-gray-400">
-                  <a
-                    href="https://www.youtube.com/@harvestinthecity/streams"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-white"
-                  >
-                    YouTube
-                  </a>
-                  <a
-                    href="https://wa.me/19175977498"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-white"
-                  >
-                    WhatsApp
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-              <p>
-                {language === "en"
-                  ? "© 2026 Harvest Ministry. Part of Remnant Church NYC."
-                  : "© 2026 Ministerio Harvest. Parte de Iglesia Remanente NYC."}
-              </p>
+            <h3 className="text-center text-2xl font-bold mb-8 underline text-black uppercase">HARVEST NYC</h3>
+            <div className="flex justify-center items-center gap-12">
+              <a href="https://www.youtube.com/@harvestinthecity" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Ffc234dd74fca47339292514ea22e61c2?format=webp&width=100"
+                  alt="YouTube"
+                  className="w-16 h-16"
+                  draggable="false"
+                />
+              </a>
+              <a href="mailto:harvestinthecitynyc@gmail.com">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2F4e33951a443c48028a4f03ea89d1e34c?format=webp&width=100"
+                  alt="Email"
+                  className="w-16 h-16"
+                  draggable="false"
+                />
+              </a>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fd2a5926a2a294ef4a6be01d573e936d5?format=webp&width=200"
+                alt="Remnant Church"
+                className="h-16"
+                draggable="false"
+              />
             </div>
           </div>
         </footer>

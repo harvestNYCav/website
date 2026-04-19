@@ -1,0 +1,209 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+
+type Language = "en" | "es";
+
+const translations = {
+  announcement: {
+    en: "SOME SORT OF ANNOUNCEMENT HERE",
+    es: "ALGÚN TIPO DE ANUNCIO AQUÍ",
+  },
+  aboutUs: {
+    en: "ABOUT US",
+    es: "ACERCA DE NOSOTROS",
+  },
+  ministries: {
+    en: "MINISTRIES",
+    es: "MINISTERIOS",
+  },
+  getInvolved: {
+    en: "GET INVOLVED",
+    es: "INVOLÚCRATE",
+  },
+  connect: {
+    en: "CONNECT",
+    es: "CONECTAR",
+  },
+  heroTitle: {
+    en: "CONNECT WITH US",
+    es: "CONECTA CON NOSOTROS",
+  },
+  introText: {
+    en: "We'd love to get to know you!\nFor more information, blahblahb blah xyz\nxyz xyz xyz lah blah",
+    es: "¡Nos encantaría conocerte!\nPara más información, blahblahb blah xyz\nxyz xyz xyz lah blah",
+  },
+  harvest: {
+    en: "HARVEST",
+    es: "HARVEST",
+  },
+  vineTutoring: {
+    en: "VINE TUTORING",
+    es: "VINE TUTORÍA",
+  },
+  aldoWiloto: {
+    en: "Aldo Wiloto:",
+    es: "Aldo Wiloto:",
+  },
+  rachelGuen: {
+    en: "Rachel Guen:",
+    es: "Rachel Guen:",
+  },
+  connectBtn: {
+    en: "CONNECT",
+    es: "CONECTAR",
+  },
+  harvestNyc: {
+    en: "HARVEST NYC",
+    es: "HARVEST NYC",
+  },
+};
+
+export default function ConnectPage() {
+  const [language, setLanguage] = useState<Language>("en");
+
+  const t = (key: keyof typeof translations): string => {
+    return translations[key][language];
+  };
+
+  const introLines = t("introText").split("\n");
+
+  return (
+    <>
+      {/* Announcement Banner */}
+      <div className="announcement-bar">
+        {t("announcement")}
+      </div>
+
+      {/* Navigation */}
+      <nav className="site-nav">
+        <div className="nav-inner">
+          <Link href="/" className="nav-logo">
+            HARVEST LOGO
+          </Link>
+
+          <div className="nav-links">
+            <Link href="/about" className="nav-link">
+              {t("aboutUs")}
+            </Link>
+            <Link href="/#ministries" className="nav-link">
+              {t("ministries")}
+            </Link>
+            <Link href="/#involved" className="nav-link">
+              {t("getInvolved")}
+            </Link>
+            <Link href="/connect" className="nav-link nav-link--active">
+              {t("connect")}
+            </Link>
+          </div>
+
+          <button
+            onClick={() => setLanguage(language === "en" ? "es" : "en")}
+            className="lang-btn"
+          >
+            {language === "en" ? "ESPAÑOL" : "ENGLISH"}
+          </button>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <div className="hero-wrapper">
+        <img
+          src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=2926"
+          alt=""
+          className="hero-img"
+          draggable="false"
+        />
+        <div className="hero-overlay">
+          <h1 className="hero-title">{t("heroTitle")}</h1>
+        </div>
+      </div>
+
+      {/* Intro Section */}
+      <section className="intro-section">
+        <p className="intro-text">
+          {introLines[0]}<br />
+          {introLines[1]}<br />
+          {introLines[2]}
+        </p>
+      </section>
+
+      {/* Contact Sections */}
+      <section className="contact-section">
+        <div className="contact-grid">
+
+          {/* Harvest */}
+          <div className="contact-column">
+            <h3 className="contact-heading">{t("harvest")}</h3>
+            <div className="contact-list">
+              <p className="contact-line">
+                <span className="contact-name">{t("aldoWiloto")}</span>{" "}
+                <a href="mailto:aldowiloto@gmail.com" className="contact-email">
+                  aldowiloto@gmail.com
+                </a>
+              </p>
+              <p className="contact-line">
+                <span className="contact-name">{t("rachelGuen")}</span>{" "}
+                <a href="mailto:rguen97@gmail.com" className="contact-email">
+                  rguen97@gmail.com
+                </a>
+              </p>
+            </div>
+            <button className="connect-btn">{t("connectBtn")}</button>
+          </div>
+
+          {/* Vine Tutoring */}
+          <div className="contact-column">
+            <h3 className="contact-heading">{t("vineTutoring")}</h3>
+            <div className="contact-list">
+              <p className="contact-line">
+                <span className="contact-name">{t("aldoWiloto")}</span>{" "}
+                <a href="mailto:aldowiloto@gmail.com" className="contact-email">
+                  aldowiloto@gmail.com
+                </a>
+              </p>
+              <p className="contact-line">
+                <span className="contact-name">{t("rachelGuen")}</span>{" "}
+                <a href="mailto:rguen97@gmail.com" className="contact-email">
+                  rguen97@gmail.com
+                </a>
+              </p>
+            </div>
+            <button className="connect-btn">{t("connectBtn")}</button>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="site-footer">
+        <h3 className="footer-title">{t("harvestNyc")}</h3>
+        <div className="footer-icons">
+          <a href="https://www.youtube.com/@harvestinthecity" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/62d640b0b7413ecd1eb34c8d2a6733a1699cfafb?width=180"
+              alt="YouTube"
+              className="footer-icon"
+              draggable="false"
+            />
+          </a>
+          <a href="mailto:harvestinthecitynyc@gmail.com">
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/e94bdc79b9e6397731ea714e81845699cb463ee2?width=170"
+              alt="Email"
+              className="footer-icon"
+              draggable="false"
+            />
+          </a>
+          <img
+            src="https://api.builder.io/api/v1/image/assets/TEMP/d4de61100a8688fad8f49f3af86899013ee08870?width=224"
+            alt="Remnant Church"
+            className="footer-icon footer-icon--wide"
+            draggable="false"
+          />
+        </div>
+      </footer>
+    </>
+  );
+}
