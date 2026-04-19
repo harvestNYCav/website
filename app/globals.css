@@ -24,9 +24,18 @@
   font-family: 'Anek Telugu', system-ui, -apple-system, sans-serif !important;
 }
 
+html {
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
 body {
-  background: var(--background);
+  background: white !important;
   color: var(--foreground);
+  -ms-overflow-style: none;
 }
 
 a {
@@ -43,6 +52,15 @@ a:hover {
 }
 
 /* ── Shared layout ── */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .announcement-bar {
   background: rgba(242, 242, 242, 0.87);
   text-align: center;
@@ -50,6 +68,16 @@ a:hover {
   font-size: 17px;
   font-weight: 600;
   color: #000;
+  animation: fadeIn 0.8s ease-in-out 0s forwards;
+  opacity: 0;
+}
+
+@media (max-width: 767px) {
+  .announcement-bar {
+    padding: 8px 16px;
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
 }
 
 .site-nav {
@@ -58,6 +86,8 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 50;
+  animation: fadeIn 0.8s ease-in-out 0.2s forwards;
+  opacity: 0;
 }
 
 .nav-inner {
@@ -71,17 +101,18 @@ a:hover {
 }
 
 .nav-logo {
-  font-size: 17px;
-  font-weight: 700;
+  font-size: clamp(16.8px, 3vw, 21.6px);
+  font-weight: 900;
   color: #000;
   text-decoration: none;
-  white-space: nowrap;
+  line-height: 0.88;
+  max-width: 100px;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 42px;
 }
 
 .nav-link {
@@ -122,6 +153,8 @@ a:hover {
   width: 100%;
   overflow: hidden;
   background: #fff;
+  animation: fadeIn 0.8s ease-in-out 0.4s forwards;
+  opacity: 0;
 }
 
 .hero-img {
@@ -129,6 +162,12 @@ a:hover {
   height: 400px;
   object-fit: cover;
   display: block;
+}
+
+@media (max-width: 767px) {
+  .hero-img {
+    height: 300px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -152,7 +191,16 @@ a:hover {
   color: #000;
   text-align: center;
   line-height: 1;
-  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.8);
+  animation: fadeIn 0.8s ease-in-out 1.2s forwards;
+  opacity: 0;
+}
+
+@media (max-width: 767px) {
+  .hero-title {
+    font-size: clamp(37px, 5.2vw, 62px);
+    animation: fadeIn 0.8s ease-in-out 1.2s forwards;
+    opacity: 0;
+  }
 }
 
 /* ── Intro ── */
@@ -160,6 +208,8 @@ a:hover {
   padding: 64px 24px;
   text-align: center;
   background: #fff;
+  animation: fadeIn 0.8s ease-in-out 0.6s forwards;
+  opacity: 0;
 }
 
 .intro-text {
@@ -169,12 +219,16 @@ a:hover {
   color: #000;
   margin: 0 auto;
   max-width: 1140px;
+  animation: fadeIn 0.8s ease-in-out 0.6s forwards;
+  opacity: 0;
 }
 
 /* ── Contact ── */
 .contact-section {
   padding: 48px 24px 80px;
   background: #fff;
+  animation: fadeIn 0.8s ease-in-out 0.8s forwards;
+  opacity: 0;
 }
 
 .contact-grid {
@@ -183,6 +237,62 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
+}
+
+@media (max-width: 767px) {
+  .site-nav {
+    margin-top: 12px;
+    top: 12px !important;
+  }
+
+  .nav-inner {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 16px 0;
+    row-gap: 20px;
+  }
+
+  .nav-logo {
+    font-size: 18.7px;
+    max-width: 96px;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    padding: 8px 0 10px;
+    gap: 4px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+  }
+
+  .lang-btn {
+    font-size: 13px;
+    padding: 4px 10px;
+  }
+
+  .intro-section {
+    padding: 36px 20px 20px;
+  }
+
+  .intro-text {
+    line-height: 1.8;
+  }
+
+  .contact-section {
+    padding: 12px 20px 60px;
+  }
+
+  .contact-heading {
+    margin-bottom: 20px;
+  }
+
+  .contact-list {
+    margin-bottom: 28px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -202,6 +312,8 @@ a:hover {
   color: #2d8771;
   text-decoration: underline;
   margin-bottom: 32px;
+  animation: fadeIn 0.8s ease-in-out 0.8s forwards;
+  opacity: 0;
 }
 
 .contact-list {
@@ -213,9 +325,10 @@ a:hover {
 
 .contact-line {
   font-size: clamp(15.3px, 1.53vw, 23.8px);
-  text-decoration: underline;
   color: #000;
   line-height: 1.12;
+  animation: fadeIn 0.8s ease-in-out 0.9s forwards;
+  opacity: 0;
 }
 
 .contact-name {
@@ -246,6 +359,14 @@ a:hover {
   transition: background 0.2s;
 }
 
+@media (max-width: 767px) {
+  .connect-btn {
+    padding: 11px 36px;
+    font-size: 13px;
+    border-radius: 16px;
+  }
+}
+
 .connect-btn:hover {
   background: #f5f5f5;
 }
@@ -255,6 +376,8 @@ a:hover {
   padding: 60px 24px;
   text-align: center;
   background: #fff;
+  animation: fadeIn 0.8s ease-in-out 1s forwards;
+  opacity: 0;
 }
 
 .footer-title {
@@ -263,6 +386,15 @@ a:hover {
   text-decoration: underline;
   color: #000;
   margin-bottom: 17.92px;
+  animation: fadeIn 0.8s ease-in-out 1s forwards;
+  opacity: 0;
+}
+
+@media (max-width: 767px) {
+  .footer-title {
+    font-size: 19px;
+    margin-bottom: 13px;
+  }
 }
 
 .footer-icons {
@@ -271,6 +403,20 @@ a:hover {
   justify-content: center;
   gap: clamp(20px, 5vw, 33.6px);
   flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  .footer-icons {
+    gap: clamp(35px, 8.2vw, 49px) !important;
+  }
+
+  .footer-icon {
+    height: 29px;
+  }
+
+  .footer-icon--wide {
+    height: 26px;
+  }
 }
 
 @media (max-width: 768px) {

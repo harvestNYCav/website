@@ -1,11 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 type Language = "en" | "es";
 
 const translations = {
+  announcement1: {
+    en: "JOIN US FOR WORSHIP ON SUNDAYS AT 3:30PM",
+    es: "ÚNETE A NOSOTROS PARA ADORAR LOS DOMINGOS A LAS 3:30PM",
+  },
+  announcement2: {
+    en: "WELCOME TO HARVEST IN THE CITY",
+    es: "BIENVENIDO A HARVEST EN LA CIUDAD",
+  },
   announcement: {
     en: "SOME SORT OF ANNOUNCEMENT HERE",
     es: "ALGÚN TIPO DE ANUNCIO AQUÍ",
@@ -62,10 +70,20 @@ const translations = {
 
 export default function ConnectPage() {
   const [language, setLanguage] = useState<Language>("en");
+  const [announcementIndex, setAnnouncementIndex] = useState(0);
 
   const t = (key: keyof typeof translations): string => {
     return translations[key][language];
   };
+
+  const announcements = ["announcement1", "announcement2"] as const;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAnnouncementIndex((prev) => (prev + 1) % announcements.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   const introLines = t("introText").split("\n");
 
@@ -73,14 +91,14 @@ export default function ConnectPage() {
     <>
       {/* Announcement Banner */}
       <div className="announcement-bar">
-        {t("announcement")}
+        {t(announcements[announcementIndex])}
       </div>
 
       {/* Navigation */}
       <nav className="site-nav">
         <div className="nav-inner">
-          <Link href="/" className="nav-logo">
-            HARVEST LOGO
+          <Link href="/" className="nav-logo" id="HARVEST LOGO">
+            HARVEST<br />NYC
           </Link>
 
           <div className="nav-links">
@@ -89,9 +107,6 @@ export default function ConnectPage() {
             </Link>
             <Link href="/#ministries" className="nav-link">
               {t("ministries")}
-            </Link>
-            <Link href="/#involved" className="nav-link">
-              {t("getInvolved")}
             </Link>
             <Link href="/connect" className="nav-link nav-link--active">
               {t("connect")}
@@ -116,7 +131,7 @@ export default function ConnectPage() {
           draggable="false"
         />
         <div className="hero-overlay">
-          <h1 className="hero-title">{t("heroTitle")}</h1>
+          <h1 className="hero-title">CONNECT<br />WITH US</h1>
         </div>
       </div>
 
@@ -178,7 +193,7 @@ export default function ConnectPage() {
 
       {/* Footer */}
       <footer className="site-footer">
-        <h3 className="footer-title">{t("harvestNyc")}</h3>
+        <h3 className="footer-title" id="FOOTER HARVEST">{t("harvestNyc")}</h3>
         <div className="footer-icons">
           <a href="https://www.youtube.com/@harvestinthecity" target="_blank" rel="noopener noreferrer">
             <img
