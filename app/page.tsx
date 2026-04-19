@@ -322,75 +322,29 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="bg-gray-900 text-white py-12 px-4">
+        <footer className="bg-gray-100 py-12 px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              <div>
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-6 h-6 bg-blue-500 rounded"></div>
-                  <span className="text-sm font-semibold">Harvest</span>
-                </div>
-                <p className="text-gray-400 text-sm">
-                  {language === "en"
-                    ? "Part of Remnant Church NYC"
-                    : "Parte de Iglesia Remanente NYC"}
-                </p>
-              </div>
-
-              <div>
-                <h4 className="font-bold mb-4">
-                  {language === "en" ? "Quick Links" : "Enlaces Rápidos"}
-                </h4>
-                <ul className="space-y-2 text-gray-400 text-sm">
-                  <li>
-                    <a href="#about" className="hover:text-white">
-                      {t("aboutUs")}
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#ministries" className="hover:text-white">
-                      {t("ministries")}
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#contact" className="hover:text-white">
-                      {t("contact")}
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="font-bold mb-4">
-                  {language === "en" ? "Follow Us" : "Síguenos"}
-                </h4>
-                <div className="flex gap-4 text-gray-400">
-                  <a
-                    href="https://www.youtube.com/@harvestinthecity/streams"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-white"
-                  >
-                    YouTube
-                  </a>
-                  <a
-                    href="https://wa.me/19175977498"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-white"
-                  >
-                    WhatsApp
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-              <p>
-                {language === "en"
-                  ? "© 2026 Harvest Ministry. Part of Remnant Church NYC."
-                  : "© 2026 Ministerio Harvest. Parte de Iglesia Remanente NYC."}
-              </p>
+            <h3 className="text-center text-2xl font-bold mb-8 underline">HARVEST NYC</h3>
+            <div className="flex justify-center items-center gap-12">
+              <a href="https://www.youtube.com/@harvestinthecity" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Ffc234dd74fca47339292514ea22e61c2?format=webp&width=100"
+                  alt="YouTube"
+                  className="w-16 h-16"
+                />
+              </a>
+              <a href="mailto:harvestinthecitynyc@gmail.com">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2F4e33951a443c48028a4f03ea89d1e34c?format=webp&width=100"
+                  alt="Email"
+                  className="w-16 h-16"
+                />
+              </a>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fd2a5926a2a294ef4a6be01d573e936d5?format=webp&width=200"
+                alt="Remnant Church"
+                className="h-16"
+              />
             </div>
           </div>
         </footer>

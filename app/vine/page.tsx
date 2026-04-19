@@ -293,13 +293,30 @@ export default function VinePage() {
         </section>
 
         {/* Footer */}
-        <footer className="bg-gray-900 text-white py-12 px-4">
-          <div className="max-w-6xl mx-auto text-center text-gray-400 text-sm">
-            <p>
-              {language === "en"
-                ? "© 2026 Harvest Ministry. Part of Remnant Church NYC."
-                : "© 2026 Ministerio Harvest. Parte de Iglesia Remanente NYC."}
-            </p>
+        <footer className="bg-gray-100 py-12 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h3 className="text-center text-2xl font-bold mb-8 underline">HARVEST NYC</h3>
+            <div className="flex justify-center items-center gap-12 mb-8">
+              <a href="https://www.youtube.com/@harvestinthecity" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Ffc234dd74fca47339292514ea22e61c2?format=webp&width=100"
+                  alt="YouTube"
+                  className="w-16 h-16"
+                />
+              </a>
+              <a href="mailto:harvestinthecitynyc@gmail.com">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2F4e33951a443c48028a4f03ea89d1e34c?format=webp&width=100"
+                  alt="Email"
+                  className="w-16 h-16"
+                />
+              </a>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fd2a5926a2a294ef4a6be01d573e936d5?format=webp&width=200"
+                alt="Remnant Church"
+                className="h-16"
+              />
+            </div>
           </div>
         </footer>
     </>

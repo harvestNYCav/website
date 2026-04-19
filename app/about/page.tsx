@@ -167,27 +167,28 @@ export default function AboutPage() {
       {/* Footer */}
       <footer className="bg-gray-100 py-12 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="flex justify-center items-center gap-8 mb-8">
+          <h3 className="text-center text-2xl font-bold mb-8 underline">HARVEST NYC</h3>
+          <div className="flex justify-center items-center gap-12 mb-8">
             <a href="https://www.youtube.com/@harvestinthecity" target="_blank" rel="noopener noreferrer">
-              <div className="w-12 h-12 bg-gray-800 rounded flex items-center justify-center text-white">
-                ▶
-              </div>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Ffc234dd74fca47339292514ea22e61c2?format=webp&width=100"
+                alt="YouTube"
+                className="w-16 h-16"
+              />
             </a>
             <a href="mailto:harvestinthecitynyc@gmail.com">
-              <div className="w-12 h-12 bg-gray-800 rounded flex items-center justify-center text-white">
-                ✉
-              </div>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2F4e33951a443c48028a4f03ea89d1e34c?format=webp&width=100"
+                alt="Email"
+                className="w-16 h-16"
+              />
             </a>
-            <div className="flex items-center gap-2">
-              <span className="text-sm font-semibold">REMNANT</span>
-              <span className="text-sm">CHURCH</span>
-            </div>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fd2a5926a2a294ef4a6be01d573e936d5?format=webp&width=200"
+              alt="Remnant Church"
+              className="h-16"
+            />
           </div>
-          <p className="text-center text-gray-600 text-sm">
-            {language === "en"
-              ? "© 2026 Harvest NYC"
-              : "© 2026 Harvest NYC"}
-          </p>
         </div>
       </footer>
     </>
