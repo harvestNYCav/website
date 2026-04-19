@@ -216,8 +216,8 @@ a:hover {
 
 @media (max-width: 767px) {
   .site-nav {
-    margin-top: 10px;
-    top: 10px !important;
+    margin-top: 12px;
+    top: 12px !important;
   }
 
   .nav-inner {
