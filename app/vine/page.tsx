@@ -110,6 +110,11 @@ export default function VinePage() {
 
   return (
     <>
+      {/* Announcement Banner */}
+      <div className="bg-gray-200 text-gray-800 text-sm py-2 text-center">
+        SOME SORT OF ANNOUNCEMENT HERE
+      </div>
+
       {/* Navigation */}
         <nav className="sticky top-0 z-50 bg-white shadow-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,12 +126,27 @@ export default function VinePage() {
                 </span>
               </Link>
 
+              <div className="hidden md:flex items-center gap-8">
+                <Link href="/about" className="text-sm text-gray-700 hover:text-blue-600">
+                  About Us
+                </Link>
+                <a href="/#ministries" className="text-sm text-gray-700 hover:text-blue-600">
+                  Ministries
+                </a>
+                <a href="/#involved" className="text-sm text-gray-700 hover:text-blue-600">
+                  Get Involved
+                </a>
+                <Link href="/connect" className="text-sm text-gray-700 hover:text-blue-600">
+                  Connect
+                </Link>
+              </div>
+
               <div className="flex items-center gap-4">
                 <button
                   onClick={() => setLanguage(language === "en" ? "es" : "en")}
-                  className="px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-700"
+                  className="px-3 py-1 text-sm border border-gray-800 text-gray-800 rounded hover:bg-gray-100"
                 >
-                  {language === "en" ? "ES" : "EN"}
+                  {language === "en" ? "ESPAÑOL" : "ENGLISH"}
                 </button>
               </div>
             </div>
