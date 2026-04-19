@@ -261,15 +261,21 @@ a:hover {
   font-weight: 700;
   text-decoration: underline;
   color: #000;
-  margin-bottom: 32px;
+  margin-bottom: 25.6px;
 }
 
 .footer-icons {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 48px;
+  gap: clamp(20px, 5vw, 33.6px);
   flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .footer-icons {
+    gap: clamp(16px, 4vw, 24px);
+  }
 }
 
 .footer-icon {
