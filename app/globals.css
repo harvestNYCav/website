@@ -65,6 +65,7 @@ a:hover {
   .announcement-bar {
     padding: 7px 16px;
     font-size: 13px;
+    margin-bottom: 10px;
   }
 }
 
@@ -179,7 +180,7 @@ a:hover {
 
 @media (max-width: 767px) {
   .hero-title {
-    font-size: clamp(30px, 4.2vw, 50px);
+    font-size: clamp(37px, 5.2vw, 62px);
   }
 }
 
@@ -243,7 +244,7 @@ a:hover {
   }
 
   .intro-section {
-    padding: 36px 20px;
+    padding: 36px 20px 20px;
   }
 
   .intro-text {
@@ -251,7 +252,7 @@ a:hover {
   }
 
   .contact-section {
-    padding: 32px 20px 60px;
+    padding: 12px 20px 60px;
   }
 
   .contact-heading {
@@ -368,7 +369,7 @@ a:hover {
 
 @media (max-width: 767px) {
   .footer-icons {
-    gap: clamp(18px, 4.4vw, 26px);
+    gap: clamp(24px, 5.7vw, 34px);
   }
 
   .footer-icon {
