@@ -74,12 +74,12 @@ export default function AboutPage() {
               <Link href="/about" className="text-sm text-gray-700 hover:text-blue-600">
                 About Us
               </Link>
-              <a href="/#ministries" className="text-sm text-gray-700 hover:text-blue-600">
+              <Link href="/#ministries" className="text-sm text-gray-700 hover:text-blue-600">
                 Ministries
-              </a>
-              <a href="/#involved" className="text-sm text-gray-700 hover:text-blue-600">
+              </Link>
+              <Link href="/#involved" className="text-sm text-gray-700 hover:text-blue-600">
                 Get Involved
-              </a>
+              </Link>
               <Link href="/connect" className="text-sm text-gray-700 hover:text-blue-600">
                 Connect
               </Link>
