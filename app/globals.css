@@ -68,6 +68,8 @@ a:hover {
   font-size: 17px;
   font-weight: 600;
   color: #000;
+  animation: fadeIn 0.8s ease-in-out 0s forwards;
+  opacity: 0;
 }
 
 @media (max-width: 767px) {
@@ -84,6 +86,8 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 50;
+  animation: fadeIn 0.8s ease-in-out 0.2s forwards;
+  opacity: 0;
 }
 
 .nav-inner {
@@ -149,6 +153,8 @@ a:hover {
   width: 100%;
   overflow: hidden;
   background: #fff;
+  animation: fadeIn 0.8s ease-in-out 0.4s forwards;
+  opacity: 0;
 }
 
 .hero-img {
@@ -185,7 +191,8 @@ a:hover {
   color: #000;
   text-align: center;
   line-height: 1;
-  animation: fadeIn 0.8s ease-in-out;
+  animation: fadeIn 0.8s ease-in-out 0.4s forwards;
+  opacity: 0;
 }
 
 @media (max-width: 767px) {
@@ -199,6 +206,8 @@ a:hover {
   padding: 64px 24px;
   text-align: center;
   background: #fff;
+  animation: fadeIn 0.8s ease-in-out 0.6s forwards;
+  opacity: 0;
 }
 
 .intro-text {
@@ -208,13 +217,16 @@ a:hover {
   color: #000;
   margin: 0 auto;
   max-width: 1140px;
-  animation: fadeIn 0.8s ease-in-out;
+  animation: fadeIn 0.8s ease-in-out 0.6s forwards;
+  opacity: 0;
 }
 
 /* ── Contact ── */
 .contact-section {
   padding: 48px 24px 80px;
   background: #fff;
+  animation: fadeIn 0.8s ease-in-out 0.8s forwards;
+  opacity: 0;
 }
 
 .contact-grid {
@@ -298,7 +310,8 @@ a:hover {
   color: #2d8771;
   text-decoration: underline;
   margin-bottom: 32px;
-  animation: fadeIn 0.8s ease-in-out;
+  animation: fadeIn 0.8s ease-in-out 0.8s forwards;
+  opacity: 0;
 }
 
 .contact-list {
@@ -312,7 +325,8 @@ a:hover {
   font-size: clamp(15.3px, 1.53vw, 23.8px);
   color: #000;
   line-height: 1.12;
-  animation: fadeIn 0.8s ease-in-out;
+  animation: fadeIn 0.8s ease-in-out 0.9s forwards;
+  opacity: 0;
 }
 
 .contact-name {
@@ -360,6 +374,8 @@ a:hover {
   padding: 60px 24px;
   text-align: center;
   background: #fff;
+  animation: fadeIn 0.8s ease-in-out 1s forwards;
+  opacity: 0;
 }
 
 .footer-title {
@@ -368,7 +384,8 @@ a:hover {
   text-decoration: underline;
   color: #000;
   margin-bottom: 17.92px;
-  animation: fadeIn 0.8s ease-in-out;
+  animation: fadeIn 0.8s ease-in-out 1s forwards;
+  opacity: 0;
 }
 
 @media (max-width: 767px) {
