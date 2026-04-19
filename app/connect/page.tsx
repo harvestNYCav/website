@@ -1,11 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 type Language = "en" | "es";
 
 const translations = {
+  announcement1: {
+    en: "JOIN US FOR WORSHIP ON SUNDAYS AT 3:30PM!",
+    es: "¡ÚNETE A NOSOTROS PARA ADORAR LOS DOMINGOS A LAS 3:30PM!",
+  },
+  announcement2: {
+    en: "WELCOME TO HARVEST NYC",
+    es: "BIENVENIDO A HARVEST NYC",
+  },
   announcement: {
     en: "SOME SORT OF ANNOUNCEMENT HERE",
     es: "ALGÚN TIPO DE ANUNCIO AQUÍ",
@@ -62,10 +70,20 @@ const translations = {
 
 export default function ConnectPage() {
   const [language, setLanguage] = useState<Language>("en");
+  const [announcementIndex, setAnnouncementIndex] = useState(0);
 
   const t = (key: keyof typeof translations): string => {
     return translations[key][language];
   };
+
+  const announcements = ["announcement1", "announcement2"] as const;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAnnouncementIndex((prev) => (prev + 1) % announcements.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   const introLines = t("introText").split("\n");
 
@@ -73,7 +91,7 @@ export default function ConnectPage() {
     <>
       {/* Announcement Banner */}
       <div className="announcement-bar">
-        {t("announcement")}
+        {t(announcements[announcementIndex])}
       </div>
 
       {/* Navigation */}
