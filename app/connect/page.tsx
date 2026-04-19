@@ -80,7 +80,7 @@ export default function ConnectPage() {
       <nav className="site-nav">
         <div className="nav-inner">
           <Link href="/" className="nav-logo">
-            HARVEST LOGO
+            HARVEST<br />NYC
           </Link>
 
           <div className="nav-links">
