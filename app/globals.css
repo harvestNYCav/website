@@ -197,7 +197,7 @@ a:hover {
 
 .contact-heading {
   font-size: clamp(20.4px, 2.125vw, 29.75px);
-  font-weight: 400;
+  font-weight: 500;
   color: #2d8771;
   text-decoration: underline;
   margin-bottom: 32px;
