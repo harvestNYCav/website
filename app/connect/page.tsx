@@ -79,7 +79,7 @@ export default function ConnectPage() {
       {/* Navigation */}
       <nav className="site-nav">
         <div className="nav-inner">
-          <Link href="/" className="nav-logo">
+          <Link href="/" className="nav-logo" id="HARVEST LOGO">
             HARVEST<br />NYC
           </Link>
 
@@ -175,7 +175,7 @@ export default function ConnectPage() {
 
       {/* Footer */}
       <footer className="site-footer">
-        <h3 className="footer-title">{t("harvestNyc")}</h3>
+        <h3 className="footer-title" id="FOOTER HARVEST">{t("harvestNyc")}</h3>
         <div className="footer-icons">
           <a href="https://www.youtube.com/@harvestinthecity" target="_blank" rel="noopener noreferrer">
             <img
