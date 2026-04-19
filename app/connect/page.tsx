@@ -132,29 +132,29 @@ export default function ConnectPage() {
             {/* Harvest Contact */}
             <div className="text-center">
               <h3 className="text-2xl md:text-3xl font-bold mb-8 text-black">
-                <u className="font-helvetica">{t("harvest").toUpperCase()}</u>
+                <u className="font-anek-telugu">{t("harvest").toUpperCase()}</u>
               </h3>
-              <div className="space-y-4 mb-8 font-helvetica">
+              <div className="space-y-4 mb-8 font-anek-telugu">
                 <div>
-                  <p className="font-bold text-gray-800 font-helvetica">{t("aldoWiloto")}</p>
+                  <p className="font-bold text-gray-800 font-anek-telugu">{t("aldoWiloto")}</p>
                   <a
                     href="mailto:aldowiloto@gmail.com"
-                    className="text-green-700 hover:underline font-helvetica"
+                    className="text-green-700 hover:underline font-anek-telugu"
                   >
                     aldowiloto@gmail.com
                   </a>
                 </div>
                 <div>
-                  <p className="font-bold text-gray-800 font-helvetica">{t("rachelGuen")}</p>
+                  <p className="font-bold text-gray-800 font-anek-telugu">{t("rachelGuen")}</p>
                   <a
                     href="mailto:rguen97@gmail.com"
-                    className="text-green-700 hover:underline font-helvetica"
+                    className="text-green-700 hover:underline font-anek-telugu"
                   >
                     rguen97@gmail.com
                   </a>
                 </div>
               </div>
-              <button className="px-8 py-3 border-2 border-black text-black rounded-full font-bold hover:bg-gray-100 transition uppercase font-helvetica">
+              <button className="px-8 py-3 border-2 border-black text-black rounded-full font-bold hover:bg-gray-100 transition uppercase font-anek-telugu">
                 {t("connect")}
               </button>
             </div>
@@ -162,29 +162,29 @@ export default function ConnectPage() {
             {/* Vine Tutoring Contact */}
             <div className="text-center">
               <h3 className="text-2xl md:text-3xl font-bold mb-8 text-black">
-                <u className="font-helvetica">{t("vineTutoring").toUpperCase()}</u>
+                <u className="font-anek-telugu">{t("vineTutoring").toUpperCase()}</u>
               </h3>
-              <div className="space-y-4 mb-8 font-helvetica">
+              <div className="space-y-4 mb-8 font-anek-telugu">
                 <div>
-                  <p className="font-bold text-gray-800 font-helvetica">{t("aldoWiloto")}</p>
+                  <p className="font-bold text-gray-800 font-anek-telugu">{t("aldoWiloto")}</p>
                   <a
                     href="mailto:aldowiloto@gmail.com"
-                    className="text-green-700 hover:underline font-helvetica"
+                    className="text-green-700 hover:underline font-anek-telugu"
                   >
                     aldowiloto@gmail.com
                   </a>
                 </div>
                 <div>
-                  <p className="font-bold text-gray-800 font-helvetica">{t("rachelGuen")}</p>
+                  <p className="font-bold text-gray-800 font-anek-telugu">{t("rachelGuen")}</p>
                   <a
                     href="mailto:rguen97@gmail.com"
-                    className="text-green-700 hover:underline font-helvetica"
+                    className="text-green-700 hover:underline font-anek-telugu"
                   >
                     rguen97@gmail.com
                   </a>
                 </div>
               </div>
-              <button className="px-8 py-3 border-2 border-black text-black rounded-full font-bold hover:bg-gray-100 transition uppercase font-helvetica">
+              <button className="px-8 py-3 border-2 border-black text-black rounded-full font-bold hover:bg-gray-100 transition uppercase font-anek-telugu">
                 {t("connect")}
               </button>
             </div>
