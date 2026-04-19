@@ -90,9 +90,6 @@ export default function ConnectPage() {
             <Link href="/#ministries" className="nav-link">
               {t("ministries")}
             </Link>
-            <Link href="/#involved" className="nav-link">
-              {t("getInvolved")}
-            </Link>
             <Link href="/connect" className="nav-link nav-link--active">
               {t("connect")}
             </Link>
