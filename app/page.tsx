@@ -98,16 +98,16 @@ export default function Home() {
               </div>
 
               <div className="hidden md:flex items-center gap-8">
-                <a href="/about" className="text-sm text-gray-700 hover:text-blue-600">
+                <a href="/about" className="text-sm text-gray-700 hover:text-green-700">
                   {t("aboutUs")}
                 </a>
-                <a href="#ministries" className="text-sm text-gray-700 hover:text-blue-600">
+                <a href="#ministries" className="text-sm text-gray-700 hover:text-green-700">
                   {t("ministries")}
                 </a>
-                <a href="#involved" className="text-sm text-gray-700 hover:text-blue-600">
+                <a href="#involved" className="text-sm text-gray-700 hover:text-green-700">
                   {t("getInvolved")}
                 </a>
-                <a href="/connect" className="text-sm text-gray-700 hover:text-blue-600">
+                <a href="/connect" className="text-sm text-gray-700 hover:text-green-700">
                   {t("contact")}
                 </a>
               </div>
@@ -148,7 +148,7 @@ export default function Home() {
                 href="https://www.youtube.com/@harvestinthecity/streams"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded text-sm font-semibold transition"
+                className="inline-block px-6 py-2 bg-green-700 hover:bg-green-800 rounded text-sm font-semibold transition text-white"
               >
                 {t("liveStream")}
               </a>
@@ -250,13 +250,13 @@ export default function Home() {
                     : "¿Preguntas? ¿Quieres involucrarte? ¡Nos encantaría saber de ti!"}
                 </p>
                 <a
-                  href="https://wa.me/19175977498"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-6 py-3 bg-green-500 text-white rounded font-semibold hover:bg-green-600 transition"
-                >
-                  {language === "en" ? "Message on WhatsApp" : "Mensaje por WhatsApp"}
-                </a>
+                href="https://wa.me/19175977498"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-6 py-3 bg-green-700 text-white rounded font-semibold hover:bg-green-800 transition"
+              >
+                {language === "en" ? "Message on WhatsApp" : "Mensaje por WhatsApp"}
+              </a>
               </div>
             </div>
           </div>
@@ -273,11 +273,11 @@ export default function Home() {
                   {language === "en" ? "Phone" : "Teléfono"}
                 </h3>
                 <a
-                  href="tel:+19175977498"
-                  className="text-blue-600 hover:underline"
-                >
-                  +1 (917) 597-7498
-                </a>
+                href="tel:+19175977498"
+                className="text-green-700 hover:underline"
+              >
+                +1 (917) 597-7498
+              </a>
               </div>
 
               <div>
@@ -286,7 +286,7 @@ export default function Home() {
                 </h3>
                 <a
                   href="mailto:harvestinthecitynyc@gmail.com"
-                  className="text-blue-600 hover:underline"
+                  className="text-green-700 hover:underline"
                 >
                   harvestinthecitynyc@gmail.com
                 </a>
@@ -305,7 +305,7 @@ export default function Home() {
                 href="https://app.easytithe.com/App/Giving/remnantchurch"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-blue-600 text-white rounded font-semibold hover:bg-blue-700 transition"
+                className="px-6 py-3 bg-green-700 text-white rounded font-semibold hover:bg-green-800 transition"
               >
                 {t("give")}
               </a>
@@ -313,7 +313,7 @@ export default function Home() {
                 href="https://www.youtube.com/@harvestinthecity/streams"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 border-2 border-blue-600 text-blue-600 rounded font-semibold hover:bg-blue-50 transition"
+                className="px-6 py-3 border-2 border-green-700 text-green-700 rounded font-semibold hover:bg-green-50 transition"
               >
                 {language === "en" ? "YouTube" : "YouTube"}
               </a>

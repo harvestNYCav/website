@@ -67,16 +67,16 @@ export default function ConnectPage() {
             </Link>
 
             <div className="hidden md:flex items-center gap-8">
-              <Link href="/about" className="text-sm text-gray-700 hover:text-blue-600">
+              <Link href="/about" className="text-sm text-gray-700 hover:text-green-700">
                 About Us
               </Link>
-              <Link href="/#ministries" className="text-sm text-gray-700 hover:text-blue-600">
+              <Link href="/#ministries" className="text-sm text-gray-700 hover:text-green-700">
                 Ministries
               </Link>
-              <Link href="/#involved" className="text-sm text-gray-700 hover:text-blue-600">
+              <Link href="/#involved" className="text-sm text-gray-700 hover:text-green-700">
                 Get Involved
               </Link>
-              <Link href="/connect" className="text-sm text-gray-700 hover:text-blue-600">
+              <Link href="/connect" className="text-sm text-gray-700 hover:text-green-700">
                 Connect
               </Link>
             </div>
@@ -139,7 +139,7 @@ export default function ConnectPage() {
                   <p className="font-bold text-gray-800">{t("aldoWiloto")}</p>
                   <a
                     href="mailto:aldowiloto@gmail.com"
-                    className="text-blue-600 hover:underline"
+                    className="text-green-700 hover:underline"
                   >
                     aldowiloto@gmail.com
                   </a>
@@ -148,13 +148,13 @@ export default function ConnectPage() {
                   <p className="font-bold text-gray-800">{t("rachelGuen")}</p>
                   <a
                     href="mailto:rguen97@gmail.com"
-                    className="text-blue-600 hover:underline"
+                    className="text-green-700 hover:underline"
                   >
                     rguen97@gmail.com
                   </a>
                 </div>
               </div>
-              <button className="px-8 py-3 border-2 border-gray-800 text-gray-800 rounded-full font-bold hover:bg-gray-100 transition">
+              <button className="px-8 py-3 border-2 border-green-700 text-green-700 rounded-full font-bold hover:bg-green-50 transition">
                 {t("connect")}
               </button>
             </div>
@@ -169,7 +169,7 @@ export default function ConnectPage() {
                   <p className="font-bold text-gray-800">{t("aldoWiloto")}</p>
                   <a
                     href="mailto:aldowiloto@gmail.com"
-                    className="text-blue-600 hover:underline"
+                    className="text-green-700 hover:underline"
                   >
                     aldowiloto@gmail.com
                   </a>
@@ -178,13 +178,13 @@ export default function ConnectPage() {
                   <p className="font-bold text-gray-800">{t("rachelGuen")}</p>
                   <a
                     href="mailto:rguen97@gmail.com"
-                    className="text-blue-600 hover:underline"
+                    className="text-green-700 hover:underline"
                   >
                     rguen97@gmail.com
                   </a>
                 </div>
               </div>
-              <button className="px-8 py-3 border-2 border-gray-800 text-gray-800 rounded-full font-bold hover:bg-gray-100 transition">
+              <button className="px-8 py-3 border-2 border-green-700 text-green-700 rounded-full font-bold hover:bg-green-50 transition">
                 {t("connect")}
               </button>
             </div>

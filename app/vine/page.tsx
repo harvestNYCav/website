@@ -127,16 +127,16 @@ export default function VinePage() {
               </Link>
 
               <div className="hidden md:flex items-center gap-8">
-                <Link href="/about" className="text-sm text-gray-700 hover:text-blue-600">
+                <Link href="/about" className="text-sm text-gray-700 hover:text-green-700">
                   About Us
                 </Link>
-                <Link href="/#ministries" className="text-sm text-gray-700 hover:text-blue-600">
+                <Link href="/#ministries" className="text-sm text-gray-700 hover:text-green-700">
                   Ministries
                 </Link>
-                <Link href="/#involved" className="text-sm text-gray-700 hover:text-blue-600">
+                <Link href="/#involved" className="text-sm text-gray-700 hover:text-green-700">
                   Get Involved
                 </Link>
-                <Link href="/connect" className="text-sm text-gray-700 hover:text-blue-600">
+                <Link href="/connect" className="text-sm text-gray-700 hover:text-green-700">
                   Connect
                 </Link>
               </div>
@@ -266,7 +266,7 @@ export default function VinePage() {
                   <h4 className="font-bold mb-2">Aldo Wiloto</h4>
                   <a
                     href="mailto:aldowiloto@gmail.com"
-                    className="text-blue-600 hover:underline"
+                    className="text-green-700 hover:underline"
                   >
                     aldowiloto@gmail.com
                   </a>
@@ -275,7 +275,7 @@ export default function VinePage() {
                   <h4 className="font-bold mb-2">Rachel Guen</h4>
                   <a
                     href="mailto:rguen97@gmail.com"
-                    className="text-blue-600 hover:underline"
+                    className="text-green-700 hover:underline"
                   >
                     rguen97@gmail.com
                   </a>
@@ -285,7 +285,7 @@ export default function VinePage() {
 
             <Link
               href="/"
-              className="inline-block px-6 py-3 bg-blue-600 text-white rounded font-semibold hover:bg-blue-700 transition"
+              className="inline-block px-6 py-3 bg-green-700 text-white rounded font-semibold hover:bg-green-800 transition"
             >
               {t("back")}
             </Link>
