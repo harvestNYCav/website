@@ -273,11 +273,11 @@ a:hover {
 }
 
 .footer-icon {
-  height: 63px;
+  height: 47.25px;
   width: auto;
   object-fit: contain;
 }
 
 .footer-icon--wide {
-  height: 57px;
+  height: 42.75px;
 }
