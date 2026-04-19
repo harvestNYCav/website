@@ -52,6 +52,13 @@ a:hover {
   color: #000;
 }
 
+@media (max-width: 767px) {
+  .announcement-bar {
+    padding: 7px 16px;
+    font-size: 13px;
+  }
+}
+
 .site-nav {
   background: #fff;
   border-bottom: 1px solid #e5e5e5;
@@ -161,6 +168,12 @@ a:hover {
   text-shadow: 0 2px 8px rgba(255, 255, 255, 0.8);
 }
 
+@media (max-width: 767px) {
+  .hero-title {
+    font-size: clamp(25px, 3.5vw, 42px);
+  }
+}
+
 /* ── Intro ── */
 .intro-section {
   padding: 64px 24px;
@@ -196,7 +209,7 @@ a:hover {
     flex-wrap: wrap;
     height: auto;
     padding: 10px 16px 0;
-    row-gap: 0;
+    row-gap: 15%;
   }
 
   .nav-logo {
@@ -300,6 +313,14 @@ a:hover {
   cursor: pointer;
   text-transform: uppercase;
   transition: background 0.2s;
+}
+
+@media (max-width: 767px) {
+  .connect-btn {
+    padding: 11px 36px;
+    font-size: 13px;
+    border-radius: 16px;
+  }
 }
 
 .connect-btn:hover {
