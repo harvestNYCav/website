@@ -191,13 +191,15 @@ a:hover {
   color: #000;
   text-align: center;
   line-height: 1;
-  animation: fadeIn 0.8s ease-in-out 0.4s forwards;
+  animation: fadeIn 0.8s ease-in-out 1.2s forwards;
   opacity: 0;
 }
 
 @media (max-width: 767px) {
   .hero-title {
     font-size: clamp(37px, 5.2vw, 62px);
+    animation: fadeIn 0.8s ease-in-out 1.2s forwards;
+    opacity: 0;
   }
 }
 
