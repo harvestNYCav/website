@@ -67,16 +67,16 @@ export default function ConnectPage() {
             </Link>
 
             <div className="hidden md:flex items-center gap-8">
-              <Link href="/about" className="text-sm text-gray-700 hover:text-green-700">
+              <Link href="/about" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
                 About Us
               </Link>
-              <Link href="/#ministries" className="text-sm text-gray-700 hover:text-green-700">
+              <Link href="/#ministries" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
                 Ministries
               </Link>
-              <Link href="/#involved" className="text-sm text-gray-700 hover:text-green-700">
+              <Link href="/#involved" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
                 Get Involved
               </Link>
-              <Link href="/connect" className="text-sm text-gray-700 hover:text-green-700">
+              <Link href="/connect" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
                 Connect
               </Link>
             </div>
@@ -131,8 +131,8 @@ export default function ConnectPage() {
           <div className="grid md:grid-cols-2 gap-12">
             {/* Harvest Contact */}
             <div className="text-center">
-              <h3 className="text-2xl md:text-3xl font-bold mb-8">
-                <u>{t("harvest")}</u>
+              <h3 className="text-2xl md:text-3xl font-bold mb-8 text-black">
+                <u>{t("harvest").toUpperCase()}</u>
               </h3>
               <div className="space-y-4 mb-8">
                 <div>
@@ -154,15 +154,15 @@ export default function ConnectPage() {
                   </a>
                 </div>
               </div>
-              <button className="px-8 py-3 border-2 border-green-700 text-green-700 rounded-full font-bold hover:bg-green-50 transition">
+              <button className="px-8 py-3 border-2 border-black text-black rounded-full font-bold hover:bg-gray-100 transition uppercase">
                 {t("connect")}
               </button>
             </div>
 
             {/* Vine Tutoring Contact */}
             <div className="text-center">
-              <h3 className="text-2xl md:text-3xl font-bold mb-8">
-                <u>{t("vineTutoring")}</u>
+              <h3 className="text-2xl md:text-3xl font-bold mb-8 text-black">
+                <u>{t("vineTutoring").toUpperCase()}</u>
               </h3>
               <div className="space-y-4 mb-8">
                 <div>
@@ -184,7 +184,7 @@ export default function ConnectPage() {
                   </a>
                 </div>
               </div>
-              <button className="px-8 py-3 border-2 border-green-700 text-green-700 rounded-full font-bold hover:bg-green-50 transition">
+              <button className="px-8 py-3 border-2 border-black text-black rounded-full font-bold hover:bg-gray-100 transition uppercase">
                 {t("connect")}
               </button>
             </div>
@@ -195,13 +195,14 @@ export default function ConnectPage() {
       {/* Footer */}
       <footer className="bg-gray-100 py-12 px-4">
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-center text-2xl font-bold mb-8 underline">HARVEST NYC</h3>
+          <h3 className="text-center text-2xl font-bold mb-8 underline text-black uppercase">HARVEST NYC</h3>
           <div className="flex justify-center items-center gap-12 mb-8">
             <a href="https://www.youtube.com/@harvestinthecity" target="_blank" rel="noopener noreferrer">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Ffc234dd74fca47339292514ea22e61c2?format=webp&width=100"
                 alt="YouTube"
                 className="w-16 h-16"
+                draggable="false"
               />
             </a>
             <a href="mailto:harvestinthecitynyc@gmail.com">
@@ -209,12 +210,14 @@ export default function ConnectPage() {
                 src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2F4e33951a443c48028a4f03ea89d1e34c?format=webp&width=100"
                 alt="Email"
                 className="w-16 h-16"
+                draggable="false"
               />
             </a>
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fd2a5926a2a294ef4a6be01d573e936d5?format=webp&width=200"
               alt="Remnant Church"
               className="h-16"
+              draggable="false"
             />
           </div>
         </div>

@@ -127,16 +127,16 @@ export default function VinePage() {
               </Link>
 
               <div className="hidden md:flex items-center gap-8">
-                <Link href="/about" className="text-sm text-gray-700 hover:text-green-700">
+                <Link href="/about" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
                   About Us
                 </Link>
-                <Link href="/#ministries" className="text-sm text-gray-700 hover:text-green-700">
+                <Link href="/#ministries" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
                   Ministries
                 </Link>
-                <Link href="/#involved" className="text-sm text-gray-700 hover:text-green-700">
+                <Link href="/#involved" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
                   Get Involved
                 </Link>
-                <Link href="/connect" className="text-sm text-gray-700 hover:text-green-700">
+                <Link href="/connect" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
                   Connect
                 </Link>
               </div>
@@ -285,7 +285,7 @@ export default function VinePage() {
 
             <Link
               href="/"
-              className="inline-block px-6 py-3 bg-green-700 text-white rounded font-semibold hover:bg-green-800 transition"
+              className="inline-block px-6 py-3 bg-black text-white rounded font-semibold hover:bg-gray-900 transition uppercase"
             >
               {t("back")}
             </Link>
@@ -295,13 +295,14 @@ export default function VinePage() {
         {/* Footer */}
         <footer className="bg-gray-100 py-12 px-4">
           <div className="max-w-6xl mx-auto">
-            <h3 className="text-center text-2xl font-bold mb-8 underline">HARVEST NYC</h3>
+            <h3 className="text-center text-2xl font-bold mb-8 underline text-black uppercase">HARVEST NYC</h3>
             <div className="flex justify-center items-center gap-12 mb-8">
               <a href="https://www.youtube.com/@harvestinthecity" target="_blank" rel="noopener noreferrer">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Ffc234dd74fca47339292514ea22e61c2?format=webp&width=100"
                   alt="YouTube"
                   className="w-16 h-16"
+                  draggable="false"
                 />
               </a>
               <a href="mailto:harvestinthecitynyc@gmail.com">
@@ -309,12 +310,14 @@ export default function VinePage() {
                   src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2F4e33951a443c48028a4f03ea89d1e34c?format=webp&width=100"
                   alt="Email"
                   className="w-16 h-16"
+                  draggable="false"
                 />
               </a>
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fd2a5926a2a294ef4a6be01d573e936d5?format=webp&width=200"
                 alt="Remnant Church"
                 className="h-16"
+                draggable="false"
               />
             </div>
           </div>

@@ -98,16 +98,16 @@ export default function Home() {
               </div>
 
               <div className="hidden md:flex items-center gap-8">
-                <a href="/about" className="text-sm text-gray-700 hover:text-green-700">
+                <a href="/about" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
                   {t("aboutUs")}
                 </a>
-                <a href="#ministries" className="text-sm text-gray-700 hover:text-green-700">
+                <a href="#ministries" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
                   {t("ministries")}
                 </a>
-                <a href="#involved" className="text-sm text-gray-700 hover:text-green-700">
+                <a href="#involved" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
                   {t("getInvolved")}
                 </a>
-                <a href="/connect" className="text-sm text-gray-700 hover:text-green-700">
+                <a href="/connect" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
                   {t("contact")}
                 </a>
               </div>
@@ -145,13 +145,13 @@ export default function Home() {
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 max-w-2xl">
               <p className="text-lg md:text-xl mb-4">{t("serviceTime")}</p>
               <a
-                href="https://www.youtube.com/@harvestinthecity/streams"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-6 py-2 bg-green-700 hover:bg-green-800 rounded text-sm font-semibold transition text-white"
-              >
-                {t("liveStream")}
-              </a>
+              href="https://www.youtube.com/@harvestinthecity/streams"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-2 bg-black hover:bg-gray-900 rounded text-sm font-semibold transition text-white uppercase"
+            >
+              {t("liveStream")}
+            </a>
             </div>
           </div>
         </section>
@@ -253,7 +253,7 @@ export default function Home() {
                 href="https://wa.me/19175977498"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-6 py-3 bg-green-700 text-white rounded font-semibold hover:bg-green-800 transition"
+                className="inline-block px-6 py-3 bg-black text-white rounded font-semibold hover:bg-gray-900 transition uppercase"
               >
                 {language === "en" ? "Message on WhatsApp" : "Mensaje por WhatsApp"}
               </a>
@@ -305,7 +305,7 @@ export default function Home() {
                 href="https://app.easytithe.com/App/Giving/remnantchurch"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-green-700 text-white rounded font-semibold hover:bg-green-800 transition"
+                className="px-6 py-3 bg-black text-white rounded font-semibold hover:bg-gray-900 transition uppercase"
               >
                 {t("give")}
               </a>
@@ -313,7 +313,7 @@ export default function Home() {
                 href="https://www.youtube.com/@harvestinthecity/streams"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 border-2 border-green-700 text-green-700 rounded font-semibold hover:bg-green-50 transition"
+                className="px-6 py-3 border-2 border-black text-black rounded font-semibold hover:bg-gray-100 transition uppercase"
               >
                 {language === "en" ? "YouTube" : "YouTube"}
               </a>
@@ -324,13 +324,14 @@ export default function Home() {
         {/* Footer */}
         <footer className="bg-gray-100 py-12 px-4">
           <div className="max-w-6xl mx-auto">
-            <h3 className="text-center text-2xl font-bold mb-8 underline">HARVEST NYC</h3>
+            <h3 className="text-center text-2xl font-bold mb-8 underline text-black uppercase">HARVEST NYC</h3>
             <div className="flex justify-center items-center gap-12">
               <a href="https://www.youtube.com/@harvestinthecity" target="_blank" rel="noopener noreferrer">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Ffc234dd74fca47339292514ea22e61c2?format=webp&width=100"
                   alt="YouTube"
                   className="w-16 h-16"
+                  draggable="false"
                 />
               </a>
               <a href="mailto:harvestinthecitynyc@gmail.com">
@@ -338,12 +339,14 @@ export default function Home() {
                   src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2F4e33951a443c48028a4f03ea89d1e34c?format=webp&width=100"
                   alt="Email"
                   className="w-16 h-16"
+                  draggable="false"
                 />
               </a>
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fd2a5926a2a294ef4a6be01d573e936d5?format=webp&width=200"
                 alt="Remnant Church"
                 className="h-16"
+                draggable="false"
               />
             </div>
           </div>
