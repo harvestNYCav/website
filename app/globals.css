@@ -68,7 +68,6 @@ a:hover {
   font-size: 17px;
   font-weight: 600;
   color: #000;
-  animation: fadeIn 0.5s ease-in-out;
 }
 
 @media (max-width: 767px) {
@@ -186,6 +185,7 @@ a:hover {
   color: #000;
   text-align: center;
   line-height: 1;
+  animation: fadeIn 0.8s ease-in-out;
 }
 
 @media (max-width: 767px) {
@@ -208,6 +208,7 @@ a:hover {
   color: #000;
   margin: 0 auto;
   max-width: 1140px;
+  animation: fadeIn 0.8s ease-in-out;
 }
 
 /* ── Contact ── */
@@ -297,6 +298,7 @@ a:hover {
   color: #2d8771;
   text-decoration: underline;
   margin-bottom: 32px;
+  animation: fadeIn 0.8s ease-in-out;
 }
 
 .contact-list {
@@ -310,6 +312,7 @@ a:hover {
   font-size: clamp(15.3px, 1.53vw, 23.8px);
   color: #000;
   line-height: 1.12;
+  animation: fadeIn 0.8s ease-in-out;
 }
 
 .contact-name {
@@ -365,6 +368,7 @@ a:hover {
   text-decoration: underline;
   color: #000;
   margin-bottom: 17.92px;
+  animation: fadeIn 0.8s ease-in-out;
 }
 
 @media (max-width: 767px) {
