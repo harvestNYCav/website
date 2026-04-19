@@ -81,7 +81,7 @@ export default function ConnectPage() {
   useEffect(() => {
     const interval = setInterval(() => {
       setAnnouncementIndex((prev) => (prev + 1) % announcements.length);
-    }, 3000);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -90,7 +90,7 @@ export default function ConnectPage() {
   return (
     <>
       {/* Announcement Banner */}
-      <div className="announcement-bar" key={announcementIndex}>
+      <div className="announcement-bar">
         {t(announcements[announcementIndex])}
       </div>
 
