@@ -217,6 +217,7 @@ a:hover {
 @media (max-width: 767px) {
   .site-nav {
     margin-top: 10px;
+    top: 10px !important;
   }
 
   .nav-inner {
@@ -373,7 +374,7 @@ a:hover {
 
 @media (max-width: 767px) {
   .footer-icons {
-    gap: clamp(29px, 6.84vw, 41px);
+    gap: clamp(35px, 8.2vw, 49px) !important;
   }
 
   .footer-icon {
