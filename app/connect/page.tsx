@@ -90,7 +90,7 @@ export default function ConnectPage() {
   return (
     <>
       {/* Announcement Banner */}
-      <div className="announcement-bar">
+      <div className="announcement-bar" key={announcementIndex}>
         {t(announcements[announcementIndex])}
       </div>
 
