@@ -113,7 +113,7 @@ export default function ConnectPage() {
           draggable="false"
         />
         <div className="hero-overlay">
-          <h1 className="hero-title">{t("heroTitle")}</h1>
+          <h1 className="hero-title">CONNECT<br />WITH US</h1>
         </div>
       </div>
 

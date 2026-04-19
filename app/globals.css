@@ -24,9 +24,18 @@
   font-family: 'Anek Telugu', system-ui, -apple-system, sans-serif !important;
 }
 
+html {
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
+  -ms-overflow-style: none;
 }
 
 a {
@@ -170,7 +179,7 @@ a:hover {
 
 @media (max-width: 767px) {
   .hero-title {
-    font-size: clamp(25px, 3.5vw, 42px);
+    font-size: clamp(30px, 4.2vw, 50px);
   }
 }
 
@@ -209,7 +218,7 @@ a:hover {
     flex-wrap: wrap;
     height: auto;
     padding: 10px 16px 0;
-    row-gap: 15%;
+    row-gap: 20px;
   }
 
   .nav-logo {
@@ -342,12 +351,33 @@ a:hover {
   margin-bottom: 17.92px;
 }
 
+@media (max-width: 767px) {
+  .footer-title {
+    font-size: 19px;
+    margin-bottom: 13px;
+  }
+}
+
 .footer-icons {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: clamp(20px, 5vw, 33.6px);
   flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  .footer-icons {
+    gap: clamp(18px, 4.4vw, 26px);
+  }
+
+  .footer-icon {
+    height: 29px;
+  }
+
+  .footer-icon--wide {
+    height: 26px;
+  }
 }
 
 @media (max-width: 768px) {
