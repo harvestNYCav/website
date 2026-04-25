@@ -213,12 +213,14 @@ export default function ConnectPage() {
               draggable="false"
             />
           </a>
-          <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/d4de61100a8688fad8f49f3af86899013ee08870?width=224"
-            alt="Remnant Church"
-            className="footer-icon footer-icon--wide"
-            draggable="false"
-          />
+          <a href="https://www.remnantchurch.org/" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/d4de61100a8688fad8f49f3af86899013ee08870?width=224"
+              alt="Remnant Church"
+              className="footer-icon footer-icon--wide"
+              draggable="false"
+            />
+          </a>
         </div>
       </footer>
     </>
