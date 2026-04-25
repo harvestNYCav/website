@@ -189,7 +189,7 @@ a:hover {
   flex-direction: column;
   align-items: flex-start !important;
   justify-content: flex-start !important;
-  gap: 2px !important;
+  gap: 1px !important;
   z-index: 100;
   min-width: 160px;
 }
@@ -206,7 +206,7 @@ a:hover {
   text-decoration: none !important;
   text-transform: uppercase !important;
   text-align: left !important;
-  padding: 6px 20px !important;
+  padding: 6px 20px 6px 15px !important;
   margin: 0 !important;
   width: 100% !important;
   border-radius: 0 !important;
@@ -366,7 +366,7 @@ a:hover {
     min-width: 140px;
     left: 0 !important;
     right: auto !important;
-    gap: 2px !important;
+    gap: 1px !important;
     align-items: flex-start !important;
     justify-content: flex-start !important;
     border-radius: 0 0 6px 6px !important;
@@ -375,7 +375,7 @@ a:hover {
   .nav-dropdown-item {
     display: block !important;
     font-size: 12px;
-    padding: 6px 20px !important;
+    padding: 6px 20px 6px 15px !important;
     font-weight: 400;
     text-align: left !important;
     margin: 0 !important;

@@ -115,7 +115,7 @@ export default function ConnectPage() {
               <button className="nav-link nav-dropdown-trigger">
                 {t("ministries")}
               </button>
-              <div id="dropdown" className="nav-dropdown-menu">
+              <div id="menu-dropdown" className="nav-dropdown-menu">
                 <span className="nav-dropdown-item">
                   {t("vineTutoring")}
                 </span>
