@@ -185,7 +185,7 @@ a:hover {
   padding: 12px 20px;
   display: none;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   z-index: 100;
   min-width: 160px;
@@ -201,6 +201,7 @@ a:hover {
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
+  text-align: left;
   padding: 8px 12px;
   border-radius: 8px;
   transition: background 0.2s, color 0.2s;
@@ -357,12 +358,14 @@ a:hover {
     padding: 10px 16px;
     min-width: 140px;
     left: 0;
+    gap: 4px;
   }
 
   .nav-dropdown-item {
     font-size: 12px;
     padding: 6px 10px;
     font-weight: 400;
+    text-align: left;
   }
 
   .lang-btn {
