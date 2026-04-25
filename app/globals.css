@@ -81,7 +81,7 @@ a:hover {
 
 .announcement-text {
   display: inline-block;
-  animation: fadeTextInOut 0.8s ease-in-out forwards;
+  animation: fadeTextInOut 1.5s ease-in-out forwards;
 }
 
 @media (max-width: 767px) {
@@ -92,7 +92,7 @@ a:hover {
   }
 
   .announcement-text {
-    animation: fadeTextInOut 0.8s ease-in-out forwards;
+    animation: fadeTextInOut 1.5s ease-in-out forwards;
   }
 }
 
