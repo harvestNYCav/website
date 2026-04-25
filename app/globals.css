@@ -357,9 +357,17 @@ a:hover {
     font-size: 13px;
   }
 
+  #menu {
+    font-size: 15px !important;
+  }
+
   .nav-dropdown-trigger {
     font-size: 13px;
     font-weight: 600;
+  }
+
+  #menu.nav-dropdown-trigger {
+    font-size: 15px !important;
   }
 
   .nav-dropdown-menu {

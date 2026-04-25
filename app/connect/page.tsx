@@ -108,11 +108,11 @@ export default function ConnectPage() {
           </Link>
 
           <div className="nav-links">
-            <Link href="/about" className="nav-link">
+            <Link href="/about" className="nav-link" id="menu">
               {t("aboutUs")}
             </Link>
             <div className="nav-dropdown">
-              <button className="nav-link nav-dropdown-trigger">
+              <button className="nav-link nav-dropdown-trigger" id="menu">
                 {t("ministries")}
               </button>
               <div id="menu-dropdown" className="nav-dropdown-menu">
@@ -124,7 +124,7 @@ export default function ConnectPage() {
                 </span>
               </div>
             </div>
-            <Link href="/connect" className="nav-link nav-link--active">
+            <Link href="/connect" className="nav-link nav-link--active" id="menu">
               {t("connect")}
             </Link>
           </div>
