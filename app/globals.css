@@ -183,7 +183,7 @@ a:hover {
   right: auto;
   background: white;
   border-radius: 0 0 0.5em 0.5em;
-  padding: 0.75em 0;
+  padding: 0.3em 0;
   margin: 0;
   display: none;
   flex-direction: column;
@@ -206,7 +206,7 @@ a:hover {
   text-decoration: none !important;
   text-transform: uppercase !important;
   text-align: left !important;
-  padding: 0.2em 1.25em 0.2em 0.9em !important;
+  padding: 0.3em 1.25em 0.3em 0.9em !important;
   margin: 0 !important;
   width: 100% !important;
   border-radius: 0 !important;
@@ -362,7 +362,7 @@ a:hover {
   }
 
   .nav-dropdown-menu {
-    padding: 0.75em 0 !important;
+    padding: 0.3em 0 !important;
     min-width: 140px;
     left: 0 !important;
     right: auto !important;
@@ -376,7 +376,7 @@ a:hover {
   .nav-dropdown-item {
     display: block !important;
     font-size: 12px;
-    padding: 0.2em 1.25em 0.2em 0.9em !important;
+    padding: 0.3em 1.25em 0.3em 0.9em !important;
     font-weight: 400;
     text-align: left !important;
     margin: 0 !important;
