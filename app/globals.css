@@ -61,6 +61,15 @@ a:hover {
   }
 }
 
+@keyframes fadeTextInOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .announcement-bar {
   background: rgba(242, 242, 242, 0.87);
   text-align: center;
@@ -68,8 +77,11 @@ a:hover {
   font-size: 17px;
   font-weight: 600;
   color: #000;
-  animation: fadeIn 0.8s ease-in-out 0s forwards;
-  opacity: 0;
+}
+
+.announcement-text {
+  display: inline-block;
+  animation: fadeTextInOut 0.8s ease-in-out forwards;
 }
 
 @media (max-width: 767px) {
@@ -77,6 +89,10 @@ a:hover {
     padding: 8px 16px;
     font-size: 13px;
     margin-bottom: 10px;
+  }
+
+  .announcement-text {
+    animation: fadeTextInOut 0.8s ease-in-out forwards;
   }
 }
 
