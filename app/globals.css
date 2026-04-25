@@ -181,12 +181,13 @@ a:hover {
   top: calc(100% + 2px);
   left: 0;
   background: white;
-  border-radius: 12px;
+  border-radius: 0 0 12px 12px;
   padding: 12px 20px;
   display: none;
   flex-direction: column;
-  gap: 4px !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  gap: 2px !important;
   z-index: 100;
   min-width: 160px;
 }
@@ -205,6 +206,7 @@ a:hover {
   text-align: left !important;
   padding: 4px 8px !important;
   margin: 0 !important;
+  width: 100% !important;
   border-radius: 8px;
   transition: background 0.2s, color 0.2s;
 }
@@ -360,7 +362,10 @@ a:hover {
     padding: 10px 16px;
     min-width: 140px;
     left: 0;
-    gap: 4px !important;
+    gap: 2px !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    border-radius: 0 0 12px 12px;
   }
 
   .nav-dropdown-item {
@@ -370,6 +375,7 @@ a:hover {
     font-weight: 400;
     text-align: left !important;
     margin: 0 !important;
+    width: 100% !important;
   }
 
   .lang-btn {
