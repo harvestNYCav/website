@@ -34,6 +34,10 @@ const translations = {
     en: "CONNECT",
     es: "CONECTAR",
   },
+  children: {
+    en: "CHILDREN",
+    es: "NIÑOS",
+  },
   heroTitle: {
     en: "CONNECT WITH US",
     es: "CONECTA CON NOSOTROS",
@@ -107,9 +111,19 @@ export default function ConnectPage() {
             <Link href="/about" className="nav-link">
               {t("aboutUs")}
             </Link>
-            <Link href="/#ministries" className="nav-link">
-              {t("ministries")}
-            </Link>
+            <div className="nav-dropdown">
+              <button className="nav-link nav-dropdown-trigger">
+                {t("ministries")}
+              </button>
+              <div className="nav-dropdown-menu">
+                <Link href="/#vine-tutoring" className="nav-dropdown-item">
+                  {t("vineTutoring")}
+                </Link>
+                <Link href="/#children" className="nav-dropdown-item">
+                  {t("children")}
+                </Link>
+              </div>
+            </div>
             <Link href="/connect" className="nav-link nav-link--active">
               {t("connect")}
             </Link>
