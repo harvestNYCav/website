@@ -182,7 +182,7 @@ a:hover {
   left: 0;
   right: auto;
   background: white;
-  border-radius: 0 0 0.25em 0.25em;
+  border-radius: 0 0 2px 2px;
   padding: 1em 0.35em 0.4em 0.35em;
   margin: 0;
   display: none;
@@ -371,7 +371,7 @@ a:hover {
     gap: 0.05em !important;
     align-items: flex-start !important;
     justify-content: flex-start !important;
-    border-radius: 0 0 0.25em 0.25em !important;
+    border-radius: 0 0 2px 2px !important;
     top: calc(100% + 0.15em) !important;
   }
 
