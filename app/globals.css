@@ -151,6 +151,16 @@ a:hover {
   position: relative;
 }
 
+.nav-dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 8px;
+  z-index: 99;
+}
+
 .nav-dropdown-trigger {
   font-size: 17px;
   font-weight: 600;
@@ -168,12 +178,11 @@ a:hover {
 
 .nav-dropdown-menu {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 2px);
   left: 0;
   background: white;
   border-radius: 12px;
   padding: 12px 20px;
-  margin-top: 8px;
   display: none;
   flex-direction: column;
   gap: 8px;
