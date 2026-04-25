@@ -191,7 +191,8 @@ a:hover {
   justify-content: flex-start !important;
   gap: 0.05em !important;
   z-index: 100;
-  min-width: auto;
+  min-width: 155px;
+  white-space: nowrap;
 }
 
 .nav-dropdown:hover .nav-dropdown-menu {
@@ -363,7 +364,8 @@ a:hover {
 
   .nav-dropdown-menu {
     padding: 0.4em !important;
-    min-width: auto;
+    min-width: 155px !important;
+    white-space: nowrap !important;
     left: 0 !important;
     right: auto !important;
     gap: 0.05em !important;
