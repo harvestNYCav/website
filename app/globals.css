@@ -202,7 +202,7 @@ a:hover {
 .nav-dropdown-item {
   display: block !important;
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 600;
   color: #000 !important;
   text-decoration: none !important;
   text-transform: uppercase !important;
@@ -213,6 +213,10 @@ a:hover {
   border-radius: 0 !important;
   transition: background 0.2s, color 0.2s;
   box-sizing: border-box !important;
+}
+
+.nav-dropdown-item:last-child {
+  font-size: 14px;
 }
 
 .nav-dropdown-item:hover {
@@ -379,12 +383,16 @@ a:hover {
     display: block !important;
     font-size: 12px;
     padding: 0.25em 0.35em !important;
-    font-weight: 400;
+    font-weight: 600;
     text-align: left !important;
     margin: 0 !important;
     width: 100% !important;
     border-radius: 0 !important;
     box-sizing: border-box !important;
+  }
+
+  .nav-dropdown-item:last-child {
+    font-size: 14px !important;
   }
 
   .lang-btn {
