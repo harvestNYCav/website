@@ -197,7 +197,7 @@ export default function ConnectPage() {
       <footer className="site-footer">
         <h3 className="footer-title" id="FOOTER HARVEST">{t("harvestNyc")}</h3>
         <div className="footer-icons">
-          <a href="https://www.youtube.com/@harvestinthecity" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.youtube.com/@harvestinthecity/streams" target="_blank" rel="noopener noreferrer">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/62d640b0b7413ecd1eb34c8d2a6733a1699cfafb?width=180"
               alt="YouTube"
