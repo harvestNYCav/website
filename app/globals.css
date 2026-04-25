@@ -201,7 +201,7 @@ a:hover {
 
 .nav-dropdown-item {
   display: block !important;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   color: #000 !important;
   text-decoration: none !important;
@@ -213,10 +213,6 @@ a:hover {
   border-radius: 0 !important;
   transition: background 0.2s, color 0.2s;
   box-sizing: border-box !important;
-}
-
-.nav-dropdown-item:last-child {
-  font-size: 14px;
 }
 
 .nav-dropdown-item:hover {
@@ -381,7 +377,7 @@ a:hover {
 
   .nav-dropdown-item {
     display: block !important;
-    font-size: 12px;
+    font-size: 13px;
     padding: 0.25em 0.35em !important;
     font-weight: 600;
     text-align: left !important;
@@ -389,10 +385,6 @@ a:hover {
     width: 100% !important;
     border-radius: 0 !important;
     box-sizing: border-box !important;
-  }
-
-  .nav-dropdown-item:last-child {
-    font-size: 14px !important;
   }
 
   .lang-btn {
