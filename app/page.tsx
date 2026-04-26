@@ -183,7 +183,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <a href="https://www.youtube.com/@harvestinthecity/streams" target="_blank" rel="noopener noreferrer" className="hero-youtube-btn">
+          <a id="livestream button" href="https://www.youtube.com/@harvestinthecity/streams" target="_blank" rel="noopener noreferrer" className="hero-youtube-btn">
             {t("youtubeBtn")}
           </a>
         </div>

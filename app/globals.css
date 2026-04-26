@@ -311,15 +311,17 @@ a:hover {
 
 .hero-info-label {
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 900;
   letter-spacing: 1px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
+  color: #333;
 }
 
 .hero-info-value {
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 900;
   letter-spacing: 0.5px;
+  color: #333;
 }
 
 @media (max-width: 767px) {
@@ -329,16 +331,19 @@ a:hover {
 
   .hero-info-label {
     font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 3px;
   }
 
   .hero-info-value {
     font-size: 18px;
+    font-weight: 900;
   }
 }
 
 .hero-youtube-btn {
   display: inline-block;
-  padding: 16px 32px;
+  padding: 11px 22px;
   background: #fff;
   color: #000;
   text-decoration: none;
@@ -347,19 +352,18 @@ a:hover {
   letter-spacing: 0.5px;
   border-radius: 4px;
   text-transform: uppercase;
-  transition: background 0.2s, transform 0.2s;
+  transition: opacity 0.2s;
   animation: fadeIn 0.8s ease-in-out 1.2s forwards;
   opacity: 0;
 }
 
 .hero-youtube-btn:hover {
-  background: #f0f0f0;
-  transform: scale(1.02);
+  opacity: 0.8;
 }
 
 @media (max-width: 767px) {
   .hero-youtube-btn {
-    padding: 14px 28px;
+    padding: 10px 19px;
     font-size: 14px;
   }
 }
