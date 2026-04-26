@@ -311,17 +311,17 @@ a:hover {
 
 .hero-info-label {
   font-size: 22px;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 1px;
-  margin-bottom: 4px;
-  color: #333;
+  margin-bottom: 2px;
+  color: #fff;
 }
 
 .hero-info-value {
   font-size: 22px;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 0.5px;
-  color: #333;
+  color: #fff;
 }
 
 @media (max-width: 767px) {
@@ -331,13 +331,15 @@ a:hover {
 
   .hero-info-label {
     font-size: 18px;
-    font-weight: 900;
-    margin-bottom: 3px;
+    font-weight: 700;
+    margin-bottom: 1px;
+    color: #fff;
   }
 
   .hero-info-value {
     font-size: 18px;
-    font-weight: 900;
+    font-weight: 700;
+    color: #fff;
   }
 }
 
@@ -350,7 +352,7 @@ a:hover {
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.5px;
-  border-radius: 4px;
+  border-radius: 10px;
   text-transform: uppercase;
   transition: opacity 0.2s;
   animation: fadeIn 0.8s ease-in-out 1.2s forwards;
