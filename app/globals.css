@@ -109,7 +109,7 @@ a:hover {
 .nav-inner {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 38px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -140,11 +140,11 @@ a:hover {
 }
 
 .nav-link:hover {
-  color: #2d8771;
+  color: #000;
 }
 
 .nav-link--active {
-  color: #2d8771 !important;
+  color: #000 !important;
 }
 
 .nav-dropdown {
@@ -173,7 +173,7 @@ a:hover {
 }
 
 .nav-dropdown-trigger:hover {
-  color: #2d8771;
+  color: #000;
 }
 
 .nav-dropdown-menu {
@@ -216,7 +216,7 @@ a:hover {
 }
 
 .nav-dropdown-item:hover {
-  color: #2d8771;
+  color: #000;
 }
 
 .lang-btn {
@@ -250,6 +250,7 @@ a:hover {
   height: 400px;
   object-fit: cover;
   display: block;
+  opacity: 1;
 }
 
 @media (max-width: 767px) {
@@ -268,8 +269,10 @@ a:hover {
   position: absolute;
   inset: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  padding: 40px 20px;
   background: transparent;
 }
 
@@ -291,11 +294,100 @@ a:hover {
   }
 }
 
+.hero-info {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 800px;
+  animation: fadeIn 0.8s ease-in-out 1.2s forwards;
+  opacity: 0;
+}
+
+.hero-info-column {
+  text-align: center;
+  color: #fff;
+}
+
+.hero-info-label {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+  color: #fff;
+}
+
+.hero-info-value {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .hero-info {
+    gap: 24px;
+  }
+
+  .hero-info-label {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 1px;
+    color: #fff;
+  }
+
+  .hero-info-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+  }
+}
+
+.hero-youtube-btn {
+  display: inline-block;
+  padding: 11px 22px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  transition: transform 0.2s, opacity 0.2s;
+  animation: fadeIn 0.8s ease-in-out 1.2s forwards;
+  opacity: 0;
+}
+
+.hero-youtube-btn:hover {
+  transform: scale(1.05);
+  color: #000;
+}
+
+@media (max-width: 767px) {
+  .hero-youtube-btn {
+    padding: 10px 19px;
+    font-size: 14px;
+  }
+}
+
 /* ── Intro ── */
 .intro-section {
-  padding: 64px 24px;
+  padding: 64px 40px;
   text-align: center;
   background: #fff;
+  animation: fadeIn 0.8s ease-in-out 0.6s forwards;
+  opacity: 0;
+}
+
+.mission-title {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #000;
+  margin: 0 auto 24px;
   animation: fadeIn 0.8s ease-in-out 0.6s forwards;
   opacity: 0;
 }
@@ -305,15 +397,21 @@ a:hover {
   font-weight: 200;
   line-height: 48px;
   color: #000;
-  margin: 0 auto;
+  margin: 0 auto 32px;
   max-width: 1140px;
+  animation: fadeIn 0.8s ease-in-out 0.6s forwards;
+  opacity: 0;
+}
+
+.intro-section .connect-btn {
+  margin-top: 16px;
   animation: fadeIn 0.8s ease-in-out 0.6s forwards;
   opacity: 0;
 }
 
 /* ── Contact ── */
 .contact-section {
-  padding: 48px 24px 80px;
+  padding: 48px 30px 80px;
   background: #fff;
   animation: fadeIn 0.8s ease-in-out 0.8s forwards;
   opacity: 0;
@@ -336,7 +434,7 @@ a:hover {
   .nav-inner {
     flex-wrap: wrap;
     height: auto;
-    padding: 10px 16px 0;
+    padding: 10px 20px 0;
     row-gap: 20px;
   }
 
@@ -385,7 +483,7 @@ a:hover {
 
   .nav-dropdown-item {
     display: block !important;
-    font-size: clamp(11px, 1.3vw, 13px);
+    font-size: clamp(13.2px, 1.56vw, 15.6px);
     padding: 0.25em 0.35em !important;
     font-weight: 600;
     text-align: left !important;
@@ -401,15 +499,21 @@ a:hover {
   }
 
   .intro-section {
-    padding: 36px 20px 20px;
+    padding: 36px 32px 20px;
+  }
+
+  .mission-title {
+    font-size: clamp(24px, 5vw, 32px);
+    margin-bottom: 16px;
   }
 
   .intro-text {
     line-height: 1.8;
+    margin-bottom: 20px;
   }
 
   .contact-section {
-    padding: 12px 20px 60px;
+    padding: 12px 24px 60px;
   }
 
   .contact-heading {
@@ -499,7 +603,7 @@ a:hover {
 
 /* ── Footer ── */
 .site-footer {
-  padding: 60px 24px;
+  padding: 60px 30px;
   text-align: center;
   background: #fff;
   animation: fadeIn 0.8s ease-in-out 1s forwards;

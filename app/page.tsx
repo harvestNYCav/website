@@ -1,356 +1,293 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Link from "next/link";
 
 type Language = "en" | "es";
 
-const content: Record<string, { en: string; es: string }> = {
-  tagline: {
-    en: "loving & living like Jesus",
-    es: "amando y viviendo como Jesús",
+const translations = {
+  announcement1: {
+    en: "WELCOME TO HARVEST IN THE CITY",
+    es: "BIENVENIDO A HARVEST EN LA CIUDAD",
   },
-  serviceTime: {
-    en: "Sunday Service | 3:30 PM | 206 E 29th Street",
-    es: "Servicio Dominical | 3:30 PM | 206 E 29th Street",
+  announcement2: {
+    en: "WELCOME TO HARVEST IN THE CITY",
+    es: "BIENVENIDO A HARVEST EN LA CIUDAD",
   },
-  liveStream: {
-    en: "LIVE STREAM YOUTUBE",
-    es: "TRANSMISIÓN EN VIVO YOUTUBE",
+  announcement: {
+    en: "SOME SORT OF ANNOUNCEMENT HERE",
+    es: "ALGÚN TIPO DE ANUNCIO AQUÍ",
   },
   aboutUs: {
-    en: "About Us",
-    es: "Acerca de Nosotros",
+    en: "ABOUT US",
+    es: "ACERCA DE NOSOTROS",
   },
   ministries: {
-    en: "Ministries",
-    es: "Ministerios",
+    en: "MINISTRIES",
+    es: "MINISTERIOS",
   },
   getInvolved: {
-    en: "Get Involved",
-    es: "Únete",
+    en: "GET INVOLVED",
+    es: "INVOLÚCRATE",
   },
-  contact: {
-    en: "Contact",
-    es: "Contacto",
+  connect: {
+    en: "CONNECT",
+    es: "CONECTAR",
   },
-  give: {
-    en: "Give",
-    es: "Diezmos",
+  children: {
+    en: "CHILDREN",
+    es: "NIÑOS",
   },
-  childrenMinistry: {
-    en: "Children's Ministry",
-    es: "Ministerio de Niños",
+  heroTitle: {
+    en: "LOVING & LIVING LIKE JESUS",
+    es: "AMANDO Y VIVIENDO COMO JESÚS",
   },
-  worship: {
-    en: "Worship",
-    es: "Adoración",
+  location: {
+    en: "LOCATION:",
+    es: "UBICACIÓN:",
   },
-  vine: {
-    en: "Vine",
-    es: "Vine",
+  address: {
+    en: "206 E 29TH STREET",
+    es: "206 E 29TH STREET",
   },
-  ourMission: {
-    en: "Our Mission",
-    es: "Nuestra Misión",
+  sundayService: {
+    en: "SUNDAY SERVICE:",
+    es: "SERVICIO DOMINICAL:",
   },
-  weeklyRhythms: {
-    en: "Weekly Rhythms",
-    es: "Ritmo Semanal",
+  sundayTime: {
+    en: "SUNDAYS AT 3:30 PM",
+    es: "DOMINGOS A LAS 3:30 PM",
   },
-  sundayWorship: {
-    en: "Sunday Worship",
-    es: "Adoración Dominical",
+  youtubeBtn: {
+    en: "SUNDAY YOUTUBE LIVESTREAM",
+    es: "TRANSMISIÓN EN VIVO YOUTUBE DOMINICAL",
   },
-  sundayDesc: {
-    en: "Join us for our Sunday service at 3:30 PM as we worship together and encounter God's presence.",
-    es: "Únete a nuestro servicio dominical a las 3:30 PM para adorar juntos y encontrar la presencia de Dios.",
+  missionTitle: {
+    en: "OUR MISSION",
+    es: "NUESTRA MISIÓN",
   },
-  communityFeed: {
-    en: "Community Feed",
-    es: "Comunidad",
+  missionText: {
+    en: "Harvest is a vibrant ministry within Remnant Church NYC dedicated to loving and living like Jesus. We're committed to creating a community where people encounter God's love, grow in faith, and serve others with compassion.",
+    es: "Harvest es un ministerio vibrante dentro de Remnant Church NYC dedicado a amar y vivir como Jesús. Nos comprometemos a crear una comunidad donde las personas encuentren el amor de Dios, crezcan en fe y sirvan a otros con compasión.",
+  },
+  learnMoreBtn: {
+    en: "LEARN MORE",
+    es: "APRENDE MÁS",
+  },
+  introText: {
+    en: "We'd love to get to know you!\nFor more information, blahblahb blah xyz\nxyz xyz xyz lah blah",
+    es: "¡Nos encantaría conocerte!\nPara más información, blahblahb blah xyz\nxyz xyz xyz lah blah",
+  },
+  harvest: {
+    en: "HARVEST",
+    es: "HARVEST",
+  },
+  vineTutoring: {
+    en: "VINE TUTORING",
+    es: "VINE TUTORÍA",
+  },
+  aldoWiloto: {
+    en: "Aldo Wiloto:",
+    es: "Aldo Wiloto:",
+  },
+  rachelGuen: {
+    en: "Rachel Guen:",
+    es: "Rachel Guen:",
+  },
+  connectBtn: {
+    en: "CONNECT",
+    es: "CONECTAR",
+  },
+  harvestNyc: {
+    en: "HARVEST NYC",
+    es: "HARVEST NYC",
   },
 };
 
-export default function Home() {
+export default function HomePage() {
   const [language, setLanguage] = useState<Language>("en");
+  const [announcementIndex, setAnnouncementIndex] = useState(0);
 
-  const t = (key: string): string => {
-    const translations = content[key as keyof typeof content];
-    return translations ? translations[language] : key;
+  const t = (key: keyof typeof translations): string => {
+    return translations[key][language];
   };
+
+  const announcements = ["announcement1", "announcement2"] as const;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAnnouncementIndex((prev) => (prev + 1) % announcements.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const introLines = t("introText").split("\n");
 
   return (
     <>
       {/* Announcement Banner */}
-      <div className="bg-gray-200 text-gray-800 text-sm py-2 text-center">
-        SOME SORT OF ANNOUNCEMENT HERE
+      <div className="announcement-bar">
+        <span key={announcementIndex} className="announcement-text">
+          {t(announcements[announcementIndex])}
+        </span>
       </div>
 
       {/* Navigation */}
-        <nav className="sticky top-0 z-50 bg-white shadow-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-blue-600 rounded"></div>
-                <span className="text-sm font-semibold text-gray-800">
-                  Harvest
+      <nav className="site-nav">
+        <div className="nav-inner">
+          <Link href="/" className="nav-logo" id="HARVEST LOGO">
+            HARVEST<br />NYC
+          </Link>
+
+          <div className="nav-links">
+            <Link href="/about" className="nav-link" id="menu">
+              {t("aboutUs")}
+            </Link>
+            <div className="nav-dropdown">
+              <button className="nav-link nav-dropdown-trigger" id="menu">
+                {t("ministries")}
+              </button>
+              <div id="menu-dropdown" className="nav-dropdown-menu">
+                <span className="nav-dropdown-item">
+                  {t("vineTutoring")}
+                </span>
+                <span className="nav-dropdown-item">
+                  {t("children")}
                 </span>
               </div>
+            </div>
+            <Link href="/connect" className="nav-link nav-link--active" id="menu">
+              {t("connect")}
+            </Link>
+          </div>
 
-              <div className="hidden md:flex items-center gap-8">
-                <a href="/about" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
-                  {t("aboutUs")}
+          <button
+            onClick={() => setLanguage(language === "en" ? "es" : "en")}
+            className="lang-btn"
+          >
+            {language === "en" ? "ESPAÑOL" : "ENGLISH"}
+          </button>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <div className="hero-wrapper">
+        <img
+          id="hero-img"
+          src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=2926"
+          alt=""
+          className="hero-img"
+          draggable="false"
+        />
+        <div className="hero-overlay">
+          <h1 className="hero-title" id="header-text">
+            {language === "en" ? "LOVING &" : "AMANDO Y"}<br />{language === "en" ? "LIVING LIKE JESUS" : "VIVIENDO COMO JESÚS"}
+          </h1>
+
+          <div className="hero-info">
+            <div className="hero-info-column hero-location">
+              <div className="hero-info-label">{t("location")}</div>
+              <div className="hero-info-value">{t("address")}</div>
+            </div>
+
+            <div className="hero-info-column hero-service">
+              <div className="hero-info-label">{t("sundayService")}</div>
+              <div className="hero-info-value">{t("sundayTime")}</div>
+            </div>
+          </div>
+
+          <a id="livestream button" href="https://www.youtube.com/@harvestinthecity/streams" target="_blank" rel="noopener noreferrer" className="hero-youtube-btn">
+            {t("youtubeBtn")}
+          </a>
+        </div>
+      </div>
+
+      {/* Mission Section */}
+      <section className="intro-section">
+        <h2 className="mission-title">{t("missionTitle")}</h2>
+        <p className="intro-text">
+          {t("missionText")}
+        </p>
+        <button className="connect-btn">{t("learnMoreBtn")}</button>
+      </section>
+
+      {/* Contact Sections */}
+      <section className="contact-section">
+        <div className="contact-grid">
+
+          {/* Harvest */}
+          <div className="contact-column">
+            <h3 className="contact-heading">{t("harvest")}</h3>
+            <div className="contact-list">
+              <p className="contact-line">
+                <span className="contact-name">{t("aldoWiloto")}</span>{" "}
+                <a href="mailto:aldowiloto@gmail.com" className="contact-email">
+                  aldowiloto@gmail.com
                 </a>
-                <a href="#ministries" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
-                  {t("ministries")}
+              </p>
+              <p className="contact-line">
+                <span className="contact-name">{t("rachelGuen")}</span>{" "}
+                <a href="mailto:rguen97@gmail.com" className="contact-email">
+                  rguen97@gmail.com
                 </a>
-                <a href="#involved" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
-                  {t("getInvolved")}
+              </p>
+            </div>
+            <button className="connect-btn">{t("connectBtn")}</button>
+          </div>
+
+          {/* Vine Tutoring */}
+          <div className="contact-column">
+            <h3 className="contact-heading">{t("vineTutoring")}</h3>
+            <div className="contact-list">
+              <p className="contact-line">
+                <span className="contact-name">{t("aldoWiloto")}</span>{" "}
+                <a href="mailto:aldowiloto@gmail.com" className="contact-email">
+                  aldowiloto@gmail.com
                 </a>
-                <a href="/connect" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
-                  {t("contact")}
+              </p>
+              <p className="contact-line">
+                <span className="contact-name">{t("rachelGuen")}</span>{" "}
+                <a href="mailto:rguen97@gmail.com" className="contact-email">
+                  rguen97@gmail.com
                 </a>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <button
-                  onClick={() => setLanguage(language === "en" ? "es" : "en")}
-                  className="px-3 py-1 text-sm border border-gray-800 text-gray-800 rounded hover:bg-gray-100"
-                >
-                  {language === "en" ? "ESPAÑOL" : "ENGLISH"}
-                </button>
-              </div>
+              </p>
             </div>
+            <button className="connect-btn">{t("connectBtn")}</button>
           </div>
-        </nav>
 
-        {/* Hero Section */}
-        <section className="relative h-96 md:h-screen bg-gradient-to-b from-gray-800 to-gray-900 overflow-hidden">
-          <div
-            className="absolute inset-0 bg-cover bg-center opacity-50"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1200&h=800&fit=crop')",
-            }}
-          ></div>
+        </div>
+      </section>
 
-          <div className="relative h-full flex flex-col justify-center items-center text-center text-white px-4">
-            <p className="text-sm md:text-base uppercase tracking-widest mb-4 opacity-80">
-              {t("aboutUs")}
-            </p>
-            <h1 className="text-4xl md:text-6xl font-light mb-8 max-w-3xl">
-              {t("tagline")}
-            </h1>
-
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 max-w-2xl">
-              <p className="text-lg md:text-xl mb-4">{t("serviceTime")}</p>
-              <a
-              href="https://www.youtube.com/@harvestinthecity/streams"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-6 py-2 bg-black hover:bg-gray-900 rounded text-sm font-semibold transition text-white uppercase"
-            >
-              {t("liveStream")}
-            </a>
-            </div>
-          </div>
-        </section>
-
-        {/* About Section */}
-        <section id="about" className="py-16 md:py-24 px-4 bg-gray-50">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-              {t("ourMission")}
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed text-center mb-8">
-              {language === "en"
-                ? "Harvest is a vibrant ministry within Remnant Church NYC dedicated to loving and living like Jesus. We're committed to creating a community where people encounter God's love, grow in faith, and serve others with compassion."
-                : "Harvest es un ministerio vibrante dentro de Remnant Church NYC dedicado a amar y vivir como Jesús. Nos comprometemos a crear una comunidad donde las personas encuentren el amor de Dios, crezcan en fe y sirvan a otros con compasión."}
-            </p>
-          </div>
-        </section>
-
-        {/* Ministries Section */}
-        <section id="ministries" className="py-16 md:py-24 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-              {t("ministries")}
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {/* Children's Ministry */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
-                <div
-                  className="h-48 bg-cover bg-center"
-                  style={{
-                    backgroundImage:
-                      "url('https://images.unsplash.com/photo-1503454537688-e6c8944f3814?w=500&h=400&fit=crop')",
-                  }}
-                ></div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3">
-                    {t("childrenMinistry")}
-                  </h3>
-                  <p className="text-gray-600">
-                    {language === "en"
-                      ? "A loving space where children encounter Jesus and grow in their faith through engaging activities and Bible teaching."
-                      : "Un espacio amoroso donde los niños encuentran a Jesús y crecen en su fe a través de actividades atractivas y enseñanza bíblica."}
-                  </p>
-                </div>
-              </div>
-
-              {/* Vine */}
-              <a
-                href="/vine"
-                className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition cursor-pointer block"
-              >
-                <div
-                  className="h-48 bg-cover bg-center"
-                  style={{
-                    backgroundImage:
-                      "url('https://images.unsplash.com/photo-1427504494785-cdaa41d10ae0?w=500&h=400&fit=crop')",
-                  }}
-                ></div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3">{t("vine")}</h3>
-                  <p className="text-gray-600">
-                    {language === "en"
-                      ? "A tutoring program serving the local and migrant communities, helping students develop English language skills and academic success."
-                      : "Un programa de tutoría que sirve a las comunidades locales y migrantes, ayudando a los estudiantes a desarrollar habilidades en inglés y éxito académico."}
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Weekly Rhythms */}
-        <section id="involved" className="py-16 md:py-24 px-4 bg-gray-50">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-              {t("weeklyRhythms")}
-            </h2>
-
-            <div className="bg-white rounded-lg p-8 shadow-lg">
-              <div className="mb-8 pb-8 border-b">
-                <h3 className="text-2xl font-bold mb-3">{t("sundayWorship")}</h3>
-                <p className="text-gray-600 mb-4">{t("sundayDesc")}</p>
-                <p className="text-lg font-semibold text-blue-600">
-                  3:30 PM • 206 E 29th Street
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-bold mb-3">
-                  {language === "en" ? "Connect With Us" : "Conecta Con Nosotros"}
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  {language === "en"
-                    ? "Have questions? Want to get involved? We'd love to hear from you!"
-                    : "¿Preguntas? ¿Quieres involucrarte? ¡Nos encantaría saber de ti!"}
-                </p>
-                <a
-                href="https://wa.me/19175977498"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-6 py-3 bg-black text-white rounded font-semibold hover:bg-gray-900 transition uppercase"
-              >
-                {language === "en" ? "Message on WhatsApp" : "Mensaje por WhatsApp"}
-              </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section id="contact" className="py-16 md:py-24 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12">{t("contact")}</h2>
-
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <div>
-                <h3 className="font-bold mb-3">
-                  {language === "en" ? "Phone" : "Teléfono"}
-                </h3>
-                <a
-                href="tel:+19175977498"
-                className="text-green-700 hover:underline"
-              >
-                +1 (917) 597-7498
-              </a>
-              </div>
-
-              <div>
-                <h3 className="font-bold mb-3">
-                  {language === "en" ? "Email" : "Correo Electrónico"}
-                </h3>
-                <a
-                  href="mailto:harvestinthecitynyc@gmail.com"
-                  className="text-green-700 hover:underline"
-                >
-                  harvestinthecitynyc@gmail.com
-                </a>
-              </div>
-
-              <div>
-                <h3 className="font-bold mb-3">
-                  {language === "en" ? "Location" : "Ubicación"}
-                </h3>
-                <p className="text-gray-600">206 E 29th Street, NYC</p>
-              </div>
-            </div>
-
-            <div className="flex gap-4 justify-center">
-              <a
-                href="https://app.easytithe.com/App/Giving/remnantchurch"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 bg-black text-white rounded font-semibold hover:bg-gray-900 transition uppercase"
-              >
-                {t("give")}
-              </a>
-              <a
-                href="https://www.youtube.com/@harvestinthecity/streams"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 border-2 border-black text-black rounded font-semibold hover:bg-gray-100 transition uppercase"
-              >
-                {language === "en" ? "YouTube" : "YouTube"}
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Footer */}
-        <footer className="bg-gray-100 py-12 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h3 className="text-center text-2xl font-bold mb-8 underline text-black uppercase">HARVEST NYC</h3>
-            <div className="flex justify-center items-center gap-12">
-              <a href="https://www.youtube.com/@harvestinthecity" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Ffc234dd74fca47339292514ea22e61c2?format=webp&width=100"
-                  alt="YouTube"
-                  className="w-16 h-16"
-                  draggable="false"
-                />
-              </a>
-              <a href="mailto:harvestinthecitynyc@gmail.com">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2F4e33951a443c48028a4f03ea89d1e34c?format=webp&width=100"
-                  alt="Email"
-                  className="w-16 h-16"
-                  draggable="false"
-                />
-              </a>
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fd2a5926a2a294ef4a6be01d573e936d5?format=webp&width=200"
-                alt="Remnant Church"
-                className="h-16"
-                draggable="false"
-              />
-            </div>
-          </div>
-        </footer>
+      {/* Footer */}
+      <footer className="site-footer">
+        <h3 className="footer-title" id="FOOTER HARVEST">{t("harvestNyc")}</h3>
+        <div className="footer-icons">
+          <a href="https://www.youtube.com/@harvestinthecity/streams" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/62d640b0b7413ecd1eb34c8d2a6733a1699cfafb?width=180"
+              alt="YouTube"
+              className="footer-icon"
+              draggable="false"
+            />
+          </a>
+          <a href="mailto:harvestinthecitynyc@gmail.com">
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/e94bdc79b8e6397731ea714e81845699cb463ee2?width=170"
+              alt="Email"
+              className="footer-icon"
+              draggable="false"
+            />
+          </a>
+          <a href="https://www.remnantchurch.org/" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/d4de61100a8688fad8f49f3af86899013ee08870?width=224"
+              alt="Remnant Church"
+              className="footer-icon footer-icon--wide"
+              draggable="false"
+            />
+          </a>
+        </div>
+      </footer>
     </>
   );
 }
