@@ -385,7 +385,7 @@ a:hover {
 
   .nav-dropdown-item {
     display: block !important;
-    font-size: clamp(11px, 1.3vw, 13px);
+    font-size: clamp(13.2px, 1.56vw, 15.6px);
     padding: 0.25em 0.35em !important;
     font-weight: 600;
     text-align: left !important;
