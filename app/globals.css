@@ -355,13 +355,13 @@ a:hover {
   letter-spacing: 0.5px;
   border-radius: 10px;
   text-transform: uppercase;
-  transition: opacity 0.2s;
+  transition: transform 0.2s, opacity 0.2s;
   animation: fadeIn 0.8s ease-in-out 1.2s forwards;
   opacity: 0;
 }
 
 .hero-youtube-btn:hover {
-  opacity: 0.8;
+  transform: scale(1.05);
 }
 
 @media (max-width: 767px) {
