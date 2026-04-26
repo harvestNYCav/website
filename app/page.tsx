@@ -147,7 +147,9 @@ export default function HomePage() {
           draggable="false"
         />
         <div className="hero-overlay">
-          <h1 className="hero-title" id="header-text">CONNECT<br />WITH US</h1>
+          <h1 className="hero-title" id="header-text">
+            {language === "en" ? "CONNECT" : "CONECTA"}<br />{language === "en" ? "WITH US" : "CON NOSOTROS"}
+          </h1>
         </div>
       </div>
 
