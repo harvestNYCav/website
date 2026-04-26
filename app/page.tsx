@@ -62,6 +62,18 @@ const translations = {
     en: "SUNDAY YOUTUBE LIVESTREAM",
     es: "TRANSMISIÓN EN VIVO YOUTUBE DOMINICAL",
   },
+  missionTitle: {
+    en: "OUR MISSION",
+    es: "NUESTRA MISIÓN",
+  },
+  missionText: {
+    en: "Harvest is a vibrant ministry within Remnant Church NYC dedicated to loving and living like Jesus. We're committed to creating a community where people encounter God's love, grow in faith, and serve others with compassion.",
+    es: "Harvest es un ministerio vibrante dentro de Remnant Church NYC dedicado a amar y vivir como Jesús. Nos comprometemos a crear una comunidad donde las personas encuentren el amor de Dios, crezcan en fe y sirvan a otros con compasión.",
+  },
+  learnMoreBtn: {
+    en: "LEARN MORE",
+    es: "APRENDE MÁS",
+  },
   introText: {
     en: "We'd love to get to know you!\nFor more information, blahblahb blah xyz\nxyz xyz xyz lah blah",
     es: "¡Nos encantaría conocerte!\nPara más información, blahblahb blah xyz\nxyz xyz xyz lah blah",
@@ -190,13 +202,13 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Intro Section */}
+      {/* Mission Section */}
       <section className="intro-section">
+        <h2 className="mission-title">{t("missionTitle")}</h2>
         <p className="intro-text">
-          {introLines[0]}<br />
-          {introLines[1]}<br />
-          {introLines[2]}
+          {t("missionText")}
         </p>
+        <button className="connect-btn">{t("learnMoreBtn")}</button>
       </section>
 
       {/* Contact Sections */}

@@ -381,13 +381,30 @@ a:hover {
   opacity: 0;
 }
 
+.mission-title {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #000;
+  margin: 0 auto 24px;
+  animation: fadeIn 0.8s ease-in-out 0.6s forwards;
+  opacity: 0;
+}
+
 .intro-text {
   font-size: clamp(18.7px, 2.125vw, 29.75px);
   font-weight: 200;
   line-height: 48px;
   color: #000;
-  margin: 0 auto;
+  margin: 0 auto 32px;
   max-width: 1140px;
+  animation: fadeIn 0.8s ease-in-out 0.6s forwards;
+  opacity: 0;
+}
+
+.intro-section .connect-btn {
+  margin-top: 16px;
   animation: fadeIn 0.8s ease-in-out 0.6s forwards;
   opacity: 0;
 }
@@ -485,8 +502,14 @@ a:hover {
     padding: 36px 20px 20px;
   }
 
+  .mission-title {
+    font-size: clamp(24px, 5vw, 32px);
+    margin-bottom: 16px;
+  }
+
   .intro-text {
     line-height: 1.8;
+    margin-bottom: 20px;
   }
 
   .contact-section {
