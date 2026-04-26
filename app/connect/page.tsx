@@ -34,6 +34,10 @@ const translations = {
     en: "CONNECT",
     es: "CONECTAR",
   },
+  children: {
+    en: "CHILDREN",
+    es: "NIÑOS",
+  },
   heroTitle: {
     en: "CONNECT WITH US",
     es: "CONECTA CON NOSOTROS",
@@ -91,7 +95,9 @@ export default function ConnectPage() {
     <>
       {/* Announcement Banner */}
       <div className="announcement-bar">
-        {t(announcements[announcementIndex])}
+        <span key={announcementIndex} className="announcement-text">
+          {t(announcements[announcementIndex])}
+        </span>
       </div>
 
       {/* Navigation */}
@@ -102,13 +108,23 @@ export default function ConnectPage() {
           </Link>
 
           <div className="nav-links">
-            <Link href="/about" className="nav-link">
+            <Link href="/about" className="nav-link" id="menu">
               {t("aboutUs")}
             </Link>
-            <Link href="/#ministries" className="nav-link">
-              {t("ministries")}
-            </Link>
-            <Link href="/connect" className="nav-link nav-link--active">
+            <div className="nav-dropdown">
+              <button className="nav-link nav-dropdown-trigger" id="menu">
+                {t("ministries")}
+              </button>
+              <div id="menu-dropdown" className="nav-dropdown-menu">
+                <span className="nav-dropdown-item">
+                  {t("vineTutoring")}
+                </span>
+                <span className="nav-dropdown-item">
+                  {t("children")}
+                </span>
+              </div>
+            </div>
+            <Link href="/connect" className="nav-link nav-link--active" id="menu">
               {t("connect")}
             </Link>
           </div>
@@ -131,7 +147,7 @@ export default function ConnectPage() {
           draggable="false"
         />
         <div className="hero-overlay">
-          <h1 className="hero-title">CONNECT<br />WITH US</h1>
+          <h1 className="hero-title" id="header-text">CONNECT<br />WITH US</h1>
         </div>
       </div>
 
@@ -195,7 +211,7 @@ export default function ConnectPage() {
       <footer className="site-footer">
         <h3 className="footer-title" id="FOOTER HARVEST">{t("harvestNyc")}</h3>
         <div className="footer-icons">
-          <a href="https://www.youtube.com/@harvestinthecity" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.youtube.com/@harvestinthecity/streams" target="_blank" rel="noopener noreferrer">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/62d640b0b7413ecd1eb34c8d2a6733a1699cfafb?width=180"
               alt="YouTube"
@@ -211,12 +227,14 @@ export default function ConnectPage() {
               draggable="false"
             />
           </a>
-          <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/d4de61100a8688fad8f49f3af86899013ee08870?width=224"
-            alt="Remnant Church"
-            className="footer-icon footer-icon--wide"
-            draggable="false"
-          />
+          <a href="https://www.remnantchurch.org/" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/d4de61100a8688fad8f49f3af86899013ee08870?width=224"
+              alt="Remnant Church"
+              className="footer-icon footer-icon--wide"
+              draggable="false"
+            />
+          </a>
         </div>
       </footer>
     </>
