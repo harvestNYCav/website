@@ -250,6 +250,8 @@ a:hover {
   height: 400px;
   object-fit: cover;
   display: block;
+  opacity: 1;
+  filter: brightness(1.2);
 }
 
 @media (max-width: 767px) {
