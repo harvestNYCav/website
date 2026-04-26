@@ -109,7 +109,7 @@ a:hover {
 .nav-inner {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 38px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -374,7 +374,7 @@ a:hover {
 
 /* ── Intro ── */
 .intro-section {
-  padding: 64px 34px;
+  padding: 64px 40px;
   text-align: center;
   background: #fff;
   animation: fadeIn 0.8s ease-in-out 0.6s forwards;
@@ -411,7 +411,7 @@ a:hover {
 
 /* ── Contact ── */
 .contact-section {
-  padding: 48px 24px 80px;
+  padding: 48px 30px 80px;
   background: #fff;
   animation: fadeIn 0.8s ease-in-out 0.8s forwards;
   opacity: 0;
@@ -434,7 +434,7 @@ a:hover {
   .nav-inner {
     flex-wrap: wrap;
     height: auto;
-    padding: 10px 16px 0;
+    padding: 10px 20px 0;
     row-gap: 20px;
   }
 
@@ -499,7 +499,7 @@ a:hover {
   }
 
   .intro-section {
-    padding: 36px 28px 20px;
+    padding: 36px 32px 20px;
   }
 
   .mission-title {
@@ -513,7 +513,7 @@ a:hover {
   }
 
   .contact-section {
-    padding: 12px 20px 60px;
+    padding: 12px 24px 60px;
   }
 
   .contact-heading {
@@ -603,7 +603,7 @@ a:hover {
 
 /* ── Footer ── */
 .site-footer {
-  padding: 60px 24px;
+  padding: 60px 30px;
   text-align: center;
   background: #fff;
   animation: fadeIn 0.8s ease-in-out 1s forwards;
