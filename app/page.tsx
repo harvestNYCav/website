@@ -7,8 +7,8 @@ type Language = "en" | "es";
 
 const translations = {
   announcement1: {
-    en: "JOIN US FOR WORSHIP ON SUNDAYS AT 3:30PM",
-    es: "ÚNETE A NOSOTROS PARA ADORAR LOS DOMINGOS A LAS 3:30PM",
+    en: "WELCOME TO HARVEST IN THE CITY",
+    es: "BIENVENIDO A HARVEST EN LA CIUDAD",
   },
   announcement2: {
     en: "WELCOME TO HARVEST IN THE CITY",
@@ -39,8 +39,28 @@ const translations = {
     es: "NIÑOS",
   },
   heroTitle: {
-    en: "CONNECT WITH US",
-    es: "CONECTA CON NOSOTROS",
+    en: "LOVING & LIVING LIKE JESUS",
+    es: "AMANDO Y VIVIENDO COMO JESÚS",
+  },
+  location: {
+    en: "LOCATION:",
+    es: "UBICACIÓN:",
+  },
+  address: {
+    en: "206 E 29TH STREET",
+    es: "206 E 29TH STREET",
+  },
+  sundayService: {
+    en: "SUNDAY SERVICE:",
+    es: "SERVICIO DOMINICAL:",
+  },
+  sundayTime: {
+    en: "SUNDAYS AT 3:30 PM",
+    es: "DOMINGOS A LAS 3:30 PM",
+  },
+  youtubeBtn: {
+    en: "SUNDAY YOUTUBE LIVESTREAM",
+    es: "TRANSMISIÓN EN VIVO YOUTUBE DOMINICAL",
   },
   introText: {
     en: "We'd love to get to know you!\nFor more information, blahblahb blah xyz\nxyz xyz xyz lah blah",
@@ -148,8 +168,24 @@ export default function HomePage() {
         />
         <div className="hero-overlay">
           <h1 className="hero-title" id="header-text">
-            {language === "en" ? "CONNECT" : "CONECTA"}<br />{language === "en" ? "WITH US" : "CON NOSOTROS"}
+            {language === "en" ? "LOVING &" : "AMANDO Y"}<br />{language === "en" ? "LIVING LIKE JESUS" : "VIVIENDO COMO JESÚS"}
           </h1>
+
+          <div className="hero-info">
+            <div className="hero-info-column hero-location">
+              <div className="hero-info-label">{t("location")}</div>
+              <div className="hero-info-value">{t("address")}</div>
+            </div>
+
+            <div className="hero-info-column hero-service">
+              <div className="hero-info-label">{t("sundayService")}</div>
+              <div className="hero-info-value">{t("sundayTime")}</div>
+            </div>
+          </div>
+
+          <a href="https://www.youtube.com/@harvestinthecity/streams" target="_blank" rel="noopener noreferrer" className="hero-youtube-btn">
+            {t("youtubeBtn")}
+          </a>
         </div>
       </div>
 
