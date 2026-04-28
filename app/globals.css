@@ -530,8 +530,8 @@ a:hover {
 }
 
 .ministry-btn:hover {
-  border-color: var(--link-green);
-  color: var(--link-green);
+  border-color: var(--link-green) !important;
+  color: var(--link-green) !important;
 }
 
 @media (max-width: 767px) {
