@@ -78,26 +78,6 @@ const translations = {
     en: "We'd love to get to know you!\nFor more information, blahblahb blah xyz\nxyz xyz xyz lah blah",
     es: "¡Nos encantaría conocerte!\nPara más información, blahblahb blah xyz\nxyz xyz xyz lah blah",
   },
-  harvest: {
-    en: "HARVEST",
-    es: "HARVEST",
-  },
-  vineTutoring: {
-    en: "VINE TUTORING",
-    es: "VINE TUTORÍA",
-  },
-  aldoWiloto: {
-    en: "Aldo Wiloto:",
-    es: "Aldo Wiloto:",
-  },
-  rachelGuen: {
-    en: "Rachel Guen:",
-    es: "Rachel Guen:",
-  },
-  connectBtn: {
-    en: "CONNECT",
-    es: "CONECTAR",
-  },
   harvestNyc: {
     en: "HARVEST NYC",
     es: "HARVEST NYC",
@@ -223,53 +203,6 @@ export default function HomePage() {
           )}
         </p>
         <button className="connect-btn">{t("learnMoreBtn")}</button>
-      </section>
-
-      {/* Contact Sections */}
-      <section className="contact-section">
-        <div className="contact-grid">
-
-          {/* Harvest */}
-          <div className="contact-column">
-            <h3 className="contact-heading">{t("harvest")}</h3>
-            <div className="contact-list">
-              <p className="contact-line">
-                <span className="contact-name">{t("aldoWiloto")}</span>{" "}
-                <a href="mailto:aldowiloto@gmail.com" className="contact-email">
-                  aldowiloto@gmail.com
-                </a>
-              </p>
-              <p className="contact-line">
-                <span className="contact-name">{t("rachelGuen")}</span>{" "}
-                <a href="mailto:rguen97@gmail.com" className="contact-email">
-                  rguen97@gmail.com
-                </a>
-              </p>
-            </div>
-            <button className="connect-btn">{t("connectBtn")}</button>
-          </div>
-
-          {/* Vine Tutoring */}
-          <div className="contact-column">
-            <h3 className="contact-heading">{t("vineTutoring")}</h3>
-            <div className="contact-list">
-              <p className="contact-line">
-                <span className="contact-name">{t("aldoWiloto")}</span>{" "}
-                <a href="mailto:aldowiloto@gmail.com" className="contact-email">
-                  aldowiloto@gmail.com
-                </a>
-              </p>
-              <p className="contact-line">
-                <span className="contact-name">{t("rachelGuen")}</span>{" "}
-                <a href="mailto:rguen97@gmail.com" className="contact-email">
-                  rguen97@gmail.com
-                </a>
-              </p>
-            </div>
-            <button className="connect-btn">{t("connectBtn")}</button>
-          </div>
-
-        </div>
       </section>
 
       {/* Footer */}
