@@ -544,12 +544,12 @@ a:hover {
   .ministries-grid {
     grid-template-columns: 1fr;
     gap: 36px;
+    justify-items: center;
   }
 
   .ministry-card {
-    width: 100%;
+    width: 90%;
     max-width: 400px;
-    margin: 0 auto;
   }
 
   .ministries-title {
