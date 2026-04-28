@@ -620,15 +620,8 @@ a:hover {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 7em;
+  gap: clamp(3em, 5vw, 7em);
   justify-items: center;
-}
-
-@media (max-width: 1024px) {
-  .when-we-meet-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 5em;
-  }
 }
 
 @media (max-width: 767px) {
