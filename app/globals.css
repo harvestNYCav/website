@@ -547,6 +547,8 @@ a:hover {
   .ministry-card {
     width: 100%;
     margin: 0;
+    padding-left: 2em !important;
+    padding-right: 2em !important;
   }
 
   .ministries-title {
