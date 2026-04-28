@@ -558,6 +558,7 @@ a:hover {
     font-size: clamp(16px, 2vw, 20px);
     margin-bottom: 12px;
     text-align: left;
+    width: 100%;
   }
 
   .ministry-desc {
@@ -565,10 +566,12 @@ a:hover {
     margin-bottom: 16px;
     height: 100px;
     text-align: left;
+    width: 100%;
   }
 
   .ministry-image {
     margin-bottom: 16px;
+    width: 100%;
   }
 
   .ministry-btn {
