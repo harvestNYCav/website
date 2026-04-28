@@ -624,7 +624,14 @@ a:hover {
   justify-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .when-we-meet-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 5em;
+  }
+}
+
+@media (max-width: 767px) {
   .when-we-meet-grid {
     grid-template-columns: 1fr;
     gap: 3em;
