@@ -520,7 +520,7 @@ a:hover {
   border-radius: 20px;
   font-size: 14px;
   font-weight: 700;
-  color: #000;
+  color: #000 !important;
   background: transparent;
   cursor: pointer;
   text-transform: uppercase;
@@ -547,6 +547,8 @@ a:hover {
   .ministry-card {
     width: 100%;
     margin: 0;
+    padding-left: 1.25em !important;
+    padding-right: 1.25em !important;
   }
 
   .ministries-title {
@@ -766,7 +768,7 @@ a:hover {
   border-radius: 20px;
   font-size: 17px;
   font-weight: 700;
-  color: #000;
+  color: #000 !important;
   background: transparent;
   cursor: pointer;
   text-transform: uppercase;
