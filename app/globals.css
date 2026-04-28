@@ -474,7 +474,7 @@ a:hover {
   text-transform: uppercase;
   text-decoration: underline;
   letter-spacing: 0.5px;
-  color: var(--link-green);
+  color: #000;
   margin-bottom: 16px;
   text-align: left;
 }
