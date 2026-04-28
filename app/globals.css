@@ -312,7 +312,7 @@ a:hover {
 }
 
 .hero-info-label {
-  font-size: 22px;
+  font-size: 25.3px;
   font-weight: 700;
   letter-spacing: 1px;
   margin-bottom: 1.6px;
@@ -320,7 +320,7 @@ a:hover {
 }
 
 .hero-info-value {
-  font-size: 22px;
+  font-size: 25.3px;
   font-weight: 700;
   letter-spacing: 0.5px;
   color: #fff;
@@ -332,14 +332,14 @@ a:hover {
   }
 
   .hero-info-label {
-    font-size: 18px;
+    font-size: 20.7px;
     font-weight: 700;
     margin-bottom: 1px;
     color: #fff;
   }
 
   .hero-info-value {
-    font-size: 18px;
+    font-size: 20.7px;
     font-weight: 700;
     color: #fff;
   }
