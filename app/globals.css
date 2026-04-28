@@ -444,8 +444,8 @@ a:hover {
   .nav-inner {
     flex-wrap: wrap;
     height: auto;
-    padding: 8px 20px 0 !important;
-    row-gap: 16px !important;
+    padding: 0.4em 1em 0 !important;
+    row-gap: 0.8em !important;
   }
 
   .nav-logo {
@@ -457,7 +457,7 @@ a:hover {
     order: 3;
     width: 100%;
     justify-content: space-between;
-    padding: 6px 0 8px !important;
+    padding: 0.3em 0 0.4em !important;
     gap: 4px;
   }
 
