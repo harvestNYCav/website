@@ -468,7 +468,7 @@ a:hover {
   animation: fadeIn 0.8s ease-in-out 0.7s forwards;
   opacity: 0;
   width: 100%;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .ministry-name {
@@ -479,7 +479,7 @@ a:hover {
   letter-spacing: 0.5px;
   color: #000;
   margin-bottom: 16px;
-  text-align: center;
+  text-align: left;
   padding: 0;
   width: 100%;
 }
@@ -491,7 +491,7 @@ a:hover {
   color: #333;
   margin-bottom: 24px;
   display: block;
-  text-align: center;
+  text-align: left;
   width: 100%;
   padding: 8px 0;
 }
@@ -503,7 +503,7 @@ a:hover {
   border-radius: 8px;
   display: block;
   margin-bottom: 24px;
-  align-self: center;
+  align-self: flex-start;
   padding: 0;
 }
 
@@ -525,7 +525,7 @@ a:hover {
   cursor: pointer;
   text-transform: uppercase;
   transition: border-color 0.2s, color 0.2s;
-  align-self: center;
+  align-self: flex-start;
   margin: 0;
 }
 
