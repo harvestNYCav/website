@@ -489,12 +489,12 @@ a:hover {
 }
 
 .ministry-image {
-  width: 100%;
+  width: 80%;
   height: 240px;
   object-fit: cover;
   border-radius: 8px;
   display: block;
-  margin-bottom: 24px;
+  margin: 0 auto 24px;
 }
 
 @media (max-width: 767px) {
