@@ -271,7 +271,7 @@ export default function HomePage() {
           </a>
           <a href="mailto:harvestinthecitynyc@gmail.com">
             <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/e94bdc79b8e6397731ea714e81845699cb463ee2?width=170"
+              src="https://api.builder.io/api/v1/image/assets/TEMP/e94bdc79b9e6397731ea714e81845699cb463ee2?width=170"
               alt="Email"
               className="footer-icon"
               draggable="false"
