@@ -538,19 +538,16 @@ a:hover {
 
 @media (max-width: 767px) {
   .ministries-section {
-    padding: 36px 20px;
+    padding: 36px 16px;
   }
 
   .ministries-grid {
     grid-template-columns: 1fr;
     gap: 36px;
-    max-width: 100%;
-    place-items: center;
   }
 
   .ministry-card {
     width: 100%;
-    max-width: 500px;
   }
 
   .ministries-title {
