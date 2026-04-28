@@ -568,14 +568,12 @@ a:hover {
   .ministry-desc {
     font-size: 14px;
     margin-bottom: 16px;
-    min-height: 120px;
     text-align: left;
     width: 100%;
     padding-left: 1.5em;
     padding-right: 1.5em;
     padding-top: 8px;
-    display: flex;
-    align-items: flex-start;
+    display: block;
   }
 
   .ministry-image {
