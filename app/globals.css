@@ -575,6 +575,7 @@ a:hover {
     padding-top: 8px;
     display: block;
     box-sizing: border-box;
+    min-height: 100px;
   }
 
   .ministry-image {
