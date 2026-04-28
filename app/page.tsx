@@ -98,6 +98,54 @@ const translations = {
     en: "A loving space where children encounter Jesus & grow in their faith through engaging activities and Bible teaching.",
     es: "Un espacio amoroso donde los niños encuentran a Jesús y crecen en su fe a través de actividades atractivas y enseñanza bíblica.",
   },
+  whenWeMetTitle: {
+    en: "WHEN WE MEET",
+    es: "CUANDO NOS REUNIMOS",
+  },
+  sundays: {
+    en: "SUNDAYS",
+    es: "DOMINGOS",
+  },
+  tuesdays: {
+    en: "TUESDAYS",
+    es: "MARTES",
+  },
+  thursdays: {
+    en: "THURSDAYS",
+    es: "JUEVES",
+  },
+  sundaysMeeting: {
+    en: "WORSHIP SERVICE | 3:15PM",
+    es: "SERVICIO DE ADORACIÓN | 3:15PM",
+  },
+  sundaysBilingual: {
+    en: "(BILINGUAL)",
+    es: "(BILINGÜE)",
+  },
+  livestream: {
+    en: "LIVESTREAM",
+    es: "TRANSMISIÓN EN VIVO",
+  },
+  tuesdaysMeeting: {
+    en: "SMALL GROUP | 7:30PM",
+    es: "GRUPO PEQUEÑO | 7:30PM",
+  },
+  tuesdaysEnglish: {
+    en: "(ENGLISH)",
+    es: "(INGLÉS)",
+  },
+  moreInfo: {
+    en: "MORE INFO",
+    es: "MÁS INFO",
+  },
+  thursdaysMeeting: {
+    en: "BIBLE STUDY | 7PM",
+    es: "ESTUDIO BÍBLICO | 7PM",
+  },
+  thursdaysSpanish: {
+    en: "(SPANISH)",
+    es: "(ESPAÑOL)",
+  },
   harvestNyc: {
     en: "HARVEST NYC",
     es: "HARVEST NYC",
@@ -253,6 +301,36 @@ export default function HomePage() {
               draggable="false"
             />
             <button className="ministry-btn">{t("learnMoreBtn")}</button>
+          </div>
+        </div>
+      </section>
+
+      {/* When We Meet Section */}
+      <section className="when-we-meet-section">
+        <h2 className="when-we-meet-title">{t("whenWeMetTitle")}</h2>
+        <div className="when-we-meet-grid">
+          {/* Sundays */}
+          <div className="meeting-card">
+            <h3 className="meeting-day">{t("sundays")}</h3>
+            <p className="meeting-time">{t("sundaysMeeting")}</p>
+            <p className="meeting-language">{t("sundaysBilingual")}</p>
+            <button className="meeting-btn">{t("livestream")}</button>
+          </div>
+
+          {/* Tuesdays */}
+          <div className="meeting-card">
+            <h3 className="meeting-day">{t("tuesdays")}</h3>
+            <p className="meeting-time">{t("tuesdaysMeeting")}</p>
+            <p className="meeting-language">{t("tuesdaysEnglish")}</p>
+            <button className="meeting-btn">{t("moreInfo")}</button>
+          </div>
+
+          {/* Thursdays */}
+          <div className="meeting-card">
+            <h3 className="meeting-day">{t("thursdays")}</h3>
+            <p className="meeting-time">{t("thursdaysMeeting")}</p>
+            <p className="meeting-language">{t("thursdaysSpanish")}</p>
+            <button className="meeting-btn">{t("moreInfo")}</button>
           </div>
         </div>
       </section>
