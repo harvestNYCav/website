@@ -247,7 +247,7 @@ a:hover {
 
 .hero-img {
   width: 100%;
-  height: 400px;
+  height: 480px;
   object-fit: cover;
   display: block;
   opacity: 1;
@@ -255,13 +255,13 @@ a:hover {
 
 @media (max-width: 767px) {
   .hero-img {
-    height: 300px;
+    height: 360px;
   }
 }
 
 @media (min-width: 768px) {
   .hero-img {
-    height: 409px;
+    height: 491px;
   }
 }
 
