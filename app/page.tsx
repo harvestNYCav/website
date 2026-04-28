@@ -206,7 +206,23 @@ export default function HomePage() {
       <section className="intro-section">
         <h2 className="mission-title">{t("missionTitle")}</h2>
         <p className="intro-text">
-          {t("missionText")}
+          {language === "en" ? (
+            <>
+              Harvest is a vibrant ministry within{" "}
+              <a href="https://www.remnantchurch.org/" target="_blank" rel="noopener noreferrer" className="mission-link">
+                Remnant Church NYC
+              </a>
+              {" "}dedicated to loving and living like Jesus. We're committed to creating a community where people encounter God's love, grow in faith, and serve others with compassion.
+            </>
+          ) : (
+            <>
+              Harvest es un ministerio vibrante dentro de{" "}
+              <a href="https://www.remnantchurch.org/" target="_blank" rel="noopener noreferrer" className="mission-link">
+                Remnant Church NYC
+              </a>
+              {" "}dedicado a amar y vivir como Jesús. Nos comprometemos a crear una comunidad donde las personas encuentren el amor de Dios, crezcan en fe y sirvan a otros con compasión.
+            </>
+          )}
         </p>
         <button className="connect-btn">{t("learnMoreBtn")}</button>
       </section>
