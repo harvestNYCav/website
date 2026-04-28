@@ -477,6 +477,7 @@ a:hover {
   color: #000;
   margin-bottom: 16px;
   text-align: left;
+  padding: 0;
 }
 
 .ministry-desc {
@@ -491,6 +492,7 @@ a:hover {
   text-align: left;
   width: 80%;
   align-self: flex-start;
+  padding: 0;
 }
 
 .ministry-image {
@@ -501,6 +503,7 @@ a:hover {
   display: block;
   margin-bottom: 24px;
   align-self: flex-start;
+  padding: 0;
 }
 
 @media (max-width: 767px) {
@@ -522,6 +525,7 @@ a:hover {
   text-transform: uppercase;
   transition: border-color 0.2s, color 0.2s;
   align-self: flex-start;
+  margin: 0;
 }
 
 .ministry-btn:hover {
