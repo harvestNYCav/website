@@ -464,7 +464,6 @@ a:hover {
 .ministry-card {
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
   animation: fadeIn 0.8s ease-in-out 0.7s forwards;
   opacity: 0;
 }
