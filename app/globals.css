@@ -554,7 +554,7 @@ a:hover {
   }
 
   .ministry-name {
-    font-size: clamp(16px, 2vw, 20px);
+    font-size: clamp(1.3em, 2.6vw, 1.625em);
     margin-bottom: 12px;
     text-align: left;
     width: 100%;
