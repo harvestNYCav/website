@@ -295,7 +295,7 @@ a:hover {
 
 @media (max-width: 767px) {
   .hero-title {
-    font-size: clamp(37px, 5.2vw, 62px);
+    font-size: clamp(30px, 4.16vw, 50px);
     animation: fadeIn 0.8s ease-in-out 1.2s forwards;
     opacity: 0;
   }
