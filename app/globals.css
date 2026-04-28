@@ -265,6 +265,12 @@ a:hover {
   }
 }
 
+@media (min-width: 1440px) {
+  .hero-img {
+    height: 640px;
+  }
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
