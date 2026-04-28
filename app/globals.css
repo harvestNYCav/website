@@ -492,10 +492,11 @@ a:hover {
   margin-bottom: 24px;
   height: 100px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   text-align: left;
   width: 80%;
   padding: 0;
+  padding-top: 8px;
 }
 
 .ministry-image {
@@ -571,8 +572,9 @@ a:hover {
     width: 100%;
     padding-left: 1.5em;
     padding-right: 1.5em;
+    padding-top: 8px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .ministry-image {
