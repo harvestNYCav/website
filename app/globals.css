@@ -428,7 +428,7 @@ a:hover {
 
 /* ── Ministries ── */
 .ministries-section {
-  padding: 64px 80px;
+  padding: 64px 96px;
   text-align: center;
   background: #f9f9f9;
   animation: fadeIn 0.8s ease-in-out 0.7s forwards;
@@ -529,7 +529,7 @@ a:hover {
 
 @media (max-width: 767px) {
   .ministries-section {
-    padding: 36px 48px;
+    padding: 36px 58px;
   }
 
   .ministries-title {
