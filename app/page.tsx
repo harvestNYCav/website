@@ -78,6 +78,10 @@ const translations = {
     en: "We'd love to get to know you!\nFor more information, blahblahb blah xyz\nxyz xyz xyz lah blah",
     es: "¡Nos encantaría conocerte!\nPara más información, blahblahb blah xyz\nxyz xyz xyz lah blah",
   },
+  vineTutoring: {
+    en: "VINE TUTORING",
+    es: "VINE TUTORÍA",
+  },
   harvestNyc: {
     en: "HARVEST NYC",
     es: "HARVEST NYC",
