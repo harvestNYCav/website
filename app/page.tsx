@@ -119,9 +119,7 @@ export default function HomePage() {
       setAnnouncementIndex((prev) => (prev + 1) % announcements.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
-
-  const introLines = t("introText").split("\n");
+  }, [announcements.length]);
 
   return (
     <>
@@ -212,7 +210,7 @@ export default function HomePage() {
               <a href="https://www.remnantchurch.org/" target="_blank" rel="noopener noreferrer" className="mission-link">
                 Remnant Church NYC
               </a>
-              {" "}dedicated to loving and living like Jesus. We're committed to creating a community where people encounter God's love, grow in faith, and serve others with compassion.
+              {" "}dedicated to loving and living like Jesus. We&apos;re committed to creating a community where people encounter God&apos;s love, grow in faith, and serve others with compassion.
             </>
           ) : (
             <>
