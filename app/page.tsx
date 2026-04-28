@@ -179,7 +179,7 @@ export default function HomePage() {
         />
         <div className="hero-overlay">
           <h1 className="hero-title" id="header-text">
-            {language === "en" ? "LOVING &" : "AMANDO Y"}<br />{language === "en" ? "LIVING LIKE JESUS" : "VIVIENDO COMO JESÚS"}
+            {language === "en" ? "LOVING & LIVING" : "AMANDO Y VIVIENDO"}<br />{language === "en" ? "LIKE JESUS" : "COMO JESÚS"}
           </h1>
 
           <div className="hero-info">
