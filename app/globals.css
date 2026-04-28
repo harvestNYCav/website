@@ -163,7 +163,7 @@ a:hover {
 
 .nav-dropdown-trigger {
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 800;
   color: #000;
   background: transparent;
   border: none;
@@ -648,7 +648,7 @@ a:hover {
 
   .nav-dropdown-trigger {
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 800;
   }
 
   #menu.nav-dropdown-trigger {
