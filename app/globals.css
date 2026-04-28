@@ -451,7 +451,7 @@ a:hover {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4.5em;
+  gap: 7em;
   justify-items: center;
 }
 
