@@ -338,14 +338,14 @@ a:hover {
   }
 
   .hero-info-label {
-    font-size: 20.7px;
+    font-size: clamp(15px, 1.8vw, 17.6px);
     font-weight: 700;
     margin-bottom: 1px;
     color: #fff;
   }
 
   .hero-info-value {
-    font-size: 20.7px;
+    font-size: clamp(15px, 1.8vw, 17.6px);
     font-weight: 700;
     color: #fff;
   }
