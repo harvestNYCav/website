@@ -518,12 +518,13 @@ a:hover {
   background: transparent;
   cursor: pointer;
   text-transform: uppercase;
-  transition: background 0.2s;
+  transition: border-color 0.2s, color 0.2s;
   align-self: flex-start;
 }
 
 .ministry-btn:hover {
-  background: #f5f5f5;
+  border-color: var(--link-green);
+  color: var(--link-green);
 }
 
 @media (max-width: 767px) {
