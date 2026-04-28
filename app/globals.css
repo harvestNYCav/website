@@ -451,7 +451,7 @@ a:hover {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  gap: 60px;
   justify-items: center;
 }
 
@@ -541,7 +541,7 @@ a:hover {
 
   .ministries-grid {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 60px;
   }
 
   .ministry-card {
