@@ -489,6 +489,8 @@ a:hover {
   display: flex;
   align-items: center;
   text-align: left;
+  width: 80%;
+  align-self: flex-start;
 }
 
 .ministry-image {
