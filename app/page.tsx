@@ -82,6 +82,22 @@ const translations = {
     en: "VINE TUTORING",
     es: "VINE TUTORÍA",
   },
+  ministriesTitle: {
+    en: "MINISTRIES",
+    es: "MINISTERIOS",
+  },
+  childrenMinistry: {
+    en: "CHILDREN'S MINISTRY",
+    es: "MINISTERIO DE NIÑOS",
+  },
+  vineTutoringDesc: {
+    en: "A tutoring program serving the local & migrant communities, at no cost. The goal is to help students develop academic success, English language skills, etc.",
+    es: "Un programa de tutoría que sirve a las comunidades locales y migrantes, sin costo. El objetivo es ayudar a los estudiantes a lograr éxito académico, habilidades del idioma inglés, etc.",
+  },
+  childrenDesc: {
+    en: "A loving space where children encounter Jesus & grow in their faith through engaging activities and Bible teaching.",
+    es: "Un espacio amoroso donde los niños encuentran a Jesús y crecen en su fe a través de actividades atractivas y enseñanza bíblica.",
+  },
   harvestNyc: {
     en: "HARVEST NYC",
     es: "HARVEST NYC",
@@ -207,6 +223,38 @@ export default function HomePage() {
           )}
         </p>
         <button className="connect-btn">{t("learnMoreBtn")}</button>
+      </section>
+
+      {/* Ministries Section */}
+      <section className="ministries-section">
+        <h2 className="ministries-title">{t("ministriesTitle")}</h2>
+        <div className="ministries-grid">
+          {/* Vine Tutoring */}
+          <div className="ministry-card">
+            <h3 className="ministry-name">{t("vineTutoring")}</h3>
+            <p className="ministry-desc">{t("vineTutoringDesc")}</p>
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=500"
+              alt="Vine Tutoring"
+              className="ministry-image"
+              draggable="false"
+            />
+            <button className="ministry-btn">{t("learnMoreBtn")}</button>
+          </div>
+
+          {/* Children's Ministry */}
+          <div className="ministry-card">
+            <h3 className="ministry-name">{t("childrenMinistry")}</h3>
+            <p className="ministry-desc">{t("childrenDesc")}</p>
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=500"
+              alt="Children's Ministry"
+              className="ministry-image"
+              draggable="false"
+            />
+            <button className="ministry-btn">{t("learnMoreBtn")}</button>
+          </div>
+        </div>
       </section>
 
       {/* Footer */}
