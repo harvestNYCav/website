@@ -405,12 +405,12 @@ a:hover {
 
 .mission-link {
   color: var(--link-green);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .mission-link:hover {
   color: var(--link-green);
-  text-decoration: underline;
+  opacity: 0.8;
 }
 
 .intro-section .connect-btn {
