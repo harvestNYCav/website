@@ -272,7 +272,7 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding: 40px 20px;
+  padding: 32px 16px;
   background: transparent;
 }
 
@@ -296,7 +296,7 @@ a:hover {
 
 .hero-info {
   display: flex;
-  gap: 40px;
+  gap: 32px;
   justify-content: center;
   align-items: flex-start;
   width: 100%;
@@ -314,7 +314,7 @@ a:hover {
   font-size: 22px;
   font-weight: 700;
   letter-spacing: 1px;
-  margin-bottom: 2px;
+  margin-bottom: 1.6px;
   color: #fff;
 }
 
