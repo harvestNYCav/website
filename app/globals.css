@@ -562,6 +562,7 @@ a:hover {
     width: 100%;
     padding-left: 1.5em;
     padding-right: 1.5em;
+    box-sizing: border-box;
   }
 
   .ministry-desc {
