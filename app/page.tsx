@@ -78,25 +78,73 @@ const translations = {
     en: "We'd love to get to know you!\nFor more information, blahblahb blah xyz\nxyz xyz xyz lah blah",
     es: "¡Nos encantaría conocerte!\nPara más información, blahblahb blah xyz\nxyz xyz xyz lah blah",
   },
-  harvest: {
-    en: "HARVEST",
-    es: "HARVEST",
-  },
   vineTutoring: {
     en: "VINE TUTORING",
     es: "VINE TUTORÍA",
   },
-  aldoWiloto: {
-    en: "Aldo Wiloto:",
-    es: "Aldo Wiloto:",
+  ministriesTitle: {
+    en: "MINISTRIES",
+    es: "MINISTERIOS",
   },
-  rachelGuen: {
-    en: "Rachel Guen:",
-    es: "Rachel Guen:",
+  childrenMinistry: {
+    en: "CHILDREN'S MINISTRY",
+    es: "MINISTERIO DE NIÑOS",
   },
-  connectBtn: {
-    en: "CONNECT",
-    es: "CONECTAR",
+  vineTutoringDesc: {
+    en: "A tutoring program serving the local & migrant communities, at no cost. The goal is to help students develop academic success, English language skills, etc.",
+    es: "Un programa de tutoría que sirve a las comunidades locales y migrantes, sin costo. El objetivo es ayudar a los estudiantes a lograr éxito académico, habilidades del idioma inglés, etc.",
+  },
+  childrenDesc: {
+    en: "A loving space where children encounter Jesus & grow in their faith through engaging activities and Bible teaching.",
+    es: "Un espacio amoroso donde los niños encuentran a Jesús y crecen en su fe a través de actividades atractivas y enseñanza bíblica.",
+  },
+  whenWeMetTitle: {
+    en: "WHEN WE MEET",
+    es: "CUANDO NOS REUNIMOS",
+  },
+  sundays: {
+    en: "SUNDAYS",
+    es: "DOMINGOS",
+  },
+  tuesdays: {
+    en: "TUESDAYS",
+    es: "MARTES",
+  },
+  thursdays: {
+    en: "THURSDAYS",
+    es: "JUEVES",
+  },
+  sundaysMeeting: {
+    en: "WORSHIP SERVICE | 3:15PM",
+    es: "SERVICIO DE ADORACIÓN | 3:15PM",
+  },
+  sundaysBilingual: {
+    en: "(BILINGUAL)",
+    es: "(BILINGÜE)",
+  },
+  livestream: {
+    en: "LIVESTREAM",
+    es: "TRANSMISIÓN EN VIVO",
+  },
+  tuesdaysMeeting: {
+    en: "SMALL GROUP | 7:30PM",
+    es: "GRUPO PEQUEÑO | 7:30PM",
+  },
+  tuesdaysEnglish: {
+    en: "(ENGLISH)",
+    es: "(INGLÉS)",
+  },
+  moreInfo: {
+    en: "MORE INFO",
+    es: "MÁS INFO",
+  },
+  thursdaysMeeting: {
+    en: "BIBLE STUDY | 7PM",
+    es: "ESTUDIO BÍBLICO | 7PM",
+  },
+  thursdaysSpanish: {
+    en: "(SPANISH)",
+    es: "(ESPAÑOL)",
   },
   harvestNyc: {
     en: "HARVEST NYC",
@@ -119,9 +167,7 @@ export default function HomePage() {
       setAnnouncementIndex((prev) => (prev + 1) % announcements.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
-
-  const introLines = t("introText").split("\n");
+  }, [announcements.length]);
 
   return (
     <>
@@ -181,7 +227,7 @@ export default function HomePage() {
         />
         <div className="hero-overlay">
           <h1 className="hero-title" id="header-text">
-            {language === "en" ? "LOVING &" : "AMANDO Y"}<br />{language === "en" ? "LIVING LIKE JESUS" : "VIVIENDO COMO JESÚS"}
+            {language === "en" ? "LOVING & LIVING" : "AMANDO Y VIVIENDO"}<br />{language === "en" ? "LIKE JESUS" : "COMO JESÚS"}
           </h1>
 
           <div className="hero-info">
@@ -206,55 +252,86 @@ export default function HomePage() {
       <section className="intro-section">
         <h2 className="mission-title">{t("missionTitle")}</h2>
         <p className="intro-text">
-          {t("missionText")}
+          {language === "en" ? (
+            <>
+              Harvest is a vibrant ministry within{" "}
+              <a href="https://www.remnantchurch.org/" target="_blank" rel="noopener noreferrer" className="mission-link">
+                Remnant Church NYC
+              </a>
+              {" "}dedicated to loving and living like Jesus. We&apos;re committed to creating a community where people encounter God&apos;s love, grow in faith, and serve others with compassion.
+            </>
+          ) : (
+            <>
+              Harvest es un ministerio vibrante dentro de{" "}
+              <a href="https://www.remnantchurch.org/" target="_blank" rel="noopener noreferrer" className="mission-link">
+                Remnant Church NYC
+              </a>
+              {" "}dedicado a amar y vivir como Jesús. Nos comprometemos a crear una comunidad donde las personas encuentren el amor de Dios, crezcan en fe y sirvan a otros con compasión.
+            </>
+          )}
         </p>
         <button className="connect-btn">{t("learnMoreBtn")}</button>
       </section>
 
-      {/* Contact Sections */}
-      <section className="contact-section">
-        <div className="contact-grid">
-
-          {/* Harvest */}
-          <div className="contact-column">
-            <h3 className="contact-heading">{t("harvest")}</h3>
-            <div className="contact-list">
-              <p className="contact-line">
-                <span className="contact-name">{t("aldoWiloto")}</span>{" "}
-                <a href="mailto:aldowiloto@gmail.com" className="contact-email">
-                  aldowiloto@gmail.com
-                </a>
-              </p>
-              <p className="contact-line">
-                <span className="contact-name">{t("rachelGuen")}</span>{" "}
-                <a href="mailto:rguen97@gmail.com" className="contact-email">
-                  rguen97@gmail.com
-                </a>
-              </p>
-            </div>
-            <button className="connect-btn">{t("connectBtn")}</button>
-          </div>
-
+      {/* Ministries Section */}
+      <section className="ministries-section">
+        <h2 className="ministries-title">{t("ministriesTitle")}</h2>
+        <div className="ministries-grid">
           {/* Vine Tutoring */}
-          <div className="contact-column">
-            <h3 className="contact-heading">{t("vineTutoring")}</h3>
-            <div className="contact-list">
-              <p className="contact-line">
-                <span className="contact-name">{t("aldoWiloto")}</span>{" "}
-                <a href="mailto:aldowiloto@gmail.com" className="contact-email">
-                  aldowiloto@gmail.com
-                </a>
-              </p>
-              <p className="contact-line">
-                <span className="contact-name">{t("rachelGuen")}</span>{" "}
-                <a href="mailto:rguen97@gmail.com" className="contact-email">
-                  rguen97@gmail.com
-                </a>
-              </p>
-            </div>
-            <button className="connect-btn">{t("connectBtn")}</button>
+          <div className="ministry-card">
+            <h3 className="ministry-name">{t("vineTutoring")}</h3>
+            <p className="ministry-desc">{t("vineTutoringDesc")}</p>
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=500"
+              alt="Vine Tutoring"
+              className="ministry-image"
+              draggable="false"
+            />
+            <button className="ministry-btn">{t("learnMoreBtn")}</button>
           </div>
 
+          {/* Children's Ministry */}
+          <div className="ministry-card">
+            <h3 className="ministry-name">{t("childrenMinistry")}</h3>
+            <p className="ministry-desc">{t("childrenDesc")}</p>
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=500"
+              alt="Children's Ministry"
+              className="ministry-image"
+              draggable="false"
+            />
+            <button className="ministry-btn">{t("learnMoreBtn")}</button>
+          </div>
+        </div>
+      </section>
+
+      {/* When We Meet Section */}
+      <section className="when-we-meet-section">
+        <h2 className="when-we-meet-title">{t("whenWeMetTitle")}</h2>
+        <div className="when-we-meet-grid">
+          {/* Sundays */}
+          <div className="meeting-card">
+            <h3 className="meeting-day">{t("sundays")}</h3>
+            <p className="meeting-time">{t("sundaysMeeting")}</p>
+            <p className="meeting-language">{t("sundaysBilingual")}</p>
+            <button className="meeting-btn">{t("livestream")}</button>
+          </div>
+
+          {/* Tuesdays */}
+          <div className="meeting-card">
+            <h3 className="meeting-day">{t("tuesdays")}</h3>
+            <p className="meeting-time">{t("tuesdaysMeeting")}</p>
+            <p className="meeting-language">{t("tuesdaysEnglish")}</p>
+            <button className="meeting-btn">{t("moreInfo")}</button>
+          </div>
+
+          {/* Thursdays */}
+          <div className="meeting-card">
+            <h3 className="meeting-day">{t("thursdays")}</h3>
+            <p className="meeting-time">{t("thursdaysMeeting")}</p>
+            <p className="meeting-language">{t("thursdaysSpanish")}</p>
+            <button className="meeting-btn">{t("moreInfo")}</button>
+          </div>
         </div>
       </section>
 
@@ -272,7 +349,7 @@ export default function HomePage() {
           </a>
           <a href="mailto:harvestinthecitynyc@gmail.com">
             <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/e94bdc79b8e6397731ea714e81845699cb463ee2?width=170"
+              src="https://api.builder.io/api/v1/image/assets/TEMP/e94bdc79b9e6397731ea714e81845699cb463ee2?width=170"
               alt="Email"
               className="footer-icon"
               draggable="false"
