@@ -115,8 +115,8 @@ const translations = {
     es: "JUEVES",
   },
   sundaysMeeting: {
-    en: "WORSHIP SERVICE | 3:15PM",
-    es: "SERVICIO DE ADORACIÓN | 3:15PM",
+    en: "WORSHIP SERVICE | 3:30PM",
+    es: "SERVICIO DE ADORACIÓN | 3:30PM",
   },
   sundaysBilingual: {
     en: "(BILINGUAL)",
