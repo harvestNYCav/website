@@ -547,8 +547,8 @@ a:hover {
   .ministry-card {
     width: 100%;
     margin: 0;
-    padding-left: 1.25em !important;
-    padding-right: 1.25em !important;
+    padding-left: 1.5em !important;
+    padding-right: 1.5em !important;
     align-items: flex-start;
   }
 
@@ -560,18 +560,18 @@ a:hover {
     font-size: clamp(1.3em, 2.6vw, 1.625em);
     margin-bottom: 12px;
     text-align: left !important;
-    width: calc(100% - 3em) !important;
-    margin-left: 1.5em;
-    margin-right: 1.5em;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .ministry-desc {
     font-size: 14px;
     margin: 0 0 24px 0;
     text-align: left !important;
-    width: calc(100% - 3em) !important;
-    margin-left: 1.5em;
-    margin-right: 1.5em;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     padding-top: 8px;
     padding-bottom: 8px;
     display: block;
@@ -580,9 +580,9 @@ a:hover {
   .ministry-image {
     margin-top: 0;
     margin-bottom: 24px;
-    width: calc(100% - 3em) !important;
-    margin-left: 1.5em;
-    margin-right: 1.5em;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     align-self: flex-start !important;
   }
 
@@ -591,7 +591,7 @@ a:hover {
     font-size: 12px;
     border-radius: 16px;
     align-self: flex-start !important;
-    margin-left: 1.5em;
+    margin-left: 0;
   }
 }
 
