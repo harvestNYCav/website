@@ -22,6 +22,10 @@ const translations = {
     en: "ABOUT US",
     es: "ACERCA DE NOSOTROS",
   },
+  aboutUsShort: {
+    en: "ABOUT",
+    es: "ACERCA",
+  },
   ministries: {
     en: "MINISTRIES",
     es: "MINISTERIOS",
@@ -61,6 +65,10 @@ const translations = {
   youtubeBtn: {
     en: "SUNDAY YOUTUBE LIVESTREAM",
     es: "TRANSMISIÓN EN VIVO YOUTUBE DOMINICAL",
+  },
+  youtubeBtnShort: {
+    en: "SUNDAY YOUTUBE LIVESTREAM",
+    es: "UNITE EN VIVO EN YOUTUBE",
   },
   missionTitle: {
     en: "OUR MISSION",
@@ -186,8 +194,9 @@ export default function HomePage() {
           </Link>
 
           <div className="nav-links">
-            <Link href="/about" className="nav-link" id="menu">
-              {t("aboutUs")}
+            <Link href="/about" className="nav-link nav-link-about" id="menu">
+              <span className="nav-link-full">{t("aboutUs")}</span>
+              <span className="nav-link-short">{t("aboutUsShort")}</span>
             </Link>
             <div className="nav-dropdown">
               <button className="nav-link nav-dropdown-trigger" id="menu">
@@ -243,7 +252,8 @@ export default function HomePage() {
           </div>
 
           <a id="livestream button" href="https://www.youtube.com/@harvestinthecity/streams" target="_blank" rel="noopener noreferrer" className="hero-youtube-btn">
-            {t("youtubeBtn")}
+            <span className="btn-text-full">{t("youtubeBtn")}</span>
+            <span className="btn-text-short">{t("youtubeBtnShort")}</span>
           </a>
         </div>
       </div>

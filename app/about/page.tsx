@@ -1,22 +1,58 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 type Language = "en" | "es";
 
-const aboutContent = {
-  aboutUs: {
-    en: "About Us",
-    es: "Acerca de Nosotros",
+const translations = {
+  announcement1: {
+    en: "JOIN US FOR WORSHIP ON SUNDAYS AT 3:30PM",
+    es: "ÚNETE A NOSOTROS PARA ADORAR LOS DOMINGOS A LAS 3:30PM",
   },
-  missionTitle: {
+  announcement2: {
+    en: "WELCOME TO HARVEST IN THE CITY",
+    es: "BIENVENIDO A HARVEST EN LA CIUDAD",
+  },
+  announcement: {
+    en: "SOME SORT OF ANNOUNCEMENT HERE",
+    es: "ALGÚN TIPO DE ANUNCIO AQUÍ",
+  },
+  aboutUs: {
+    en: "ABOUT US",
+    es: "ACERCA DE NOSOTROS",
+  },
+  aboutUsShort: {
+    en: "ABOUT",
+    es: "ACERCA",
+  },
+  ministries: {
+    en: "MINISTRIES",
+    es: "MINISTERIOS",
+  },
+  getInvolved: {
+    en: "GET INVOLVED",
+    es: "INVOLÚCRATE",
+  },
+  connect: {
+    en: "CONNECT",
+    es: "CONECTAR",
+  },
+  children: {
+    en: "CHILDREN",
+    es: "NIÑOS",
+  },
+  heroTitle: {
+    en: "ABOUT US",
+    es: "ACERCA DE NOSOTROS",
+  },
+  introText: {
     en: "Harvest is a vibrant ministry within Remnant Church NYC dedicated to loving and living like Jesus. We're committed to creating a community where people encounter God's love, grow in faith, and serve others with compassion.",
     es: "Harvest es un ministerio vibrante dentro de Iglesia Remanente NYC dedicado a amar y vivir como Jesús. Nos comprometemos a crear una comunidad donde las personas encuentren el amor de Dios, crezcan en fe y sirvan a otros con compasión.",
   },
   ourStaff: {
-    en: "Our Staff",
-    es: "Nuestro Personal",
+    en: "OUR STAFF",
+    es: "NUESTRO PERSONAL",
   },
   pastorRichard: {
     en: "Pastor Richard",
@@ -27,171 +63,169 @@ const aboutContent = {
     es: "Pastor Erika",
   },
   pastorDesc: {
-    en: "A blurb about their family, kids bay, when they started blah blah xyz blah blah xyz blah blah xyz blah blah xyz",
+    en: "A blurb about their family, kids, when they started blah blah xyz blah blah xyz blah blah xyz blah blah xyz",
     es: "Un párrafo sobre su familia, hijos, cuándo comenzaron blah blah xyz blah blah xyz blah blah xyz blah blah xyz",
   },
   servingStaff: {
-    en: "Serving Staff",
-    es: "Personal Sirviente",
+    en: "SERVING STAFF",
+    es: "PERSONAL SIRVIENTE",
   },
   servingDesc: {
     en: "A general blurb about the group of people who serve, blah blah blah blah xyz blah blah xyz blah blah xyz blah blah xyz",
     es: "Un párrafo general sobre el grupo de personas que sirven, blah blah blah blah xyz blah blah xyz blah blah xyz blah blah xyz",
   },
   interestedBtn: {
-    en: "Interested in Serving?",
-    es: "¿Interesado en Servir?",
+    en: "INTERESTED IN SERVING?",
+    es: "¿INTERESADO EN SERVIR?",
+  },
+  harvestNyc: {
+    en: "HARVEST NYC",
+    es: "HARVEST NYC",
   },
 };
 
 export default function AboutPage() {
   const [language, setLanguage] = useState<Language>("en");
+  const [announcementIndex, setAnnouncementIndex] = useState(0);
 
-  const t = (key: string): string => {
-    const translations = aboutContent[key as keyof typeof aboutContent];
-    return translations ? translations[language] : key;
+  const t = (key: keyof typeof translations): string => {
+    return translations[key][language];
   };
+
+  const announcements = ["announcement1", "announcement2"] as const;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAnnouncementIndex((prev) => (prev + 1) % announcements.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
       {/* Announcement Banner */}
-      <div className="bg-gray-200 text-gray-800 text-sm py-2 text-center">
-        SOME SORT OF ANNOUNCEMENT HERE
+      <div className="announcement-bar">
+        <span key={announcementIndex} className="announcement-text">
+          {t(announcements[announcementIndex])}
+        </span>
       </div>
 
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-blue-600 rounded"></div>
-              <span className="text-sm font-semibold text-gray-800">
-                Harvest
-              </span>
+      <nav className="site-nav">
+        <div className="nav-inner">
+          <Link href="/" className="nav-logo" id="HARVEST LOGO">
+            HARVEST<br />NYC
+          </Link>
+
+          <div className="nav-links">
+            <Link href="/about" className="nav-link nav-link-about nav-link--active" id="menu">
+              <span className="nav-link-full">{t("aboutUs")}</span>
+              <span className="nav-link-short">{t("aboutUsShort")}</span>
             </Link>
-
-            <div className="hidden md:flex items-center gap-8">
-              <Link href="/about" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
-                About Us
-              </Link>
-              <Link href="/#ministries" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
-                Ministries
-              </Link>
-              <Link href="/#involved" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
-                Get Involved
-              </Link>
-              <Link href="/connect" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
-                Connect
-              </Link>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <button
-                onClick={() => setLanguage(language === "en" ? "es" : "en")}
-                className="px-3 py-1 text-sm border border-gray-800 text-gray-800 rounded hover:bg-gray-100"
-              >
-                {language === "en" ? "ESPAÑOL" : "ENGLISH"}
+            <div className="nav-dropdown">
+              <button className="nav-link nav-dropdown-trigger" id="menu">
+                {t("ministries")}
               </button>
+              <div id="menu-dropdown" className="nav-dropdown-menu">
+                <span className="nav-dropdown-item">
+                  {t("children")}
+                </span>
+              </div>
             </div>
+            <Link href="/connect" className="nav-link" id="menu">
+              {t("connect")}
+            </Link>
           </div>
+
+          <button
+            onClick={() => setLanguage(language === "en" ? "es" : "en")}
+            className="lang-btn"
+          >
+            {language === "en" ? "ESPAÑOL" : "ENGLISH"}
+          </button>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-96 md:h-screen bg-gray-900 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-50"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1200&h=800&fit=crop')",
-          }}
-        ></div>
-
-        <div className="relative h-full flex flex-col justify-center items-center text-center text-white px-4">
-          <h1 className="text-5xl md:text-7xl font-bold">
-            {t("aboutUs")}
+      <div className="hero-wrapper">
+        <img
+          src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=2926"
+          alt=""
+          className="hero-img"
+          draggable="false"
+        />
+        <div className="hero-overlay">
+          <h1 className="hero-title" id="header-text">
+            {language === "en" ? "ABOUT US" : "ACERCA"}<br />{language === "en" ? "" : "DE NOSOTROS"}
           </h1>
         </div>
+      </div>
+
+      {/* Intro Section */}
+      <section className="intro-section">
+        <p className="intro-text">
+          {t("introText")}
+        </p>
       </section>
 
-      {/* Mission Section */}
-      <section className="py-16 md:py-24 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-lg md:text-xl text-gray-800 leading-relaxed text-center">
-            {t("missionTitle")}
-          </p>
-        </div>
-      </section>
+      {/* Our Staff Section */}
+      <section className="contact-section">
+        <h2 className="ministries-title">{t("ourStaff")}</h2>
+        
+        <div className="contact-grid">
 
-      {/* Staff Section */}
-      <section className="py-16 md:py-24 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
-            {t("ourStaff")}
-          </h2>
-
-          {/* Pastor Section */}
-          <div className="mb-24">
-            <div
-              className="h-64 md:h-96 bg-cover bg-center rounded-lg mb-8"
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop')",
-              }}
-            ></div>
-            <h3 className="text-2xl md:text-3xl font-bold text-center mb-6">
-              <u>{t("pastorRichard")} | {t("pastorErika")}</u>
-            </h3>
-            <p className="text-center text-gray-700 text-lg max-w-3xl mx-auto">
-              {t("pastorDesc")}
-            </p>
-          </div>
-
-          {/* Serving Staff Section */}
-          <div>
-            <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">
-              <u>{t("servingStaff")}</u>
-            </h3>
-            <p className="text-center text-gray-700 text-lg max-w-3xl mx-auto mb-8">
-              {t("servingDesc")}
-            </p>
-            <div className="text-center">
-              <button className="px-8 py-3 border-2 border-black text-black rounded-full font-bold hover:bg-gray-100 transition uppercase">
-              {t("interestedBtn")}
-            </button>
+          {/* Pastors */}
+          <div className="contact-column">
+            <h3 className="contact-heading">{t("pastorRichard")} | {t("pastorErika")}</h3>
+            <div className="contact-list">
+              <p className="contact-line">
+                {t("pastorDesc")}
+              </p>
             </div>
           </div>
+
+          {/* Serving Staff */}
+          <div className="contact-column">
+            <h3 className="contact-heading">{t("servingStaff")}</h3>
+            <div className="contact-list">
+              <p className="contact-line">
+                {t("servingDesc")}
+              </p>
+            </div>
+            <button className="connect-btn">{t("interestedBtn")}</button>
+          </div>
+
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-100 py-12 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h3 className="text-center text-2xl font-bold mb-8 underline text-black uppercase">HARVEST NYC</h3>
-          <div className="flex justify-center items-center gap-12 mb-8">
-            <a href="https://www.youtube.com/@harvestinthecity" target="_blank" rel="noopener noreferrer">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Ffc234dd74fca47339292514ea22e61c2?format=webp&width=100"
-                alt="YouTube"
-                className="w-16 h-16"
-                draggable="false"
-              />
-            </a>
-            <a href="mailto:harvestinthecitynyc@gmail.com">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2F4e33951a443c48028a4f03ea89d1e34c?format=webp&width=100"
-                alt="Email"
-                className="w-16 h-16"
-                draggable="false"
-              />
-            </a>
+      <footer className="site-footer">
+        <h3 className="footer-title" id="FOOTER HARVEST">{t("harvestNyc")}</h3>
+        <div className="footer-icons">
+          <a href="https://www.youtube.com/@harvestinthecity/streams" target="_blank" rel="noopener noreferrer">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fd2a5926a2a294ef4a6be01d573e936d5?format=webp&width=200"
-              alt="Remnant Church"
-              className="h-16"
+              src="https://api.builder.io/api/v1/image/assets/TEMP/62d640b0b7413ecd1eb34c8d2a6733a1699cfafb?width=180"
+              alt="YouTube"
+              className="footer-icon"
               draggable="false"
             />
-          </div>
+          </a>
+          <a href="mailto:harvestinthecitynyc@gmail.com">
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/e94bdc79b9e6397731ea714e81845699cb463ee2?width=170"
+              alt="Email"
+              className="footer-icon"
+              draggable="false"
+            />
+          </a>
+          <a href="https://www.remnantchurch.org/" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/d4de61100a8688fad8f49f3af86899013ee08870?width=224"
+              alt="Remnant Church"
+              className="footer-icon footer-icon--wide"
+              draggable="false"
+            />
+          </a>
         </div>
       </footer>
     </>

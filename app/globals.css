@@ -128,15 +128,34 @@ a:hover {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 42px;
+  gap: clamp(8px, 3vw, 42px);
 }
 
 .nav-link {
-  font-size: 17px;
+  font-size: clamp(10px, 2vw, 17px);
   font-weight: 800;
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.nav-link-short {
+  display: none;
+}
+
+.nav-link-full {
+  display: inline;
+}
+
+@media (max-width: 480px) {
+  .nav-link-short {
+    display: inline;
+  }
+
+  .nav-link-full {
+    display: none;
+  }
 }
 
 .nav-link:hover {
@@ -162,7 +181,7 @@ a:hover {
 }
 
 .nav-dropdown-trigger {
-  font-size: 17px;
+  font-size: clamp(10px, 2vw, 17px);
   font-weight: 800;
   color: #000;
   background: transparent;
@@ -170,6 +189,7 @@ a:hover {
   cursor: pointer;
   text-transform: uppercase;
   padding: 0;
+  white-space: nowrap;
 }
 
 .nav-dropdown-trigger:hover {
@@ -243,6 +263,7 @@ a:hover {
   background: #fff;
   animation: fadeIn 0.8s ease-in-out 0.4s forwards;
   opacity: 0;
+  margin-bottom: 32px;
 }
 
 .hero-img {
@@ -367,6 +388,24 @@ a:hover {
   opacity: 0;
 }
 
+.btn-text-short {
+  display: none;
+}
+
+.btn-text-full {
+  display: inline;
+}
+
+@media (max-width: 480px) {
+  .btn-text-short {
+    display: inline;
+  }
+
+  .btn-text-full {
+    display: none;
+  }
+}
+
 .hero-youtube-btn:hover {
   transform: scale(1.05);
   color: #000;
@@ -381,7 +420,7 @@ a:hover {
 
 /* ── Intro ── */
 .intro-section {
-  padding: 64px 50px;
+  padding: 32px 70px 32px;
   text-align: center;
   background: #fff;
   animation: fadeIn 0.8s ease-in-out 0.6s forwards;
@@ -404,7 +443,7 @@ a:hover {
   font-weight: 200;
   line-height: 48px;
   color: #000;
-  margin: 0 auto 32px;
+  margin: 20px auto;
   max-width: 1140px;
   animation: fadeIn 0.8s ease-in-out 0.6s forwards;
   opacity: 0;
@@ -546,10 +585,10 @@ a:hover {
 
   .ministry-card {
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
     padding-left: 1.5em !important;
     padding-right: 1.5em !important;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .ministries-title {
@@ -559,7 +598,7 @@ a:hover {
   .ministry-name {
     font-size: clamp(1.3em, 2.6vw, 1.625em);
     margin-bottom: 12px;
-    text-align: left !important;
+    text-align: center !important;
     width: 100%;
     margin-left: 0;
     margin-right: 0;
@@ -568,7 +607,7 @@ a:hover {
   .ministry-desc {
     font-size: 14px;
     margin: 0 0 24px 0;
-    text-align: left !important;
+    text-align: center !important;
     width: 100%;
     margin-left: 0;
     margin-right: 0;
@@ -583,14 +622,14 @@ a:hover {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
-    align-self: flex-start !important;
+    align-self: center !important;
   }
 
   .ministry-btn {
     padding: 10px 28px;
     font-size: 12px;
     border-radius: 16px;
-    align-self: flex-start !important;
+    align-self: center !important;
     margin-left: 0;
   }
 }
@@ -693,6 +732,7 @@ a:hover {
   transition: border-color 0.2s, color 0.2s;
   align-self: center;
   margin: 0;
+  white-space: nowrap;
 }
 
 .meeting-btn:hover {
@@ -766,10 +806,15 @@ a:hover {
 
 /* ── Contact ── */
 .contact-section {
-  padding: 48px 38px 80px;
+  padding: 32px 38px 80px;
   background: #fff;
   animation: fadeIn 0.8s ease-in-out 0.8s forwards;
   opacity: 0;
+  text-align: center;
+}
+
+.contact-section .ministries-title {
+  text-align: center;
 }
 
 .contact-grid {
