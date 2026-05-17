@@ -128,15 +128,34 @@ a:hover {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 42px;
+  gap: clamp(8px, 3vw, 42px);
 }
 
 .nav-link {
-  font-size: 17px;
+  font-size: clamp(10px, 2vw, 17px);
   font-weight: 800;
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.nav-link-short {
+  display: none;
+}
+
+.nav-link-full {
+  display: inline;
+}
+
+@media (max-width: 480px) {
+  .nav-link-short {
+    display: inline;
+  }
+
+  .nav-link-full {
+    display: none;
+  }
 }
 
 .nav-link:hover {
@@ -162,7 +181,7 @@ a:hover {
 }
 
 .nav-dropdown-trigger {
-  font-size: 17px;
+  font-size: clamp(10px, 2vw, 17px);
   font-weight: 800;
   color: #000;
   background: transparent;
@@ -170,6 +189,7 @@ a:hover {
   cursor: pointer;
   text-transform: uppercase;
   padding: 0;
+  white-space: nowrap;
 }
 
 .nav-dropdown-trigger:hover {
