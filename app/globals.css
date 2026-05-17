@@ -804,7 +804,7 @@ a:hover {
 
 /* ── Contact ── */
 .contact-section {
-  padding: 64px 38px 80px;
+  padding: 0 38px 80px;
   background: #fff;
   animation: fadeIn 0.8s ease-in-out 0.8s forwards;
   opacity: 0;
