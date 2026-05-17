@@ -156,7 +156,7 @@ export default function AboutPage() {
         />
         <div className="hero-overlay">
           <h1 className="hero-title" id="header-text">
-            {t("heroTitle")}
+            {language === "en" ? "ABOUT US" : "ACERCA"}<br />{language === "en" ? "" : "DE NOSOTROS"}
           </h1>
         </div>
       </div>
