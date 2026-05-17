@@ -732,6 +732,7 @@ a:hover {
   transition: border-color 0.2s, color 0.2s;
   align-self: center;
   margin: 0;
+  white-space: nowrap;
 }
 
 .meeting-btn:hover {
