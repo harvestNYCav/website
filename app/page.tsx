@@ -66,6 +66,10 @@ const translations = {
     en: "SUNDAY YOUTUBE LIVESTREAM",
     es: "TRANSMISIÓN EN VIVO YOUTUBE DOMINICAL",
   },
+  youtubeBtnShort: {
+    en: "SUNDAY YOUTUBE LIVESTREAM",
+    es: "UNITE EN VIVO EN YOUTUBE",
+  },
   missionTitle: {
     en: "OUR MISSION",
     es: "NUESTRA MISIÓN",
@@ -248,7 +252,8 @@ export default function HomePage() {
           </div>
 
           <a id="livestream button" href="https://www.youtube.com/@harvestinthecity/streams" target="_blank" rel="noopener noreferrer" className="hero-youtube-btn">
-            {t("youtubeBtn")}
+            <span className="btn-text-full">{t("youtubeBtn")}</span>
+            <span className="btn-text-short">{t("youtubeBtnShort")}</span>
           </a>
         </div>
       </div>

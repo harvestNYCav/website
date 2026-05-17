@@ -387,6 +387,24 @@ a:hover {
   opacity: 0;
 }
 
+.btn-text-short {
+  display: none;
+}
+
+.btn-text-full {
+  display: inline;
+}
+
+@media (max-width: 480px) {
+  .btn-text-short {
+    display: inline;
+  }
+
+  .btn-text-full {
+    display: none;
+  }
+}
+
 .hero-youtube-btn:hover {
   transform: scale(1.05);
   color: #000;
