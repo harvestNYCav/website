@@ -42,6 +42,10 @@ const aboutContent = {
     en: "Interested in Serving?",
     es: "¿Interesado en Servir?",
   },
+  aboutUsShort: {
+    en: "ABOUT",
+    es: "ACERCA",
+  },
 };
 
 export default function AboutPage() {
@@ -72,7 +76,8 @@ export default function AboutPage() {
 
             <div className="hidden md:flex items-center gap-8">
               <Link href="/about" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
-                About Us
+                <span className="nav-link-full">{t("aboutUs")}</span>
+                <span className="nav-link-short">{t("aboutUsShort")}</span>
               </Link>
               <Link href="/#ministries" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
                 Ministries

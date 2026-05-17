@@ -22,6 +22,10 @@ const translations = {
     en: "ABOUT US",
     es: "ACERCA DE NOSOTROS",
   },
+  aboutUsShort: {
+    en: "ABOUT",
+    es: "ACERCA",
+  },
   ministries: {
     en: "MINISTRIES",
     es: "MINISTERIOS",
@@ -108,8 +112,9 @@ export default function ConnectPage() {
           </Link>
 
           <div className="nav-links">
-            <Link href="/about" className="nav-link" id="menu">
-              {t("aboutUs")}
+            <Link href="/about" className="nav-link nav-link-about" id="menu">
+              <span className="nav-link-full">{t("aboutUs")}</span>
+              <span className="nav-link-short">{t("aboutUsShort")}</span>
             </Link>
             <div className="nav-dropdown">
               <button className="nav-link nav-dropdown-trigger" id="menu">
