@@ -47,8 +47,8 @@ const translations = {
     es: "ACERCA DE NOSOTROS",
   },
   introText: {
-    en: "Harvest is a vibrant ministry within Remnant Church NYC dedicated to loving and living like Jesus. We're committed to creating a community where people encounter God's love, grow in faith, and serve others with compassion.",
-    es: "Harvest es un ministerio vibrante dentro de Iglesia Remanente NYC dedicado a amar y vivir como Jesús. Nos comprometemos a crear una comunidad donde las personas encuentren el amor de Dios, crezcan en fe y sirvan a otros con compasión.",
+    en: "Harvest is a neighborhood outreach service focused on sharing the Good News of Jesus Christ and building up a community of faithful believers. People of all walks of life and backgrounds are invited to worship our Lord, build deep relationships, and experience abundant fellowship together.",
+    es: "Harvest es un servicio comunitario enfocado en compartir la Buena Nueva de Jesucristo y fortalecer una comunidad de creyentes fieles. Personas de todos los ámbitos y orígenes están invitadas a adorar a nuestro Señor, forjar relaciones profundas y disfrutar de una comunión plena.",
   },
   ourStaff: {
     en: "OUR STAFF",

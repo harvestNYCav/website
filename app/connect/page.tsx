@@ -62,6 +62,10 @@ const translations = {
     en: "General Inquiries:",
     es: "Consultas Generales:",
   },
+  rachelGuen: {
+    en: "Rachel Guen:",
+    es: "Rachel Guen:",
+  },
   connectBtn: {
     en: "CONNECT",
     es: "CONECTAR",
@@ -175,6 +179,12 @@ export default function ConnectPage() {
                 <span className="contact-name">{t("generalInquiries")}</span>{" "}
                 <a href="mailto:harvestinthecity@gmail.com" className="contact-email">
                   harvestinthecity@gmail.com
+                </a>
+              </p>
+              <p className="contact-line">
+                <span className="contact-name">{t("rachelGuen")}</span>{" "}
+                <a href="mailto:rguen97@gmail.com" className="contact-email">
+                  rguen97@gmail.com
                 </a>
               </p>
             </div>
