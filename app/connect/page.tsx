@@ -47,8 +47,8 @@ const translations = {
     es: "CONECTA CON NOSOTROS",
   },
   introText: {
-    en: "We'd love to get to know you!\nFor more information, blahblahb blah xyz\nxyz xyz xyz lah blah",
-    es: "¡Nos encantaría conocerte!\nPara más información, blahblahb blah xyz\nxyz xyz xyz lah blah",
+    en: "We'd love to get to know you! Feel free to reach out to Pastor Richard or anyone on the serving team after service. If you'd like to connect outside of our meeting times, please use the contact information below.",
+    es: "¡Nos encantaría conocerte! Siéntete libre de comunicarte con el Pastor Richard o cualquier miembro del equipo de servicio después del servicio. Si deseas conectar fuera de nuestros horarios de reunión, utiliza la información de contacto a continuación.",
   },
   harvest: {
     en: "HARVEST",
