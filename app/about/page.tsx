@@ -47,8 +47,8 @@ const translations = {
     es: "ACERCA DE NOSOTROS",
   },
   introText: {
-    en: "Harvest is a vibrant ministry within Remnant Church NYC dedicated to loving and living like Jesus. We're committed to creating a community where people encounter God's love, grow in faith, and serve others with compassion.",
-    es: "Harvest es un ministerio vibrante dentro de Iglesia Remanente NYC dedicado a amar y vivir como Jesús. Nos comprometemos a crear una comunidad donde las personas encuentren el amor de Dios, crezcan en fe y sirvan a otros con compasión.",
+    en: "Harvest is a neighborhood outreach service focused on sharing the Good News of Jesus Christ and building up a community of faithful believers. People of all walks of life and backgrounds are invited to worship our Lord, build deep relationships, and experience abundant fellowship together.",
+    es: "Harvest es un servicio comunitario enfocado en compartir la Buena Nueva de Jesucristo y fortalecer una comunidad de creyentes fieles. Personas de todos los ámbitos y orígenes están invitadas a adorar a nuestro Señor, forjar relaciones profundas y disfrutar de una comunión plena.",
   },
   ourStaff: {
     en: "OUR STAFF",
@@ -63,7 +63,7 @@ const translations = {
     es: "Pastor Erika",
   },
   pastorDesc: {
-    en: "A blurb about their family, kids, when they started blah blah xyz blah blah xyz blah blah xyz blah blah xyz",
+    en: "When Pastor Richard moved into the Kips Bay Neighborhood 12 years ago he saw the need of urban ministry in this community. He served and developed programs for homeless outreach and inner city youth ministry as well as connecting with diverse groups in the neighborhood. God connected him with Remnant Church in May 2012 and a year later in June 2013, he went on a mission trip to Guatemala for the first time with Remnant members. In December 2013, Pastor Richard joined Remnant as an outreach pastor. He has been married to Erika for 25+ years and they have three amazing boys Richard, Paul, and Matheux. He currently serves in Harvest outreach services and The Vine tutoring program for families in the Kips Bay community.",
     es: "Un párrafo sobre su familia, hijos, cuándo comenzaron blah blah xyz blah blah xyz blah blah xyz blah blah xyz",
   },
   servingStaff: {

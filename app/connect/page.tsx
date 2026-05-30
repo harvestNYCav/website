@@ -47,8 +47,8 @@ const translations = {
     es: "CONECTA CON NOSOTROS",
   },
   introText: {
-    en: "We'd love to get to know you!\nFor more information, blahblahb blah xyz\nxyz xyz xyz lah blah",
-    es: "¡Nos encantaría conocerte!\nPara más información, blahblahb blah xyz\nxyz xyz xyz lah blah",
+    en: "We'd love to get to know you! Feel free to reach out to Pastor Richard or anyone on the serving team after service. If you'd like to connect outside of our meeting times, please use the contact information below.",
+    es: "¡Nos encantaría conocerte! Siéntete libre de comunicarte con el Pastor Richard o cualquier miembro del equipo de servicio después del servicio. Si deseas conectar fuera de nuestros horarios de reunión, utiliza la información de contacto a continuación.",
   },
   harvest: {
     en: "HARVEST",
@@ -58,9 +58,9 @@ const translations = {
     en: "VINE TUTORING",
     es: "VINE TUTORÍA",
   },
-  aldoWiloto: {
-    en: "Aldo Wiloto:",
-    es: "Aldo Wiloto:",
+  generalInquiries: {
+    en: "General Inquiries:",
+    es: "Consultas Generales:",
   },
   rachelGuen: {
     en: "Rachel Guen:",
@@ -176,19 +176,13 @@ export default function ConnectPage() {
             <h3 className="contact-heading">{t("harvest")}</h3>
             <div className="contact-list">
               <p className="contact-line">
-                <span className="contact-name">{t("aldoWiloto")}</span>{" "}
-                <a href="mailto:aldowiloto@gmail.com" className="contact-email">
-                  aldowiloto@gmail.com
-                </a>
-              </p>
-              <p className="contact-line">
-                <span className="contact-name">{t("rachelGuen")}</span>{" "}
-                <a href="mailto:rguen97@gmail.com" className="contact-email">
-                  rguen97@gmail.com
+                <span className="contact-name">{t("generalInquiries")}</span>{" "}
+                <a href="mailto:harvestinthecity@gmail.com" className="contact-email">
+                  harvestinthecity@gmail.com
                 </a>
               </p>
             </div>
-            <button className="connect-btn">{t("connectBtn")}</button>
+            <a href="mailto:harvestinthecity@gmail.com?subject=%5BWebsite%5D%20General%20Inquiry" className="connect-btn">{t("connectBtn")}</a>
           </div>
 
           {/* Vine Tutoring */}
@@ -196,7 +190,7 @@ export default function ConnectPage() {
             <h3 className="contact-heading">{t("vineTutoring")}</h3>
             <div className="contact-list">
               <p className="contact-line">
-                <span className="contact-name">{t("aldoWiloto")}</span>{" "}
+                <span className="contact-name">Aldo Wiloto:</span>{" "}
                 <a href="mailto:aldowiloto@gmail.com" className="contact-email">
                   aldowiloto@gmail.com
                 </a>
@@ -208,7 +202,7 @@ export default function ConnectPage() {
                 </a>
               </p>
             </div>
-            <button className="connect-btn">{t("connectBtn")}</button>
+            <a href="mailto:aldowiloto@gmail.com?subject=%5BWebsite%5D%20Vine%20Tutoring%20Inquiry" className="connect-btn">{t("connectBtn")}</a>
           </div>
 
         </div>

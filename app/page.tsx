@@ -280,7 +280,7 @@ export default function HomePage() {
             </>
           )}
         </p>
-        <button className="connect-btn">{t("learnMoreBtn")}</button>
+        <Link href="/about" className="connect-btn">{t("learnMoreBtn")}</Link>
       </section>
 
       {/* Ministries Section */}
@@ -324,7 +324,7 @@ export default function HomePage() {
             <h3 className="meeting-day">{t("sundays")}</h3>
             <p className="meeting-time">{t("sundaysMeeting")}</p>
             <p className="meeting-language">{t("sundaysBilingual")}</p>
-            <button className="meeting-btn">{t("livestream")}</button>
+            <a href="https://www.youtube.com/@harvestinthecity/streams" target="_blank" rel="noopener noreferrer" className="meeting-btn">{t("livestream")}</a>
           </div>
 
           {/* Tuesdays */}
