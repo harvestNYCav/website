@@ -181,12 +181,6 @@ export default function ConnectPage() {
                   harvestinthecity@gmail.com
                 </a>
               </p>
-              <p className="contact-line">
-                <span className="contact-name">{t("rachelGuen")}</span>{" "}
-                <a href="mailto:rguen97@gmail.com" className="contact-email">
-                  rguen97@gmail.com
-                </a>
-              </p>
             </div>
             <a href="mailto:harvestinthecity@gmail.com?subject=%5BWebsite%5D%20General%20Inquiry" className="connect-btn">{t("connectBtn")}</a>
           </div>
@@ -199,6 +193,12 @@ export default function ConnectPage() {
                 <span className="contact-name">Aldo Wiloto:</span>{" "}
                 <a href="mailto:aldowiloto@gmail.com" className="contact-email">
                   aldowiloto@gmail.com
+                </a>
+              </p>
+              <p className="contact-line">
+                <span className="contact-name">{t("rachelGuen")}</span>{" "}
+                <a href="mailto:rguen97@gmail.com" className="contact-email">
+                  rguen97@gmail.com
                 </a>
               </p>
             </div>
