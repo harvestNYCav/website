@@ -63,7 +63,7 @@ const translations = {
     es: "Pastor Erika",
   },
   pastorDesc: {
-    en: "A blurb about their family, kids, when they started blah blah xyz blah blah xyz blah blah xyz blah blah xyz",
+    en: "When Pastor Richard moved into the Kips Bay Neighborhood 12 years ago he saw the need of urban ministry in this community. He served and developed programs for homeless outreach and inner city youth ministry as well as connecting with diverse groups in the neighborhood. God connected him with Remnant Church in May 2012 and a year later in June 2013, he went on a mission trip to Guatemala for the first time with Remnant members. In December 2013, Pastor Richard joined Remnant as an outreach pastor. He has been married to Erika for 25+ years and they have three amazing boys Richard, Paul, and Matheux. He currently serves in Harvest outreach services and The Vine tutoring program for families in the Kips Bay community.",
     es: "Un párrafo sobre su familia, hijos, cuándo comenzaron blah blah xyz blah blah xyz blah blah xyz blah blah xyz",
   },
   servingStaff: {
