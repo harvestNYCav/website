@@ -58,13 +58,9 @@ const translations = {
     en: "VINE TUTORING",
     es: "VINE TUTORÍA",
   },
-  aldoWiloto: {
-    en: "Aldo Wiloto:",
-    es: "Aldo Wiloto:",
-  },
-  rachelGuen: {
-    en: "Rachel Guen:",
-    es: "Rachel Guen:",
+  generalInquiries: {
+    en: "General Inquiries:",
+    es: "Consultas Generales:",
   },
   connectBtn: {
     en: "CONNECT",
@@ -176,19 +172,13 @@ export default function ConnectPage() {
             <h3 className="contact-heading">{t("harvest")}</h3>
             <div className="contact-list">
               <p className="contact-line">
-                <span className="contact-name">{t("aldoWiloto")}</span>{" "}
-                <a href="mailto:aldowiloto@gmail.com" className="contact-email">
-                  aldowiloto@gmail.com
-                </a>
-              </p>
-              <p className="contact-line">
-                <span className="contact-name">{t("rachelGuen")}</span>{" "}
-                <a href="mailto:rguen97@gmail.com" className="contact-email">
-                  rguen97@gmail.com
+                <span className="contact-name">{t("generalInquiries")}</span>{" "}
+                <a href="mailto:harvestinthecity@gmail.com" className="contact-email">
+                  harvestinthecity@gmail.com
                 </a>
               </p>
             </div>
-            <button className="connect-btn">{t("connectBtn")}</button>
+            <a href="mailto:harvestinthecity@gmail.com?subject=%5BWebsite%5D%20General%20Inquiry" className="connect-btn">{t("connectBtn")}</a>
           </div>
 
           {/* Vine Tutoring */}
@@ -196,19 +186,13 @@ export default function ConnectPage() {
             <h3 className="contact-heading">{t("vineTutoring")}</h3>
             <div className="contact-list">
               <p className="contact-line">
-                <span className="contact-name">{t("aldoWiloto")}</span>{" "}
+                <span className="contact-name">Aldo Wiloto:</span>{" "}
                 <a href="mailto:aldowiloto@gmail.com" className="contact-email">
                   aldowiloto@gmail.com
                 </a>
               </p>
-              <p className="contact-line">
-                <span className="contact-name">{t("rachelGuen")}</span>{" "}
-                <a href="mailto:rguen97@gmail.com" className="contact-email">
-                  rguen97@gmail.com
-                </a>
-              </p>
             </div>
-            <button className="connect-btn">{t("connectBtn")}</button>
+            <a href="mailto:aldowiloto@gmail.com?subject=%5BWebsite%5D%20Vine%20Tutoring%20Inquiry" className="connect-btn">{t("connectBtn")}</a>
           </div>
 
         </div>
