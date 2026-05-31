@@ -59,8 +59,12 @@ const translations = {
     es: "VINE TUTORÍA",
   },
   generalInquiries: {
-    en: "General Inquiries:",
-    es: "Consultas Generales:",
+    en: "For General Inquiries:",
+    es: "Para Consultas Generales:",
+  },
+  smallGroup: {
+    en: "For Small Group:",
+    es: "Para Grupo Pequeño:",
   },
   rachelGuen: {
     en: "Rachel Guen:",
@@ -179,6 +183,12 @@ export default function ConnectPage() {
                 <span className="contact-name">{t("generalInquiries")}</span>{" "}
                 <a href="mailto:harvestinthecity@gmail.com" className="contact-email">
                   harvestinthecity@gmail.com
+                </a>
+              </p>
+              <p className="contact-line">
+                <span className="contact-name">{t("smallGroup")}</span>{" "}
+                <a href="mailto:SmallGroup@harvest-nyc.com" className="contact-email">
+                  SmallGroup@harvest-nyc.com
                 </a>
               </p>
             </div>
