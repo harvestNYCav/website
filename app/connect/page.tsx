@@ -200,19 +200,13 @@ export default function ConnectPage() {
             <h3 className="contact-heading">{t("vineTutoring")}</h3>
             <div className="contact-list">
               <p className="contact-line">
-                <span className="contact-name">Aldo Wiloto:</span>{" "}
-                <a href="mailto:aldowiloto@gmail.com" className="contact-email">
-                  aldowiloto@gmail.com
-                </a>
-              </p>
-              <p className="contact-line">
-                <span className="contact-name">{t("rachelGuen")}</span>{" "}
-                <a href="mailto:rguen97@gmail.com" className="contact-email">
-                  rguen97@gmail.com
+                <span className="contact-name">{t("generalInquiries")}</span>{" "}
+                <a href="mailto:VineAdmin@harvest-nyc.com" className="contact-email">
+                  VineAdmin@harvest-nyc.com
                 </a>
               </p>
             </div>
-            <a href="mailto:aldowiloto@gmail.com?subject=%5BWebsite%5D%20Vine%20Tutoring%20Inquiry" className="connect-btn">{t("connectBtn")}</a>
+            <a href="mailto:VineAdmin@harvest-nyc.com?subject=%5BWebsite%5D%20Vine%20Tutoring%20Inquiry" className="connect-btn">{t("connectBtn")}</a>
           </div>
 
         </div>
