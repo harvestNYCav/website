@@ -407,7 +407,7 @@ export default function VinePage() {
       </section>
 
       {/* Get Involved Section */}
-      <section className="contact-section">
+      <section className="contact-section vine-get-involved">
         <h2 className="ministries-title">{t("getInvolved")}</h2>
         <p className="intro-text">
           {t("reachOut")}
