@@ -94,6 +94,42 @@ const translations = {
     en: "JOIN OUR TUTORING COMMUNITY",
     es: "ÚNETE A NUESTRA COMUNIDAD DE TUTORÍA",
   },
+  volunteeringTutor: {
+    en: "VOLUNTEERING AS A TUTOR",
+    es: "VOLUNTARIADO COMO TUTOR",
+  },
+  enrollStudent: {
+    en: "ENROLL AS A STUDENT",
+    es: "INSCRIBIRSE COMO ESTUDIANTE",
+  },
+  signUpTutor: {
+    en: "How do I sign up to be a tutor?",
+    es: "¿Cómo me inscribo para ser tutor?",
+  },
+  signUpStudent: {
+    en: "How do I sign up to be a student?",
+    es: "¿Cómo me inscribo para ser estudiante?",
+  },
+  timeCommitment: {
+    en: "What's the time commitment?",
+    es: "¿Cuál es el compromiso de tiempo?",
+  },
+  expectStudent: {
+    en: "What can I expect as a student?",
+    es: "¿Qué puedo esperar como estudiante?",
+  },
+  tutorSkills: {
+    en: "What skills does a tutor need?",
+    es: "¿Qué habilidades necesita un tutor?",
+  },
+  tutorSkillsAnswer: {
+    en: "We ask tutors to be open and willing to teach a variety of grade school subjects such as English & Math. Bi-lingual proficiency is not required.",
+    es: "Pedimos a los tutores que estén dispuestos a enseñar una variedad de materias de escuela primaria como inglés y matemáticas. No se requiere competencia bilingüe.",
+  },
+  studentExpectAnswer: {
+    en: "We ask that students commit for both semesters (Fall & Spring) and be ready and willing to learn.",
+    es: "Pedimos que los estudiantes se comprometan durante ambos semestres (Otoño e Invierno) y estén listos y dispuestos a aprender.",
+  },
   harvestNyc: {
     en: "HARVEST NYC",
     es: "HARVEST NYC",
@@ -102,9 +138,14 @@ const translations = {
 
 export default function VinePage() {
   const [language, setLanguage] = useState<Language>("en");
+  const [openFaq, setOpenFaq] = useState<string | null>(null);
 
   const t = (key: keyof typeof translations): string => {
     return translations[key][language];
+  };
+
+  const toggleFaq = (id: string) => {
+    setOpenFaq(openFaq === id ? null : id);
   };
 
   return (
@@ -243,6 +284,96 @@ export default function VinePage() {
               draggable="false"
             />
             <p className="vine-expect-text">Put a caption here</p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="vine-faq-section">
+        <div className="vine-faq-grid">
+          {/* Volunteering as Tutor */}
+          <div className="vine-faq-column">
+            <h3 className="vine-faq-heading">{t("volunteeringTutor")}</h3>
+
+            <div className="vine-faq-item">
+              <button
+                className="vine-faq-question"
+                onClick={() => toggleFaq("tutor-signup")}
+              >
+                <span>{t("signUpTutor")}</span>
+                <span className={`vine-faq-arrow ${openFaq === "tutor-signup" ? "open" : ""}`}>▼</span>
+              </button>
+              {openFaq === "tutor-signup" && (
+                <div className="vine-faq-answer">
+                  <p>Please reach out to our coordinators for more information.</p>
+                </div>
+              )}
+            </div>
+
+            <div className="vine-faq-item">
+              <button
+                className="vine-faq-question"
+                onClick={() => toggleFaq("tutor-commitment")}
+              >
+                <span>{t("timeCommitment")}</span>
+                <span className={`vine-faq-arrow ${openFaq === "tutor-commitment" ? "open" : ""}`}>▼</span>
+              </button>
+              {openFaq === "tutor-commitment" && (
+                <div className="vine-faq-answer">
+                  <p>Tutors meet on Saturday mornings for 2 hours during the spring and fall sessions.</p>
+                </div>
+              )}
+            </div>
+
+            <div className="vine-faq-item">
+              <button
+                className="vine-faq-question"
+                onClick={() => toggleFaq("tutor-skills")}
+              >
+                <span>{t("tutorSkills")}</span>
+                <span className={`vine-faq-arrow ${openFaq === "tutor-skills" ? "open" : ""}`}>▼</span>
+              </button>
+              {openFaq === "tutor-skills" && (
+                <div className="vine-faq-answer">
+                  <p>{t("tutorSkillsAnswer")}</p>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Enroll as Student */}
+          <div className="vine-faq-column">
+            <h3 className="vine-faq-heading">{t("enrollStudent")}</h3>
+
+            <div className="vine-faq-item">
+              <button
+                className="vine-faq-question"
+                onClick={() => toggleFaq("student-signup")}
+              >
+                <span>{t("signUpStudent")}</span>
+                <span className={`vine-faq-arrow ${openFaq === "student-signup" ? "open" : ""}`}>▼</span>
+              </button>
+              {openFaq === "student-signup" && (
+                <div className="vine-faq-answer">
+                  <p>Please reach out to our coordinators to register as a student.</p>
+                </div>
+              )}
+            </div>
+
+            <div className="vine-faq-item">
+              <button
+                className="vine-faq-question"
+                onClick={() => toggleFaq("student-expect")}
+              >
+                <span>{t("expectStudent")}</span>
+                <span className={`vine-faq-arrow ${openFaq === "student-expect" ? "open" : ""}`}>▼</span>
+              </button>
+              {openFaq === "student-expect" && (
+                <div className="vine-faq-answer">
+                  <p>{t("studentExpectAnswer")}</p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </section>

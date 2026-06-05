@@ -1353,3 +1353,131 @@ a:hover {
     font-size: clamp(14px, 2.2vw, 18px);
   }
 }
+
+/* ── Vine FAQ ── */
+.vine-faq-section {
+  padding: 64px 120px;
+  text-align: center;
+  background: #fff;
+  animation: fadeIn 0.8s ease-in-out 0.9s forwards;
+  opacity: 0;
+}
+
+.vine-faq-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  justify-items: start;
+}
+
+@media (max-width: 768px) {
+  .vine-faq-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+.vine-faq-column {
+  width: 100%;
+}
+
+.vine-faq-heading {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #000;
+  text-align: left;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+  animation: fadeIn 0.8s ease-in-out 0.9s forwards;
+  opacity: 0;
+}
+
+.vine-faq-item {
+  margin-bottom: 24px;
+  border-bottom: 1px solid #ddd;
+  animation: fadeIn 0.8s ease-in-out 0.9s forwards;
+  opacity: 0;
+}
+
+.vine-faq-question {
+  width: 100%;
+  padding: 16px 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: clamp(14px, 1.5vw, 16px);
+  font-weight: 400;
+  color: #000;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: color 0.2s;
+}
+
+.vine-faq-question:hover {
+  color: var(--link-green);
+}
+
+.vine-faq-arrow {
+  font-size: 12px;
+  color: #000;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.vine-faq-arrow.open {
+  transform: rotate(180deg);
+}
+
+.vine-faq-answer {
+  padding: 16px 0 24px 0;
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vine-faq-answer p {
+  font-size: clamp(14px, 1.5vw, 16px);
+  font-weight: 400;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  .vine-faq-section {
+    padding: 36px 16px;
+  }
+
+  .vine-faq-heading {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .vine-faq-item {
+    margin-bottom: 16px;
+  }
+
+  .vine-faq-question {
+    padding: 12px 0;
+    font-size: 14px;
+  }
+}
