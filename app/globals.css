@@ -935,6 +935,7 @@ a:hover {
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 60px;
+    margin-bottom: 0;
   }
 }
 
