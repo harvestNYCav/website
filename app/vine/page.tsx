@@ -234,7 +234,7 @@ export default function VinePage() {
           A tutoring program<br className="mobile-break" /> that reaches out to families<br className="mobile-break" /> in the NYC community through<br className="mobile-break" /> tutoring students & sharing<br className="mobile-break" /> the message of Christ, at no cost.<br className="mobile-break" /> Tutors & students gather<br className="mobile-break" /> on Saturday mornings for two hours,<br className="mobile-break" /> including a time of worship and hearing<br className="mobile-break" /> the Word of God.
         </p>
         <p className="intro-text vine-intro-text">
-          Our mission is to transform lives<br /> through the love & compassion of Jesus Christ with the goals of:<br /><br />
+          Our mission is to transform lives<br className="mobile-break" /> through the love & compassion of Jesus Christ<br className="mobile-break" /> with the goals of:<br /><br />
           {t("goal1")}<br />
           {t("goal2")}<br />
           {t("goal3")}
