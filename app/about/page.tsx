@@ -177,6 +177,12 @@ export default function AboutPage() {
           {/* Pastors */}
           <div className="contact-column">
             <h3 className="contact-heading">{t("pastorRichard")}{'\u00A0'}&<br className="pastor-break" /> {t("pastorErika")}</h3>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2F014c11f900cc45779110ef35e4937412?format=webp&width=800&height=1200"
+              alt="NYC Skyline"
+              className="staff-image"
+              draggable="false"
+            />
             <div className="contact-list">
               <p className="contact-line">
                 {t("pastorDesc")}
@@ -187,6 +193,12 @@ export default function AboutPage() {
           {/* Serving Staff */}
           <div className="contact-column">
             <h3 className="contact-heading">{t("servingStaff")}</h3>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2F014c11f900cc45779110ef35e4937412?format=webp&width=800&height=1200"
+              alt="NYC Skyline"
+              className="staff-image"
+              draggable="false"
+            />
             <div className="contact-list">
               <p className="contact-line">
                 {t("servingDesc")}
