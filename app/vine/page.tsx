@@ -141,10 +141,10 @@ export default function VinePage() {
 
       {/* About Section */}
       <section className="intro-section">
-        <p className="intro-text">
+        <p className="intro-text vine-intro-text">
           {t("vineDesc")}
         </p>
-        <p className="intro-text">
+        <p className="intro-text vine-intro-text">
           {t("mission")}<br />
           {t("goal1")}<br />
           {t("goal2")}<br />
