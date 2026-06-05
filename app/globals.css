@@ -1372,7 +1372,7 @@ a:hover {
 
 @media (max-width: 767px) {
   .vine-expect-section {
-    padding: 36px 16px;
+    padding: 0 16px 36px;
   }
 
   .vine-expect-title {
