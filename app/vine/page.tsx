@@ -170,22 +170,22 @@ export default function VinePage() {
           </Link>
 
           <div className="nav-links">
-            <Link href="/about" className="nav-link nav-link-about">
+            <Link href="/about" className="nav-link nav-link-about" id="menu">
               <span className="nav-link-full">{t("aboutUs")}</span>
               <span className="nav-link-short">{t("aboutUsShort")}</span>
             </Link>
             <div className="nav-dropdown">
-              <button className="nav-link nav-dropdown-trigger">
+              <button className="nav-link nav-dropdown-trigger" id="menu">
                 {t("ministries")}
               </button>
-              <div className="nav-dropdown-menu">
+              <div id="menu-dropdown" className="nav-dropdown-menu">
                 <Link href="/vine" className="nav-dropdown-item">
                   {t("vineTutoring")}
                 </Link>
                 <span className="nav-dropdown-item">Children</span>
               </div>
             </div>
-            <Link href="/connect" className="nav-link nav-link--active">
+            <Link href="/connect" className="nav-link nav-link--active" id="menu">
               {t("connect")}
             </Link>
           </div>
