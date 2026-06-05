@@ -215,10 +215,10 @@ export default function VinePage() {
       {/* About Section */}
       <section className="intro-section">
         <p className="intro-text vine-intro-text">
-          {t("vineDesc")}
+          A tutoring program that reaches out to families in the NYC community<br /> through tutoring students & sharing the message of Christ, at no cost.<br /> Tutors & students gather on Saturday mornings for two hours,<br /> including a time of worship and hearing the Word of God.
         </p>
         <p className="intro-text vine-intro-text">
-          Our mission is to transform lives<br className="mission-break" /> through the love & compassion of Jesus Christ with the goals of:<br /><br />
+          Our mission is to transform lives<br /> through the love & compassion of Jesus Christ with the goals of:<br /><br />
           {t("goal1")}<br />
           {t("goal2")}<br />
           {t("goal3")}
