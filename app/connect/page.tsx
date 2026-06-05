@@ -125,9 +125,9 @@ export default function ConnectPage() {
                 {t("ministries")}
               </button>
               <div id="menu-dropdown" className="nav-dropdown-menu">
-                <span className="nav-dropdown-item">
+                <Link href="/vine" className="nav-dropdown-item">
                   {t("vineTutoring")}
-                </span>
+                </Link>
                 <span className="nav-dropdown-item">
                   {t("children")}
                 </span>

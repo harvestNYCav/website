@@ -127,6 +127,9 @@ export default function AboutPage() {
                 {t("ministries")}
               </button>
               <div id="menu-dropdown" className="nav-dropdown-menu">
+                <Link href="/vine" className="nav-dropdown-item">
+                  {t("vineTutoring")}
+                </Link>
                 <span className="nav-dropdown-item">
                   {t("children")}
                 </span>
