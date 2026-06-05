@@ -122,9 +122,21 @@ const translations = {
     en: "What skills does a tutor need?",
     es: "¿Qué habilidades necesita un tutor?",
   },
+  tutorSignupAnswer: {
+    en: "Please reach out to our coordinators for more information.",
+    es: "Comuníquese con nuestros coordinadores para obtener más información.",
+  },
+  tutorCommitmentAnswer: {
+    en: "Tutors meet on Saturday mornings for 2 hours during the spring and fall sessions.",
+    es: "Los tutores se reúnen los sábados por la mañana durante 2 horas en las sesiones de primavera e invierno.",
+  },
   tutorSkillsAnswer: {
     en: "We ask tutors to be open and willing to teach a variety of grade school subjects such as English & Math. Bi-lingual proficiency is not required.",
     es: "Pedimos a los tutores que estén dispuestos a enseñar una variedad de materias de escuela primaria como inglés y matemáticas. No se requiere competencia bilingüe.",
+  },
+  studentSignupAnswer: {
+    en: "Please reach out to our coordinators to register as a student.",
+    es: "Comuníquese con nuestros coordinadores para registrarse como estudiante.",
   },
   studentExpectAnswer: {
     en: "We ask that students commit for both semesters (Fall & Spring) and be ready and willing to learn.",
@@ -305,7 +317,7 @@ export default function VinePage() {
               </button>
               {openFaq === "tutor-signup" && (
                 <div className="vine-faq-answer">
-                  <p>Please reach out to our coordinators for more information.</p>
+                  <p>{t("tutorSignupAnswer")}</p>
                 </div>
               )}
             </div>
@@ -320,7 +332,7 @@ export default function VinePage() {
               </button>
               {openFaq === "tutor-commitment" && (
                 <div className="vine-faq-answer">
-                  <p>Tutors meet on Saturday mornings for 2 hours during the spring and fall sessions.</p>
+                  <p>{t("tutorCommitmentAnswer")}</p>
                 </div>
               )}
             </div>
@@ -355,7 +367,7 @@ export default function VinePage() {
               </button>
               {openFaq === "student-signup" && (
                 <div className="vine-faq-answer">
-                  <p>Please reach out to our coordinators to register as a student.</p>
+                  <p>{t("studentSignupAnswer")}</p>
                 </div>
               )}
             </div>
