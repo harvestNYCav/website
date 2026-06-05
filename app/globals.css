@@ -470,7 +470,7 @@ a:hover {
 .ministries-section {
   padding: 64px 120px;
   text-align: center;
-  background: #f9f9f9;
+  background: #fbfbfb;
   animation: fadeIn 0.8s ease-in-out 0.7s forwards;
   opacity: 0;
 }
@@ -1130,7 +1130,7 @@ a:hover {
 }
 
 .vine-session-box {
-  background: #f0f0f0;
+  background: #f6f6f6;
   padding: 48px 32px;
   text-align: center;
   margin: 40px calc(-120px) 0 calc(-120px);
@@ -1358,7 +1358,7 @@ a:hover {
 .vine-faq-section {
   padding: 64px 120px;
   text-align: center;
-  background: #f0f0f0;
+  background: #f6f6f6;
   animation: fadeIn 0.8s ease-in-out 0.9s forwards;
   opacity: 0;
 }
