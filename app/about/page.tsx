@@ -176,7 +176,7 @@ export default function AboutPage() {
 
           {/* Pastors */}
           <div className="contact-column">
-            <h3 className="contact-heading">{t("pastorRichard")} | {t("pastorErika")}</h3>
+            <h3 className="contact-heading">{t("pastorRichard")} |<br className="pastor-break" /> {t("pastorErika")}</h3>
             <div className="contact-list">
               <p className="contact-line">
                 {t("pastorDesc")}

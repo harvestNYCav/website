@@ -948,6 +948,16 @@ a:hover {
   text-transform: uppercase;
 }
 
+.pastor-break {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .pastor-break {
+    display: block;
+  }
+}
+
 .contact-list {
   margin-bottom: 40px;
   display: flex;
