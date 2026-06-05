@@ -642,6 +642,7 @@ a:hover {
   background: #fff;
   animation: fadeIn 0.8s ease-in-out 0.7s forwards;
   opacity: 0;
+  margin-bottom: 0;
 }
 
 .when-we-meet-title {
