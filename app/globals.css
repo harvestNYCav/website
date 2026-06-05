@@ -1065,3 +1065,103 @@ a:hover {
 .footer-icon--wide {
   height: 34.91px;
 }
+
+/* ── Vine Page ── */
+.vine-team-section {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  animation: fadeIn 0.8s ease-in-out 0.6s forwards;
+  opacity: 0;
+}
+
+.vine-team-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .vine-team-section {
+    height: 240px;
+  }
+}
+
+.vine-meeting-detail {
+  font-size: clamp(16px, 1.8vw, 18px);
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin-bottom: 48px;
+  letter-spacing: 0.5px;
+}
+
+.vine-session-box {
+  background: #f0f0f0;
+  padding: 48px 32px;
+  text-align: center;
+  margin: 40px auto;
+  max-width: 600px;
+  animation: fadeIn 0.8s ease-in-out 0.7s forwards;
+  opacity: 0;
+}
+
+.vine-session-title {
+  font-size: clamp(20px, 2.2vw, 24px);
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 16px;
+  text-transform: none;
+}
+
+.vine-session-dates {
+  font-size: clamp(16px, 1.8vw, 18px);
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.vine-session-info {
+  font-size: clamp(14px, 1.6vw, 16px);
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.vine-interested-btn {
+  display: inline-block;
+  padding: 14px 48px;
+  border: 2px solid #000;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  background: transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.vine-interested-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .vine-session-box {
+    padding: 32px 24px;
+    margin: 32px auto;
+  }
+
+  .vine-interested-btn {
+    padding: 12px 36px;
+    font-size: 14px;
+  }
+
+  .vine-meeting-detail {
+    margin-bottom: 32px;
+  }
+}
