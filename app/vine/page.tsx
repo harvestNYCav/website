@@ -413,7 +413,7 @@ export default function VinePage() {
           {t("reachOut")}
         </p>
 
-        <div className="contact-list">
+        <div className="contact-list vine-contact-list">
           <p className="contact-line">
             <span className="contact-name">{t("aldoWiloto")}</span>{" "}
             <a href="mailto:aldowiloto@gmail.com" className="contact-email">
