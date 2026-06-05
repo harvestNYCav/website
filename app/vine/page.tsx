@@ -74,6 +74,26 @@ const translations = {
     en: "INTERESTED?",
     es: "¿INTERESADO?",
   },
+  whatToExpect: {
+    en: "WHAT TO EXPECT",
+    es: "QUÉ ESPERAR",
+  },
+  tutoringDesc: {
+    en: "Tutoring for 1-2 ESL & NYC students on Grade School English/Math",
+    es: "Tutoría para 1-2 estudiantes ESL y de Nueva York en Inglés/Matemáticas de escuela primaria",
+  },
+  conversationsJesus: {
+    en: "Having conversations about Jesus",
+    es: "Teniendo conversaciones sobre Jesús",
+  },
+  buildCommunity: {
+    en: "BUILD COMMUNITY RELATIONSHIPS",
+    es: "CONSTRUIR RELACIONES COMUNITARIAS",
+  },
+  joinCommunity: {
+    en: "JOIN OUR TUTORING COMMUNITY",
+    es: "ÚNETE A NUESTRA COMUNIDAD DE TUTORÍA",
+  },
   harvestNyc: {
     en: "HARVEST NYC",
     es: "HARVEST NYC",
@@ -172,6 +192,52 @@ export default function VinePage() {
           <p className="vine-session-dates">{t("sessionDates")}</p>
           <p className="vine-session-info">{t("sessionInfo")}</p>
           <button className="vine-interested-btn">{t("interested")}</button>
+        </div>
+      </section>
+
+      {/* What to Expect Section */}
+      <section className="vine-expect-section">
+        <h2 className="vine-expect-title">{t("whatToExpect")}</h2>
+        <div className="vine-expect-grid">
+          <div className="vine-expect-card">
+            <img
+              src="https://images.unsplash.com/photo-1427504494785-cdaa41d10ae0?w=500&h=300&fit=crop"
+              alt="Tutoring"
+              className="vine-expect-image"
+              draggable="false"
+            />
+            <p className="vine-expect-text">{t("tutoringDesc")}</p>
+          </div>
+
+          <div className="vine-expect-card">
+            <img
+              src="https://images.unsplash.com/photo-1427504494785-cdaa41d10ae0?w=500&h=300&fit=crop"
+              alt="Conversations"
+              className="vine-expect-image"
+              draggable="false"
+            />
+            <p className="vine-expect-text">{t("conversationsJesus")}</p>
+          </div>
+
+          <div className="vine-expect-card">
+            <img
+              src="https://images.unsplash.com/photo-1427504494785-cdaa41d10ae0?w=500&h=300&fit=crop"
+              alt="Community"
+              className="vine-expect-image"
+              draggable="false"
+            />
+            <h3 className="vine-expect-card-title">{t("buildCommunity")}</h3>
+          </div>
+
+          <div className="vine-expect-card">
+            <img
+              src="https://images.unsplash.com/photo-1427504494785-cdaa41d10ae0?w=500&h=300&fit=crop"
+              alt="Join Community"
+              className="vine-expect-image"
+              draggable="false"
+            />
+            <h3 className="vine-expect-card-title">{t("joinCommunity")}</h3>
+          </div>
         </div>
       </section>
 
