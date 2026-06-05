@@ -232,6 +232,7 @@ export default function VinePage() {
               className="vine-expect-image"
               draggable="false"
             />
+            <p className="vine-expect-text">{t("tutoringDesc")}</p>
           </div>
 
           <div className="vine-expect-card">
@@ -241,6 +242,7 @@ export default function VinePage() {
               className="vine-expect-image"
               draggable="false"
             />
+            <p className="vine-expect-text">{t("conversationsJesus")}</p>
           </div>
         </div>
       </section>
