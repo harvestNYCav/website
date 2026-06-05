@@ -1099,12 +1099,13 @@ a:hover {
 }
 
 .vine-meeting-detail {
-  font-size: clamp(16px, 1.8vw, 18px);
-  font-weight: 400;
+  font-size: clamp(18.7px, 2.125vw, 29.75px);
+  font-weight: 200;
   color: #000;
   text-align: center;
   margin-bottom: 48px;
   letter-spacing: 0.5px;
+  line-height: 38.4px;
 }
 
 .vine-session-box {
@@ -1126,18 +1127,19 @@ a:hover {
 }
 
 .vine-session-dates {
-  font-size: clamp(16px, 1.8vw, 18px);
-  font-weight: 400;
+  font-size: clamp(18.7px, 2.125vw, 29.75px);
+  font-weight: 200;
   color: #000;
   margin-bottom: 12px;
+  line-height: 38.4px;
 }
 
 .vine-session-info {
-  font-size: clamp(14px, 1.6vw, 16px);
-  font-weight: 400;
+  font-size: clamp(18.7px, 2.125vw, 29.75px);
+  font-weight: 200;
   color: #000;
   margin-bottom: 32px;
-  line-height: 1.6;
+  line-height: 38.4px;
 }
 
 .vine-interested-btn {
