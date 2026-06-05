@@ -945,6 +945,7 @@ a:hover {
   margin-bottom: 32px;
   animation: fadeIn 0.8s ease-in-out 0.8s forwards;
   opacity: 0;
+  text-transform: uppercase;
 }
 
 .contact-list {
