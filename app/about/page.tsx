@@ -30,6 +30,10 @@ const translations = {
     en: "MINISTRIES",
     es: "MINISTERIOS",
   },
+  vineTutoring: {
+    en: "VINE TUTORING",
+    es: "VINE TUTORÍA",
+  },
   getInvolved: {
     en: "GET INVOLVED",
     es: "INVOLÚCRATE",
