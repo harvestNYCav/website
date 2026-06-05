@@ -1267,8 +1267,14 @@ a:hover {
 @media (max-width: 767px) {
   .vine-expect-image {
     height: 220px;
-    margin-left: 5%;
-    margin-right: 5%;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .vine-expect-card {
+    padding-left: 1.5em !important;
+    padding-right: 1.5em !important;
   }
 }
 
