@@ -1112,7 +1112,7 @@ a:hover {
   background: #f0f0f0;
   padding: 48px 32px;
   text-align: center;
-  margin: 40px calc(-120px);
+  margin: 40px calc(-120px) 0 calc(-120px);
   width: calc(100% + 240px);
   animation: fadeIn 0.8s ease-in-out 0.7s forwards;
   opacity: 0;
