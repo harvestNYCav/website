@@ -142,6 +142,22 @@ const translations = {
     en: "We ask that students commit for both semesters (Fall & Spring) and be ready and willing to learn.",
     es: "Pedimos que los estudiantes se comprometan durante ambos semestres (Otoño e Invierno) y estén listos y dispuestos a aprender.",
   },
+  getInvolved: {
+    en: "GET INVOLVED",
+    es: "INVOLÚCRATE",
+  },
+  reachOut: {
+    en: "Please reach out to our Vine coordinators for more information:",
+    es: "Comuníquese con nuestros coordinadores de Vine para obtener más información:",
+  },
+  aldoWiloto: {
+    en: "Aldo Wiloto:",
+    es: "Aldo Wiloto:",
+  },
+  rachelGuen: {
+    en: "Rachel Guen:",
+    es: "Rachel Guen:",
+  },
   harvestNyc: {
     en: "HARVEST NYC",
     es: "HARVEST NYC",
@@ -385,6 +401,38 @@ export default function VinePage() {
                   <p>{t("studentExpectAnswer")}</p>
                 </div>
               )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Get Involved Section */}
+      <section className="contact-section">
+        <h2 className="ministries-title">{t("getInvolved")}</h2>
+        <p className="intro-text">
+          {t("reachOut")}
+        </p>
+
+        <div className="contact-grid">
+          <div className="contact-column">
+            <div className="contact-list">
+              <p className="contact-line">
+                <span className="contact-name">{t("aldoWiloto")}</span>{" "}
+                <a href="mailto:aldowiloto@gmail.com" className="contact-email">
+                  aldowiloto@gmail.com
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div className="contact-column">
+            <div className="contact-list">
+              <p className="contact-line">
+                <span className="contact-name">{t("rachelGuen")}</span>{" "}
+                <a href="mailto:rguen97@gmail.com" className="contact-email">
+                  rguen97@gmail.com
+                </a>
+              </p>
             </div>
           </div>
         </div>
