@@ -637,7 +637,7 @@ a:hover {
 
 /* ── When We Meet ── */
 .when-we-meet-section {
-  padding: 64px 120px;
+  padding: 64px 120px 0;
   text-align: center;
   background: #fff;
   animation: fadeIn 0.8s ease-in-out 0.7s forwards;
