@@ -1198,6 +1198,37 @@ a:hover {
   opacity: 0;
 }
 
+.vine-expect-labels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto 32px;
+  justify-items: center;
+}
+
+@media (max-width: 768px) {
+  .vine-expect-labels {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.vine-expect-label {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #000;
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  line-height: 1.4;
+  animation: fadeIn 0.8s ease-in-out 0.8s forwards;
+  opacity: 0;
+}
+
 .vine-expect-grid {
   max-width: 1200px;
   margin: 0 auto;

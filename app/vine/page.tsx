@@ -198,6 +198,12 @@ export default function VinePage() {
       {/* What to Expect Section */}
       <section className="vine-expect-section">
         <h2 className="vine-expect-title">{t("whatToExpect")}</h2>
+
+        <div className="vine-expect-labels">
+          <h3 className="vine-expect-label">{t("buildCommunity")}</h3>
+          <h3 className="vine-expect-label">{t("joinCommunity")}</h3>
+        </div>
+
         <div className="vine-expect-grid">
           <div className="vine-expect-card">
             <img
@@ -226,7 +232,6 @@ export default function VinePage() {
               className="vine-expect-image"
               draggable="false"
             />
-            <h3 className="vine-expect-card-title">{t("buildCommunity")}</h3>
           </div>
 
           <div className="vine-expect-card">
@@ -236,7 +241,6 @@ export default function VinePage() {
               className="vine-expect-image"
               draggable="false"
             />
-            <h3 className="vine-expect-card-title">{t("joinCommunity")}</h3>
           </div>
         </div>
       </section>
