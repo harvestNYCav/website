@@ -452,6 +452,7 @@ a:hover {
 .mission-link {
   color: var(--link-green);
   text-decoration: underline;
+  font-weight: 700;
 }
 
 .mission-link:hover {
