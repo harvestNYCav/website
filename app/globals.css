@@ -1267,6 +1267,8 @@ a:hover {
 @media (max-width: 767px) {
   .vine-expect-image {
     height: 220px;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
 
