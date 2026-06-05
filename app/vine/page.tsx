@@ -218,7 +218,7 @@ export default function VinePage() {
           {t("vineDesc")}
         </p>
         <p className="intro-text vine-intro-text">
-          {t("mission")}<br />
+          Our mission is to transform lives<br className="mission-break" /> through the love & compassion of Jesus Christ with the goals of:<br /><br />
           {t("goal1")}<br />
           {t("goal2")}<br />
           {t("goal3")}
