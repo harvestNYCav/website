@@ -185,7 +185,7 @@ export default function VinePage() {
       {/* When We Meet Section */}
       <section className="when-we-meet-section">
         <h2 className="when-we-meet-title">{t("whenWeMeet")}</h2>
-        <p className="vine-meeting-detail">{t("meetingTime")}</p>
+        <p className="vine-meeting-detail">Saturdays<br className="meeting-break" /> | 9:30-11:30 AM<br className="meeting-break" /> | 223 E. 30th Street (RNC)</p>
 
         <div className="vine-session-box">
           <h3 className="vine-session-title">{t("springSession")}</h3>

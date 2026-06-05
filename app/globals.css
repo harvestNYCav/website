@@ -1119,6 +1119,16 @@ a:hover {
   line-height: 38.4px;
 }
 
+.meeting-break {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .meeting-break {
+    display: none;
+  }
+}
+
 .vine-session-box {
   background: #f0f0f0;
   padding: 48px 32px;
