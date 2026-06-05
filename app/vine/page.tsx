@@ -200,8 +200,8 @@ export default function VinePage() {
         <h2 className="vine-expect-title">{t("whatToExpect")}</h2>
 
         <div className="vine-expect-labels">
-          <h3 className="vine-expect-label">{t("buildCommunity")}</h3>
-          <h3 className="vine-expect-label">{t("joinCommunity")}</h3>
+          <h3 className="vine-expect-label">BUILD<br className="label-break" /> COMMUNITY RELATIONSHIPS</h3>
+          <h3 className="vine-expect-label">JOIN OUR<br className="label-break" /> TUTORING COMMUNITY</h3>
         </div>
 
         <div className="vine-expect-grid">

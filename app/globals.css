@@ -1240,6 +1240,16 @@ a:hover {
   opacity: 0;
 }
 
+.label-break {
+  display: block;
+}
+
+@media (min-width: 1200px) {
+  .label-break {
+    display: none;
+  }
+}
+
 .vine-expect-grid {
   max-width: 1200px;
   margin: 0 auto;
