@@ -201,7 +201,7 @@ export default function VinePage() {
         <div className="vine-expect-grid">
           <div className="vine-expect-card">
             <img
-              src="https://images.unsplash.com/photo-1427504494785-cdaa41d10ae0?w=500&h=300&fit=crop"
+              src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fa40622fd49024d2d9c82279a4ea61954?format=webp&width=800&height=1200"
               alt="Tutoring"
               className="vine-expect-image"
               draggable="false"
@@ -211,7 +211,7 @@ export default function VinePage() {
 
           <div className="vine-expect-card">
             <img
-              src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=500&h=300&fit=crop"
+              src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fa40622fd49024d2d9c82279a4ea61954?format=webp&width=800&height=1200"
               alt="Conversations"
               className="vine-expect-image"
               draggable="false"
@@ -221,7 +221,7 @@ export default function VinePage() {
 
           <div className="vine-expect-card">
             <img
-              src="https://images.unsplash.com/photo-1522202176988-08fa0ecd2cb6?w=500&h=300&fit=crop"
+              src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fa40622fd49024d2d9c82279a4ea61954?format=webp&width=800&height=1200"
               alt="Community"
               className="vine-expect-image"
               draggable="false"
@@ -231,7 +231,7 @@ export default function VinePage() {
 
           <div className="vine-expect-card">
             <img
-              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=300&fit=crop"
+              src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fa40622fd49024d2d9c82279a4ea61954?format=webp&width=800&height=1200"
               alt="Join Community"
               className="vine-expect-image"
               draggable="false"
