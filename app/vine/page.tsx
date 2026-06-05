@@ -413,28 +413,19 @@ export default function VinePage() {
           {t("reachOut")}
         </p>
 
-        <div className="contact-grid">
-          <div className="contact-column">
-            <div className="contact-list">
-              <p className="contact-line">
-                <span className="contact-name">{t("aldoWiloto")}</span>{" "}
-                <a href="mailto:aldowiloto@gmail.com" className="contact-email">
-                  aldowiloto@gmail.com
-                </a>
-              </p>
-            </div>
-          </div>
-
-          <div className="contact-column">
-            <div className="contact-list">
-              <p className="contact-line">
-                <span className="contact-name">{t("rachelGuen")}</span>{" "}
-                <a href="mailto:rguen97@gmail.com" className="contact-email">
-                  rguen97@gmail.com
-                </a>
-              </p>
-            </div>
-          </div>
+        <div className="contact-list">
+          <p className="contact-line">
+            <span className="contact-name">{t("aldoWiloto")}</span>{" "}
+            <a href="mailto:aldowiloto@gmail.com" className="contact-email">
+              aldowiloto@gmail.com
+            </a>
+          </p>
+          <p className="contact-line">
+            <span className="contact-name">{t("rachelGuen")}</span>{" "}
+            <a href="mailto:rguen97@gmail.com" className="contact-email">
+              rguen97@gmail.com
+            </a>
+          </p>
         </div>
       </section>
 
