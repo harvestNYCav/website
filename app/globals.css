@@ -1108,9 +1108,17 @@ a:hover {
   line-height: 38.4px;
 }
 
+.mobile-break {
+  display: none;
+}
+
 @media (max-width: 767px) {
   .vine-intro-text {
     line-height: 1.5;
+  }
+
+  .mobile-break {
+    display: block;
   }
 }
 
