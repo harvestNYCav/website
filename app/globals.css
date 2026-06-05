@@ -1494,7 +1494,8 @@ a:hover {
   }
 
   .vine-faq-heading {
-    font-size: clamp(16px, 2vw, 20px);
+    font-size: clamp(28px, 3.5vw, 40px);
+    font-weight: 900;
     margin-bottom: 16px;
   }
 
