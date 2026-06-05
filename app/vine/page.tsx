@@ -129,7 +129,7 @@ export default function VinePage() {
       {/* Hero Section */}
       <div className="hero-wrapper">
         <img
-          src="https://images.unsplash.com/photo-1518235506717-e1ed3306a326?w=1200&h=400&fit=crop"
+          src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=2926"
           alt="NYC Skyline"
           className="hero-img"
           draggable="false"
