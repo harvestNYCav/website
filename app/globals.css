@@ -441,7 +441,7 @@ a:hover {
 .intro-text {
   font-size: clamp(18.7px, 2.125vw, 29.75px);
   font-weight: 200;
-  line-height: 48px;
+  line-height: 45.6px;
   color: #000;
   margin: 20px auto;
   max-width: 1140px;
@@ -452,6 +452,7 @@ a:hover {
 .mission-link {
   color: var(--link-green);
   text-decoration: underline;
+  font-weight: 700;
 }
 
 .mission-link:hover {
@@ -469,7 +470,7 @@ a:hover {
 .ministries-section {
   padding: 64px 120px;
   text-align: center;
-  background: #f9f9f9;
+  background: #fbfbfb;
   animation: fadeIn 0.8s ease-in-out 0.7s forwards;
   opacity: 0;
 }
@@ -636,11 +637,12 @@ a:hover {
 
 /* ── When We Meet ── */
 .when-we-meet-section {
-  padding: 64px 120px;
+  padding: 64px 120px 0;
   text-align: center;
   background: #fff;
   animation: fadeIn 0.8s ease-in-out 0.7s forwards;
   opacity: 0;
+  margin-bottom: 0;
 }
 
 .when-we-meet-title {
@@ -743,6 +745,8 @@ a:hover {
   .when-we-meet-section {
     padding: 36px 16px;
     text-align: center;
+    margin-top: 15%;
+    margin-bottom: 15%;
   }
 
   .when-we-meet-grid {
@@ -826,6 +830,11 @@ a:hover {
 }
 
 @media (max-width: 767px) {
+  .contact-column {
+    padding-left: 1.5em !important;
+    padding-right: 1.5em !important;
+  }
+
   .site-nav {
     margin-top: 0;
     top: 0 !important;
@@ -899,7 +908,7 @@ a:hover {
   }
 
   .intro-section {
-    padding: 36px 32px 20px;
+    padding: 0 32px 20px;
   }
 
   .mission-title {
@@ -928,12 +937,33 @@ a:hover {
 @media (max-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 0;
+    margin-bottom: 0;
   }
 }
 
 .contact-column {
   text-align: center;
+}
+
+.staff-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 24px;
+  padding: 0;
+}
+
+@media (max-width: 767px) {
+  .staff-image {
+    height: 200px;
+    margin-bottom: 24px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .contact-heading {
@@ -944,6 +974,17 @@ a:hover {
   margin-bottom: 32px;
   animation: fadeIn 0.8s ease-in-out 0.8s forwards;
   opacity: 0;
+  text-transform: uppercase;
+}
+
+.pastor-break {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .pastor-break {
+    display: block;
+  }
 }
 
 .contact-list {
@@ -956,7 +997,7 @@ a:hover {
 .contact-line {
   font-size: clamp(15.3px, 1.53vw, 23.8px);
   color: #000;
-  line-height: 1.12;
+  line-height: 1.064;
   animation: fadeIn 0.8s ease-in-out 0.9s forwards;
   opacity: 0;
 }
@@ -1063,4 +1104,438 @@ a:hover {
 
 .footer-icon--wide {
   height: 34.91px;
+}
+
+/* ── Vine Page ── */
+.vine-intro-text {
+  line-height: 38.4px;
+}
+
+.mobile-break {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .vine-intro-text {
+    line-height: 1.5;
+  }
+
+  .mobile-break {
+    display: block;
+  }
+}
+
+.vine-team-section {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  animation: fadeIn 0.8s ease-in-out 0.6s forwards;
+  opacity: 0;
+}
+
+.vine-team-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .vine-team-section {
+    height: 240px;
+  }
+}
+
+.vine-meeting-detail {
+  font-size: clamp(18.7px, 2.125vw, 29.75px);
+  font-weight: 200;
+  color: #000;
+  text-align: center;
+  margin-bottom: 48px;
+  letter-spacing: 0.5px;
+  line-height: 38.4px;
+}
+
+.meeting-break {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .meeting-break {
+    display: none;
+  }
+}
+
+.vine-session-box {
+  background: #f6f6f6;
+  padding: 48px 32px;
+  text-align: center;
+  margin: 40px calc(-120px) 0 calc(-120px);
+  width: calc(100% + 240px);
+  animation: fadeIn 0.8s ease-in-out 0.7s forwards;
+  opacity: 0;
+}
+
+.vine-session-title {
+  font-size: clamp(20px, 2.2vw, 24px);
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 16px;
+  text-transform: none;
+}
+
+.vine-session-dates {
+  font-size: clamp(18.7px, 2.125vw, 29.75px);
+  font-weight: 200;
+  color: #000;
+  margin-bottom: 12px;
+  line-height: 38.4px;
+}
+
+.vine-session-info {
+  font-size: clamp(18.7px, 2.125vw, 29.75px);
+  font-weight: 200;
+  color: #000;
+  margin-bottom: 32px;
+  line-height: 38.4px;
+}
+
+.vine-interested-btn {
+  display: inline-block;
+  padding: 14px 48px;
+  border: 2px solid #000;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  background: transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.vine-interested-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .vine-session-box {
+    padding: 32px 24px;
+    margin: 32px calc(-16px);
+    width: calc(100% + 32px);
+  }
+
+  .vine-interested-btn {
+    padding: 12px 36px;
+    font-size: 14px;
+  }
+
+  .vine-meeting-detail {
+    margin-bottom: 32px;
+  }
+}
+
+.vine-expect-section {
+  padding: 64px 120px;
+  text-align: center;
+  background: #fff;
+  animation: fadeIn 0.8s ease-in-out 0.8s forwards;
+  opacity: 0;
+}
+
+.vine-expect-title {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #000;
+  margin: 0 auto 48px;
+  animation: fadeIn 0.8s ease-in-out 0.8s forwards;
+  opacity: 0;
+}
+
+.vine-expect-labels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto 32px;
+  justify-items: center;
+}
+
+@media (max-width: 768px) {
+  .vine-expect-labels {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.vine-expect-label {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #000;
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  line-height: 1.4;
+  animation: fadeIn 0.8s ease-in-out 0.8s forwards;
+  opacity: 0;
+}
+
+.label-break {
+  display: block;
+}
+
+@media (min-width: 1200px) {
+  .label-break {
+    display: none;
+  }
+}
+
+.vine-expect-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  justify-items: center;
+}
+
+@media (max-width: 768px) {
+  .vine-expect-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.vine-expect-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  animation: fadeIn 0.8s ease-in-out 0.8s forwards;
+  opacity: 0;
+}
+
+.vine-expect-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 16px;
+  padding: 0;
+}
+
+@media (max-width: 767px) {
+  .vine-expect-image {
+    height: 220px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .vine-expect-card {
+    padding-left: 1.5em !important;
+    padding-right: 1.5em !important;
+  }
+}
+
+.vine-expect-text {
+  font-size: clamp(14px, 1.5vw, 16px);
+  font-weight: 400;
+  line-height: 1.6;
+  color: #333;
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.vine-expect-card-title {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #000;
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 767px) {
+  .vine-expect-section {
+    padding: 0 16px 36px;
+  }
+
+  .vine-expect-title {
+    margin-bottom: 32px;
+    font-size: clamp(24px, 5vw, 32px);
+  }
+
+  .vine-expect-card {
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .vine-expect-card-title {
+    font-size: clamp(14px, 2.2vw, 18px);
+  }
+}
+
+/* ── Vine FAQ ── */
+.vine-faq-section {
+  padding: 64px 120px;
+  text-align: center;
+  background: #f6f6f6;
+  animation: fadeIn 0.8s ease-in-out 0.9s forwards;
+  opacity: 0;
+}
+
+.vine-faq-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  justify-items: start;
+}
+
+@media (max-width: 768px) {
+  .vine-faq-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+.vine-faq-column {
+  width: 100%;
+}
+
+.vine-faq-heading {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #000;
+  text-align: left;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+  animation: fadeIn 0.8s ease-in-out 0.9s forwards;
+  opacity: 0;
+}
+
+.vine-faq-item {
+  margin-bottom: 24px;
+  border-bottom: 1px solid #ddd;
+  animation: fadeIn 0.8s ease-in-out 0.9s forwards;
+  opacity: 0;
+}
+
+.vine-faq-question {
+  width: 100%;
+  padding: 16px 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: clamp(14px, 1.5vw, 16px);
+  font-weight: 400;
+  color: #000;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: color 0.2s;
+}
+
+.vine-faq-question:hover {
+  color: var(--link-green);
+}
+
+.vine-faq-arrow {
+  font-size: 12px;
+  color: #000;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.vine-faq-arrow.open {
+  transform: rotate(180deg);
+}
+
+.vine-faq-answer {
+  padding: 16px 0 24px 0;
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vine-faq-answer p {
+  font-size: clamp(14px, 1.5vw, 16px);
+  font-weight: 400;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  .vine-faq-section {
+    padding: 36px 16px;
+  }
+
+  .vine-faq-grid {
+    padding-left: 1.5em !important;
+    padding-right: 1.5em !important;
+  }
+
+  .vine-faq-heading {
+    font-size: clamp(20px, 2.2vw, 24px);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .vine-faq-item {
+    margin-bottom: 16px;
+  }
+
+  .vine-faq-question {
+    padding: 12px 0;
+    font-size: 14px;
+  }
+}
+
+.vine-contact-list .contact-line {
+  font-size: clamp(18.7px, 2.125vw, 29.75px);
+  font-weight: 200;
+  line-height: 1.4;
+}
+
+.vine-get-involved {
+  margin-bottom: 0;
+  padding: 64px 38px 64px;
+}
+
+.vine-get-involved .ministries-title {
+  margin-bottom: 12px;
 }

@@ -30,6 +30,10 @@ const translations = {
     en: "MINISTRIES",
     es: "MINISTERIOS",
   },
+  vineTutoring: {
+    en: "VINE TUTORING",
+    es: "VINE TUTORÍA",
+  },
   getInvolved: {
     en: "GET INVOLVED",
     es: "INVOLÚCRATE",
@@ -127,6 +131,9 @@ export default function AboutPage() {
                 {t("ministries")}
               </button>
               <div id="menu-dropdown" className="nav-dropdown-menu">
+                <Link href="/vine" className="nav-dropdown-item">
+                  {t("vineTutoring")}
+                </Link>
                 <span className="nav-dropdown-item">
                   {t("children")}
                 </span>
@@ -176,7 +183,13 @@ export default function AboutPage() {
 
           {/* Pastors */}
           <div className="contact-column">
-            <h3 className="contact-heading">{t("pastorRichard")} | {t("pastorErika")}</h3>
+            <h3 className="contact-heading">{t("pastorRichard")}{'\u00A0'}&<br className="pastor-break" /> {t("pastorErika")}</h3>
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=2926"
+              alt="NYC Skyline"
+              className="staff-image"
+              draggable="false"
+            />
             <div className="contact-list">
               <p className="contact-line">
                 {t("pastorDesc")}
@@ -187,6 +200,12 @@ export default function AboutPage() {
           {/* Serving Staff */}
           <div className="contact-column">
             <h3 className="contact-heading">{t("servingStaff")}</h3>
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=2926"
+              alt="NYC Skyline"
+              className="staff-image"
+              draggable="false"
+            />
             <div className="contact-list">
               <p className="contact-line">
                 {t("servingDesc")}

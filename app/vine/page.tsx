@@ -5,99 +5,7 @@ import Link from "next/link";
 
 type Language = "en" | "es";
 
-const vineContent = {
-  title: {
-    en: "Vine",
-    es: "Vine",
-  },
-  subtitle: {
-    en: "Academic Tutoring & Community Outreach",
-    es: "Tutoría académica y alcance comunitario",
-  },
-  aboutTitle: {
-    en: "About Vine",
-    es: "Acerca de Vine",
-  },
-  aboutDesc: {
-    en: "Vine is a tutoring program run by Harvest Ministry as part of our outreach and community service. We provide English language instruction to migrant communities and academic tutoring support to local students, helping all participants develop strong skills and reach their full potential.",
-    es: "Vine es un programa de tutoría dirigido por el Ministerio Harvest como parte de nuestro alcance y servicio comunitario. proporcionamos tutorías enfocadas en el aprendizaje del  ingles como segunda lengua para todas las comunidades migrantes y apoyo de tutoría académica a estudiantes locales, ayudando a todos los participantes a desarrollar habilidades sólidas y alcanzar su máximo potencial",
-  },
-  programDetails: {
-    en: "Program Details",
-    es: "Detalles del Programa",
-  },
-  session: {
-    en: "2026 Spring Session",
-    es: "Sesión de Primavera 2026",
-  },
-  dates: {
-    en: "January 10 - May 30, 2026",
-    es: "10 de Enero - 30 de Mayo de 2026",
-  },
-  schedule: {
-    en: "Schedule",
-    es: "Horario",
-  },
-  scheduleDetails: {
-    en: "Saturdays, 9:30 AM - 11:30 AM at RNC (223 E 30th Street)",
-    es: "Sábados, 9:30 AM - 11:30 AM en RNC (223 E 30th Street)",
-  },
-  sessions: {
-    en: "15 Sessions Total",
-    es: "15 Sesiones en Total",
-  },
-  noSession: {
-    en: "No Vine on: February 15, April 12, April 19",
-    es: "Sin Vine: 15 de Febrero, 12 de Abril, 19 de Abril",
-  },
-  whatWeOffer: {
-    en: "What We Offer",
-    es: "Lo Que Ofrecemos",
-  },
-  englishLearning: {
-    en: "English Language Learning",
-    es: "Aprendizaje del Idioma Inglés",
-  },
-  englishDesc: {
-    en: "For our migrant community partners, we provide structured English instruction focusing on reading, writing, and speaking skills using beginner-friendly materials and resources.",
-    es: "Para toda nuestra comunidad migrante, proporcionamos instrucción en inglés estructurada enfocada en habilidades de lectura, escritura y expresión oral utilizando materiales flexibles y de facil uso  para principiantes.",
-  },
-  academicTutoring: {
-    en: "Academic Tutoring",
-    es: "Tutoría Académica",
-  },
-  academicDesc: {
-    en: "Local students receive personalized tutoring support in school subjects with mentors dedicated to helping them succeed academically and develop confidence in their learning.",
-    es: "Los estudiantes locales reciben apoyo de tutoría personalizada en materias escolares con mentores dedicados a ayudarlos a obtener éxito académico y desarrollar confianza en su aprendizaje.",
-  },
-  mentorship: {
-    en: "Mentorship",
-    es: "Mentoría",
-  },
-  mentorshipDesc: {
-    en: "Beyond academics, our tutors serve as mentors, building meaningful relationships and providing encouragement and support to our students.",
-    es: "Más allá de lo académico, nuestros tutores sirven como mentores, construyendo relaciones significativas y proporcionando aliento y apoyo a nuestros estudiantes.",
-  },
-  getInvolved: {
-    en: "Get Involved",
-    es: "Involúcrate",
-  },
-  contact: {
-    en: "Contact",
-    es: "Contacto",
-  },
-  questions: {
-    en: "Questions about Vine?",
-    es: "¿Preguntas sobre Vine?",
-  },
-  reachOut: {
-    en: "Feel free to reach out to our Vine coordinators:",
-    es: "Siéntete libre de comunicarte con nuestros coordinadores de Vine:",
-  },
-  back: {
-    en: "← Back to Home",
-    es: "← Volver al Inicio",
-  },
+const translations = {
   aboutUs: {
     en: "ABOUT US",
     es: "ACERCA DE NOSOTROS",
@@ -106,231 +14,451 @@ const vineContent = {
     en: "ABOUT",
     es: "ACERCA",
   },
+  ministries: {
+    en: "MINISTRIES",
+    es: "MINISTERIOS",
+  },
+  connect: {
+    en: "CONNECT",
+    es: "CONECTAR",
+  },
+  vineTutoring: {
+    en: "VINE TUTORING",
+    es: "VINE TUTORÍA",
+  },
+  vineTitle: {
+    en: "VINE TUTORING",
+    es: "VINE TUTORÍA",
+  },
+  vineDesc: {
+    en: "A tutoring program that reaches out to families in the NYC community through tutoring students & sharing the message of Christ, at no cost. Tutors & students gather on Saturday mornings for two hours, including a time of worship and hearing the Word of God.",
+    es: "Un programa de tutoría que llega a las familias en la comunidad de Nueva York a través de estudiantes de tutoría y compartir el mensaje de Cristo, sin costo. Los tutores y estudiantes se reúnen los sábados por la mañana durante dos horas, incluyendo un tiempo de adoración y escuchar la Palabra de Dios.",
+  },
+  mission: {
+    en: "Our mission is to transform lives through the love & compassion of Jesus Christ with the goals of:",
+    es: "Nuestra misión es transformar vidas a través del amor y la compasión de Jesucristo con los objetivos de:",
+  },
+  goal1: {
+    en: "1 | improving English & subject knowledge across all ages",
+    es: "1 | mejorar el inglés y el conocimiento de materias en todas las edades",
+  },
+  goal2: {
+    en: "2 | building students' confidence",
+    es: "2 | construir la confianza de los estudiantes",
+  },
+  goal3: {
+    en: "3 | teaching them Gospel",
+    es: "3 | enseñarles el Evangelio",
+  },
+  whenWeMeet: {
+    en: "WHEN WE MEET",
+    es: "CUANDO NOS REUNIMOS",
+  },
+  meetingTime: {
+    en: "Saturdays | 9:30-11:30 AM | 223 E. 30th Street (RNC)",
+    es: "Sábados | 9:30-11:30 AM | 223 E. 30th Street (RNC)",
+  },
+  springSession: {
+    en: "2026 Spring Session",
+    es: "Sesión de Primavera 2026",
+  },
+  sessionDates: {
+    en: "January 10 - May 30, 2026",
+    es: "10 de Enero - 30 de Mayo de 2026",
+  },
+  sessionInfo: {
+    en: "15 Sessions Total | Break: 2/15, 4/12, 4/19",
+    es: "15 Sesiones en Total | Descanso: 2/15, 4/12, 4/19",
+  },
+  interested: {
+    en: "INTERESTED?",
+    es: "¿INTERESADO?",
+  },
+  whatToExpect: {
+    en: "WHAT TO EXPECT",
+    es: "QUÉ ESPERAR",
+  },
+  tutoringDesc: {
+    en: "Tutoring for 1-2 ESL & NYC students on Grade School English/Math",
+    es: "Tutoría para 1-2 estudiantes ESL y de Nueva York en Inglés/Matemáticas de escuela primaria",
+  },
+  conversationsJesus: {
+    en: "Having conversations about Jesus",
+    es: "Teniendo conversaciones sobre Jesús",
+  },
+  buildCommunity: {
+    en: "BUILD COMMUNITY RELATIONSHIPS",
+    es: "CONSTRUIR RELACIONES COMUNITARIAS",
+  },
+  joinCommunity: {
+    en: "JOIN OUR TUTORING COMMUNITY",
+    es: "ÚNETE A NUESTRA COMUNIDAD DE TUTORÍA",
+  },
+  volunteeringTutor: {
+    en: "VOLUNTEERING AS A TUTOR",
+    es: "VOLUNTARIADO COMO TUTOR",
+  },
+  enrollStudent: {
+    en: "ENROLL AS A STUDENT",
+    es: "INSCRIBIRSE COMO ESTUDIANTE",
+  },
+  signUpTutor: {
+    en: "How do I sign up to be a tutor?",
+    es: "¿Cómo me inscribo para ser tutor?",
+  },
+  signUpStudent: {
+    en: "How do I sign up to be a student?",
+    es: "¿Cómo me inscribo para ser estudiante?",
+  },
+  timeCommitment: {
+    en: "What's the time commitment?",
+    es: "¿Cuál es el compromiso de tiempo?",
+  },
+  expectStudent: {
+    en: "What can I expect as a student?",
+    es: "¿Qué puedo esperar como estudiante?",
+  },
+  tutorSkills: {
+    en: "What skills does a tutor need?",
+    es: "¿Qué habilidades necesita un tutor?",
+  },
+  tutorSignupAnswer: {
+    en: "Please reach out to our coordinators for more information.",
+    es: "Comuníquese con nuestros coordinadores para obtener más información.",
+  },
+  tutorCommitmentAnswer: {
+    en: "Tutors meet on Saturday mornings for 2 hours during the spring and fall sessions.",
+    es: "Los tutores se reúnen los sábados por la mañana durante 2 horas en las sesiones de primavera e invierno.",
+  },
+  tutorSkillsAnswer: {
+    en: "We ask tutors to be open and willing to teach a variety of grade school subjects such as English & Math. Bi-lingual proficiency is not required.",
+    es: "Pedimos a los tutores que estén dispuestos a enseñar una variedad de materias de escuela primaria como inglés y matemáticas. No se requiere competencia bilingüe.",
+  },
+  studentSignupAnswer: {
+    en: "Please reach out to our coordinators to register as a student.",
+    es: "Comuníquese con nuestros coordinadores para registrarse como estudiante.",
+  },
+  studentExpectAnswer: {
+    en: "We ask that students commit for both semesters (Fall & Spring) and be ready and willing to learn.",
+    es: "Pedimos que los estudiantes se comprometan durante ambos semestres (Otoño e Invierno) y estén listos y dispuestos a aprender.",
+  },
+  getInvolved: {
+    en: "GET INVOLVED",
+    es: "INVOLÚCRATE",
+  },
+  reachOut: {
+    en: "Please reach out to our Vine coordinators for more information:",
+    es: "Comuníquese con nuestros coordinadores de Vine para obtener más información:",
+  },
+  aldoWiloto: {
+    en: "Aldo Wiloto:",
+    es: "Aldo Wiloto:",
+  },
+  rachelGuen: {
+    en: "Rachel Guen:",
+    es: "Rachel Guen:",
+  },
+  harvestNyc: {
+    en: "HARVEST NYC",
+    es: "HARVEST NYC",
+  },
 };
 
 export default function VinePage() {
   const [language, setLanguage] = useState<Language>("en");
+  const [openFaq, setOpenFaq] = useState<string | null>(null);
 
-  const t = (key: string): string => {
-    const translations = vineContent[key as keyof typeof vineContent];
-    return translations ? translations[language] : key;
+  const t = (key: keyof typeof translations): string => {
+    return translations[key][language];
+  };
+
+  const toggleFaq = (id: string) => {
+    setOpenFaq(openFaq === id ? null : id);
   };
 
   return (
     <>
-      {/* Announcement Banner */}
-      <div className="bg-gray-200 text-gray-800 text-sm py-2 text-center">
-        SOME SORT OF ANNOUNCEMENT HERE
-      </div>
-
       {/* Navigation */}
-        <nav className="sticky top-0 z-50 bg-white shadow-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
-              <Link href="/" className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-blue-600 rounded"></div>
-                <span className="text-sm font-semibold text-gray-800">
-                  Harvest
-                </span>
-              </Link>
+      <nav className="site-nav">
+        <div className="nav-inner">
+          <Link href="/" className="nav-logo">
+            HARVEST<br />NYC
+          </Link>
 
-              <div className="hidden md:flex items-center gap-8">
-                <Link href="/about" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
-                  <span className="nav-link-full">{t("aboutUs")}</span>
-                  <span className="nav-link-short">{t("aboutUsShort")}</span>
+          <div className="nav-links">
+            <Link href="/about" className="nav-link nav-link-about" id="menu">
+              <span className="nav-link-full">{t("aboutUs")}</span>
+              <span className="nav-link-short">{t("aboutUsShort")}</span>
+            </Link>
+            <div className="nav-dropdown">
+              <button className="nav-link nav-dropdown-trigger" id="menu">
+                {t("ministries")}
+              </button>
+              <div id="menu-dropdown" className="nav-dropdown-menu">
+                <Link href="/vine" className="nav-dropdown-item">
+                  {t("vineTutoring")}
                 </Link>
-                <Link href="/#ministries" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
-                  Ministries
-                </Link>
-                <Link href="/#involved" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
-                  Get Involved
-                </Link>
-                <Link href="/connect" className="text-sm text-black hover:text-green-700 uppercase font-semibold">
-                  Connect
-                </Link>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <button
-                  onClick={() => setLanguage(language === "en" ? "es" : "en")}
-                  className="px-3 py-1 text-sm border border-gray-800 text-gray-800 rounded hover:bg-gray-100"
-                >
-                  {language === "en" ? "ESPAÑOL" : "ENGLISH"}
-                </button>
+                <span className="nav-dropdown-item">Children</span>
               </div>
             </div>
-          </div>
-        </nav>
-
-        {/* Hero Section */}
-        <section className="relative h-80 md:h-96 bg-gradient-to-b from-gray-800 to-gray-900 overflow-hidden">
-          <div
-            className="absolute inset-0 bg-cover bg-center opacity-40"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1427504494785-cdaa41d10ae0?w=1200&h=800&fit=crop')",
-            }}
-          ></div>
-
-          <div className="relative h-full flex flex-col justify-center items-center text-center text-white px-4">
-            <h1 className="text-4xl md:text-5xl font-light mb-3">
-              {t("title")}
-            </h1>
-            <p className="text-lg md:text-xl opacity-90">{t("subtitle")}</p>
-          </div>
-        </section>
-
-        {/* About Section */}
-        <section className="py-16 md:py-24 px-4 bg-gray-50">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-              {t("aboutTitle")}
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed text-center">
-              {t("aboutDesc")}
-            </p>
-          </div>
-        </section>
-
-        {/* Program Details */}
-        <section className="py-16 md:py-24 px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-              {t("programDetails")}
-            </h2>
-
-            <div className="bg-blue-50 rounded-lg p-8 mb-12">
-              <h3 className="text-2xl font-bold mb-6">{t("session")}</h3>
-
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h4 className="font-bold text-lg mb-2">{t("dates")}</h4>
-                  <p className="text-gray-700 mb-6">{t("dates")}</p>
-
-                  <h4 className="font-bold text-lg mb-2">{t("schedule")}</h4>
-                  <p className="text-gray-700 mb-2">{t("scheduleDetails")}</p>
-                  <p className="text-gray-700 font-semibold mb-4">{t("sessions")}</p>
-                  <p className="text-sm text-gray-600 italic">{t("noSession")}</p>
-                </div>
-
-                <div className="bg-white rounded-lg p-6">
-                  <h4 className="font-bold text-lg mb-4">
-                    {language === "en" ? "Location" : "Ubicación"}
-                  </h4>
-                  <p className="text-gray-700 mb-4">
-                    <span className="font-semibold">RNC</span>
-                    <br />
-                    223 E 30th Street
-                    <br />
-                    New York, NY
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    {language === "en"
-                      ? "In-person every Saturday"
-                      : "En persona cada sábado"}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* What We Offer */}
-            <h2 className="text-3xl font-bold mb-8">{t("whatWeOffer")}</h2>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white rounded-lg p-6 shadow-lg">
-                <h3 className="text-xl font-bold mb-3">
-                  {t("englishLearning")}
-                </h3>
-                <p className="text-gray-600">{t("englishDesc")}</p>
-              </div>
-
-              <div className="bg-white rounded-lg p-6 shadow-lg">
-                <h3 className="text-xl font-bold mb-3">
-                  {t("academicTutoring")}
-                </h3>
-                <p className="text-gray-600">{t("academicDesc")}</p>
-              </div>
-
-              <div className="bg-white rounded-lg p-6 shadow-lg">
-                <h3 className="text-xl font-bold mb-3">{t("mentorship")}</h3>
-                <p className="text-gray-600">{t("mentorshipDesc")}</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="py-16 md:py-24 px-4 bg-gray-50">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-              {t("getInvolved")}
-            </h2>
-
-            <div className="bg-white rounded-lg p-8 shadow-lg mb-8">
-              <h3 className="text-2xl font-bold mb-4">{t("questions")}</h3>
-              <p className="text-gray-700 mb-6">{t("reachOut")}</p>
-
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h4 className="font-bold mb-2">Aldo Wiloto</h4>
-                  <a
-                    href="mailto:aldowiloto@gmail.com"
-                    className="text-green-700 hover:underline"
-                  >
-                    aldowiloto@gmail.com
-                  </a>
-                </div>
-                <div>
-                  <h4 className="font-bold mb-2">Rachel Guen</h4>
-                  <a
-                    href="mailto:rguen97@gmail.com"
-                    className="text-green-700 hover:underline"
-                  >
-                    rguen97@gmail.com
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <Link
-              href="/"
-              className="inline-block px-6 py-3 bg-black text-white rounded font-semibold hover:bg-gray-900 transition uppercase"
-            >
-              {t("back")}
+            <Link href="/connect" className="nav-link nav-link--active" id="menu">
+              {t("connect")}
             </Link>
           </div>
-        </section>
 
-        {/* Footer */}
-        <footer className="bg-gray-100 py-12 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h3 className="text-center text-2xl font-bold mb-8 underline text-black uppercase">HARVEST NYC</h3>
-            <div className="flex justify-center items-center gap-12 mb-8">
-              <a href="https://www.youtube.com/@harvestinthecity" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Ffc234dd74fca47339292514ea22e61c2?format=webp&width=100"
-                  alt="YouTube"
-                  className="w-16 h-16"
-                  draggable="false"
-                />
-              </a>
-              <a href="mailto:harvestinthecitynyc@gmail.com">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2F4e33951a443c48028a4f03ea89d1e34c?format=webp&width=100"
-                  alt="Email"
-                  className="w-16 h-16"
-                  draggable="false"
-                />
-              </a>
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fd2a5926a2a294ef4a6be01d573e936d5?format=webp&width=200"
-                alt="Remnant Church"
-                className="h-16"
-                draggable="false"
-              />
+          <button
+            onClick={() => setLanguage(language === "en" ? "es" : "en")}
+            className="lang-btn"
+          >
+            {language === "en" ? "ESPAÑOL" : "ENGLISH"}
+          </button>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <div className="hero-wrapper">
+        <img
+          src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=2926"
+          alt="NYC Skyline"
+          className="hero-img"
+          draggable="false"
+        />
+        <div className="hero-overlay">
+          <h1 className="hero-title">{t("vineTitle")}</h1>
+        </div>
+      </div>
+
+      {/* About Section */}
+      <section className="intro-section">
+        <p className="intro-text vine-intro-text">
+          A tutoring program<br className="mobile-break" /> that reaches out to families<br className="mobile-break" /> in the NYC community through<br className="mobile-break" /> tutoring students & sharing<br className="mobile-break" /> the message of Christ, at no cost.<br className="mobile-break" /> Tutors & students gather<br className="mobile-break" /> on Saturday mornings for two hours,<br className="mobile-break" /> including a time of worship and hearing<br className="mobile-break" /> the Word of God.
+        </p>
+        <p className="intro-text vine-intro-text">
+          Our mission is to transform lives<br className="mobile-break" /> through the love & compassion of Jesus Christ<br className="mobile-break" /> with the goals of:<br /><br />
+          {t("goal1")}<br />
+          {t("goal2")}<br />
+          {t("goal3")}
+        </p>
+      </section>
+
+      {/* Team Photo Section */}
+      <section className="vine-team-section">
+        <img
+          src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&h=400&fit=crop"
+          alt="Vine team"
+          className="vine-team-image"
+          draggable="false"
+        />
+      </section>
+
+      {/* When We Meet Section */}
+      <section className="when-we-meet-section">
+        <h2 className="when-we-meet-title">{t("whenWeMeet")}</h2>
+        <p className="vine-meeting-detail">Saturdays<br className="meeting-break" /> | 9:30-11:30 AM<br className="meeting-break" /> | 223 E. 30th Street (RNC)</p>
+
+        <div className="vine-session-box">
+          <h3 className="vine-session-title">{t("springSession")}</h3>
+          <p className="vine-session-dates">{t("sessionDates")}</p>
+          <p className="vine-session-info">{t("sessionInfo")}</p>
+          <button className="vine-interested-btn">{t("interested")}</button>
+        </div>
+      </section>
+
+      {/* What to Expect Section */}
+      <section className="vine-expect-section">
+        <h2 className="vine-expect-title">{t("whatToExpect")}</h2>
+
+        <div className="vine-expect-labels">
+          <h3 className="vine-expect-label">BUILD<br className="label-break" /> COMMUNITY RELATIONSHIPS</h3>
+          <h3 className="vine-expect-label">JOIN OUR<br className="label-break" /> TUTORING COMMUNITY</h3>
+        </div>
+
+        <div className="vine-expect-grid">
+          <div className="vine-expect-card">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fa40622fd49024d2d9c82279a4ea61954?format=webp&width=800&height=1200"
+              alt="Tutoring"
+              className="vine-expect-image"
+              draggable="false"
+            />
+            <p className="vine-expect-text">{t("tutoringDesc")}</p>
+          </div>
+
+          <div className="vine-expect-card">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fa40622fd49024d2d9c82279a4ea61954?format=webp&width=800&height=1200"
+              alt="Conversations"
+              className="vine-expect-image"
+              draggable="false"
+            />
+            <p className="vine-expect-text">{t("conversationsJesus")}</p>
+          </div>
+
+          <div className="vine-expect-card">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fa40622fd49024d2d9c82279a4ea61954?format=webp&width=800&height=1200"
+              alt="Community"
+              className="vine-expect-image"
+              draggable="false"
+            />
+            <p className="vine-expect-text">Put a caption here</p>
+          </div>
+
+          <div className="vine-expect-card">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fa40622fd49024d2d9c82279a4ea61954?format=webp&width=800&height=1200"
+              alt="Join Community"
+              className="vine-expect-image"
+              draggable="false"
+            />
+            <p className="vine-expect-text">Put a caption here</p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="vine-faq-section">
+        <div className="vine-faq-grid">
+          {/* Volunteering as Tutor */}
+          <div className="vine-faq-column">
+            <h3 className="vine-faq-heading">{t("volunteeringTutor")}</h3>
+
+            <div className="vine-faq-item">
+              <button
+                className="vine-faq-question"
+                onClick={() => toggleFaq("tutor-signup")}
+              >
+                <span>{t("signUpTutor")}</span>
+                <span className={`vine-faq-arrow ${openFaq === "tutor-signup" ? "open" : ""}`}>▼</span>
+              </button>
+              {openFaq === "tutor-signup" && (
+                <div className="vine-faq-answer">
+                  <p>{t("tutorSignupAnswer")}</p>
+                </div>
+              )}
+            </div>
+
+            <div className="vine-faq-item">
+              <button
+                className="vine-faq-question"
+                onClick={() => toggleFaq("tutor-commitment")}
+              >
+                <span>{t("timeCommitment")}</span>
+                <span className={`vine-faq-arrow ${openFaq === "tutor-commitment" ? "open" : ""}`}>▼</span>
+              </button>
+              {openFaq === "tutor-commitment" && (
+                <div className="vine-faq-answer">
+                  <p>{t("tutorCommitmentAnswer")}</p>
+                </div>
+              )}
+            </div>
+
+            <div className="vine-faq-item">
+              <button
+                className="vine-faq-question"
+                onClick={() => toggleFaq("tutor-skills")}
+              >
+                <span>{t("tutorSkills")}</span>
+                <span className={`vine-faq-arrow ${openFaq === "tutor-skills" ? "open" : ""}`}>▼</span>
+              </button>
+              {openFaq === "tutor-skills" && (
+                <div className="vine-faq-answer">
+                  <p>{t("tutorSkillsAnswer")}</p>
+                </div>
+              )}
             </div>
           </div>
-        </footer>
+
+          {/* Enroll as Student */}
+          <div className="vine-faq-column">
+            <h3 className="vine-faq-heading">{t("enrollStudent")}</h3>
+
+            <div className="vine-faq-item">
+              <button
+                className="vine-faq-question"
+                onClick={() => toggleFaq("student-signup")}
+              >
+                <span>{t("signUpStudent")}</span>
+                <span className={`vine-faq-arrow ${openFaq === "student-signup" ? "open" : ""}`}>▼</span>
+              </button>
+              {openFaq === "student-signup" && (
+                <div className="vine-faq-answer">
+                  <p>{t("studentSignupAnswer")}</p>
+                </div>
+              )}
+            </div>
+
+            <div className="vine-faq-item">
+              <button
+                className="vine-faq-question"
+                onClick={() => toggleFaq("student-expect")}
+              >
+                <span>{t("expectStudent")}</span>
+                <span className={`vine-faq-arrow ${openFaq === "student-expect" ? "open" : ""}`}>▼</span>
+              </button>
+              {openFaq === "student-expect" && (
+                <div className="vine-faq-answer">
+                  <p>{t("studentExpectAnswer")}</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Get Involved Section */}
+      <section className="contact-section vine-get-involved">
+        <h2 className="ministries-title">{t("getInvolved")}</h2>
+        <p className="intro-text">
+          {t("reachOut")}
+        </p>
+
+        <div className="contact-list vine-contact-list">
+          <p className="contact-line">
+            <span className="contact-name">{t("aldoWiloto")}</span>{" "}
+            <a href="mailto:aldowiloto@gmail.com" className="contact-email">
+              aldowiloto@gmail.com
+            </a>
+          </p>
+          <p className="contact-line">
+            <span className="contact-name">{t("rachelGuen")}</span>{" "}
+            <a href="mailto:rguen97@gmail.com" className="contact-email">
+              rguen97@gmail.com
+            </a>
+          </p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="site-footer">
+        <h3 className="footer-title">{t("harvestNyc")}</h3>
+        <div className="footer-icons">
+          <a href="https://www.youtube.com/@harvestinthecity/streams" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/62d640b0b7413ecd1eb34c8d2a6733a1699cfafb?width=180"
+              alt="YouTube"
+              className="footer-icon"
+              draggable="false"
+            />
+          </a>
+          <a href="mailto:harvestinthecitynyc@gmail.com">
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/e94bdc79b9e6397731ea714e81845699cb463ee2?width=170"
+              alt="Email"
+              className="footer-icon"
+              draggable="false"
+            />
+          </a>
+          <a href="https://www.remnantchurch.org/" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/d4de61100a8688fad8f49f3af86899013ee08870?width=224"
+              alt="Remnant Church"
+              className="footer-icon footer-icon--wide"
+              draggable="false"
+            />
+          </a>
+        </div>
+      </footer>
     </>
   );
 }
