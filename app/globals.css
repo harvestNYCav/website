@@ -1553,7 +1553,7 @@ a:hover {
   width: 100vw;
   overflow: hidden;
   background: #fbfbfb;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
   margin-left: calc(-50vw + 50%);
   position: relative;
 }
