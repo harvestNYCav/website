@@ -173,23 +173,6 @@ export default function ChildrenPage() {
             <span className="contact-name children-contact-name">{t("erika")}</span>
             {" "}<a href="mailto:email@gmail.com" className="contact-email">{t("erikaEmail")}</a>
           </p>
-          <div className="children-contact-row-wrapper">
-            <p className="contact-line children-contact-row">
-              <span className="contact-name children-contact-name">{t("whoeverElse")}</span>
-              {" "}<a href="mailto:email@gmail.com" className="contact-email">{t("whoeverElseEmail")}</a>
-            </p>
-            <button
-              className="children-dropdown-toggle"
-              onClick={() => setContactOpen(!contactOpen)}
-              aria-label="Toggle contact details"
-            >
-              <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/6ab20d7d0df51b63e11f7a3414f5303e3dc71bbc?width=102"
-                alt=""
-                className={`children-dropdown-arrow ${contactOpen ? "children-dropdown-arrow--open" : ""}`}
-              />
-            </button>
-          </div>
         </div>
       </section>
 
