@@ -1564,7 +1564,7 @@ a:hover {
   white-space: nowrap;
   animation: scroll-left 30s linear infinite;
   font-size: clamp(28px, 3.5vw, 40px);
-  font-weight: 900;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #000;
