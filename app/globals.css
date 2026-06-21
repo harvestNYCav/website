@@ -1022,7 +1022,7 @@ a:hover {
   border: 2px solid #000;
   border-radius: 20px;
   font-size: 17px;
-  font-weight: 700;
+  font-weight: 600;
   color: #000 !important;
   background: transparent;
   cursor: pointer;
@@ -1658,7 +1658,7 @@ a:hover {
   border: none;
   padding: 0;
   font-size: clamp(18px, 2.5vw, 24px);
-  font-weight: 700;
+  font-weight: 600;
   color: #000;
   text-transform: uppercase;
   text-decoration: underline;
