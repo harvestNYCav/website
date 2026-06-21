@@ -1663,8 +1663,11 @@ a:hover {
   text-transform: uppercase;
   text-decoration: underline;
   letter-spacing: 0.5px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   pointer-events: none;
+}
+
+.event-image-link:hover .event-image {
+  opacity: 0.85;
 }
 
 .event-title {

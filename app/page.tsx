@@ -311,7 +311,6 @@ export default function HomePage() {
               <span className="event-image-overlay">LEARN MORE</span>
             </button>
             <h3 className="event-title">VBS: KIDS SUMMER CAMP</h3>
-            <p className="event-subtitle">FOR CHILDREN ONLY.</p>
           </div>
 
           {/* Event 2 */}
@@ -327,7 +326,6 @@ export default function HomePage() {
               <span className="event-image-overlay">LEARN MORE</span>
             </button>
             <h3 className="event-title">VBS: KIDS SUMMER CAMP</h3>
-            <p className="event-subtitle">FOR CHILDREN ONLY.</p>
           </div>
         </div>
       </section>
