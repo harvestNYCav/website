@@ -1563,10 +1563,10 @@ a:hover {
   gap: 64px;
   white-space: nowrap;
   animation: scroll-left 25s linear infinite;
-  font-size: clamp(28px, 5vw, 60px);
+  font-size: clamp(28px, 3.5vw, 40px);
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: #000;
   padding: 32px 0;
   width: fit-content;
