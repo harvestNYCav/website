@@ -283,34 +283,45 @@ export default function HomePage() {
         <Link href="/about" className="connect-btn">{t("learnMoreBtn")}</Link>
       </section>
 
-      {/* Ministries Section */}
-      <section className="ministries-section">
-        <h2 className="ministries-title">{t("ministriesTitle")}</h2>
-        <div className="ministries-grid">
-          {/* Vine Tutoring */}
-          <div className="ministry-card">
-            <h3 className="ministry-name">{t("vineTutoring")}</h3>
-            <p className="ministry-desc">{t("vineTutoringDesc")}</p>
+      {/* Events Section */}
+      <section className="events-section">
+        {/* Scrolling Events Header */}
+        <div className="events-scroll-wrapper">
+          <div className="events-scroll-text">
+            <span>UPCOMING EVENTS</span>
+            <span>UPCOMING EVENTS</span>
+            <span>UPCOMING EVENTS</span>
+          </div>
+        </div>
+
+        {/* Events Grid */}
+        <div className="events-grid">
+          {/* Event 1 */}
+          <div className="event-card">
+            <div className="event-date">JULY 1</div>
             <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=500"
-              alt="Vine Tutoring"
-              className="ministry-image"
+              src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2F1548192f38d2487891a82bfede661ae4?format=webp&width=800&height=1200"
+              alt="VBS: Kids Summer Camp"
+              className="event-image"
               draggable="false"
             />
-            <Link href="/vine" className="ministry-btn">{t("learnMoreBtn")}</Link>
+            <h3 className="event-title">VBS: KIDS SUMMER CAMP</h3>
+            <p className="event-subtitle">FOR CHILDREN ONLY.</p>
+            <button className="event-btn">DETAILS</button>
           </div>
 
-          {/* Children's Ministry */}
-          <div className="ministry-card">
-            <h3 className="ministry-name">{t("childrenMinistry")}</h3>
-            <p className="ministry-desc">{t("childrenDesc")}</p>
+          {/* Event 2 */}
+          <div className="event-card">
+            <div className="event-date">JULY 1</div>
             <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=500"
-              alt="Children's Ministry"
-              className="ministry-image"
+              src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2F1548192f38d2487891a82bfede661ae4?format=webp&width=800&height=1200"
+              alt="VBS: Kids Summer Camp"
+              className="event-image"
               draggable="false"
             />
-            <Link href="/children" className="ministry-btn">{t("learnMoreBtn")}</Link>
+            <h3 className="event-title">VBS: KIDS SUMMER CAMP</h3>
+            <p className="event-subtitle">FOR CHILDREN ONLY.</p>
+            <button className="event-btn">DETAILS</button>
           </div>
         </div>
       </section>
