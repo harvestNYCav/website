@@ -1539,3 +1539,246 @@ a:hover {
 .vine-get-involved .ministries-title {
   margin-bottom: 12px;
 }
+
+/* ── Children's Ministry Page ── */
+.children-group-photo-wrapper {
+  width: 100%;
+  overflow: hidden;
+  animation: fadeIn 0.8s ease-in-out 0.6s forwards;
+  opacity: 0;
+}
+
+.children-group-photo {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .children-group-photo {
+    height: 220px;
+  }
+}
+
+.children-when-section {
+  padding: 64px 120px;
+  text-align: center;
+  background: #fff;
+  animation: fadeIn 0.8s ease-in-out 0.7s forwards;
+  opacity: 0;
+}
+
+.children-age-groups {
+  max-width: 900px;
+  margin: 0 auto 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.children-age-text {
+  font-size: clamp(18.7px, 2.125vw, 29.75px);
+  font-weight: 200;
+  line-height: 60px;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+.children-age-heading {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.children-interested-btn {
+  display: inline-block;
+  padding: 14px 80px;
+  border: 2px solid #000;
+  border-radius: 30px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #000;
+  background: transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s;
+  letter-spacing: 0.5px;
+  margin-top: 16px;
+}
+
+.children-interested-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.children-events-section {
+  padding: 64px 120px;
+  text-align: center;
+  background: #fbfbfb;
+  animation: fadeIn 0.8s ease-in-out 0.7s forwards;
+  opacity: 0;
+}
+
+.children-events-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7em;
+  justify-items: start;
+}
+
+.children-event-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  animation: fadeIn 0.8s ease-in-out 0.7s forwards;
+  opacity: 0;
+}
+
+.children-event-title {
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: #000;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.children-event-desc {
+  font-size: clamp(14px, 1.5vw, 16px);
+  font-weight: 400;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.children-event-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.children-get-involved {
+  padding: 64px 38px 80px;
+}
+
+.children-get-involved .ministries-title {
+  margin-bottom: 12px;
+}
+
+.children-reach-out-text {
+  font-size: clamp(15.3px, 1.8vw, 25.5px);
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.children-contact-rows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.children-contact-row {
+  font-size: clamp(15.3px, 1.8vw, 25.5px);
+  line-height: 60px;
+  text-align: center;
+}
+
+.children-contact-name {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.children-contact-row-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.children-dropdown-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.children-dropdown-arrow {
+  width: 28px;
+  height: 26px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.children-dropdown-arrow--open {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 767px) {
+  .children-when-section {
+    padding: 36px 24px;
+  }
+
+  .children-age-text {
+    line-height: 1.8;
+    font-size: clamp(15px, 4vw, 20px);
+  }
+
+  .children-interested-btn {
+    padding: 12px 48px;
+    font-size: 14px;
+    border-radius: 24px;
+  }
+
+  .children-events-section {
+    padding: 36px 16px;
+  }
+
+  .children-events-grid {
+    grid-template-columns: 1fr;
+    gap: 3em;
+  }
+
+  .children-event-card {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    align-items: center;
+  }
+
+  .children-event-title {
+    text-align: center;
+  }
+
+  .children-event-desc {
+    text-align: center;
+  }
+
+  .children-event-image {
+    height: 200px;
+    border-radius: 14px;
+  }
+
+  .children-get-involved {
+    padding: 36px 24px 60px;
+  }
+
+  .children-contact-row {
+    line-height: 1.8;
+    font-size: clamp(14px, 4vw, 18px);
+  }
+}
