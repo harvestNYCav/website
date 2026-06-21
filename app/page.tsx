@@ -302,14 +302,12 @@ export default function HomePage() {
           <div className="event-card">
             <div className="event-date">JULY 1</div>
             <h3 className="event-title">VBS: KIDS SUMMER CAMP</h3>
-            <button className="event-image-link">
-              <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=800"
-                alt="VBS: Kids Summer Camp"
-                className="event-image"
-                draggable="false"
-              />
-            </button>
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=800"
+              alt="VBS: Kids Summer Camp"
+              className="event-image"
+              draggable="false"
+            />
             <button className="event-learn-more">LEARN MORE →</button>
           </div>
 
@@ -317,14 +315,12 @@ export default function HomePage() {
           <div className="event-card">
             <div className="event-date">JULY 1</div>
             <h3 className="event-title">VBS: KIDS SUMMER CAMP</h3>
-            <button className="event-image-link">
-              <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=800"
-                alt="VBS: Kids Summer Camp"
-                className="event-image"
-                draggable="false"
-              />
-            </button>
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=800"
+              alt="VBS: Kids Summer Camp"
+              className="event-image"
+              draggable="false"
+            />
             <button className="event-learn-more">LEARN MORE →</button>
           </div>
         </div>

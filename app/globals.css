@@ -1621,20 +1621,6 @@ a:hover {
   text-align: left;
 }
 
-.event-image-link {
-  position: relative;
-  display: block;
-  width: 100%;
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  margin-top: 24px;
-  margin-bottom: 0;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
 .event-image {
   width: 100%;
   height: 280px;
@@ -1642,6 +1628,8 @@ a:hover {
   border-radius: 8px;
   display: block;
   padding: 0;
+  margin-top: 24px;
+  margin-bottom: 0;
 }
 
 @media (max-width: 767px) {
@@ -1675,9 +1663,6 @@ a:hover {
   color: var(--link-green);
 }
 
-.event-image-link:hover .event-image {
-  opacity: 0.85;
-}
 
 .event-title {
   font-size: clamp(18px, 2.5vw, 24px);
