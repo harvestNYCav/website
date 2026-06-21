@@ -1542,8 +1542,7 @@ a:hover {
 
 /* ── Events Section ── */
 .events-section {
-  padding: 0 0 64px 0;
-  margin-top: 32px;
+  padding: 32px 0 32px 0;
   text-align: center;
   background: #fbfbfb;
   animation: fadeIn 0.8s ease-in-out 0.7s forwards;
