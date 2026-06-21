@@ -1562,7 +1562,7 @@ a:hover {
   display: flex;
   gap: 16px;
   white-space: nowrap;
-  animation: scroll-left 23s linear infinite;
+  animation: scroll-left 18s linear infinite;
   font-size: clamp(28px, 3.5vw, 40px);
   font-weight: 700;
   text-transform: uppercase;
