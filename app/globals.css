@@ -1671,7 +1671,7 @@ a:hover {
   cursor: pointer;
   text-transform: uppercase;
   transition: border-color 0.2s, color 0.2s;
-  align-self: center;
+  align-self: flex-start;
   margin: 0;
 }
 
