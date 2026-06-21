@@ -291,6 +291,8 @@ export default function HomePage() {
             <span>UPCOMING EVENTS</span>
             <span>UPCOMING EVENTS</span>
             <span>UPCOMING EVENTS</span>
+            <span>UPCOMING EVENTS</span>
+            <span>UPCOMING EVENTS</span>
           </div>
         </div>
 

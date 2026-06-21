@@ -1560,9 +1560,9 @@ a:hover {
 
 .events-scroll-text {
   display: flex;
-  gap: 64px;
+  gap: 16px;
   white-space: nowrap;
-  animation: scroll-left 25s linear infinite;
+  animation: scroll-left 30s linear infinite;
   font-size: clamp(28px, 3.5vw, 40px);
   font-weight: 900;
   text-transform: uppercase;
@@ -1582,7 +1582,7 @@ a:hover {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-33.333%);
+    transform: translateX(-20%);
   }
 }
 
