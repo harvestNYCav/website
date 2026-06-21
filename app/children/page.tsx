@@ -173,6 +173,7 @@ export default function ChildrenPage() {
             <span className="contact-name children-contact-name">{t("erika")}</span>
             {" "}<a href="mailto:email@gmail.com" className="contact-email">{t("erikaEmail")}</a>
           </p>
+          <button className="connect-btn">{t("connect")}</button>
         </div>
       </section>
 
