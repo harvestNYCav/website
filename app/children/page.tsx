@@ -168,13 +168,7 @@ export default function ChildrenPage() {
       <section className="contact-section children-get-involved">
         <h2 className="ministries-title">{t("getInvolved")}</h2>
         <p className="intro-text children-reach-out-text">{t("reachOut")}</p>
-        <div className="children-contact-rows">
-          <p className="contact-line children-contact-row">
-            <span className="contact-name children-contact-name">{t("erika")}</span>
-            {" "}<a href="mailto:email@gmail.com" className="contact-email">{t("erikaEmail")}</a>
-          </p>
-          <button className="connect-btn">{t("connect")}</button>
-        </div>
+        <button className="connect-btn">{t("connect")}</button>
       </section>
 
       {/* Footer */}
