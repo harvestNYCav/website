@@ -309,8 +309,8 @@ export default function HomePage() {
                 className="event-image"
                 draggable="false"
               />
-              <span className="event-image-overlay">LEARN MORE</span>
             </button>
+            <button className="event-learn-more">LEARN MORE →</button>
           </div>
 
           {/* Event 2 */}
@@ -324,8 +324,8 @@ export default function HomePage() {
                 className="event-image"
                 draggable="false"
               />
-              <span className="event-image-overlay">LEARN MORE</span>
             </button>
+            <button className="event-learn-more">LEARN MORE →</button>
           </div>
         </div>
       </section>

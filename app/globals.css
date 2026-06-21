@@ -1652,18 +1652,26 @@ a:hover {
   }
 }
 
-.event-image-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.event-learn-more {
+  display: inline-block;
+  background: transparent;
+  border: none;
+  padding: 0;
   font-size: clamp(18px, 2.5vw, 24px);
   font-weight: 700;
-  color: #fff;
+  color: #000;
   text-transform: uppercase;
   text-decoration: underline;
   letter-spacing: 0.5px;
-  pointer-events: none;
+  cursor: pointer;
+  text-align: left;
+  align-self: flex-start;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.event-learn-more:hover {
+  color: var(--link-green);
 }
 
 .event-image-link:hover .event-image {
