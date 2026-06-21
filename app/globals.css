@@ -1177,7 +1177,7 @@ a:hover {
 }
 
 .vine-session-title {
-  font-size: clamp(20px, 2.2vw, 24px);
+  font-size: clamp(18.7px, 2.125vw, 29.75px);
   font-weight: 600;
   color: #000;
   margin-bottom: 16px;
