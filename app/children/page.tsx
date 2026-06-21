@@ -167,7 +167,6 @@ export default function ChildrenPage() {
       {/* Get Involved */}
       <section className="contact-section children-get-involved">
         <h2 className="ministries-title">{t("getInvolved")}</h2>
-        <p className="intro-text children-reach-out-text">{t("reachOut")}</p>
         <button className="connect-btn">{t("connect")}</button>
       </section>
 
