@@ -1021,8 +1021,8 @@ a:hover {
   padding: 14px 48px;
   border: 2px solid #000;
   border-radius: 20px;
-  font-size: 17px;
-  font-weight: 400;
+  font-size: clamp(14px, 1.5vw, 16px);
+  font-weight: 500;
   color: #000 !important;
   background: transparent;
   cursor: pointer;
