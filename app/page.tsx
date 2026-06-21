@@ -302,7 +302,7 @@ export default function HomePage() {
           <div className="event-card">
             <div className="event-date">JULY 1</div>
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2F1548192f38d2487891a82bfede661ae4?format=webp&width=800&height=1200"
+              src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=800"
               alt="VBS: Kids Summer Camp"
               className="event-image"
               draggable="false"
@@ -316,7 +316,7 @@ export default function HomePage() {
           <div className="event-card">
             <div className="event-date">JULY 1</div>
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2F1548192f38d2487891a82bfede661ae4?format=webp&width=800&height=1200"
+              src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=800"
               alt="VBS: Kids Summer Camp"
               className="event-image"
               draggable="false"
