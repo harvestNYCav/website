@@ -206,9 +206,9 @@ export default function HomePage() {
                 <Link href="/vine" className="nav-dropdown-item">
                   {t("vineTutoring")}
                 </Link>
-                <span className="nav-dropdown-item">
+                <Link href="/children" className="nav-dropdown-item">
                   {t("children")}
-                </span>
+                </Link>
               </div>
             </div>
             <Link href="/connect" className="nav-link nav-link--active" id="menu">
@@ -297,7 +297,7 @@ export default function HomePage() {
               className="ministry-image"
               draggable="false"
             />
-            <button className="ministry-btn">{t("learnMoreBtn")}</button>
+            <Link href="/vine" className="ministry-btn">{t("learnMoreBtn")}</Link>
           </div>
 
           {/* Children's Ministry */}
@@ -310,7 +310,7 @@ export default function HomePage() {
               className="ministry-image"
               draggable="false"
             />
-            <button className="ministry-btn">{t("learnMoreBtn")}</button>
+            <Link href="/children" className="ministry-btn">{t("learnMoreBtn")}</Link>
           </div>
         </div>
       </section>

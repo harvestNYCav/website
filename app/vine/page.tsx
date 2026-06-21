@@ -198,7 +198,7 @@ export default function VinePage() {
                 <Link href="/vine" className="nav-dropdown-item">
                   {t("vineTutoring")}
                 </Link>
-                <span className="nav-dropdown-item">Children</span>
+                <Link href="/children" className="nav-dropdown-item">Children</Link>
               </div>
             </div>
             <Link href="/connect" className="nav-link nav-link--active" id="menu">

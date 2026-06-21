@@ -134,9 +134,9 @@ export default function AboutPage() {
                 <Link href="/vine" className="nav-dropdown-item">
                   {t("vineTutoring")}
                 </Link>
-                <span className="nav-dropdown-item">
+                <Link href="/children" className="nav-dropdown-item">
                   {t("children")}
-                </span>
+                </Link>
               </div>
             </div>
             <Link href="/connect" className="nav-link" id="menu">
