@@ -29,7 +29,7 @@ const translations = {
     es: "Un párrafo sobre el ministerio para niños pequeños, rango de edad, breve idea de qué/cuándo blah blah blah blah xyz",
   },
   interestedBtn: { en: "INTERESTED?", es: "¿INTERESADO?" },
-  upcomingEvents: { en: "UPCOMING EVENTS?", es: "¿PRÓXIMOS EVENTOS?" },
+  upcomingEvents: { en: "UPCOMING EVENTS", es: "PRÓXIMOS EVENTOS" },
   vineMusicStudio: { en: "VINE MUSIC STUDIO", es: "VINE MÚSICA ESTUDIO" },
   vineMusicDesc: {
     en: "A tutoring program serving the local & migrant communities, at no cost. The goal is to help students develop academic success, English language skills, etc.",
