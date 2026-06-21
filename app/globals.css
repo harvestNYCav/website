@@ -1616,7 +1616,7 @@ a:hover {
   text-transform: uppercase;
   text-decoration: underline;
   letter-spacing: 0.5px;
-  color: #000;
+  color: var(--link-green);
   margin-bottom: 16px;
   text-align: left;
 }
