@@ -7,8 +7,8 @@ type Language = "en" | "es";
 
 const translations = {
   announcement1: {
-    en: "WELCOME TO HARVEST IN THE CITY",
-    es: "BIENVENIDO A HARVEST EN LA CIUDAD",
+    en: "JOIN US FOR WORSHIP ON SUNDAYS AT 3:30PM",
+    es: "ÚNETE A NOSOTROS PARA ADORAR LOS DOMINGOS A LAS 3:30PM",
   },
   announcement2: {
     en: "WELCOME TO HARVEST IN THE CITY",
