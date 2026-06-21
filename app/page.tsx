@@ -301,29 +301,33 @@ export default function HomePage() {
           {/* Event 1 */}
           <div className="event-card">
             <div className="event-date">JULY 1</div>
-            <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=800"
-              alt="VBS: Kids Summer Camp"
-              className="event-image"
-              draggable="false"
-            />
+            <button className="event-image-link">
+              <img
+                src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=800"
+                alt="VBS: Kids Summer Camp"
+                className="event-image"
+                draggable="false"
+              />
+              <span className="event-image-overlay">LEARN MORE</span>
+            </button>
             <h3 className="event-title">VBS: KIDS SUMMER CAMP</h3>
             <p className="event-subtitle">FOR CHILDREN ONLY.</p>
-            <button className="event-btn">DETAILS</button>
           </div>
 
           {/* Event 2 */}
           <div className="event-card">
             <div className="event-date">JULY 1</div>
-            <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=800"
-              alt="VBS: Kids Summer Camp"
-              className="event-image"
-              draggable="false"
-            />
+            <button className="event-image-link">
+              <img
+                src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=800"
+                alt="VBS: Kids Summer Camp"
+                className="event-image"
+                draggable="false"
+              />
+              <span className="event-image-overlay">LEARN MORE</span>
+            </button>
             <h3 className="event-title">VBS: KIDS SUMMER CAMP</h3>
             <p className="event-subtitle">FOR CHILDREN ONLY.</p>
-            <button className="event-btn">DETAILS</button>
           </div>
         </div>
       </section>

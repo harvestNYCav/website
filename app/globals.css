@@ -1624,19 +1624,46 @@ a:hover {
   text-align: left;
 }
 
+.event-image-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
 .event-image {
   width: 100%;
   height: 280px;
   object-fit: cover;
   border-radius: 12px;
   display: block;
-  margin-bottom: 24px;
 }
 
 @media (max-width: 767px) {
   .event-image {
     height: 220px;
   }
+}
+
+.event-image-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: underline;
+  letter-spacing: 0.5px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
 }
 
 .event-title {
