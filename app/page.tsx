@@ -7,8 +7,8 @@ type Language = "en" | "es";
 
 const translations = {
   announcement1: {
-    en: "WELCOME TO HARVEST IN THE CITY",
-    es: "BIENVENIDO A HARVEST EN LA CIUDAD",
+    en: "JOIN US FOR WORSHIP ON SUNDAYS AT 3:30PM",
+    es: "ÚNETE A NOSOTROS PARA ADORAR LOS DOMINGOS A LAS 3:30PM",
   },
   announcement2: {
     en: "WELCOME TO HARVEST IN THE CITY",
@@ -206,9 +206,9 @@ export default function HomePage() {
                 <Link href="/vine" className="nav-dropdown-item">
                   {t("vineTutoring")}
                 </Link>
-                <span className="nav-dropdown-item">
+                <Link href="/children" className="nav-dropdown-item">
                   {t("children")}
-                </span>
+                </Link>
               </div>
             </div>
             <Link href="/connect" className="nav-link nav-link--active" id="menu">
@@ -283,34 +283,45 @@ export default function HomePage() {
         <Link href="/about" className="connect-btn">{t("learnMoreBtn")}</Link>
       </section>
 
-      {/* Ministries Section */}
-      <section className="ministries-section">
-        <h2 className="ministries-title">{t("ministriesTitle")}</h2>
-        <div className="ministries-grid">
-          {/* Vine Tutoring */}
-          <div className="ministry-card">
-            <h3 className="ministry-name">{t("vineTutoring")}</h3>
-            <p className="ministry-desc">{t("vineTutoringDesc")}</p>
+      {/* Events Section */}
+      <section className="events-section">
+        {/* Scrolling Events Header */}
+        <div className="events-scroll-wrapper">
+          <div className="events-scroll-text">
+            <span>UPCOMING EVENTS</span>
+            <span>UPCOMING EVENTS</span>
+            <span>UPCOMING EVENTS</span>
+            <span>UPCOMING EVENTS</span>
+            <span>UPCOMING EVENTS</span>
+          </div>
+        </div>
+
+        {/* Events Grid */}
+        <div className="events-grid">
+          {/* Event 1 */}
+          <div className="event-card">
+            <div className="event-date">JULY 1</div>
+            <h3 className="event-title">VBS: KIDS SUMMER CAMP</h3>
             <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=500"
-              alt="Vine Tutoring"
-              className="ministry-image"
+              src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=800"
+              alt="VBS: Kids Summer Camp"
+              className="event-image"
               draggable="false"
             />
-            <button className="ministry-btn">{t("learnMoreBtn")}</button>
+            <button className="event-learn-more">LEARN MORE →</button>
           </div>
 
-          {/* Children's Ministry */}
-          <div className="ministry-card">
-            <h3 className="ministry-name">{t("childrenMinistry")}</h3>
-            <p className="ministry-desc">{t("childrenDesc")}</p>
+          {/* Event 2 */}
+          <div className="event-card">
+            <div className="event-date">JULY 1</div>
+            <h3 className="event-title">VBS: KIDS SUMMER CAMP</h3>
             <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=500"
-              alt="Children's Ministry"
-              className="ministry-image"
+              src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=800"
+              alt="VBS: Kids Summer Camp"
+              className="event-image"
               draggable="false"
             />
-            <button className="ministry-btn">{t("learnMoreBtn")}</button>
+            <button className="event-learn-more">LEARN MORE →</button>
           </div>
         </div>
       </section>

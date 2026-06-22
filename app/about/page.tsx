@@ -58,13 +58,9 @@ const translations = {
     en: "OUR STAFF",
     es: "NUESTRO PERSONAL",
   },
-  pastorRichard: {
-    en: "Pastor Richard",
-    es: "Pastor Richard",
-  },
-  pastorErika: {
-    en: "Pastor Erika",
-    es: "Pastor Erika",
+  aguirreFamily: {
+    en: "The Aguirre Family",
+    es: "La Familia Aguirre",
   },
   pastorDesc: {
     en: "When Pastor Richard moved into the Kips Bay Neighborhood 12 years ago he saw the need of urban ministry in this community. He served and developed programs for homeless outreach and inner city youth ministry as well as connecting with diverse groups in the neighborhood. God connected him with Remnant Church in May 2012 and a year later in June 2013, he went on a mission trip to Guatemala for the first time with Remnant members. In December 2013, Pastor Richard joined Remnant as an outreach pastor. He has been married to Erika for 25+ years and they have three amazing boys Richard, Paul, and Matheux. He currently serves in Harvest outreach services and The Vine tutoring program for families in the Kips Bay community.",
@@ -134,9 +130,9 @@ export default function AboutPage() {
                 <Link href="/vine" className="nav-dropdown-item">
                   {t("vineTutoring")}
                 </Link>
-                <span className="nav-dropdown-item">
+                <Link href="/children" className="nav-dropdown-item">
                   {t("children")}
-                </span>
+                </Link>
               </div>
             </div>
             <Link href="/connect" className="nav-link" id="menu">
@@ -183,7 +179,7 @@ export default function AboutPage() {
 
           {/* Pastors */}
           <div className="contact-column">
-            <h3 className="contact-heading">{t("pastorRichard")}{'\u00A0'}&<br className="pastor-break" /> {t("pastorErika")}</h3>
+            <h3 className="contact-heading">{t("aguirreFamily")}</h3>
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=2926"
               alt="NYC Skyline"
