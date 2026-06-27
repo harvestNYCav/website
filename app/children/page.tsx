@@ -179,7 +179,7 @@ export default function ChildrenPage() {
       {/* Get Involved */}
       <section className="contact-section children-get-involved">
         <h2 className="ministries-title">{t("getInvolved")}</h2>
-        <button className="connect-btn">{t("connect")}</button>
+        <a href="https://wa.me/19175977498" target="_blank" rel="noopener noreferrer" className="connect-btn">{t("connect")}</a>
       </section>
 
       {/* Footer */}
