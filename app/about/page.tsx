@@ -182,9 +182,11 @@ export default function AboutPage() {
 
       {/* Intro Section */}
       <section className="intro-section">
-        <p className="intro-text">
-          {t("introText")}
-        </p>
+        {t("introText").split("\n\n").map((paragraph, index) => (
+          <p key={index} className="intro-text">
+            {paragraph}
+          </p>
+        ))}
       </section>
 
       {/* Our Staff Section */}
