@@ -35,10 +35,6 @@ const translations = {
   },
   whenWeMeet: { en: "WHEN WE MEET", es: "CUANDO NOS REUNIMOS" },
   youthHeading: { en: "Youth", es: "Jóvenes" },
-  youthDesc: {
-    en: "A blurb about youth ministry, age range, brief idea of what/when blah blah blah blah xyz",
-    es: "Un párrafo sobre el ministerio juvenil, rango de edad, breve idea de qué/cuándo blah blah blah blah xyz",
-  },
   toddlersHeading: { en: "Toddlers", es: "Niños pequeños" },
   toddlersDesc: {
     en: "A blurb about toddler ministry, age range, brief idea of what/when blah blah blah blah xyz",
