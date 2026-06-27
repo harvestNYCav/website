@@ -223,7 +223,7 @@ export default function AboutPage() {
                 {t("servingDesc")}
               </p>
             </div>
-            <button className="connect-btn">{t("interestedBtn")}</button>
+            <Link href="/connect" className="connect-btn">{t("interestedBtn")}</Link>
           </div>
 
         </div>
