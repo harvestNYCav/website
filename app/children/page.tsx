@@ -133,22 +133,22 @@ export default function ChildrenPage() {
         />
       </div>
 
-      {/* When We Meet */}
+      {/* Children's and Youth Programs */}
       <section className="children-when-section">
-        <h2 className="when-we-meet-title">{t("whenWeMeet")}</h2>
         <div className="children-age-groups">
-          <p className="children-age-text">
-            <span className="children-age-heading">{t("youthHeading")}</span>
-            <br />
-            {t("youthDesc")}
-          </p>
-          <p className="children-age-text">
-            <span className="children-age-heading">{t("toddlersHeading")}</span>
-            <br />
-            {t("toddlersDesc")}
-          </p>
+          <div className="children-program-block">
+            <h2 className="when-we-meet-title">{t("childrenProgram")}</h2>
+            <p className="children-age-text">
+              {t("childrenDesc")}
+            </p>
+          </div>
+          <div className="children-program-block">
+            <h2 className="when-we-meet-title">{t("youthProgram")}</h2>
+            <p className="children-age-text">
+              {t("youthDesc")}
+            </p>
+          </div>
         </div>
-        <button className="children-interested-btn">{t("interestedBtn")}</button>
       </section>
 
       {/* Upcoming Events */}
@@ -176,34 +176,6 @@ export default function ChildrenPage() {
               draggable="false"
             />
             <Link href="/vine" className="ministry-btn">{t("learnMore")}</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Children's Program Section */}
-      <section className="contact-section">
-        <h2 className="ministries-title">{t("childrenProgram")}</h2>
-        <div className="contact-grid">
-          <div className="contact-column" style={{ gridColumn: "1 / -1" }}>
-            <div className="contact-list">
-              <p className="contact-line">
-                {t("childrenDesc")}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Youth Program Section */}
-      <section className="contact-section">
-        <h2 className="ministries-title">{t("youthProgram")}</h2>
-        <div className="contact-grid">
-          <div className="contact-column" style={{ gridColumn: "1 / -1" }}>
-            <div className="contact-list">
-              <p className="contact-line">
-                {t("youthDesc")}
-              </p>
-            </div>
           </div>
         </div>
       </section>
