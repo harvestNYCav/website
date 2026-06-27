@@ -12,6 +12,22 @@ const translations = {
   connect: { en: "CONNECT", es: "CONECTAR" },
   vineTutoring: { en: "VINE TUTORING", es: "VINE TUTORÍA" },
   children: { en: "CHILDREN", es: "NIÑOS" },
+  childrenProgram: {
+    en: "CHILDREN'S PROGRAM",
+    es: "PROGRAMA INFANTIL",
+  },
+  childrenDesc: {
+    en: "Matthew 19:14: \"But Jesus said, 'Permit the children to come to Me, and do not hinder them; for the kingdom of heaven belongs to such as these.'\"\n\nEvery Sunday, children come together for age-appropriate activities and teaching grounded in the biblical foundations of the Christian faith.",
+    es: "Mateo 19:14: \"Pero Jesús dijo: 'Permitan que los niños vengan a Mí, y no los impidan; porque el reino de los cielos es para los que son como estos.'\" \n\nCada domingo, los niños se reúnen para actividades y enseñanzas apropiadas para su edad, fundamentadas en los fundamentos bíblicos de la fe cristiana.",
+  },
+  youthProgram: {
+    en: "YOUTH PROGRAM",
+    es: "PROGRAMA JUVENIL",
+  },
+  youthDesc: {
+    en: "We believe the younger generation needs to be prepared well for their future. God's culture calls young people into worship and into understanding the language and promises of God. To support that, we have built a music program and offer free tutoring for students from third grade through high school.",
+    es: "Creemos que la generación más joven necesita ser bien preparada para su futuro. La cultura de Dios llama a los jóvenes a adorar y a entender el lenguaje y las promesas de Dios. Para apoyar eso, hemos construido un programa de música y ofrecemos tutoría gratuita para estudiantes de tercero a duodécimo grado.",
+  },
   pageTitle: { en: "CHILDREN'S MINISTRY", es: "MINISTERIO DE NIÑOS" },
   intro: {
     en: "A loving space where children encounter Jesus and grow in their faith through engaging activities and Bible teaching.",
@@ -19,10 +35,6 @@ const translations = {
   },
   whenWeMeet: { en: "WHEN WE MEET", es: "CUANDO NOS REUNIMOS" },
   youthHeading: { en: "Youth", es: "Jóvenes" },
-  youthDesc: {
-    en: "A blurb about youth ministry, age range, brief idea of what/when blah blah blah blah xyz",
-    es: "Un párrafo sobre el ministerio juvenil, rango de edad, breve idea de qué/cuándo blah blah blah blah xyz",
-  },
   toddlersHeading: { en: "Toddlers", es: "Niños pequeños" },
   toddlersDesc: {
     en: "A blurb about toddler ministry, age range, brief idea of what/when blah blah blah blah xyz",
@@ -117,22 +129,22 @@ export default function ChildrenPage() {
         />
       </div>
 
-      {/* When We Meet */}
+      {/* Children's and Youth Programs */}
       <section className="children-when-section">
-        <h2 className="when-we-meet-title">{t("whenWeMeet")}</h2>
         <div className="children-age-groups">
-          <p className="children-age-text">
-            <span className="children-age-heading">{t("youthHeading")}</span>
-            <br />
-            {t("youthDesc")}
-          </p>
-          <p className="children-age-text">
-            <span className="children-age-heading">{t("toddlersHeading")}</span>
-            <br />
-            {t("toddlersDesc")}
-          </p>
+          <div className="children-program-block">
+            <h2 className="when-we-meet-title">{t("childrenProgram")}</h2>
+            <p className="children-age-text">
+              {t("childrenDesc")}
+            </p>
+          </div>
+          <div className="children-program-block">
+            <h2 className="when-we-meet-title">{t("youthProgram")}</h2>
+            <p className="children-age-text">
+              {t("youthDesc")}
+            </p>
+          </div>
         </div>
-        <button className="children-interested-btn">{t("interestedBtn")}</button>
       </section>
 
       {/* Upcoming Events */}
@@ -167,7 +179,7 @@ export default function ChildrenPage() {
       {/* Get Involved */}
       <section className="contact-section children-get-involved">
         <h2 className="ministries-title">{t("getInvolved")}</h2>
-        <button className="connect-btn">{t("connect")}</button>
+        <a href="https://wa.me/19175977498" target="_blank" rel="noopener noreferrer" className="connect-btn">{t("connect")}</a>
       </section>
 
       {/* Footer */}
