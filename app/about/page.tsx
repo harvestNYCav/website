@@ -229,34 +229,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Children's Program Section */}
-      <section className="contact-section">
-        <h2 className="ministries-title">{t("childrenProgram")}</h2>
-        <div className="contact-grid">
-          <div className="contact-column" style={{ gridColumn: "1 / -1" }}>
-            <div className="contact-list">
-              <p className="contact-line">
-                {t("childrenDesc")}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Youth Program Section */}
-      <section className="contact-section">
-        <h2 className="ministries-title">{t("youthProgram")}</h2>
-        <div className="contact-grid">
-          <div className="contact-column" style={{ gridColumn: "1 / -1" }}>
-            <div className="contact-list">
-              <p className="contact-line">
-                {t("youthDesc")}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="site-footer">
         <h3 className="footer-title" id="FOOTER HARVEST">{t("harvestNyc")}</h3>
