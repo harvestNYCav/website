@@ -2,8 +2,15 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import harvestLivestream from "@/data/harvest_livestream.json";
 
 type Language = "en" | "es";
+
+const latestLivestream = harvestLivestream as {
+  videoId: string;
+  title: string;
+  channelUrl: string;
+};
 
 const translations = {
   announcement1: {
@@ -77,6 +84,18 @@ const translations = {
   learnMoreBtn: {
     en: "LEARN MORE",
     es: "APRENDE MÁS",
+  },
+  latestLivestreamTitle: {
+    en: "LATEST LIVESTREAM",
+    es: "ÚLTIMA TRANSMISIÓN",
+  },
+  latestLivestreamDesc: {
+    en: "Watch the latest Harvest Sunday service.",
+    es: "Mira el servicio dominical más reciente de Harvest.",
+  },
+  openChannel: {
+    en: "OPEN YOUTUBE CHANNEL",
+    es: "ABRIR CANAL DE YOUTUBE",
   },
   introText: {
     en: "We'd love to get to know you!\nFor more information, blahblahb blah xyz\nxyz xyz xyz lah blah",
@@ -277,6 +296,36 @@ export default function HomePage() {
           )}
         </p>
         <Link href="/about" className="connect-btn">{t("learnMoreBtn")}</Link>
+      </section>
+
+      {/* Latest Livestream Section */}
+      <section className="latest-stream-section">
+        <div className="latest-stream-inner">
+          <div className="latest-stream-copy">
+            <div>
+              <h2 className="latest-stream-title">{t("latestLivestreamTitle")}</h2>
+              <p className="latest-stream-desc">{t("latestLivestreamDesc")}</p>
+              <p className="latest-stream-meta">{latestLivestream.title}</p>
+            </div>
+            <a
+              href={latestLivestream.channelUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="latest-stream-link"
+            >
+              {t("openChannel")}
+            </a>
+          </div>
+
+          <div className="latest-stream-video">
+            <iframe
+              src={`https://www.youtube.com/embed/${latestLivestream.videoId}`}
+              title={latestLivestream.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+        </div>
       </section>
 
       {/* Events Section */}
