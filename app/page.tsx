@@ -142,6 +142,42 @@ const translations = {
     en: "HARVEST NYC",
     es: "HARVEST NYC",
   },
+  missionDesc: {
+    en: "Harvest is a vibrant ministry within Remnant Church NYC dedicated to loving and living like Jesus. We're committed to creating a community where people encounter God's love, grow in faith, and serve others with compassion.",
+    es: "Harvest es un ministerio vibrante dentro de Remnant Church NYC dedicado a amar y vivir como Jesús. Nos comprometemos a crear una comunidad donde las personas encuentren el amor de Dios, crezcan en fe y sirvan a otros con compasión.",
+  },
+  upcomingEvents: {
+    en: "UPCOMING EVENTS",
+    es: "PRÓXIMOS EVENTOS",
+  },
+  vbsDate: {
+    en: "JULY 1",
+    es: "1 DE JULIO",
+  },
+  vbsTitle: {
+    en: "VBS: KIDS SUMMER CAMP",
+    es: "VBS: CAMPAMENTO DE VERANO PARA NIÑOS",
+  },
+  vbsAlt: {
+    en: "VBS: Kids Summer Camp",
+    es: "VBS: Campamento de Verano para Niños",
+  },
+  learnMoreArrow: {
+    en: "LEARN MORE →",
+    es: "APRENDE MÁS →",
+  },
+  youtubeAlt: {
+    en: "YouTube",
+    es: "YouTube",
+  },
+  emailAlt: {
+    en: "Email",
+    es: "Correo Electrónico",
+  },
+  remnantChurchAlt: {
+    en: "Remnant Church",
+    es: "Iglesia Remanente",
+  },
 };
 
 export default function HomePage() {
@@ -271,23 +307,7 @@ export default function HomePage() {
       <section className="intro-section">
         <h2 className="mission-title">{t("missionTitle")}</h2>
         <p className="intro-text">
-          {language === "en" ? (
-            <>
-              Harvest is a vibrant ministry within{" "}
-              <a href="https://www.remnantchurch.org/" target="_blank" rel="noopener noreferrer" className="mission-link">
-                Remnant Church NYC
-              </a>
-              {" "}dedicated to loving and living like Jesus. We&apos;re committed to creating a community where people encounter God&apos;s love, grow in faith, and serve others with compassion.
-            </>
-          ) : (
-            <>
-              Harvest es un ministerio vibrante dentro de{" "}
-              <a href="https://www.remnantchurch.org/" target="_blank" rel="noopener noreferrer" className="mission-link">
-                Remnant Church NYC
-              </a>
-              {" "}dedicado a amar y vivir como Jesús. Nos comprometemos a crear una comunidad donde las personas encuentren el amor de Dios, crezcan en fe y sirvan a otros con compasión.
-            </>
-          )}
+          {t("missionDesc")}
         </p>
         <Link href="/about" className="connect-btn">{t("learnMoreBtn")}</Link>
       </section>
@@ -316,11 +336,11 @@ export default function HomePage() {
         {/* Scrolling Events Header */}
         <div className="events-scroll-wrapper">
           <div className="events-scroll-text">
-            <span>UPCOMING EVENTS</span>
-            <span>UPCOMING EVENTS</span>
-            <span>UPCOMING EVENTS</span>
-            <span>UPCOMING EVENTS</span>
-            <span>UPCOMING EVENTS</span>
+            <span>{t("upcomingEvents")}</span>
+            <span>{t("upcomingEvents")}</span>
+            <span>{t("upcomingEvents")}</span>
+            <span>{t("upcomingEvents")}</span>
+            <span>{t("upcomingEvents")}</span>
           </div>
         </div>
 
@@ -328,28 +348,28 @@ export default function HomePage() {
         <div className="events-grid">
           {/* Event 1 */}
           <div className="event-card">
-            <div className="event-date">JULY 1</div>
-            <h3 className="event-title">VBS: KIDS SUMMER CAMP</h3>
+            <div className="event-date">{t("vbsDate")}</div>
+            <h3 className="event-title">{t("vbsTitle")}</h3>
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=800"
-              alt="VBS: Kids Summer Camp"
+              alt={t("vbsAlt")}
               className="event-image"
               draggable="false"
             />
-            <button className="event-learn-more">LEARN MORE →</button>
+            <button className="event-learn-more">{t("learnMoreArrow")}</button>
           </div>
 
           {/* Event 2 */}
           <div className="event-card">
-            <div className="event-date">JULY 1</div>
-            <h3 className="event-title">VBS: KIDS SUMMER CAMP</h3>
+            <div className="event-date">{t("vbsDate")}</div>
+            <h3 className="event-title">{t("vbsTitle")}</h3>
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=800"
-              alt="VBS: Kids Summer Camp"
+              alt={t("vbsAlt")}
               className="event-image"
               draggable="false"
             />
-            <button className="event-learn-more">LEARN MORE →</button>
+            <button className="event-learn-more">{t("learnMoreArrow")}</button>
           </div>
         </div>
       </section>
@@ -391,7 +411,7 @@ export default function HomePage() {
           <a href="https://www.youtube.com/@harvestinthecity/streams" target="_blank" rel="noopener noreferrer">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/62d640b0b7413ecd1eb34c8d2a6733a1699cfafb?width=180"
-              alt="YouTube"
+              alt={t("youtubeAlt")}
               className="footer-icon"
               draggable="false"
             />
@@ -399,7 +419,7 @@ export default function HomePage() {
           <a href="mailto:harvestinthecitynyc@gmail.com">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/e94bdc79b9e6397731ea714e81845699cb463ee2?width=170"
-              alt="Email"
+              alt={t("emailAlt")}
               className="footer-icon"
               draggable="false"
             />
@@ -407,7 +427,7 @@ export default function HomePage() {
           <a href="https://www.remnantchurch.org/" target="_blank" rel="noopener noreferrer">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/d4de61100a8688fad8f49f3af86899013ee08870?width=224"
-              alt="Remnant Church"
+              alt={t("remnantChurchAlt")}
               className="footer-icon footer-icon--wide"
               draggable="false"
             />

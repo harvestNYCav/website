@@ -73,6 +73,26 @@ const translations = {
     en: "HARVEST NYC",
     es: "HARVEST NYC",
   },
+  aboutTitle: {
+    en: "ABOUT US",
+    es: "ACERCA\nDE NOSOTROS",
+  },
+  skylineAlt: {
+    en: "NYC Skyline",
+    es: "Horizonte de Nueva York",
+  },
+  youtubeAlt: {
+    en: "YouTube",
+    es: "YouTube",
+  },
+  emailAlt: {
+    en: "Email",
+    es: "Correo Electrónico",
+  },
+  remnantChurchAlt: {
+    en: "Remnant Church",
+    es: "Iglesia Remanente",
+  },
 };
 
 export default function AboutPage() {
@@ -150,7 +170,11 @@ export default function AboutPage() {
         />
         <div className="hero-overlay">
           <h1 className="hero-title" id="header-text">
-            {language === "en" ? "ABOUT US" : "ACERCA"}<br />{language === "en" ? "" : "DE NOSOTROS"}
+            {language === "en" ? "ABOUT US" : (
+              <>
+                ACERCA<br />DE NOSOTROS
+              </>
+            )}
           </h1>
         </div>
       </div>
@@ -175,7 +199,7 @@ export default function AboutPage() {
             <h3 className="contact-heading">{t("aguirreFamily")}</h3>
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=2926"
-              alt="NYC Skyline"
+              alt={t("skylineAlt")}
               className="staff-image"
               draggable="false"
             />
@@ -191,7 +215,7 @@ export default function AboutPage() {
             <h3 className="contact-heading">{t("servingStaff")}</h3>
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=2926"
-              alt="NYC Skyline"
+              alt={t("skylineAlt")}
               className="staff-image"
               draggable="false"
             />
@@ -213,7 +237,7 @@ export default function AboutPage() {
           <a href="https://www.youtube.com/@harvestinthecity/streams" target="_blank" rel="noopener noreferrer">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/62d640b0b7413ecd1eb34c8d2a6733a1699cfafb?width=180"
-              alt="YouTube"
+              alt={t("youtubeAlt")}
               className="footer-icon"
               draggable="false"
             />
@@ -221,7 +245,7 @@ export default function AboutPage() {
           <a href="mailto:harvestinthecitynyc@gmail.com">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/e94bdc79b9e6397731ea714e81845699cb463ee2?width=170"
-              alt="Email"
+              alt={t("emailAlt")}
               className="footer-icon"
               draggable="false"
             />
@@ -229,7 +253,7 @@ export default function AboutPage() {
           <a href="https://www.remnantchurch.org/" target="_blank" rel="noopener noreferrer">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/d4de61100a8688fad8f49f3af86899013ee08870?width=224"
-              alt="Remnant Church"
+              alt={t("remnantChurchAlt")}
               className="footer-icon footer-icon--wide"
               draggable="false"
             />
