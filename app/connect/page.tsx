@@ -26,10 +26,6 @@ const translations = {
     en: "MINISTRIES",
     es: "MINISTERIOS",
   },
-  getInvolved: {
-    en: "GET INVOLVED",
-    es: "INVOLÚCRATE",
-  },
   connect: {
     en: "CONNECT",
     es: "CONECTAR",
@@ -61,10 +57,6 @@ const translations = {
   smallGroup: {
     en: "For Small Group:",
     es: "Para Grupo Pequeño:",
-  },
-  rachelGuen: {
-    en: "Rachel Guen:",
-    es: "Rachel Guen:",
   },
   connectBtn: {
     en: "CONNECT",

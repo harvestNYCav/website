@@ -33,10 +33,6 @@ const translations = {
     en: "MINISTRIES",
     es: "MINISTERIOS",
   },
-  getInvolved: {
-    en: "GET INVOLVED",
-    es: "INVOLÚCRATE",
-  },
   connect: {
     en: "CONNECT",
     es: "CONECTAR",
@@ -77,10 +73,6 @@ const translations = {
     en: "OUR MISSION",
     es: "NUESTRA MISIÓN",
   },
-  missionText: {
-    en: "Harvest is a vibrant ministry within Remnant Church NYC dedicated to loving and living like Jesus. We're committed to creating a community where people encounter God's love, grow in faith, and serve others with compassion.",
-    es: "Harvest es un ministerio vibrante dentro de Remnant Church NYC dedicado a amar y vivir como Jesús. Nos comprometemos a crear una comunidad donde las personas encuentren el amor de Dios, crezcan en fe y sirvan a otros con compasión.",
-  },
   learnMoreBtn: {
     en: "LEARN MORE",
     es: "APRENDE MÁS",
@@ -97,29 +89,9 @@ const translations = {
     en: "OPEN YOUTUBE CHANNEL",
     es: "ABRIR CANAL DE YOUTUBE",
   },
-  introText: {
-    en: "We'd love to get to know you!\nFor more information, blahblahb blah xyz\nxyz xyz xyz lah blah",
-    es: "¡Nos encantaría conocerte!\nPara más información, blahblahb blah xyz\nxyz xyz xyz lah blah",
-  },
   vineTutoring: {
     en: "VINE TUTORING",
     es: "VINE TUTORÍA",
-  },
-  ministriesTitle: {
-    en: "MINISTRIES",
-    es: "MINISTERIOS",
-  },
-  childrenMinistry: {
-    en: "CHILDREN'S MINISTRY",
-    es: "MINISTERIO DE NIÑOS",
-  },
-  vineTutoringDesc: {
-    en: "A tutoring program serving the local & migrant communities, at no cost. The goal is to help students develop academic success, English language skills, etc.",
-    es: "Un programa de tutoría que sirve a las comunidades locales y migrantes, sin costo. El objetivo es ayudar a los estudiantes a lograr éxito académico, habilidades del idioma inglés, etc.",
-  },
-  childrenDesc: {
-    en: "A loving space where children encounter Jesus & grow in their faith through engaging activities and Bible teaching.",
-    es: "Un espacio amoroso donde los niños encuentran a Jesús y crecen en su fe a través de actividades atractivas y enseñanza bíblica.",
   },
   whenWeMetTitle: {
     en: "WHEN WE MEET",
