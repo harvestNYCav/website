@@ -273,22 +273,6 @@ export default function HomePage() {
       {/* Latest Livestream Section */}
       <section className="latest-stream-section">
         <div className="latest-stream-inner">
-          <div className="latest-stream-copy">
-            <div>
-              <h2 className="latest-stream-title">{t("latestLivestreamTitle")}</h2>
-              <p className="latest-stream-desc">{t("latestLivestreamDesc")}</p>
-              <p className="latest-stream-meta">{latestLivestream.title}</p>
-            </div>
-            <a
-              href={latestLivestream.channelUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="latest-stream-link"
-            >
-              {t("openChannel")}
-            </a>
-          </div>
-
           <div className="latest-stream-video">
             <iframe
               src={`https://www.youtube.com/embed/${latestLivestream.videoId}`}

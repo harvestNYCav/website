@@ -481,71 +481,12 @@ a:hover {
   margin: 0 auto;
 }
 
-.latest-stream-copy {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-  margin-bottom: 48px;
-}
-
-.latest-stream-title {
-  color: #000;
-  font-size: clamp(28px, 3.5vw, 40px);
-  font-weight: 900;
-  letter-spacing: 1px;
-  line-height: 1.1;
-  margin: 0 0 16px;
-  text-transform: uppercase;
-  animation: fadeIn 0.8s ease-in-out 0.7s forwards;
-  opacity: 0;
-}
-
-.latest-stream-desc,
-.latest-stream-meta {
-  color: #666;
-  font-size: clamp(16px, 1.7vw, 20px);
-  line-height: 1.45;
-  margin: 0;
-}
-
-.latest-stream-meta {
-  color: #000;
-  font-weight: 700;
-  margin-top: 8px;
-}
-
-.latest-stream-link {
-  align-items: center;
-  background: transparent;
-  border: 2px solid #000;
-  border-radius: 20px;
-  color: #000;
-  display: inline-flex;
-  font-size: 14px;
-  font-weight: 700;
-  justify-content: center;
-  padding: 12px 36px;
-  text-decoration: none;
-  text-transform: uppercase;
-  white-space: nowrap;
-  transition: border-color 0.2s, color 0.2s;
-}
-
-.latest-stream-link:hover {
-  border-color: var(--link-green);
-  color: var(--link-green);
-}
-
 .latest-stream-video {
   aspect-ratio: 16 / 9;
   background: #000;
   border-radius: 8px;
   overflow: hidden;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .latest-stream-video iframe {
@@ -1011,20 +952,7 @@ a:hover {
   }
 
   .latest-stream-section {
-    padding: 36px 24px 36px;
-  }
-
-  .latest-stream-copy {
-    margin-bottom: 32px;
-  }
-
-  .latest-stream-title {
-    font-size: clamp(24px, 5vw, 32px);
-    margin-bottom: 12px;
-  }
-
-  .latest-stream-link {
-    width: 100%;
+    padding: 36px 16px;
   }
 
   .contact-section {
