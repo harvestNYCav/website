@@ -275,7 +275,6 @@ export default function HomePage() {
         <div className="latest-stream-inner">
           <div className="latest-stream-copy">
             <p className="latest-stream-desc">{t("latestLivestreamDesc")}</p>
-            <p className="latest-stream-meta">{latestLivestream.title}</p>
           </div>
 
           <div className="latest-stream-video">
