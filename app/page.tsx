@@ -6,11 +6,13 @@ import harvestLivestream from "@/data/harvest_livestream.json";
 
 type Language = "en" | "es";
 
-const latestLivestream = harvestLivestream as {
+type HarvestLivestream = {
   videoId: string;
   title: string;
   channelUrl: string;
 };
+
+const fallbackLivestream = harvestLivestream as HarvestLivestream;
 
 const translations = {
   announcement1: {
@@ -85,10 +87,6 @@ const translations = {
     en: "Watch the latest Harvest Sunday service.",
     es: "Mira el servicio dominical más reciente de Harvest.",
   },
-  openChannel: {
-    en: "OPEN YOUTUBE CHANNEL",
-    es: "ABRIR CANAL DE YOUTUBE",
-  },
   vineTutoring: {
     en: "VINE TUTORING",
     es: "VINE TUTORÍA",
@@ -150,6 +148,8 @@ const translations = {
 export default function HomePage() {
   const [language, setLanguage] = useState<Language>("en");
   const [announcementIndex, setAnnouncementIndex] = useState(0);
+  const [latestLivestream, setLatestLivestream] =
+    useState<HarvestLivestream>(fallbackLivestream);
 
   const t = (key: keyof typeof translations): string => {
     return translations[key][language];
@@ -163,6 +163,29 @@ export default function HomePage() {
     }, 5000);
     return () => clearInterval(interval);
   }, [announcements.length]);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function refreshLivestream() {
+      try {
+        const response = await fetch("/api/latest-livestream");
+        if (!response.ok) return;
+        const livestream = (await response.json()) as HarvestLivestream;
+        if (!cancelled && livestream.videoId) {
+          setLatestLivestream(livestream);
+        }
+      } catch {
+        // Keep the bundled fallback if the server refresh is unavailable.
+      }
+    }
+
+    refreshLivestream();
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   return (
     <>

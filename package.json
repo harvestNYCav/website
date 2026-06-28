@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --webpack",
     "refresh:livestream": "node scripts/fetch-harvest-livestream.mjs",
-    "build": "npm run refresh:livestream && next build --webpack",
+    "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint"
   },
