@@ -5,8 +5,6 @@ import Link from "next/link";
 import { useLanguage } from "./LanguageContext";
 import harvestLivestream from "@/data/harvest_livestream.json";
 
-type Language = "en" | "es";
-
 type HarvestLivestream = {
   videoId: string;
   title: string;

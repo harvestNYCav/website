@@ -4,8 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "../LanguageContext";
 
-type Language = "en" | "es";
-
 const translations = {
   aboutUs: {
     en: "ABOUT US",

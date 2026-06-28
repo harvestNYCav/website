@@ -4,8 +4,6 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useLanguage } from "../LanguageContext";
 
-type Language = "en" | "es";
-
 const translations = {
   announcement1: {
     en: "JOIN US FOR WORSHIP ON SUNDAYS AT 3:30PM",
