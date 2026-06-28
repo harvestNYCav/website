@@ -26,10 +26,6 @@ const translations = {
     en: "MINISTRIES",
     es: "MINISTERIOS",
   },
-  getInvolved: {
-    en: "GET INVOLVED",
-    es: "INVOLÚCRATE",
-  },
   connect: {
     en: "CONNECT",
     es: "CONECTAR",

@@ -30,10 +30,6 @@ const translations = {
     en: "VINE TUTORING",
     es: "VINE TUTORÍA",
   },
-  getInvolved: {
-    en: "GET INVOLVED",
-    es: "INVOLÚCRATE",
-  },
   connect: {
     en: "CONNECT",
     es: "CONECTAR",
