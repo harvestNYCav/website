@@ -481,6 +481,18 @@ a:hover {
   margin: 0 auto;
 }
 
+.latest-stream-title {
+  color: #000;
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 900;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  margin: 0 0 24px;
+  text-transform: uppercase;
+  animation: fadeIn 0.8s ease-in-out 0.7s forwards;
+  opacity: 0;
+}
+
 .latest-stream-copy {
   display: flex;
   flex-direction: column;
@@ -490,17 +502,11 @@ a:hover {
   margin-bottom: 32px;
 }
 
-.latest-stream-desc,
-.latest-stream-meta {
+.latest-stream-desc {
   color: #666;
   font-size: clamp(16px, 1.7vw, 20px);
   line-height: 1.45;
   margin: 0;
-}
-
-.latest-stream-meta {
-  color: #000;
-  font-weight: 700;
 }
 
 .latest-stream-video {
@@ -975,6 +981,11 @@ a:hover {
 
   .latest-stream-section {
     padding: 36px 24px;
+  }
+
+  .latest-stream-title {
+    font-size: clamp(24px, 5vw, 32px);
+    margin-bottom: 16px;
   }
 
   .latest-stream-copy {

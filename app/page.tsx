@@ -273,6 +273,7 @@ export default function HomePage() {
       {/* Latest Livestream Section */}
       <section className="latest-stream-section">
         <div className="latest-stream-inner">
+          <h2 className="latest-stream-title">{t("latestLivestreamTitle")}</h2>
           <div className="latest-stream-copy">
             <p className="latest-stream-desc">{t("latestLivestreamDesc")}</p>
           </div>
