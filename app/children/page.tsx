@@ -18,7 +18,7 @@ const translations = {
   },
   childrenDesc: {
     en: "Matthew 19:14: \"But Jesus said, 'Permit the children to come to Me, and do not hinder them; for the kingdom of heaven belongs to such as these.'\"\n\nEvery Sunday, children come together for age-appropriate activities and teaching grounded in the biblical foundations of the Christian faith.",
-    es: "Mateo 19:14: \"Pero Jesús dijo: 'Permitan que los niños vengan a Mí, y no los impidan; porque el reino de los cielos es para los que son como estos.'\" \n\nCada domingo, los niños se reúnen para actividades y enseñanzas apropiadas para su edad, fundamentadas en los fundamentos bíblicos de la fe cristiana.",
+    es: "Mateo 19:14: \"Pero Jesús dijo: 'Permitan que los niños vengan a Mí, y no se lo impidan; porque el reino de los cielos es para los que son como estos.'\" \n\nCada domingo, los niños se reúnen para actividades y enseñanzas apropiadas para su edad, fundamentadas en los fundamentos bíblicos de la fe cristiana.",
   },
   youthProgram: {
     en: "YOUTH PROGRAM",
@@ -37,8 +37,8 @@ const translations = {
   youthHeading: { en: "Youth", es: "Jóvenes" },
   toddlersHeading: { en: "Toddlers", es: "Niños pequeños" },
   toddlersDesc: {
-    en: "A blurb about toddler ministry, age range, brief idea of what/when blah blah blah blah xyz",
-    es: "Un párrafo sobre el ministerio para niños pequeños, rango de edad, breve idea de qué/cuándo blah blah blah blah xyz",
+    en: "Our toddler ministry provides a safe, nurturing environment for children ages 0-3 during Sunday worship services, allowing parents to participate fully in service while their children are cared for by dedicated staff.",
+    es: "Nuestro ministerio para niños pequeños proporciona un ambiente seguro y acogedor para niños de 0-3 años durante los servicios de adoración dominicales, permitiendo que los padres participen plenamente en el servicio mientras sus hijos son cuidados por personal dedicado.",
   },
   interestedBtn: { en: "INTERESTED?", es: "¿INTERESADO?" },
   upcomingEvents: { en: "UPCOMING EVENTS", es: "PRÓXIMOS EVENTOS" },
@@ -56,9 +56,8 @@ const translations = {
   getInvolved: { en: "GET INVOLVED", es: "INVOLÚCRATE" },
   reachOut: { en: "For more information, please reach out below:", es: "Para más información, comuníquese con nosotros:" },
   erika: { en: "Erika:", es: "Erika:" },
-  erikaEmail: { en: "email@gmail.com", es: "email@gmail.com" },
-  whoeverElse: { en: "Whoever else:", es: "Quien más:" },
-  whoeverElseEmail: { en: "email@gmail.com", es: "email@gmail.com" },
+  erikaEmail: { en: "erika@harvest-nyc.com", es: "erika@harvest-nyc.com" },
+  childrenContactEmail: { en: "children@harvest-nyc.com", es: "children@harvest-nyc.com" },
   harvestNyc: { en: "HARVEST NYC", es: "HARVEST NYC" },
 };
 

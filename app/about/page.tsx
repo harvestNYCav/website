@@ -14,10 +14,6 @@ const translations = {
     en: "WELCOME TO HARVEST IN THE CITY",
     es: "BIENVENIDO A HARVEST EN LA CIUDAD",
   },
-  announcement: {
-    en: "SOME SORT OF ANNOUNCEMENT HERE",
-    es: "ALGÚN TIPO DE ANUNCIO AQUÍ",
-  },
   aboutUs: {
     en: "ABOUT US",
     es: "ACERCA DE NOSOTROS",
@@ -84,7 +80,7 @@ const translations = {
   },
   childrenDesc: {
     en: "Matthew 19:14: \"But Jesus said, 'Permit the children to come to Me, and do not hinder them; for the kingdom of heaven belongs to such as these.'\"\n\nEvery Sunday, children come together for age-appropriate activities and teaching grounded in the biblical foundations of the Christian faith.",
-    es: "Mateo 19:14: \"Pero Jesús dijo: 'Permitan que los niños vengan a Mí, y no los impidan; porque el reino de los cielos es para los que son como estos.'\" \n\nCada domingo, los niños se reúnen para actividades y enseñanzas apropiadas para su edad, fundamentadas en los fundamentos bíblicos de la fe cristiana.",
+    es: "Mateo 19:14: \"Pero Jesús dijo: 'Permitan que los niños vengan a Mí, y no se lo impidan; porque el reino de los cielos es para los que son como estos.'\" \n\nCada domingo, los niños se reúnen para actividades y enseñanzas apropiadas para su edad, fundamentadas en los fundamentos bíblicos de la fe cristiana.",
   },
   youthProgram: {
     en: "YOUTH PROGRAM",

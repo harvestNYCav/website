@@ -14,10 +14,6 @@ const translations = {
     en: "WELCOME TO HARVEST IN THE CITY",
     es: "BIENVENIDO A HARVEST EN LA CIUDAD",
   },
-  announcement: {
-    en: "SOME SORT OF ANNOUNCEMENT HERE",
-    es: "ALGÚN TIPO DE ANUNCIO AQUÍ",
-  },
   aboutUs: {
     en: "ABOUT US",
     es: "ACERCA DE NOSOTROS",
@@ -97,8 +93,6 @@ export default function ConnectPage() {
     return () => clearInterval(interval);
   }, []);
 
-  const introLines = t("introText").split("\n");
-
   return (
     <>
       {/* Announcement Banner */}
@@ -165,9 +159,7 @@ export default function ConnectPage() {
       {/* Intro Section */}
       <section className="intro-section">
         <p className="intro-text">
-          {introLines[0]}<br />
-          {introLines[1]}<br />
-          {introLines[2]}
+          {t("introText")}
         </p>
       </section>
 
@@ -181,8 +173,8 @@ export default function ConnectPage() {
             <div className="contact-list">
               <p className="contact-line">
                 <span className="contact-name">{t("generalInquiries")}</span>{" "}
-                <a href="mailto:harvestinthecity@gmail.com" className="contact-email">
-                  harvestinthecity@gmail.com
+                <a href="mailto:harvestinthecitynyc@gmail.com" className="contact-email">
+                  harvestinthecitynyc@gmail.com
                 </a>
               </p>
               <p className="contact-line">
@@ -192,7 +184,7 @@ export default function ConnectPage() {
                 </a>
               </p>
             </div>
-            <a href="mailto:harvestinthecity@gmail.com?subject=%5BWebsite%5D%20General%20Inquiry" className="connect-btn">{t("connectBtn")}</a>
+            <a href="mailto:harvestinthecitynyc@gmail.com?subject=%5BWebsite%5D%20General%20Inquiry" className="connect-btn">{t("connectBtn")}</a>
           </div>
 
           {/* Vine Tutoring */}

@@ -47,7 +47,7 @@ const translations = {
     es: "2 | construir la confianza de los estudiantes",
   },
   goal3: {
-    en: "3 | teaching them Gospel",
+    en: "3 | teaching them the Gospel",
     es: "3 | enseñarles el Evangelio",
   },
   whenWeMeet: {
@@ -64,7 +64,7 @@ const translations = {
   },
   sessionDates: {
     en: "January 10 - May 30, 2026",
-    es: "10 de Enero - 30 de Mayo de 2026",
+    es: "10 de enero - 30 de mayo de 2026",
   },
   sessionInfo: {
     en: "15 Sessions Total | Break: 2/15, 4/12, 4/19",
@@ -131,7 +131,7 @@ const translations = {
     es: "Los tutores se reúnen los sábados por la mañana durante 2 horas en las sesiones de primavera e invierno.",
   },
   tutorSkillsAnswer: {
-    en: "We ask tutors to be open and willing to teach a variety of grade school subjects such as English & Math. Bi-lingual proficiency is not required.",
+    en: "We ask tutors to be open and willing to teach a variety of grade school subjects such as English & Math. Bilingual proficiency is not required.",
     es: "Pedimos a los tutores que estén dispuestos a enseñar una variedad de materias de escuela primaria como inglés y matemáticas. No se requiere competencia bilingüe.",
   },
   studentSignupAnswer: {
