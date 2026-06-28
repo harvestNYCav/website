@@ -469,78 +469,83 @@ a:hover {
 
 /* ── Latest livestream ── */
 .latest-stream-section {
-  padding: 58px 70px 68px;
-  background: #101418;
-  color: #f7f7f4;
+  padding: 64px 120px;
+  text-align: center;
+  background: #fbfbfb;
   animation: fadeIn 0.8s ease-in-out 0.7s forwards;
   opacity: 0;
 }
 
 .latest-stream-inner {
-  max-width: 1120px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .latest-stream-copy {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 48px;
 }
 
 .latest-stream-title {
-  color: #fff;
+  color: #000;
   font-size: clamp(28px, 3.5vw, 40px);
   font-weight: 900;
   letter-spacing: 1px;
   line-height: 1.1;
-  margin: 0 0 10px;
+  margin: 0 0 16px;
   text-transform: uppercase;
+  animation: fadeIn 0.8s ease-in-out 0.7s forwards;
+  opacity: 0;
 }
 
 .latest-stream-desc,
 .latest-stream-meta {
-  color: #d8dee4;
+  color: #666;
   font-size: clamp(16px, 1.7vw, 20px);
   line-height: 1.45;
   margin: 0;
 }
 
 .latest-stream-meta {
-  color: #fff;
+  color: #000;
   font-weight: 700;
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 .latest-stream-link {
   align-items: center;
-  background: #fff;
-  border-radius: 8px;
-  color: #101418;
+  background: transparent;
+  border: 2px solid #000;
+  border-radius: 20px;
+  color: #000;
   display: inline-flex;
-  font-size: 15px;
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 700;
   justify-content: center;
-  min-height: 44px;
-  padding: 11px 18px;
+  padding: 12px 36px;
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
+  transition: border-color 0.2s, color 0.2s;
 }
 
 .latest-stream-link:hover {
-  color: #101418;
-  opacity: 0.86;
+  border-color: var(--link-green);
+  color: var(--link-green);
 }
 
 .latest-stream-video {
   aspect-ratio: 16 / 9;
   background: #000;
-  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 8px;
   overflow: hidden;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .latest-stream-video iframe {
@@ -1006,17 +1011,16 @@ a:hover {
   }
 
   .latest-stream-section {
-    padding: 34px 24px 44px;
+    padding: 36px 24px 36px;
   }
 
   .latest-stream-copy {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 16px;
+    margin-bottom: 32px;
   }
 
   .latest-stream-title {
     font-size: clamp(24px, 5vw, 32px);
+    margin-bottom: 12px;
   }
 
   .latest-stream-link {
