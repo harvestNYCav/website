@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-
-type Language = "en" | "es";
+import { useLanguage } from "../LanguageContext";
 
 const translations = {
   announcement1: {
@@ -62,6 +61,26 @@ const translations = {
     en: "CONNECT",
     es: "CONECTAR",
   },
+  connectTitle: {
+    en: "CONNECT WITH US",
+    es: "CONECTA\nCON NOSOTROS",
+  },
+  skylineAlt: {
+    en: "NYC Skyline",
+    es: "Horizonte de Nueva York",
+  },
+  youtubeAlt: {
+    en: "YouTube",
+    es: "YouTube",
+  },
+  emailAlt: {
+    en: "Email",
+    es: "Correo Electrónico",
+  },
+  remnantChurchAlt: {
+    en: "Remnant Church",
+    es: "Iglesia Remanente",
+  },
   harvestNyc: {
     en: "HARVEST NYC",
     es: "HARVEST NYC",
@@ -69,7 +88,7 @@ const translations = {
 };
 
 export default function ConnectPage() {
-  const [language, setLanguage] = useState<Language>("en");
+  const { language, setLanguage } = useLanguage();
   const [announcementIndex, setAnnouncementIndex] = useState(0);
 
   const t = (key: keyof typeof translations): string => {
@@ -143,7 +162,11 @@ export default function ConnectPage() {
         />
         <div className="hero-overlay">
           <h1 className="hero-title" id="header-text">
-            {language === "en" ? "CONNECT" : "CONECTA"}<br />{language === "en" ? "WITH US" : "CON NOSOTROS"}
+            {language === "en" ? "CONNECT WITH US" : (
+              <>
+                CONECTA<br />CON NOSOTROS
+              </>
+            )}
           </h1>
         </div>
       </div>
@@ -203,7 +226,7 @@ export default function ConnectPage() {
           <a href="https://www.youtube.com/@harvestinthecity/streams" target="_blank" rel="noopener noreferrer">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/62d640b0b7413ecd1eb34c8d2a6733a1699cfafb?width=180"
-              alt="YouTube"
+              alt={t("youtubeAlt")}
               className="footer-icon"
               draggable="false"
             />
@@ -211,7 +234,7 @@ export default function ConnectPage() {
           <a href="mailto:harvestinthecitynyc@gmail.com">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/e94bdc79b9e6397731ea714e81845699cb463ee2?width=170"
-              alt="Email"
+              alt={t("emailAlt")}
               className="footer-icon"
               draggable="false"
             />
@@ -219,7 +242,7 @@ export default function ConnectPage() {
           <a href="https://www.remnantchurch.org/" target="_blank" rel="noopener noreferrer">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/d4de61100a8688fad8f49f3af86899013ee08870?width=224"
-              alt="Remnant Church"
+              alt={t("remnantChurchAlt")}
               className="footer-icon footer-icon--wide"
               draggable="false"
             />
