@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useLanguage } from "../LanguageContext";
 
 type Language = "en" | "es";
 
@@ -142,10 +143,18 @@ const translations = {
     en: "HARVEST NYC",
     es: "HARVEST NYC",
   },
+  vineIntroAbout: {
+    en: "A tutoring program that reaches out to families in the NYC community through tutoring students & sharing the message of Christ, at no cost. Tutors & students gather on Saturday mornings for two hours, including a time of worship and hearing the Word of God.",
+    es: "Un programa de tutoría que se acerca a las familias en la comunidad de Nueva York a través de la tutoría de estudiantes y compartiendo el mensaje de Cristo, sin costo alguno. Los tutores y estudiantes se reúnen los sábados por la mañana durante dos horas, incluyendo un tiempo de adoración y escuchando la Palabra de Dios.",
+  },
+  vineIntroMission: {
+    en: "Our mission is to transform lives through the love & compassion of Jesus Christ with the goals of:",
+    es: "Nuestra misión es transformar vidas a través del amor y la compasión de Jesucristo con los objetivos de:",
+  },
 };
 
 export default function VinePage() {
-  const [language, setLanguage] = useState<Language>("en");
+  const { language, setLanguage } = useLanguage();
   const [openFaq, setOpenFaq] = useState<string | null>(null);
 
   const t = (key: keyof typeof translations): string => {
@@ -211,10 +220,10 @@ export default function VinePage() {
       {/* About Section */}
       <section className="intro-section">
         <p className="intro-text vine-intro-text">
-          A tutoring program<br className="mobile-break" /> that reaches out to families<br className="mobile-break" /> in the NYC community through<br className="mobile-break" /> tutoring students & sharing<br className="mobile-break" /> the message of Christ, at no cost.<br className="mobile-break" /> Tutors & students gather<br className="mobile-break" /> on Saturday mornings for two hours,<br className="mobile-break" /> including a time of worship and hearing<br className="mobile-break" /> the Word of God.
+          {t("vineIntroAbout")}
         </p>
         <p className="intro-text vine-intro-text">
-          Our mission is to transform lives<br className="mobile-break" /> through the love & compassion of Jesus Christ<br className="mobile-break" /> with the goals of:<br /><br />
+          {t("vineIntroMission")}<br /><br />
           {t("goal1")}<br />
           {t("goal2")}<br />
           {t("goal3")}

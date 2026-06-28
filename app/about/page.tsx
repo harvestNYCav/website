@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useLanguage } from "../LanguageContext";
 
 type Language = "en" | "es";
 
@@ -77,7 +78,7 @@ const translations = {
 };
 
 export default function AboutPage() {
-  const [language, setLanguage] = useState<Language>("en");
+  const { language, setLanguage } = useLanguage();
   const [announcementIndex, setAnnouncementIndex] = useState(0);
 
   const t = (key: keyof typeof translations): string => {
