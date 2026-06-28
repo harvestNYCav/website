@@ -469,75 +469,49 @@ a:hover {
 
 /* ── Latest livestream ── */
 .latest-stream-section {
-  padding: 58px 70px 68px;
-  background: #101418;
-  color: #f7f7f4;
+  padding: 64px 120px;
+  text-align: center;
+  background: #fbfbfb;
   animation: fadeIn 0.8s ease-in-out 0.7s forwards;
   opacity: 0;
 }
 
 .latest-stream-inner {
-  max-width: 1120px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.latest-stream-copy {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 24px;
-  margin-bottom: 20px;
-}
-
 .latest-stream-title {
-  color: #fff;
+  color: #000;
   font-size: clamp(28px, 3.5vw, 40px);
   font-weight: 900;
   letter-spacing: 1px;
   line-height: 1.1;
-  margin: 0 0 10px;
+  margin: 0 0 24px;
   text-transform: uppercase;
+  animation: fadeIn 0.8s ease-in-out 0.7s forwards;
+  opacity: 0;
 }
 
-.latest-stream-desc,
-.latest-stream-meta {
-  color: #d8dee4;
+.latest-stream-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.latest-stream-desc {
+  color: #666;
   font-size: clamp(16px, 1.7vw, 20px);
   line-height: 1.45;
   margin: 0;
 }
 
-.latest-stream-meta {
-  color: #fff;
-  font-weight: 700;
-  margin-top: 6px;
-}
-
-.latest-stream-link {
-  align-items: center;
-  background: #fff;
-  border-radius: 8px;
-  color: #101418;
-  display: inline-flex;
-  font-size: 15px;
-  font-weight: 800;
-  justify-content: center;
-  min-height: 44px;
-  padding: 11px 18px;
-  text-decoration: none;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.latest-stream-link:hover {
-  color: #101418;
-  opacity: 0.86;
-}
-
 .latest-stream-video {
   aspect-ratio: 16 / 9;
   background: #000;
-  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 8px;
   overflow: hidden;
   width: 100%;
@@ -1006,21 +980,16 @@ a:hover {
   }
 
   .latest-stream-section {
-    padding: 34px 24px 44px;
-  }
-
-  .latest-stream-copy {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 16px;
+    padding: 36px 24px;
   }
 
   .latest-stream-title {
     font-size: clamp(24px, 5vw, 32px);
+    margin-bottom: 16px;
   }
 
-  .latest-stream-link {
-    width: 100%;
+  .latest-stream-copy {
+    margin-bottom: 24px;
   }
 
   .contact-section {

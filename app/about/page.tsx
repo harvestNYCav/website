@@ -30,10 +30,6 @@ const translations = {
     en: "VINE TUTORING",
     es: "VINE TUTORÍA",
   },
-  getInvolved: {
-    en: "GET INVOLVED",
-    es: "INVOLÚCRATE",
-  },
   connect: {
     en: "CONNECT",
     es: "CONECTAR",
@@ -73,22 +69,6 @@ const translations = {
   interestedBtn: {
     en: "INTERESTED IN SERVING?",
     es: "¿INTERESADO EN SERVIR?",
-  },
-  childrenProgram: {
-    en: "CHILDREN'S PROGRAM",
-    es: "PROGRAMA INFANTIL",
-  },
-  childrenDesc: {
-    en: "Matthew 19:14: \"But Jesus said, 'Permit the children to come to Me, and do not hinder them; for the kingdom of heaven belongs to such as these.'\"\n\nEvery Sunday, children come together for age-appropriate activities and teaching grounded in the biblical foundations of the Christian faith.",
-    es: "Mateo 19:14: \"Pero Jesús dijo: 'Permitan que los niños vengan a Mí, y no se lo impidan; porque el reino de los cielos es para los que son como estos.'\" \n\nCada domingo, los niños se reúnen para actividades y enseñanzas apropiadas para su edad, fundamentadas en los fundamentos bíblicos de la fe cristiana.",
-  },
-  youthProgram: {
-    en: "YOUTH PROGRAM",
-    es: "PROGRAMA JUVENIL",
-  },
-  youthDesc: {
-    en: "We believe the younger generation needs to be prepared well for their future. God's culture calls young people into worship and into understanding the language and promises of God. To support that, we have built a music program and offer free tutoring for students from third grade through high school.",
-    es: "Creemos que la generación más joven necesita ser bien preparada para su futuro. La cultura de Dios llama a los jóvenes a adorar y a entender el lenguaje y las promesas de Dios. Para apoyar eso, hemos construido un programa de música y ofrecemos tutoría gratuita para estudiantes de tercero a duodécimo grado.",
   },
   harvestNyc: {
     en: "HARVEST NYC",

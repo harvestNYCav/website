@@ -30,14 +30,6 @@ const translations = {
     en: "VINE TUTORING",
     es: "VINE TUTORÍA",
   },
-  vineDesc: {
-    en: "A tutoring program that reaches out to families in the NYC community through tutoring students & sharing the message of Christ, at no cost. Tutors & students gather on Saturday mornings for two hours, including a time of worship and hearing the Word of God.",
-    es: "Un programa de tutoría que llega a las familias en la comunidad de Nueva York a través de estudiantes de tutoría y compartir el mensaje de Cristo, sin costo. Los tutores y estudiantes se reúnen los sábados por la mañana durante dos horas, incluyendo un tiempo de adoración y escuchar la Palabra de Dios.",
-  },
-  mission: {
-    en: "Our mission is to transform lives through the love & compassion of Jesus Christ with the goals of:",
-    es: "Nuestra misión es transformar vidas a través del amor y la compasión de Jesucristo con los objetivos de:",
-  },
   goal1: {
     en: "1 | improving English & subject knowledge across all ages",
     es: "1 | mejorar el inglés y el conocimiento de materias en todas las edades",
@@ -53,10 +45,6 @@ const translations = {
   whenWeMeet: {
     en: "WHEN WE MEET",
     es: "CUANDO NOS REUNIMOS",
-  },
-  meetingTime: {
-    en: "Saturdays | 9:30-11:30 AM | 223 E. 30th Street (RNC)",
-    es: "Sábados | 9:30-11:30 AM | 223 E. 30th Street (RNC)",
   },
   springSession: {
     en: "2026 Spring Session",
@@ -85,14 +73,6 @@ const translations = {
   conversationsJesus: {
     en: "Having conversations about Jesus",
     es: "Teniendo conversaciones sobre Jesús",
-  },
-  buildCommunity: {
-    en: "BUILD COMMUNITY RELATIONSHIPS",
-    es: "CONSTRUIR RELACIONES COMUNITARIAS",
-  },
-  joinCommunity: {
-    en: "JOIN OUR TUTORING COMMUNITY",
-    es: "ÚNETE A NUESTRA COMUNIDAD DE TUTORÍA",
   },
   volunteeringTutor: {
     en: "VOLUNTEERING AS A TUTOR",
