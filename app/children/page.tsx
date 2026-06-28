@@ -37,8 +37,8 @@ const translations = {
   youthHeading: { en: "Youth", es: "Jóvenes" },
   toddlersHeading: { en: "Toddlers", es: "Niños pequeños" },
   toddlersDesc: {
-    en: "A blurb about toddler ministry, age range, brief idea of what/when blah blah blah blah xyz",
-    es: "Un párrafo sobre el ministerio para niños pequeños, rango de edad, breve idea de qué/cuándo blah blah blah blah xyz",
+    en: "Our toddler ministry provides a safe, nurturing environment for children ages 0-3 during Sunday worship services, allowing parents to participate fully in service while their children are cared for by dedicated staff.",
+    es: "Nuestro ministerio para niños pequeños proporciona un ambiente seguro y acogedor para niños de 0-3 años durante los servicios de adoración dominicales, permitiendo que los padres participen plenamente en el servicio mientras sus hijos son cuidados por personal dedicado.",
   },
   interestedBtn: { en: "INTERESTED?", es: "¿INTERESADO?" },
   upcomingEvents: { en: "UPCOMING EVENTS", es: "PRÓXIMOS EVENTOS" },
@@ -56,9 +56,8 @@ const translations = {
   getInvolved: { en: "GET INVOLVED", es: "INVOLÚCRATE" },
   reachOut: { en: "For more information, please reach out below:", es: "Para más información, comuníquese con nosotros:" },
   erika: { en: "Erika:", es: "Erika:" },
-  erikaEmail: { en: "email@gmail.com", es: "email@gmail.com" },
-  whoeverElse: { en: "Whoever else:", es: "Quien más:" },
-  whoeverElseEmail: { en: "email@gmail.com", es: "email@gmail.com" },
+  erikaEmail: { en: "erika@harvest-nyc.com", es: "erika@harvest-nyc.com" },
+  childrenContactEmail: { en: "children@harvest-nyc.com", es: "children@harvest-nyc.com" },
   harvestNyc: { en: "HARVEST NYC", es: "HARVEST NYC" },
 };
 

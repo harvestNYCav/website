@@ -14,10 +14,6 @@ const translations = {
     en: "WELCOME TO HARVEST IN THE CITY",
     es: "BIENVENIDO A HARVEST EN LA CIUDAD",
   },
-  announcement: {
-    en: "SOME SORT OF ANNOUNCEMENT HERE",
-    es: "ALGÚN TIPO DE ANUNCIO AQUÍ",
-  },
   aboutUs: {
     en: "ABOUT US",
     es: "ACERCA DE NOSOTROS",
