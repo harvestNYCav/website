@@ -30,3 +30,10 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 The project is edited using builder.io and deployed via Vercel
+
+
+## Maintenance
+
+- `docs/MAINTENANCE_AUDIT.md` records the current audit status, verification commands, and backlog.
+- `docs/ARCHITECTURE.md` maps the maintainer-facing project structure when present.
+- `docs/DEPENDENCIES.md` records dependency update guidance when present.
