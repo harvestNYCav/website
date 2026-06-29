@@ -7,7 +7,9 @@
     "refresh:livestream": "node scripts/fetch-harvest-livestream.mjs",
     "build": "next build --webpack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "node --test tests/*.test.mjs",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@builder.io/dev-tools": "^1.33.1",
