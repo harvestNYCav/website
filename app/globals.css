@@ -1613,11 +1613,23 @@ a:hover {
 
 /* ── Events Section ── */
 .events-section {
-  padding: 32px 0 32px 0;
+  padding: 32px 0 64px;
   text-align: center;
   background: #fbfbfb;
   animation: fadeIn 0.8s ease-in-out 0.7s forwards;
   opacity: 0;
+}
+
+.events-accessible-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .events-scroll-wrapper {
@@ -1657,128 +1669,53 @@ a:hover {
   }
 }
 
-.events-grid {
-  max-width: 1200px;
-  margin: 0 auto 32px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-}
-
-@media (max-width: 768px) {
-  .events-grid {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-}
-
-.event-card {
-  display: flex;
-  flex-direction: column;
-  animation: fadeIn 0.8s ease-in-out 0.7s forwards;
-  opacity: 0;
-  width: 100%;
-  text-align: center;
-}
-
-.event-date {
-  font-size: clamp(18px, 2.5vw, 24px);
-  font-weight: 700;
-  text-transform: uppercase;
-  text-decoration: underline;
-  letter-spacing: 0.5px;
-  color: var(--link-green);
-  margin-bottom: 16px;
+.events-calendar-inner {
+  width: min(1120px, calc(100% - 64px));
+  margin: 0 auto;
   text-align: left;
 }
 
-.event-image {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 8px;
-  display: block;
-  padding: 0;
-  margin-top: 24px;
-  margin-bottom: 0;
-}
-
-@media (max-width: 767px) {
-  .event-image {
-    height: 200px;
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
-.event-learn-more {
-  display: inline-block;
-  background: transparent;
-  border: none;
-  padding: 0;
-  font-size: clamp(14px, 1.5vw, 16px);
-  font-weight: 500;
-  color: #000;
-  text-transform: uppercase;
-  text-decoration: underline;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  text-align: left;
-  align-self: flex-start;
-  margin-top: 24px;
-  margin-bottom: 0;
-}
-
-.event-learn-more:hover {
-  color: var(--link-green);
-}
-
-
-.event-title {
-  font-size: clamp(14px, 1.5vw, 16px);
-  font-weight: 500;
-  line-height: 1.6;
-  color: #000;
-  margin-bottom: 8px;
-  text-align: left;
-  padding: 0;
-}
-
-.event-subtitle {
-  font-size: clamp(12px, 1.2vw, 14px);
-  font-weight: 400;
-  line-height: 1.6;
+.events-calendar-description {
+  margin: 0 0 20px;
   color: #333;
-  margin-bottom: 24px;
-  text-align: left;
-  padding: 0;
+  font-size: clamp(16px, 1.6vw, 20px);
+  line-height: 1.5;
 }
 
-.event-btn {
+.events-calendar-frame {
+  height: 640px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+}
+
+.events-calendar-frame iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
+.events-calendar-link {
   display: inline-block;
-  padding: 12px 36px;
-  border: 2px solid #000;
-  border-radius: 20px;
+  margin-top: 20px;
+  color: #000;
   font-size: 14px;
   font-weight: 700;
-  color: #000 !important;
-  background: transparent;
-  cursor: pointer;
+  letter-spacing: 0.5px;
+  text-decoration: underline;
   text-transform: uppercase;
-  transition: border-color 0.2s, color 0.2s;
-  align-self: flex-start;
-  margin: 0;
 }
 
-.event-btn:hover {
-  border-color: var(--link-green) !important;
-  color: var(--link-green) !important;
+.events-calendar-link:hover {
+  color: var(--link-green);
 }
 
 @media (max-width: 767px) {
   .events-section {
-    padding: 0 0 36px 0;
+    padding: 0 0 40px;
   }
 
   .events-scroll-wrapper {
@@ -1793,16 +1730,24 @@ a:hover {
     padding: 24px 16px;
   }
 
-  .event-card {
-    width: 100%;
-    margin: 0 auto;
-    align-items: flex-start;
+  .events-calendar-inner {
+    width: calc(100% - 32px);
   }
 
-  .event-btn {
-    padding: 10px 28px;
-    font-size: 12px;
-    border-radius: 16px;
+  .events-calendar-frame {
+    height: 560px;
+    border-radius: 8px;
+  }
+
+  .events-calendar-link {
+    margin-top: 16px;
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .events-scroll-text {
+    animation: none;
   }
 }
 
