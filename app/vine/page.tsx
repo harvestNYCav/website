@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-
-type Language = "en" | "es";
+import { useLanguage } from "../LanguageContext";
 
 const translations = {
   aboutUs: {
@@ -142,10 +141,74 @@ const translations = {
     en: "HARVEST NYC",
     es: "HARVEST NYC",
   },
+  vineIntroAbout: {
+    en: "A tutoring program that reaches out to families in the NYC community through tutoring students & sharing the message of Christ, at no cost. Tutors & students gather on Saturday mornings for two hours, including a time of worship and hearing the Word of God.",
+    es: "Un programa de tutoría que se acerca a las familias en la comunidad de Nueva York a través de la tutoría de estudiantes y compartiendo el mensaje de Cristo, sin costo alguno. Los tutores y estudiantes se reúnen los sábados por la mañana durante dos horas, incluyendo un tiempo de adoración y escuchando la Palabra de Dios.",
+  },
+  vineIntroMission: {
+    en: "Our mission is to transform lives through the love & compassion of Jesus Christ with the goals of:",
+    es: "Nuestra misión es transformar vidas a través del amor y la compasión de Jesucristo con los objetivos de:",
+  },
+  childrenDropdown: {
+    en: "Children",
+    es: "Niños",
+  },
+  skylineAlt: {
+    en: "NYC Skyline",
+    es: "Horizonte de Nueva York",
+  },
+  teamAlt: {
+    en: "Vine team",
+    es: "Equipo de Vine",
+  },
+  meetingInfo: {
+    en: "Saturdays | 9:30-11:30 AM | 223 E. 30th Street (RNC)",
+    es: "Sábados | 9:30-11:30 AM | 223 E. 30th Street (RNC)",
+  },
+  buildCommunity: {
+    en: "BUILD\nCOMMUNITY RELATIONSHIPS",
+    es: "CONSTRUIR\nRELACIONES COMUNITARIAS",
+  },
+  joinTutoring: {
+    en: "JOIN OUR\nTUTORING COMMUNITY",
+    es: "ÚNETE A NUESTRA\nCOMUNIDAD DE TUTORÍA",
+  },
+  tutoringCardAlt: {
+    en: "Tutoring",
+    es: "Tutoría",
+  },
+  conversationsCardAlt: {
+    en: "Conversations",
+    es: "Conversaciones",
+  },
+  communityCardAlt: {
+    en: "Community",
+    es: "Comunidad",
+  },
+  joinCardAlt: {
+    en: "Join Community",
+    es: "Únete a la Comunidad",
+  },
+  placeholderCaption: {
+    en: "Put a caption here",
+    es: "Pon un título aquí",
+  },
+  youtubeAlt: {
+    en: "YouTube",
+    es: "YouTube",
+  },
+  emailAlt: {
+    en: "Email",
+    es: "Correo Electrónico",
+  },
+  remnantChurchAlt: {
+    en: "Remnant Church",
+    es: "Iglesia Remanente",
+  },
 };
 
 export default function VinePage() {
-  const [language, setLanguage] = useState<Language>("en");
+  const { language, setLanguage } = useLanguage();
   const [openFaq, setOpenFaq] = useState<string | null>(null);
 
   const t = (key: keyof typeof translations): string => {
@@ -178,7 +241,7 @@ export default function VinePage() {
                 <Link href="/vine" className="nav-dropdown-item">
                   {t("vineTutoring")}
                 </Link>
-                <Link href="/children" className="nav-dropdown-item">Children</Link>
+                <Link href="/children" className="nav-dropdown-item">{t("childrenDropdown")}</Link>
               </div>
             </div>
             <Link href="/connect" className="nav-link nav-link--active" id="menu">
@@ -199,7 +262,7 @@ export default function VinePage() {
       <div className="hero-wrapper">
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=2926"
-          alt="NYC Skyline"
+          alt={t("skylineAlt")}
           className="hero-img"
           draggable="false"
         />
@@ -211,10 +274,10 @@ export default function VinePage() {
       {/* About Section */}
       <section className="intro-section">
         <p className="intro-text vine-intro-text">
-          A tutoring program<br className="mobile-break" /> that reaches out to families<br className="mobile-break" /> in the NYC community through<br className="mobile-break" /> tutoring students & sharing<br className="mobile-break" /> the message of Christ, at no cost.<br className="mobile-break" /> Tutors & students gather<br className="mobile-break" /> on Saturday mornings for two hours,<br className="mobile-break" /> including a time of worship and hearing<br className="mobile-break" /> the Word of God.
+          {t("vineIntroAbout")}
         </p>
         <p className="intro-text vine-intro-text">
-          Our mission is to transform lives<br className="mobile-break" /> through the love & compassion of Jesus Christ<br className="mobile-break" /> with the goals of:<br /><br />
+          {t("vineIntroMission")}<br /><br />
           {t("goal1")}<br />
           {t("goal2")}<br />
           {t("goal3")}
@@ -225,7 +288,7 @@ export default function VinePage() {
       <section className="vine-team-section">
         <img
           src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&h=400&fit=crop"
-          alt="Vine team"
+          alt={t("teamAlt")}
           className="vine-team-image"
           draggable="false"
         />
@@ -234,7 +297,7 @@ export default function VinePage() {
       {/* When We Meet Section */}
       <section className="when-we-meet-section">
         <h2 className="when-we-meet-title">{t("whenWeMeet")}</h2>
-        <p className="vine-meeting-detail">Saturdays<br className="meeting-break" /> | 9:30-11:30 AM<br className="meeting-break" /> | 223 E. 30th Street (RNC)</p>
+        <p className="vine-meeting-detail">{t("meetingInfo")}</p>
 
         <div className="vine-session-box">
           <h3 className="vine-session-title">{t("springSession")}</h3>
@@ -249,15 +312,27 @@ export default function VinePage() {
         <h2 className="vine-expect-title">{t("whatToExpect")}</h2>
 
         <div className="vine-expect-labels">
-          <h3 className="vine-expect-label">BUILD<br className="label-break" /> COMMUNITY RELATIONSHIPS</h3>
-          <h3 className="vine-expect-label">JOIN OUR<br className="label-break" /> TUTORING COMMUNITY</h3>
+          <h3 className="vine-expect-label">
+            {language === "en" ? "BUILD COMMUNITY RELATIONSHIPS" : (
+              <>
+                CONSTRUIR<br className="label-break" /> RELACIONES COMUNITARIAS
+              </>
+            )}
+          </h3>
+          <h3 className="vine-expect-label">
+            {language === "en" ? "JOIN OUR TUTORING COMMUNITY" : (
+              <>
+                ÚNETE A NUESTRA<br className="label-break" /> COMUNIDAD DE TUTORÍA
+              </>
+            )}
+          </h3>
         </div>
 
         <div className="vine-expect-grid">
           <div className="vine-expect-card">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fa40622fd49024d2d9c82279a4ea61954?format=webp&width=800&height=1200"
-              alt="Tutoring"
+              alt={t("tutoringCardAlt")}
               className="vine-expect-image"
               draggable="false"
             />
@@ -267,7 +342,7 @@ export default function VinePage() {
           <div className="vine-expect-card">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fa40622fd49024d2d9c82279a4ea61954?format=webp&width=800&height=1200"
-              alt="Conversations"
+              alt={t("conversationsCardAlt")}
               className="vine-expect-image"
               draggable="false"
             />
@@ -277,21 +352,21 @@ export default function VinePage() {
           <div className="vine-expect-card">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fa40622fd49024d2d9c82279a4ea61954?format=webp&width=800&height=1200"
-              alt="Community"
+              alt={t("communityCardAlt")}
               className="vine-expect-image"
               draggable="false"
             />
-            <p className="vine-expect-text">Put a caption here</p>
+            <p className="vine-expect-text">{t("placeholderCaption")}</p>
           </div>
 
           <div className="vine-expect-card">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fa40622fd49024d2d9c82279a4ea61954?format=webp&width=800&height=1200"
-              alt="Join Community"
+              alt={t("joinCardAlt")}
               className="vine-expect-image"
               draggable="false"
             />
-            <p className="vine-expect-text">Put a caption here</p>
+            <p className="vine-expect-text">{t("placeholderCaption")}</p>
           </div>
         </div>
       </section>
@@ -416,7 +491,7 @@ export default function VinePage() {
           <a href="https://www.youtube.com/@harvestinthecity/streams" target="_blank" rel="noopener noreferrer">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/62d640b0b7413ecd1eb34c8d2a6733a1699cfafb?width=180"
-              alt="YouTube"
+              alt={t("youtubeAlt")}
               className="footer-icon"
               draggable="false"
             />
@@ -424,7 +499,7 @@ export default function VinePage() {
           <a href="mailto:harvestinthecitynyc@gmail.com">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/e94bdc79b9e6397731ea714e81845699cb463ee2?width=170"
-              alt="Email"
+              alt={t("emailAlt")}
               className="footer-icon"
               draggable="false"
             />
@@ -432,7 +507,7 @@ export default function VinePage() {
           <a href="https://www.remnantchurch.org/" target="_blank" rel="noopener noreferrer">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/d4de61100a8688fad8f49f3af86899013ee08870?width=224"
-              alt="Remnant Church"
+              alt={t("remnantChurchAlt")}
               className="footer-icon footer-icon--wide"
               draggable="false"
             />
