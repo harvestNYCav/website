@@ -2,8 +2,8 @@
 
 This Google Apps Script turns specially formatted email messages sent to
 `harvestnycav@gmail.com` into events on that account's Google Calendar. The
-private subject prefix is stripped before event creation, so it never appears
-on the public calendar or website.
+required `[HARVEST EVENT]` subject prefix is stripped before event creation, so
+it never appears on the public calendar or website.
 
 ## Install
 
@@ -16,7 +16,7 @@ on the public calendar or website.
 5. Approve the Gmail and Google Calendar permissions. The trigger always runs
    as the account that creates it, so do this while signed in as the Harvest
    account.
-6. Open **Execution log** and copy the generated submission instructions.
+6. Open **Execution log** to see the submission instructions.
 
 `setup()` creates a trigger that checks Gmail every fifteen minutes and creates
 these Gmail labels:
@@ -26,11 +26,11 @@ these Gmail labels:
 
 ## Email format
 
-The generated prefix will look similar to `[HNYCEVT4A1B2C3D4E5F]`. The sender
-must place it at the very beginning of a new email subject:
+The sender must place `[HARVEST EVENT]` plus a space at the very beginning of a
+new email subject:
 
 ```text
-Subject: [GENERATED PRIVATE PREFIX] Event title
+Subject: [HARVEST EVENT] Event title
 
 START: 2026-08-14 19:00
 END: 2026-08-14 21:00
@@ -51,7 +51,7 @@ repeats on Tuesdays. `UNTIL` is optional; omitting it creates a series with no
 scheduled end date.
 
 ```text
-Subject: [GENERATED PRIVATE PREFIX] Sunday Service
+Subject: [HARVEST EVENT] Sunday Service
 
 START: 2026-08-16 15:30
 END: 2026-08-16 17:00
@@ -66,13 +66,19 @@ recurring ministry as its own email because its title and time become one
 Google Calendar series.
 
 Replies and forwards do not qualify because their subjects begin with `Re:` or
-`Fwd:` instead of the exact private prefix.
+`Fwd:` instead of the exact `[HARVEST EVENT] ` prefix.
+
+## Updating from the generated-prefix version
+
+Replace the old `Code.gs` contents with this version and save it. You do not
+need to run `setup()` again: the existing trigger will use the new code on its
+next run, and the existing labels, processing history, and calendar events stay
+intact. New submissions must use `[HARVEST EVENT]`; the old generated prefix
+will no longer qualify.
 
 ## Operations
 
-- Run `getSubmissionInstructions()` to display the current prefix and template.
-- Run `rotateSubjectToken()` if the prefix is disclosed. This immediately makes
-  the old prefix invalid.
+- Run `getSubmissionInstructions()` to display the fixed prefix and template.
 - Messages with invalid fields receive the `Harvest/Calendar-Error` label.
   Correct them by sending a new email; the original failed message will not be
   retried.
@@ -81,6 +87,9 @@ Replies and forwards do not qualify because their subjects begin with `Re:` or
   records are automatically removed after 45 days.
 - To add sender restrictions later, add lowercase addresses to
   `CONFIG.allowedSenders` in `Code.gs`.
+
+The fixed prefix is a lightweight filter, not authentication. Anyone who knows
+it can submit an event unless `CONFIG.allowedSenders` is populated.
 
 The script publishes directly to `harvestnycav@gmail.com`'s primary calendar.
 That calendar still needs to be public for anonymous website visitors to see
