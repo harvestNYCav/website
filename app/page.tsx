@@ -14,6 +14,15 @@ type HarvestLivestream = {
 
 const fallbackLivestream = harvestLivestream as HarvestLivestream;
 
+const harvestCalendarId = "harvestnycav@gmail.com";
+
+function getHarvestCalendarUrl(language: Language) {
+  return (
+    `https://calendar.google.com/calendar/embed?src=${encodeURIComponent(harvestCalendarId)}` +
+    `&ctz=America%2FNew_York&hl=${language}&mode=AGENDA&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0`
+  );
+}
+
 const translations = {
   announcement1: {
     en: "JOIN US FOR WORSHIP ON SUNDAYS AT 3:30PM",
@@ -87,6 +96,22 @@ const translations = {
     en: "Watch the latest Harvest Sunday service.",
     es: "Mira el servicio dominical más reciente de Harvest.",
   },
+  upcomingEvents: {
+    en: "UPCOMING EVENTS",
+    es: "PRÓXIMOS EVENTOS",
+  },
+  calendarDescription: {
+    en: "See everything happening at Harvest in one place.",
+    es: "Mira todo lo que está sucediendo en Harvest en un solo lugar.",
+  },
+  calendarTitle: {
+    en: "Harvest NYC upcoming events calendar",
+    es: "Calendario de próximos eventos de Harvest NYC",
+  },
+  openFullCalendar: {
+    en: "OPEN FULL CALENDAR",
+    es: "ABRIR CALENDARIO COMPLETO",
+  },
   vineTutoring: {
     en: "VINE TUTORING",
     es: "VINE TUTORÍA",
@@ -150,6 +175,7 @@ export default function HomePage() {
   const [announcementIndex, setAnnouncementIndex] = useState(0);
   const [latestLivestream, setLatestLivestream] =
     useState<HarvestLivestream>(fallbackLivestream);
+  const harvestCalendarUrl = getHarvestCalendarUrl(language);
 
   const t = (key: keyof typeof translations): string => {
     return translations[key][language];
@@ -314,44 +340,35 @@ export default function HomePage() {
 
       {/* Events Section */}
       <section className="events-section">
+        <h2 className="events-accessible-title">{t("upcomingEvents")}</h2>
+
         {/* Scrolling Events Header */}
-        <div className="events-scroll-wrapper">
+        <div className="events-scroll-wrapper" aria-hidden="true">
           <div className="events-scroll-text">
-            <span>UPCOMING EVENTS</span>
-            <span>UPCOMING EVENTS</span>
-            <span>UPCOMING EVENTS</span>
-            <span>UPCOMING EVENTS</span>
-            <span>UPCOMING EVENTS</span>
+            {Array.from({ length: 5 }, (_, index) => (
+              <span key={index}>{t("upcomingEvents")}</span>
+            ))}
           </div>
         </div>
 
-        {/* Events Grid */}
-        <div className="events-grid">
-          {/* Event 1 */}
-          <div className="event-card">
-            <div className="event-date">JULY 1</div>
-            <h3 className="event-title">VBS: KIDS SUMMER CAMP</h3>
-            <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=800"
-              alt="VBS: Kids Summer Camp"
-              className="event-image"
-              draggable="false"
+        <div className="events-calendar-inner">
+          <p className="events-calendar-description">{t("calendarDescription")}</p>
+          <div className="events-calendar-frame">
+            <iframe
+              src={harvestCalendarUrl}
+              title={t("calendarTitle")}
+              loading="lazy"
+              referrerPolicy="no-referrer"
             />
-            <button className="event-learn-more">LEARN MORE →</button>
           </div>
-
-          {/* Event 2 */}
-          <div className="event-card">
-            <div className="event-date">JULY 1</div>
-            <h3 className="event-title">VBS: KIDS SUMMER CAMP</h3>
-            <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=800"
-              alt="VBS: Kids Summer Camp"
-              className="event-image"
-              draggable="false"
-            />
-            <button className="event-learn-more">LEARN MORE →</button>
-          </div>
+          <a
+            className="events-calendar-link"
+            href={harvestCalendarUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t("openFullCalendar")} →
+          </a>
         </div>
       </section>
 
