@@ -2,13 +2,14 @@
  * Harvest email-to-calendar automation.
  *
  * Run setup() once from a standalone Google Apps Script project owned by
- * harvestnycav@gmail.com. The script generates a private subject token,
- * installs a fifteen-minute trigger, and creates Gmail status labels.
+ * harvestnycav@gmail.com. The script installs a fifteen-minute trigger and
+ * creates Gmail status labels.
  */
 
 const CONFIG = Object.freeze({
   calendarId: "harvestnycav@gmail.com",
   inboxAddress: "harvestnycav@gmail.com",
+  subjectPrefix: "[HARVEST EVENT]",
   timeZone: "America/New_York",
   processedLabel: "Harvest/Calendar-Processed",
   errorLabel: "Harvest/Calendar-Error",
@@ -22,30 +23,23 @@ const CONFIG = Object.freeze({
   maxDescriptionLength: 1500,
   maxLinkLength: 500,
 
-  // Leave empty to use the secret subject token as the only submission gate.
+  // Leave empty to use the subject prefix as the only submission gate.
   // Add lowercase email addresses here later if an allowlist is desired.
   allowedSenders: [],
 });
 
 const PROPERTY_KEYS = Object.freeze({
-  subjectToken: "SUBJECT_TOKEN",
   processedPrefix: "PROCESSED_MESSAGE_",
   failedPrefix: "FAILED_MESSAGE_",
 });
 
 /**
- * One-time setup. Creates labels, generates the private subject prefix, and
- * installs a fifteen-minute trigger. Safe to run again; duplicate triggers are
- * removed first.
+ * One-time setup. Creates labels and installs a fifteen-minute trigger. Safe
+ * to run again; duplicate triggers are removed first.
  */
 function setup() {
   getOrCreateLabel_(CONFIG.processedLabel);
   getOrCreateLabel_(CONFIG.errorLabel);
-
-  const properties = PropertiesService.getScriptProperties();
-  if (!properties.getProperty(PROPERTY_KEYS.subjectToken)) {
-    properties.setProperty(PROPERTY_KEYS.subjectToken, generateSubjectToken_());
-  }
 
   ScriptApp.getProjectTriggers()
     .filter((trigger) => trigger.getHandlerFunction() === "processEventEmails")
@@ -60,9 +54,9 @@ function setup() {
 }
 
 /**
- * Polls Gmail for messages containing the private token and publishes valid
- * submissions to the configured Google Calendar. The subject prefix is
- * removed before the public event is created.
+ * Polls Gmail for messages containing the required subject prefix and
+ * publishes valid submissions to the configured Google Calendar. The prefix
+ * is removed before the public event is created.
  */
 function processEventEmails() {
   const lock = LockService.getScriptLock();
@@ -72,13 +66,13 @@ function processEventEmails() {
   }
 
   try {
-    const token = getSubjectToken_();
-    const exactPrefix = `[${token}] `;
+    const exactPrefix = `${CONFIG.subjectPrefix} `;
+    const subjectSearchText = CONFIG.subjectPrefix.replace(/^\[|\]$/g, "");
     const query = [
       `deliveredto:${CONFIG.inboxAddress}`,
       "-from:me",
       `newer_than:${CONFIG.searchWindowDays}d`,
-      `subject:${token}`,
+      `subject:"${subjectSearchText}"`,
     ].join(" ");
     const properties = PropertiesService.getScriptProperties();
     const state = properties.getProperties();
@@ -241,14 +235,12 @@ function processMessage_(
 }
 
 /**
- * Returns the current private prefix and the exact email template. Run this
- * function whenever submission instructions need to be shared with someone.
+ * Returns the exact email template. Run this function whenever submission
+ * instructions need to be shared with someone.
  */
 function getSubmissionInstructions() {
-  const prefix = `[${getSubjectToken_()}] `;
-
   return [
-    `Subject: ${prefix}Event title`,
+    `Subject: ${CONFIG.subjectPrefix} Event title`,
     "",
     "START: 2026-08-14 19:00",
     "END: 2026-08-14 21:00",
@@ -263,18 +255,6 @@ function getSubmissionInstructions() {
     "Omit UNTIL to repeat indefinitely. The weekday comes from START.",
     `Times use ${CONFIG.timeZone} and 24-hour formatting.`,
   ].join("\n");
-}
-
-/**
- * Rotates the private subject token if it is ever disclosed. Previously sent
- * messages using the old token will no longer qualify.
- */
-function rotateSubjectToken() {
-  PropertiesService.getScriptProperties().setProperty(
-    PROPERTY_KEYS.subjectToken,
-    generateSubjectToken_(),
-  );
-  console.log("Subject token rotated.\n\n" + getSubmissionInstructions());
 }
 
 function parseFields_(plainBody) {
@@ -471,26 +451,6 @@ function pruneOldState_(properties, state) {
       delete state[key];
     }
   });
-}
-
-function getSubjectToken_() {
-  const token = PropertiesService.getScriptProperties().getProperty(
-    PROPERTY_KEYS.subjectToken,
-  );
-
-  if (!token) {
-    throw new Error("Subject token is missing. Run setup() first.");
-  }
-
-  return token;
-}
-
-function generateSubjectToken_() {
-  const randomPart = Utilities.getUuid()
-    .replace(/-/g, "")
-    .slice(0, 12)
-    .toUpperCase();
-  return `HNYCEVT${randomPart}`;
 }
 
 function getOrCreateLabel_(name) {
