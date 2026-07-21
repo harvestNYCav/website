@@ -18,7 +18,7 @@ const harvestCalendarId = "harvestnycav@gmail.com";
 function getHarvestCalendarUrl(language: Language) {
   return (
     `https://calendar.google.com/calendar/embed?src=${encodeURIComponent(harvestCalendarId)}` +
-    `&ctz=America%2FNew_York&hl=${language}&mode=AGENDA&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0`
+    `&ctz=America%2FNew_York&hl=${language}&mode=MONTH&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0`
   );
 }
 
