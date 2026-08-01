@@ -1638,13 +1638,6 @@ a:hover {
   text-align: left;
 }
 
-.events-calendar-description {
-  margin: 0 0 20px;
-  color: #333;
-  font-size: clamp(16px, 1.6vw, 20px);
-  line-height: 1.5;
-}
-
 .events-calendar-frame {
   height: 640px;
   overflow: hidden;
