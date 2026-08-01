@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { useLanguage, type Language } from "./LanguageContext";
 import harvestLivestream from "@/data/harvest_livestream.json";
@@ -14,11 +14,28 @@ type HarvestLivestream = {
 const fallbackLivestream = harvestLivestream as HarvestLivestream;
 
 const harvestCalendarId = "harvestnycav@gmail.com";
+const mobileCalendarQuery = "(max-width: 767px)";
 
-function getHarvestCalendarUrl(language: Language) {
+type CalendarMode = "MONTH" | "AGENDA";
+
+function subscribeToCalendarMode(onStoreChange: () => void) {
+  const mediaQuery = window.matchMedia(mobileCalendarQuery);
+  mediaQuery.addEventListener("change", onStoreChange);
+  return () => mediaQuery.removeEventListener("change", onStoreChange);
+}
+
+function getCalendarModeSnapshot(): CalendarMode {
+  return window.matchMedia(mobileCalendarQuery).matches ? "AGENDA" : "MONTH";
+}
+
+function getServerCalendarModeSnapshot(): CalendarMode {
+  return "MONTH";
+}
+
+function getHarvestCalendarUrl(language: Language, mode: CalendarMode) {
   return (
     `https://calendar.google.com/calendar/embed?src=${encodeURIComponent(harvestCalendarId)}` +
-    `&ctz=America%2FNew_York&hl=${language}&mode=MONTH&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0`
+    `&ctz=America%2FNew_York&hl=${language}&mode=${mode}&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0`
   );
 }
 
@@ -206,7 +223,12 @@ export default function HomePage() {
   const [announcementIndex, setAnnouncementIndex] = useState(0);
   const [latestLivestream, setLatestLivestream] =
     useState<HarvestLivestream>(fallbackLivestream);
-  const harvestCalendarUrl = getHarvestCalendarUrl(language);
+  const calendarMode = useSyncExternalStore(
+    subscribeToCalendarMode,
+    getCalendarModeSnapshot,
+    getServerCalendarModeSnapshot,
+  );
+  const harvestCalendarUrl = getHarvestCalendarUrl(language, calendarMode);
 
   const t = (key: keyof typeof translations): string => {
     return translations[key][language];
