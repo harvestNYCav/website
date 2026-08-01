@@ -116,10 +116,6 @@ const translations = {
     en: "UPCOMING EVENTS",
     es: "PRÓXIMOS EVENTOS",
   },
-  calendarDescription: {
-    en: "See everything happening at Harvest in one place.",
-    es: "Mira todo lo que está sucediendo en Harvest en un solo lugar.",
-  },
   calendarTitle: {
     en: "Harvest NYC upcoming events calendar",
     es: "Calendario de próximos eventos de Harvest NYC",
@@ -380,7 +376,6 @@ export default function HomePage() {
         <h2 className="events-title">{t("upcomingEvents")}</h2>
 
         <div className="events-calendar-inner">
-          <p className="events-calendar-description">{t("calendarDescription")}</p>
           <div className="events-calendar-frame">
             <iframe
               src={harvestCalendarUrl}
