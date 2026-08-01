@@ -355,16 +355,7 @@ export default function HomePage() {
 
       {/* Events Section */}
       <section className="events-section">
-        <h2 className="events-accessible-title">{t("upcomingEvents")}</h2>
-
-        {/* Scrolling Events Header */}
-        <div className="events-scroll-wrapper" aria-hidden="true">
-          <div className="events-scroll-text">
-            {Array.from({ length: 5 }, (_, index) => (
-              <span key={index}>{t("upcomingEvents")}</span>
-            ))}
-          </div>
-        </div>
+        <h2 className="events-title">{t("upcomingEvents")}</h2>
 
         <div className="events-calendar-inner">
           <p className="events-calendar-description">{t("calendarDescription")}</p>
