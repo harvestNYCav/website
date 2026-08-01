@@ -33,14 +33,27 @@ new email subject:
 Subject: [HARVEST EVENT] Event title
 
 START: 2026-08-14 19:00
-END: 2026-08-14 21:00
 LOCATION: 206 E 29th Street
 DESCRIPTION: Public description shown on the calendar
 LINK: https://example.com/event-details
 ```
 
 Dates use `YYYY-MM-DD HH:mm`, 24-hour time, and the `America/New_York` time
-zone. `START` and `END` are required. The other fields are optional and each
+zone. Only `START` is required. If neither `END` nor `DURATION` is supplied, the
+event lasts 90 minutes. Use one of these fields to override the default:
+
+```text
+END: 2026-08-14 21:00
+```
+
+or:
+
+```text
+DURATION: 120
+```
+
+`DURATION` is a whole number of minutes. Do not include both `END` and
+`DURATION`. `LOCATION`, `DESCRIPTION`, and `LINK` are optional, and every field
 must remain on one line.
 
 ## Weekly recurring events
@@ -54,7 +67,7 @@ scheduled end date.
 Subject: [HARVEST EVENT] Sunday Service
 
 START: 2026-08-16 15:30
-END: 2026-08-16 17:00
+DURATION: 90
 LOCATION: 206 E 29th Street
 DESCRIPTION: Weekly bilingual worship service
 REPEAT: WEEKLY

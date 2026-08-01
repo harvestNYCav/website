@@ -17,6 +17,7 @@ const CONFIG = Object.freeze({
   stateRetentionDays: 45,
   searchPageSize: 100,
   maxThreadsPerRun: 500,
+  defaultDurationMinutes: 90,
   maxEventDurationDays: 14,
   maxTitleLength: 120,
   maxLocationLength: 250,
@@ -149,7 +150,7 @@ function processMessage_(
 
     const fields = parseFields_(message.getPlainBody());
     const start = parseDateTime_(fields.START, "START");
-    const end = parseDateTime_(fields.END, "END");
+    const end = resolveEndTime_(fields, start);
 
     if (end.getTime() <= start.getTime()) {
       throw validationError_("END must be later than START.");
@@ -243,10 +244,12 @@ function getSubmissionInstructions() {
     `Subject: ${CONFIG.subjectPrefix} Event title`,
     "",
     "START: 2026-08-14 19:00",
-    "END: 2026-08-14 21:00",
     "LOCATION: 206 E 29th Street",
     "DESCRIPTION: Public description shown on the calendar",
     "LINK: https://example.com/event-details",
+    "",
+    `Without END or DURATION, the event lasts ${CONFIG.defaultDurationMinutes} minutes.`,
+    "Use either END: 2026-08-14 21:00 or DURATION: 120 to override it.",
     "",
     "For a weekly event, also add:",
     "REPEAT: WEEKLY",
@@ -262,6 +265,7 @@ function parseFields_(plainBody) {
   const supportedFields = new Set([
     "START",
     "END",
+    "DURATION",
     "LOCATION",
     "DESCRIPTION",
     "LINK",
@@ -288,9 +292,6 @@ function parseFields_(plainBody) {
   if (!fields.START) {
     throw validationError_("Missing required START field.");
   }
-  if (!fields.END) {
-    throw validationError_("Missing required END field.");
-  }
 
   return fields;
 }
@@ -315,6 +316,42 @@ function parseDateTime_(value, fieldName) {
   }
 
   return parsed;
+}
+
+function resolveEndTime_(fields, start) {
+  const hasEnd = fields.END !== undefined;
+  const hasDuration = fields.DURATION !== undefined;
+
+  if (hasEnd && hasDuration) {
+    throw validationError_("Use either END or DURATION, not both.");
+  }
+
+  if (hasEnd) {
+    return parseDateTime_(fields.END, "END");
+  }
+
+  const durationMinutes = hasDuration
+    ? parseDurationMinutes_(fields.DURATION)
+    : CONFIG.defaultDurationMinutes;
+
+  return new Date(start.getTime() + durationMinutes * 60 * 1000);
+}
+
+function parseDurationMinutes_(value) {
+  if (!/^\d+$/.test(value)) {
+    throw validationError_("DURATION must be a whole number of minutes.");
+  }
+
+  const minutes = Number(value);
+  const maxMinutes = CONFIG.maxEventDurationDays * 24 * 60;
+
+  if (!Number.isSafeInteger(minutes) || minutes < 1 || minutes > maxMinutes) {
+    throw validationError_(
+      `DURATION must be between 1 and ${maxMinutes} minutes.`,
+    );
+  }
+
+  return minutes;
 }
 
 function buildRecurrence_(fields, start) {
