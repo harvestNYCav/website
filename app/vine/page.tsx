@@ -61,6 +61,10 @@ const translations = {
     en: "To join the pilot, email",
     es: "Para unirse al piloto, escriba a",
   },
+  openVineApp: {
+    en: "OPEN THE VINE APP",
+    es: "ABRIR LA APLICACIÓN VINE",
+  },
   interested: {
     en: "INTERESTED?",
     es: "¿INTERESADO?",
@@ -302,9 +306,14 @@ export default function VinePage() {
               harvestinthecitynyc@gmail.com
             </a>
           </p>
-          <a href="mailto:harvestinthecitynyc@gmail.com" className="vine-interested-btn">
-            {t("interested")}
-          </a>
+          <div className="vine-session-actions">
+            <a href="mailto:harvestinthecitynyc@gmail.com" className="vine-interested-btn">
+              {t("interested")}
+            </a>
+            <a href="/vine-app" className="vine-interested-btn">
+              {t("openVineApp")}
+            </a>
+          </div>
         </div>
       </section>
 
