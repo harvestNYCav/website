@@ -1284,6 +1284,7 @@ a:hover {
   text-transform: uppercase;
   transition: background 0.2s;
   letter-spacing: 0.5px;
+  text-decoration: none;
 }
 
 .vine-interested-btn:hover {
