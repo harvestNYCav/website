@@ -45,17 +45,25 @@ const translations = {
     en: "WHEN WE MEET",
     es: "CUANDO NOS REUNIMOS",
   },
-  springSession: {
-    en: "2026 Spring Session",
-    es: "Sesión de Primavera 2026",
+  fallPilot: {
+    en: "2026 Fall Pilot",
+    es: "Piloto de Otoño 2026",
   },
-  sessionDates: {
-    en: "January 10 - May 30, 2026",
-    es: "10 de enero - 30 de mayo de 2026",
+  pilotOpen: {
+    en: "The fall pilot is now open!",
+    es: "¡El piloto de otoño ya está abierto!",
   },
   sessionInfo: {
-    en: "15 Sessions Total | Break: 2/15, 4/12, 4/19",
-    es: "15 Sesiones en Total | Descanso: 2/15, 4/12, 4/19",
+    en: "Fall session dates are still pending.",
+    es: "Las fechas de la sesión de otoño aún están pendientes.",
+  },
+  pilotEmailPrompt: {
+    en: "To join the pilot, email",
+    es: "Para unirse al piloto, escriba a",
+  },
+  openVineApp: {
+    en: "OPEN THE VINE APP",
+    es: "ABRIR LA APLICACIÓN VINE",
   },
   interested: {
     en: "INTERESTED?",
@@ -181,18 +189,6 @@ const translations = {
     en: "Conversations",
     es: "Conversaciones",
   },
-  communityCardAlt: {
-    en: "Community",
-    es: "Comunidad",
-  },
-  joinCardAlt: {
-    en: "Join Community",
-    es: "Únete a la Comunidad",
-  },
-  placeholderCaption: {
-    en: "Put a caption here",
-    es: "Pon un título aquí",
-  },
   youtubeAlt: {
     en: "YouTube",
     es: "YouTube",
@@ -300,10 +296,24 @@ export default function VinePage() {
         <p className="vine-meeting-detail">{t("meetingInfo")}</p>
 
         <div className="vine-session-box">
-          <h3 className="vine-session-title">{t("springSession")}</h3>
-          <p className="vine-session-dates">{t("sessionDates")}</p>
-          <p className="vine-session-info">{t("sessionInfo")}</p>
-          <button className="vine-interested-btn">{t("interested")}</button>
+          <h3 className="vine-session-title">{t("fallPilot")}</h3>
+          <p className="vine-session-dates">{t("pilotOpen")}</p>
+          <p className="vine-session-info">
+            {t("sessionInfo")}
+            <br />
+            {t("pilotEmailPrompt")}{" "}
+            <a href="mailto:harvestinthecitynyc@gmail.com" className="contact-email">
+              harvestinthecitynyc@gmail.com
+            </a>
+          </p>
+          <div className="vine-session-actions">
+            <a href="mailto:harvestinthecitynyc@gmail.com" className="vine-interested-btn">
+              {t("interested")}
+            </a>
+            <a href="/vine-app" className="vine-interested-btn">
+              {t("openVineApp")}
+            </a>
+          </div>
         </div>
       </section>
 
@@ -347,26 +357,6 @@ export default function VinePage() {
               draggable="false"
             />
             <p className="vine-expect-text">{t("conversationsJesus")}</p>
-          </div>
-
-          <div className="vine-expect-card">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fa40622fd49024d2d9c82279a4ea61954?format=webp&width=800&height=1200"
-              alt={t("communityCardAlt")}
-              className="vine-expect-image"
-              draggable="false"
-            />
-            <p className="vine-expect-text">{t("placeholderCaption")}</p>
-          </div>
-
-          <div className="vine-expect-card">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fa40622fd49024d2d9c82279a4ea61954?format=webp&width=800&height=1200"
-              alt={t("joinCardAlt")}
-              className="vine-expect-image"
-              draggable="false"
-            />
-            <p className="vine-expect-text">{t("placeholderCaption")}</p>
           </div>
         </div>
       </section>

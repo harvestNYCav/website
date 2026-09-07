@@ -1271,6 +1271,13 @@ a:hover {
   line-height: 38.4px;
 }
 
+.vine-session-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
 .vine-interested-btn {
   display: inline-block;
   padding: 14px 48px;
@@ -1284,6 +1291,7 @@ a:hover {
   text-transform: uppercase;
   transition: background 0.2s;
   letter-spacing: 0.5px;
+  text-decoration: none;
 }
 
 .vine-interested-btn:hover {
