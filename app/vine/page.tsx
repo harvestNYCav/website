@@ -134,16 +134,12 @@ const translations = {
     es: "INVOLÚCRATE",
   },
   reachOut: {
-    en: "Please reach out to our Vine coordinators for more information:",
-    es: "Comuníquese con nuestros coordinadores de Vine para obtener más información:",
+    en: "Please reach out to our Vine team for more information:",
+    es: "Comuníquese con nuestro equipo de Vine para obtener más información:",
   },
-  aldoWiloto: {
-    en: "Aldo Wiloto:",
-    es: "Aldo Wiloto:",
-  },
-  rachelGuen: {
-    en: "Rachel Guen:",
-    es: "Rachel Guen:",
+  vineAdmin: {
+    en: "Vine Admin:",
+    es: "Administración de Vine:",
   },
   harvestNyc: {
     en: "HARVEST NYC",
@@ -460,15 +456,9 @@ export default function VinePage() {
 
         <div className="contact-list vine-contact-list">
           <p className="contact-line">
-            <span className="contact-name">{t("aldoWiloto")}</span>{" "}
-            <a href="mailto:aldowiloto@gmail.com" className="contact-email">
-              aldowiloto@gmail.com
-            </a>
-          </p>
-          <p className="contact-line">
-            <span className="contact-name">{t("rachelGuen")}</span>{" "}
-            <a href="mailto:rguen97@gmail.com" className="contact-email">
-              rguen97@gmail.com
+            <span className="contact-name">{t("vineAdmin")}</span>{" "}
+            <a href="mailto:VineAdmin@harvest-nyc.com" className="contact-email">
+              VineAdmin@harvest-nyc.com
             </a>
           </p>
         </div>
