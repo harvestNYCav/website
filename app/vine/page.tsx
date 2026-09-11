@@ -182,12 +182,12 @@ const translations = {
     es: "ÚNETE A NUESTRA\nCOMUNIDAD DE TUTORÍA",
   },
   tutoringCardAlt: {
-    en: "Serving dinner at a Vine gathering",
-    es: "Sirviendo la cena en una reunión de Vine",
+    en: "Vine community sharing a rooftop meal",
+    es: "La comunidad de Vine compartiendo una comida en la azotea",
   },
   conversationsCardAlt: {
-    en: "Vine members together at a gathering",
-    es: "Miembros de Vine juntos en una reunión",
+    en: "Vine members gathered together indoors",
+    es: "Miembros de Vine reunidos en el interior",
   },
   youtubeAlt: {
     en: "YouTube",

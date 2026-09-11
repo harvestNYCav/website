@@ -167,7 +167,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <div className="hero-wrapper">
         <img
-          src="/images/hero-retreat.jpg"
+          src="/images/hero-rooftop.jpg"
           alt=""
           className="hero-img"
           draggable="false"
