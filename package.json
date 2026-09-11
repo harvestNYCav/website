@@ -8,7 +8,7 @@
     "build": "npm run refresh:livestream && next build --webpack",
     "start": "next start",
     "lint": "eslint",
-    "test": "node --test tests/",
+    "test": "node --test tests/*.test.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
