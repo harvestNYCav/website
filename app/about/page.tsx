@@ -82,8 +82,8 @@ const translations = {
     es: "El Pastor Richard y Erika Aguirre con sus tres hijos",
   },
   servingStaffAlt: {
-    en: "Harvest serving staff at the 2026 servants' retreat",
-    es: "Personal de servicio de Harvest en el retiro de servidores 2026",
+    en: "Harvest serving staff gathered around the table",
+    es: "Personal de servicio de Harvest reunido alrededor de la mesa",
   },
   youtubeAlt: {
     en: "YouTube",
