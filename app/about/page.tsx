@@ -77,9 +77,13 @@ const translations = {
     en: "ABOUT US",
     es: "ACERCA\nDE NOSOTROS",
   },
-  skylineAlt: {
-    en: "NYC Skyline",
-    es: "Horizonte de Nueva York",
+  aguirreFamilyAlt: {
+    en: "Pastor Richard and Erika Aguirre with their three sons",
+    es: "El Pastor Richard y Erika Aguirre con sus tres hijos",
+  },
+  servingStaffAlt: {
+    en: "Harvest serving staff at the 2026 servants' retreat",
+    es: "Personal de servicio de Harvest en el retiro de servidores 2026",
   },
   youtubeAlt: {
     en: "YouTube",
@@ -163,7 +167,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <div className="hero-wrapper">
         <img
-          src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=2926"
+          src="/images/hero-rooftop.jpg"
           alt=""
           className="hero-img"
           draggable="false"
@@ -198,8 +202,8 @@ export default function AboutPage() {
           <div className="contact-column">
             <h3 className="contact-heading">{t("aguirreFamily")}</h3>
             <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=2926"
-              alt={t("skylineAlt")}
+              src="/images/aguirre-family.jpg"
+              alt={t("aguirreFamilyAlt")}
               className="staff-image"
               draggable="false"
             />
@@ -214,8 +218,8 @@ export default function AboutPage() {
           <div className="contact-column">
             <h3 className="contact-heading">{t("servingStaff")}</h3>
             <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=2926"
-              alt={t("skylineAlt")}
+              src="/images/serving-staff.jpg"
+              alt={t("servingStaffAlt")}
               className="staff-image"
               draggable="false"
             />
