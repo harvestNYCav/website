@@ -5,10 +5,10 @@
   "scripts": {
     "dev": "next dev --webpack",
     "refresh:livestream": "node scripts/fetch-harvest-livestream.mjs",
-    "build": "next build --webpack",
+    "build": "npm run refresh:livestream && next build --webpack",
     "start": "next start",
     "lint": "eslint",
-    "test": "node --test tests/smoke.test.mjs",
+    "test": "node --test tests/",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
