@@ -314,7 +314,7 @@ export default function HomePage() {
       <div className="hero-wrapper">
         <img
           id="hero-img"
-          src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=2926"
+          src="/images/hero-rooftop.jpg"
           alt=""
           className="hero-img"
           draggable="false"

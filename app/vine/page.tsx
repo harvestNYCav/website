@@ -161,13 +161,13 @@ const translations = {
     en: "Children",
     es: "Niños",
   },
-  skylineAlt: {
-    en: "NYC Skyline",
-    es: "Horizonte de Nueva York",
+  heroAlt: {
+    en: "Vine community sharing a rooftop meal in Kips Bay",
+    es: "La comunidad de Vine compartiendo una comida en la azotea en Kips Bay",
   },
   teamAlt: {
-    en: "Vine team",
-    es: "Equipo de Vine",
+    en: "Vine team and community group photo",
+    es: "Foto grupal del equipo y la comunidad de Vine",
   },
   meetingInfo: {
     en: "Saturdays | 9:30-11:30 AM | 223 E. 30th Street (RNC)",
@@ -182,12 +182,12 @@ const translations = {
     es: "ÚNETE A NUESTRA\nCOMUNIDAD DE TUTORÍA",
   },
   tutoringCardAlt: {
-    en: "Tutoring",
-    es: "Tutoría",
+    en: "Serving dinner at a Vine gathering",
+    es: "Sirviendo la cena en una reunión de Vine",
   },
   conversationsCardAlt: {
-    en: "Conversations",
-    es: "Conversaciones",
+    en: "Vine members together at a gathering",
+    es: "Miembros de Vine juntos en una reunión",
   },
   youtubeAlt: {
     en: "YouTube",
@@ -257,8 +257,8 @@ export default function VinePage() {
       {/* Hero Section */}
       <div className="hero-wrapper">
         <img
-          src="https://api.builder.io/api/v1/image/assets/TEMP/b773ef0aae50cfd2f32785cd1f35aada44632d0a?width=2926"
-          alt={t("skylineAlt")}
+          src="/images/hero-rooftop.jpg"
+          alt={t("heroAlt")}
           className="hero-img"
           draggable="false"
         />
@@ -283,7 +283,7 @@ export default function VinePage() {
       {/* Team Photo Section */}
       <section className="vine-team-section">
         <img
-          src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&h=400&fit=crop"
+          src="/images/vine-team.jpg"
           alt={t("teamAlt")}
           className="vine-team-image"
           draggable="false"
@@ -341,7 +341,7 @@ export default function VinePage() {
         <div className="vine-expect-grid">
           <div className="vine-expect-card">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fa40622fd49024d2d9c82279a4ea61954?format=webp&width=800&height=1200"
+              src="/images/vine-tutoring.jpg"
               alt={t("tutoringCardAlt")}
               className="vine-expect-image"
               draggable="false"
@@ -351,7 +351,7 @@ export default function VinePage() {
 
           <div className="vine-expect-card">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F210b813151b44169899945b09fd43873%2Fa40622fd49024d2d9c82279a4ea61954?format=webp&width=800&height=1200"
+              src="/images/vine-conversations.jpg"
               alt={t("conversationsCardAlt")}
               className="vine-expect-image"
               draggable="false"

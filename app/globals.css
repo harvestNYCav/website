@@ -301,13 +301,14 @@ a:hover {
   justify-content: center;
   gap: 35px;
   padding: 32px 20px;
-  background: transparent;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
 }
 
 .hero-title {
   font-size: clamp(36px, 5vw, 60px);
   font-weight: 700;
-  color: #000;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
   text-align: center;
   line-height: 1;
   animation: fadeIn 0.8s ease-in-out 1.2s forwards;
