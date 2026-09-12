@@ -158,8 +158,8 @@ const translations = {
     es: "Niños",
   },
   heroAlt: {
-    en: "Vine community sharing a rooftop meal in Kips Bay",
-    es: "La comunidad de Vine compartiendo una comida en la azotea en Kips Bay",
+    en: "Tutors and students working together at a Vine session",
+    es: "Tutores y estudiantes trabajando juntos en una sesión de Vine",
   },
   teamAlt: {
     en: "Vine team and community group photo",
@@ -253,7 +253,7 @@ export default function VinePage() {
       {/* Hero Section */}
       <div className="hero-wrapper">
         <img
-          src="/images/hero-rooftop.jpg"
+          src="/images/hero-vine.jpg"
           alt={t("heroAlt")}
           className="hero-img"
           draggable="false"
