@@ -4,6 +4,9 @@ import { useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "../LanguageContext";
 
+const TUTOR_SIGNUP_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSdFtn8UggQz4BQJtvmE3Zk5byqahyc39r4nVomKersW50eJ3A/viewform";
+
 const translations = {
   aboutUs: {
     en: "ABOUT US",
@@ -45,29 +48,25 @@ const translations = {
     en: "WHEN WE MEET",
     es: "CUANDO NOS REUNIMOS",
   },
-  fallPilot: {
-    en: "2026 Fall Pilot",
-    es: "Piloto de Otoño 2026",
+  fallSession: {
+    en: "2026 Fall Session",
+    es: "Sesión de Otoño 2026",
   },
-  pilotOpen: {
-    en: "The fall pilot is now open!",
-    es: "¡El piloto de otoño ya está abierto!",
+  sessionDates: {
+    en: "October 24 – May 29",
+    es: "24 de octubre – 29 de mayo",
   },
   sessionInfo: {
-    en: "Fall session dates are still pending.",
-    es: "Las fechas de la sesión de otoño aún están pendientes.",
+    en: "Our fall pilot is underway now, and tutor signups for the full session are open!",
+    es: "Nuestro piloto de otoño ya está en marcha, ¡y las inscripciones de tutores para la sesión completa están abiertas!",
   },
-  pilotEmailPrompt: {
-    en: "To join the pilot, email",
-    es: "Para unirse al piloto, escriba a",
+  signUpToTutor: {
+    en: "SIGN UP TO TUTOR",
+    es: "INSCRÍBETE COMO TUTOR",
   },
   openVineApp: {
     en: "OPEN THE VINE APP",
     es: "ABRIR LA APLICACIÓN VINE",
-  },
-  interested: {
-    en: "INTERESTED?",
-    es: "¿INTERESADO?",
   },
   whatToExpect: {
     en: "WHAT TO EXPECT",
@@ -110,12 +109,16 @@ const translations = {
     es: "¿Qué habilidades necesita un tutor?",
   },
   tutorSignupAnswer: {
-    en: "Please reach out to our coordinators for more information.",
-    es: "Comuníquese con nuestros coordinadores para obtener más información.",
+    en: "Fill out our tutor signup form:",
+    es: "Complete nuestro formulario de inscripción para tutores:",
+  },
+  tutorSignupLink: {
+    en: "Vine 2026 Fall Tutor Signup Form",
+    es: "Formulario de Inscripción de Tutores de Vine, Otoño 2026",
   },
   tutorCommitmentAnswer: {
     en: "Tutors meet on Saturday mornings for 2 hours during the spring and fall sessions.",
-    es: "Los tutores se reúnen los sábados por la mañana durante 2 horas en las sesiones de primavera e invierno.",
+    es: "Los tutores se reúnen los sábados por la mañana durante 2 horas en las sesiones de primavera y otoño.",
   },
   tutorSkillsAnswer: {
     en: "We ask tutors to be open and willing to teach a variety of grade school subjects such as English & Math. Bilingual proficiency is not required.",
@@ -127,7 +130,7 @@ const translations = {
   },
   studentExpectAnswer: {
     en: "We ask that students commit for both semesters (Fall & Spring) and be ready and willing to learn.",
-    es: "Pedimos que los estudiantes se comprometan durante ambos semestres (Otoño e Invierno) y estén listos y dispuestos a aprender.",
+    es: "Pedimos que los estudiantes se comprometan durante ambos semestres (Otoño y Primavera) y estén listos y dispuestos a aprender.",
   },
   getInvolved: {
     en: "GET INVOLVED",
@@ -226,7 +229,7 @@ export default function VinePage() {
               <span className="nav-link-short">{t("aboutUsShort")}</span>
             </Link>
             <div className="nav-dropdown">
-              <button className="nav-link nav-dropdown-trigger" id="menu">
+              <button className="nav-link nav-dropdown-trigger nav-link--active" id="menu">
                 {t("ministries")}
               </button>
               <div id="menu-dropdown" className="nav-dropdown-menu">
@@ -236,7 +239,7 @@ export default function VinePage() {
                 <Link href="/children" className="nav-dropdown-item">{t("childrenDropdown")}</Link>
               </div>
             </div>
-            <Link href="/connect" className="nav-link nav-link--active" id="menu">
+            <Link href="/connect" className="nav-link" id="menu">
               {t("connect")}
             </Link>
           </div>
@@ -292,19 +295,17 @@ export default function VinePage() {
         <p className="vine-meeting-detail">{t("meetingInfo")}</p>
 
         <div className="vine-session-box">
-          <h3 className="vine-session-title">{t("fallPilot")}</h3>
-          <p className="vine-session-dates">{t("pilotOpen")}</p>
-          <p className="vine-session-info">
-            {t("sessionInfo")}
-            <br />
-            {t("pilotEmailPrompt")}{" "}
-            <a href="mailto:harvestinthecitynyc@gmail.com" className="contact-email">
-              harvestinthecitynyc@gmail.com
-            </a>
-          </p>
+          <h3 className="vine-session-title">{t("fallSession")}</h3>
+          <p className="vine-session-dates">{t("sessionDates")}</p>
+          <p className="vine-session-info">{t("sessionInfo")}</p>
           <div className="vine-session-actions">
-            <a href="mailto:harvestinthecitynyc@gmail.com" className="vine-interested-btn">
-              {t("interested")}
+            <a
+              href={TUTOR_SIGNUP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="vine-interested-btn"
+            >
+              {t("signUpToTutor")}
             </a>
             <a href="/vine-app" className="vine-interested-btn">
               {t("openVineApp")}
@@ -374,7 +375,17 @@ export default function VinePage() {
               </button>
               {openFaq === "tutor-signup" && (
                 <div className="vine-faq-answer">
-                  <p>{t("tutorSignupAnswer")}</p>
+                  <p>
+                    {t("tutorSignupAnswer")}{" "}
+                    <a
+                      href={TUTOR_SIGNUP_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="contact-email"
+                    >
+                      {t("tutorSignupLink")}
+                    </a>
+                  </p>
                 </div>
               )}
             </div>
